@@ -1,0 +1,20 @@
+2013-12-25 23:50:51 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-25 23:50:51 [SERVER] [INFO] Generating keypair
+2013-12-25 23:50:52 [SERVER] [INFO] Converting map!
+2013-12-25 23:50:52 [SERVER] [INFO] Scanning folders...
+2013-12-25 23:50:52 [SERVER] [INFO] Total conversion count is 0
+2013-12-25 23:50:52 [SERVER] [INFO] Preparing start region for level 0
+2013-12-25 23:50:53 [SERVER] [INFO] Preparing spawn area: 10%
+2013-12-25 23:50:54 [SERVER] [INFO] Preparing spawn area: 25%
+2013-12-25 23:50:55 [SERVER] [INFO] Preparing spawn area: 48%
+2013-12-25 23:50:56 [SERVER] [INFO] Preparing spawn area: 74%
+2013-12-25 23:50:57 [SERVER] [INFO] Player771[/127.0.0.1:0] logged in with entity id 78 at (233.5, 60.0, 249.5)
+2013-12-25 23:50:57 [SERVER] [INFO] Player771 joined the game
+2013-12-25 23:50:59 [SERVER] [INFO] Saving and pausing game...
+2013-12-25 23:50:59 [SERVER] [INFO] Saving chunks for level 'Test World'/Overworld
+2013-12-25 23:51:06 [SERVER] [INFO] Saving chunks for level 'Test World'/Nether
+2013-12-25 23:51:06 [SERVER] [INFO] Saving chunks for level 'Test World'/The End
+2013-12-25 23:51:06 [SERVER] [WARNING] Can't keep up! Did the system time change, or is the server overloaded?
+2013-12-25 23:51:21 [SERVER] [INFO] Saving and pausing game...
+2013-12-25 23:51:21 [SERVER] [INFO] Saving chunks for level 'Test World'/Overworld
+2013-12-25 23:51:22 [SERVER] [INFO] Stopping server

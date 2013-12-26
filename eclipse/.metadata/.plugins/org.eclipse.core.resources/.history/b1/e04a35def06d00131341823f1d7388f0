@@ -1,0 +1,6 @@
+package com.nitrogenegames.netcraft;
+
+@Mod(modid = Netcraft.modid, name = "Netcraft", version = "Reloaded 0.0.1")
+public class Netcraft {
+
+}

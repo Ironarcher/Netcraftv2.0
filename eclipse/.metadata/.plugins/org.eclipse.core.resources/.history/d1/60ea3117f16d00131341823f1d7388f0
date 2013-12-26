@@ -1,0 +1,29 @@
+package com.nitrogenegames.netcraft;
+
+import net.minecraft.block.Block;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
+@Mod(modid = Netcraft.modid, name = "Netcraft", version = "Reloaded 0.0.1")
+public class Netcraft {
+
+	public static final String modid = "netcraft";
+
+	@EventHandler
+	public void load(FMLInitializationEvent e){
+		
+	}
+	
+	public void registerBlock(Block block, String string, String name){
+		GameRegistry.registerBlock(block,string);
+		LanguageRegistry.addName(block, name);
+	}
+	
+	public void registerItem(Item item, String string, String name){
+		GameRegistry.registerItem(item,string);
+		LanguageRegistry.addName(item, name);
+	}
+}
