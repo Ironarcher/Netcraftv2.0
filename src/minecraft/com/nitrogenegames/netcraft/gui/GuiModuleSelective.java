@@ -19,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import net.minecraft.util.StringTranslate;
 import net.minecraft.world.World;
@@ -87,7 +88,8 @@ public void drawScreen(int param1, int param2, float par3) {
 
 	drawDefaultBackground();
     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-    //this.mc.renderEngine.bindTexture("/irongui/guiModule.png");
+    final ResourceLocation texture = new ResourceLocation(Netcraft.modid.toLowerCase(), "/textures/gui/guiModule.png");
+    this.mc.renderEngine.bindTexture(texture);
     int x = (this.width - this.xSize) / 2;
     int y = (this.height - this.ySize) / 2;
     this.drawTexturedModalRect(x, y, 0, 0, this.xSize, this.ySize);

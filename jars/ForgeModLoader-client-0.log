@@ -1,583 +1,536 @@
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Forge Mod Loader version 6.4.49.965 for Minecraft 1.6.4 loading
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Java is Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_45, running on Windows 7:amd64:6.1, installed at C:\Program Files\Java\jre7
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Java classpath at launch is C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\eclipse\Minecraft\bin;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\ow2\asm\asm-debug-all\4.1\asm-debug-all-4.1.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\minecraft\launchwrapper\1.8\launchwrapper-1.8.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\versions\1.6.4\1.6.4.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\google\guava\guava\14.0\guava-14.0.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Java library path at launch is C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\versions\1.6.4\1.6.4-natives
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Instantiating coremod class FMLCorePlugin
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Enqueued coremod FMLCorePlugin
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Instantiating coremod class FMLForgePlugin
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Enqueued coremod FMLForgePlugin
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] All fundamental core mods are successfully located
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Discovering coremods
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Injecting coremod FMLCorePlugin {cpw.mods.fml.relauncher.FMLCorePlugin} class transformers
-2013-12-26 14:24:03 [FINEST] [ForgeModLoader] Registering transformer cpw.mods.fml.common.asm.transformers.AccessTransformer
-2013-12-26 14:24:03 [INFO] [STDOUT] Loaded 40 rules from AccessTransformer config file fml_at.cfg
-2013-12-26 14:24:03 [FINEST] [ForgeModLoader] Registering transformer cpw.mods.fml.common.asm.transformers.MarkerTransformer
-2013-12-26 14:24:03 [FINEST] [ForgeModLoader] Registering transformer cpw.mods.fml.common.asm.transformers.SideTransformer
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Injection complete
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Running coremod plugin for FMLCorePlugin {cpw.mods.fml.relauncher.FMLCorePlugin}
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Running coremod plugin FMLCorePlugin
-2013-12-26 14:24:03 [SEVERE] [ForgeModLoader] The binary patch set is missing. Either you are in a development environment, or things are not going to work!
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Coremod plugin class FMLCorePlugin run successfully
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Injecting coremod FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin} class transformers
-2013-12-26 14:24:03 [FINEST] [ForgeModLoader] Registering transformer net.minecraftforge.transformers.ForgeAccessTransformer
-2013-12-26 14:24:03 [INFO] [STDOUT] Loaded 110 rules from AccessTransformer config file forge_at.cfg
-2013-12-26 14:24:03 [FINEST] [ForgeModLoader] Registering transformer net.minecraftforge.transformers.EventTransformer
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Injection complete
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Running coremod plugin for FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin}
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Running coremod plugin FMLForgePlugin
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Coremod plugin class FMLForgePlugin run successfully
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Validating minecraft
-2013-12-26 14:24:03 [FINE] [ForgeModLoader] Minecraft validated, launching...
-2013-12-26 14:24:03 [INFO] [ForgeModLoader] Launching wrapped minecraft {net.minecraft.client.main.Main}
-2013-12-26 14:24:04 [INFO] [Minecraft-Client] Setting user: Player8
-2013-12-26 14:24:05 [INFO] [Minecraft-Client] LWJGL Version: 2.9.0
-2013-12-26 14:24:05 [INFO] [Minecraft-Client] Reloading ResourceManager: Default
-2013-12-26 14:24:06 [INFO] [MinecraftForge] Attempting early MinecraftForge initialization
-2013-12-26 14:24:06 [INFO] [STDOUT] MinecraftForge v9.11.1.965 Initialized
-2013-12-26 14:24:06 [INFO] [ForgeModLoader] MinecraftForge v9.11.1.965 Initialized
-2013-12-26 14:24:06 [INFO] [STDOUT] Replaced 111 ore recipies
-2013-12-26 14:24:06 [INFO] [MinecraftForge] Completed early MinecraftForge initialization
-2013-12-26 14:24:06 [INFO] [ForgeModLoader] Reading custom logging properties from C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\config\logging.properties
-2013-12-26 14:24:06 [OFF] [ForgeModLoader] Logging level for ForgeModLoader logging is set to ALL
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Building injected Mod Containers [cpw.mods.fml.common.FMLDummyContainer, net.minecraftforge.common.ForgeDummyContainer]
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Attempting to load mods contained in the minecraft jar file and associated classes
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related directory at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\eclipse\Minecraft\bin, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\ow2\asm\asm-debug-all\4.1\asm-debug-all-4.1.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\minecraft\launchwrapper\1.8\launchwrapper-1.8.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\versions\1.6.4\1.6.4.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\google\guava\guava\14.0\guava-14.0.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar, examining for mod candidates
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Minecraft jar mods loaded successfully
-2013-12-26 14:24:06 [INFO] [ForgeModLoader] Searching C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\mods for mods
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Examining directory bin for potential mods
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] No mcmod.info file found in directory bin
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package assets
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package assets.forge
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package assets.forge.lang
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package assets.netcraft
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package assets.netcraft.textures
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package assets.netcraft.textures.blocks
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package assets.netcraft.textures.items
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package com
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft.block
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft.gui
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft.item
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft.machine
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft.misc
-2013-12-26 14:24:06 [FINE] [ForgeModLoader] Identified an FMLMod type mod com.nitrogenegames.netcraft.Netcraft
-2013-12-26 14:24:06 [FINEST] [netcraft] Parsed dependency info : [] [] []
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.client
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.client.modloader
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.client.registry
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.asm
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.asm.transformers
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.asm.transformers.deobf
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.discovery
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.discovery.asm
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.event
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.functions
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.launcher
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.modloader
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.network
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.patcher
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.registry
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.toposort
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.versioning
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.relauncher
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage.com
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage.com.nothome
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage.com.nothome.delta
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.server
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package ibxm
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net.minecraft
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.block
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.block.material
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.audio
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.entity
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui.achievement
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui.inventory
-2013-12-26 14:24:06 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui.mco
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.main
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.mco
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.model
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.multiplayer
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.particle
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.culling
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.entity
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.texture
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.tileentity
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.resources
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.resources.data
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.settings
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.stats
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.command
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.crash
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.creativetab
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.dispenser
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.enchantment
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.ai
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.ai.attributes
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.boss
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.effect
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.item
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.monster
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.passive
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.player
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.projectile
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.inventory
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.item
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.item.crafting
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.logging
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.nbt
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.network
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.network.packet
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.network.rcon
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.pathfinding
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.potion
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.profiler
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.scoreboard
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.dedicated
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.gui
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.integrated
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.management
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.src
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.stats
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.tileentity
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.util
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.village
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.biome
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.chunk
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.chunk.storage
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.demo
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen.feature
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen.layer
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen.structure
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.storage
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.classloading
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.event
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.event.sound
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.model
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.model.obj
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.model.techne
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.common
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.common.network
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.common.network.packet
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.brewing
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.item
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.living
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.minecart
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.player
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.terraingen
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.world
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.fluids
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.liquids
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.oredict
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.server
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.server.command
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.transformers
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package paulscode
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package paulscode.sound
-2013-12-26 14:24:07 [FINEST] [ForgeModLoader] Recursing into package paulscode.sound.codecs
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file asm-debug-all-4.1.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container asm-debug-all-4.1.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file launchwrapper-1.8.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container launchwrapper-1.8.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file 1.6.4.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container 1.6.4.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file lzma-0.0.1.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container lzma-0.0.1.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file jopt-simple-4.5.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container jopt-simple-4.5.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file codecjorbis-20101023.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container codecjorbis-20101023.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file codecwav-20101023.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container codecwav-20101023.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file libraryjavasound-20101123.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container libraryjavasound-20101123.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file librarylwjglopenal-20100824.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container librarylwjglopenal-20100824.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file soundsystem-20120107.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container soundsystem-20120107.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file argo-2.25_fixed.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container argo-2.25_fixed.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] Examining file bcprov-jdk15on-1.47.jar for potential mods
-2013-12-26 14:24:07 [FINE] [ForgeModLoader] The mod container bcprov-jdk15on-1.47.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Examining file guava-14.0.jar for potential mods
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] The mod container guava-14.0.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Examining file commons-lang3-3.1.jar for potential mods
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] The mod container commons-lang3-3.1.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Examining file commons-io-2.4.jar for potential mods
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] The mod container commons-io-2.4.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Examining file jutils-1.0.0.jar for potential mods
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] The mod container jutils-1.0.0.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Examining file gson-2.2.2.jar for potential mods
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] The mod container gson-2.2.2.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Examining file jinput-2.0.5.jar for potential mods
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] The mod container jinput-2.0.5.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Examining file lwjgl-2.9.0.jar for potential mods
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] The mod container lwjgl-2.9.0.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Examining file lwjgl_util-2.9.0.jar for potential mods
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] The mod container lwjgl_util-2.9.0.jar appears to be missing an mcmod.info file
-2013-12-26 14:24:08 [INFO] [ForgeModLoader] Forge Mod Loader has identified 4 mods to load
-2013-12-26 14:24:08 [FINER] [ForgeModLoader] Received a system property request ''
-2013-12-26 14:24:08 [FINER] [ForgeModLoader] System property request managing the state of 0 mods
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] After merging, found state information for 0 mods
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Reloading logging properties from C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\config\logging.properties
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Reloaded logging properties
-2013-12-26 14:24:08 [FINE] [mcp] Mod Logging channel mcp configured at default level.
-2013-12-26 14:24:08 [INFO] [mcp] Activating mod mcp
-2013-12-26 14:24:08 [FINE] [FML] Mod Logging channel FML configured at default level.
-2013-12-26 14:24:08 [INFO] [FML] Activating mod FML
-2013-12-26 14:24:08 [FINE] [Forge] Mod Logging channel Forge configured at default level.
-2013-12-26 14:24:08 [INFO] [Forge] Activating mod Forge
-2013-12-26 14:24:08 [FINE] [netcraft] Enabling mod netcraft
-2013-12-26 14:24:08 [FINE] [netcraft] Mod Logging channel netcraft configured at default level.
-2013-12-26 14:24:08 [INFO] [netcraft] Activating mod netcraft
-2013-12-26 14:24:08 [WARNING] [Forge Mod Loader] Mod Forge Mod Loader is missing a pack.mcmeta file, things may not work well
-2013-12-26 14:24:08 [WARNING] [Minecraft Forge] Mod Minecraft Forge is missing a pack.mcmeta file, things may not work well
-2013-12-26 14:24:08 [WARNING] [Netcraft] Mod Netcraft is missing a pack.mcmeta file, things may not work well
-2013-12-26 14:24:08 [INFO] [Minecraft-Client] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft
-2013-12-26 14:24:08 [FINER] [ForgeModLoader] Verifying mod requirements are satisfied
-2013-12-26 14:24:08 [FINER] [ForgeModLoader] All mod requirements are satisfied
-2013-12-26 14:24:08 [FINER] [ForgeModLoader] Sorting mods into an ordered list
-2013-12-26 14:24:08 [FINER] [ForgeModLoader] Mod sorting completed successfully
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Mod sorting data
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] 	netcraft(Netcraft:Reloaded 0.0.1): bin ()
-2013-12-26 14:24:08 [FINEST] [mcp] Sending event FMLConstructionEvent to mod mcp
-2013-12-26 14:24:08 [FINEST] [mcp] Sent event FMLConstructionEvent to mod mcp
-2013-12-26 14:24:08 [FINEST] [FML] Sending event FMLConstructionEvent to mod FML
-2013-12-26 14:24:08 [FINEST] [FML] Sent event FMLConstructionEvent to mod FML
-2013-12-26 14:24:08 [FINEST] [Forge] Sending event FMLConstructionEvent to mod Forge
-2013-12-26 14:24:08 [INFO] [ForgeModLoader] Registering Forge Packet Handler
-2013-12-26 14:24:08 [FINEST] [ForgeModLoader] Testing mod Forge to verify it accepts its own version in a remote connection
-2013-12-26 14:24:08 [FINEST] [ForgeModLoader] The mod Forge accepts its own version (9.11.1.965)
-2013-12-26 14:24:08 [INFO] [ForgeModLoader] Succeeded registering Forge Packet Handler
-2013-12-26 14:24:08 [FINEST] [Forge] Sent event FMLConstructionEvent to mod Forge
-2013-12-26 14:24:08 [FINEST] [netcraft] Sending event FMLConstructionEvent to mod netcraft
-2013-12-26 14:24:08 [FINEST] [ForgeModLoader] Testing mod netcraft to verify it accepts its own version in a remote connection
-2013-12-26 14:24:08 [FINEST] [ForgeModLoader] The mod netcraft accepts its own version (Reloaded 0.0.1)
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into netcraft
-2013-12-26 14:24:08 [FINEST] [netcraft] Sent event FMLConstructionEvent to mod netcraft
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] Mod signature data
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] 	mcp(Minecraft Coder Pack:8.09): minecraft.jar (NO VALID CERTIFICATE FOUND)
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] 	FML(Forge Mod Loader:6.4.49.965): bin (NO VALID CERTIFICATE FOUND)
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] 	Forge(Minecraft Forge:9.11.1.965): bin (NO VALID CERTIFICATE FOUND)
-2013-12-26 14:24:08 [FINE] [ForgeModLoader] 	netcraft(Netcraft:Reloaded 0.0.1): bin (NO VALID CERTIFICATE FOUND)
-2013-12-26 14:24:08 [FINEST] [mcp] Sending event FMLPreInitializationEvent to mod mcp
-2013-12-26 14:24:08 [FINEST] [mcp] Sent event FMLPreInitializationEvent to mod mcp
-2013-12-26 14:24:08 [FINEST] [FML] Sending event FMLPreInitializationEvent to mod FML
-2013-12-26 14:24:08 [FINEST] [FML] Sent event FMLPreInitializationEvent to mod FML
-2013-12-26 14:24:08 [FINEST] [Forge] Sending event FMLPreInitializationEvent to mod Forge
-2013-12-26 14:24:08 [INFO] [ForgeModLoader] Configured a dormant chunk cache size of 0
-2013-12-26 14:24:08 [FINEST] [Forge] Sent event FMLPreInitializationEvent to mod Forge
-2013-12-26 14:24:08 [FINEST] [netcraft] Sending event FMLPreInitializationEvent to mod netcraft
-2013-12-26 14:24:08 [FINEST] [netcraft] Sent event FMLPreInitializationEvent to mod netcraft
-2013-12-26 14:24:08 [FINEST] [mcp] Sending event FMLInitializationEvent to mod mcp
-2013-12-26 14:24:08 [FINEST] [mcp] Sent event FMLInitializationEvent to mod mcp
-2013-12-26 14:24:08 [FINEST] [FML] Sending event FMLInitializationEvent to mod FML
-2013-12-26 14:24:08 [FINEST] [FML] Sent event FMLInitializationEvent to mod FML
-2013-12-26 14:24:08 [FINEST] [Forge] Sending event FMLInitializationEvent to mod Forge
-2013-12-26 14:24:08 [FINEST] [Forge] Sent event FMLInitializationEvent to mod Forge
-2013-12-26 14:24:08 [FINEST] [netcraft] Sending event FMLInitializationEvent to mod netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCoil(4069) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCoil(4070) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4072) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4075) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4076) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4082) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModuleBase(4090) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4087) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4088) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4089) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4091) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4092) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4093) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4094) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4096) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4097) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemUpgrade(4083) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemUpgrade(4084) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemUpgrade(4085) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemUpgrade(4086) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemUpgrade(4098) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4099) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4100) owned by netcraft
-2013-12-26 14:24:08 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4101) owned by netcraft
-2013-12-26 14:24:09 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4102) owned by netcraft
-2013-12-26 14:24:09 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3815) owned by netcraft
-2013-12-26 14:24:09 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3817) owned by netcraft
-2013-12-26 14:24:09 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3821) owned by netcraft
-2013-12-26 14:24:09 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3823) owned by netcraft
-2013-12-26 14:24:09 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3825) owned by netcraft
-2013-12-26 14:24:09 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3839) owned by netcraft
-2013-12-26 14:24:09 [FINEST] [netcraft] Sent event FMLInitializationEvent to mod netcraft
-2013-12-26 14:24:09 [FINEST] [ForgeModLoader] Attempting to deliver 0 IMC messages to mod mcp
-2013-12-26 14:24:09 [FINEST] [mcp] Sending event IMCEvent to mod mcp
-2013-12-26 14:24:09 [FINEST] [mcp] Sent event IMCEvent to mod mcp
-2013-12-26 14:24:09 [FINEST] [ForgeModLoader] Attempting to deliver 0 IMC messages to mod FML
-2013-12-26 14:24:09 [FINEST] [FML] Sending event IMCEvent to mod FML
-2013-12-26 14:24:09 [FINEST] [FML] Sent event IMCEvent to mod FML
-2013-12-26 14:24:09 [FINEST] [ForgeModLoader] Attempting to deliver 0 IMC messages to mod Forge
-2013-12-26 14:24:09 [FINEST] [Forge] Sending event IMCEvent to mod Forge
-2013-12-26 14:24:09 [FINEST] [Forge] Sent event IMCEvent to mod Forge
-2013-12-26 14:24:09 [FINEST] [ForgeModLoader] Attempting to deliver 0 IMC messages to mod netcraft
-2013-12-26 14:24:09 [FINEST] [netcraft] Sending event IMCEvent to mod netcraft
-2013-12-26 14:24:09 [FINEST] [netcraft] Sent event IMCEvent to mod netcraft
-2013-12-26 14:24:09 [FINEST] [mcp] Sending event FMLPostInitializationEvent to mod mcp
-2013-12-26 14:24:09 [FINEST] [mcp] Sent event FMLPostInitializationEvent to mod mcp
-2013-12-26 14:24:09 [FINEST] [FML] Sending event FMLPostInitializationEvent to mod FML
-2013-12-26 14:24:09 [FINEST] [FML] Sent event FMLPostInitializationEvent to mod FML
-2013-12-26 14:24:09 [FINEST] [Forge] Sending event FMLPostInitializationEvent to mod Forge
-2013-12-26 14:24:09 [FINEST] [Forge] Sent event FMLPostInitializationEvent to mod Forge
-2013-12-26 14:24:09 [FINEST] [netcraft] Sending event FMLPostInitializationEvent to mod netcraft
-2013-12-26 14:24:09 [FINEST] [netcraft] Sent event FMLPostInitializationEvent to mod netcraft
-2013-12-26 14:24:09 [FINEST] [mcp] Sending event FMLLoadCompleteEvent to mod mcp
-2013-12-26 14:24:09 [FINEST] [mcp] Sent event FMLLoadCompleteEvent to mod mcp
-2013-12-26 14:24:09 [FINEST] [FML] Sending event FMLLoadCompleteEvent to mod FML
-2013-12-26 14:24:09 [FINEST] [FML] Sent event FMLLoadCompleteEvent to mod FML
-2013-12-26 14:24:09 [FINEST] [Forge] Sending event FMLLoadCompleteEvent to mod Forge
-2013-12-26 14:24:09 [FINEST] [Forge] Sent event FMLLoadCompleteEvent to mod Forge
-2013-12-26 14:24:09 [FINEST] [netcraft] Sending event FMLLoadCompleteEvent to mod netcraft
-2013-12-26 14:24:09 [FINEST] [netcraft] Sent event FMLLoadCompleteEvent to mod netcraft
-2013-12-26 14:24:09 [INFO] [ForgeModLoader] Forge Mod Loader has successfully loaded 4 mods
-2013-12-26 14:24:09 [WARNING] [Forge Mod Loader] Mod Forge Mod Loader is missing a pack.mcmeta file, things may not work well
-2013-12-26 14:24:09 [WARNING] [Minecraft Forge] Mod Minecraft Forge is missing a pack.mcmeta file, things may not work well
-2013-12-26 14:24:09 [WARNING] [Netcraft] Mod Netcraft is missing a pack.mcmeta file, things may not work well
-2013-12-26 14:24:09 [INFO] [Minecraft-Client] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
-2013-12-26 14:24:09 [INFO] [STDOUT] tile.matrixcube
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
-2013-12-26 14:24:09 [INFO] [STDOUT] 
-2013-12-26 14:24:09 [INFO] [STDOUT] Starting up SoundSystem...
-2013-12-26 14:24:09 [INFO] [STDOUT] Initializing LWJGL OpenAL
-2013-12-26 14:24:09 [INFO] [STDOUT]     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-2013-12-26 14:24:09 [INFO] [STDOUT] OpenAL initialized.
-2013-12-26 14:24:09 [SEVERE] [Minecraft-Client] Realms: Invalid session id
-2013-12-26 14:24:09 [INFO] [STDOUT] 
-2013-12-26 14:24:11 [INFO] [Minecraft-Server] Starting integrated minecraft server version 1.6.4
-2013-12-26 14:24:11 [INFO] [Minecraft-Server] Generating keypair
-2013-12-26 14:24:12 [FINEST] [mcp] Sending event FMLServerAboutToStartEvent to mod mcp
-2013-12-26 14:24:12 [FINEST] [mcp] Sent event FMLServerAboutToStartEvent to mod mcp
-2013-12-26 14:24:12 [FINEST] [FML] Sending event FMLServerAboutToStartEvent to mod FML
-2013-12-26 14:24:12 [FINEST] [FML] Sent event FMLServerAboutToStartEvent to mod FML
-2013-12-26 14:24:12 [FINEST] [Forge] Sending event FMLServerAboutToStartEvent to mod Forge
-2013-12-26 14:24:12 [FINEST] [Forge] Sent event FMLServerAboutToStartEvent to mod Forge
-2013-12-26 14:24:12 [FINEST] [netcraft] Sending event FMLServerAboutToStartEvent to mod netcraft
-2013-12-26 14:24:12 [FINEST] [netcraft] Sent event FMLServerAboutToStartEvent to mod netcraft
-2013-12-26 14:24:12 [FINE] [fml.ItemTracker] The difference set is equal
-2013-12-26 14:24:12 [INFO] [ForgeModLoader] Loading dimension 0 (Test World) (net.minecraft.server.integrated.IntegratedServer@11cc8555)
-2013-12-26 14:24:12 [INFO] [ForgeModLoader] Loading dimension 1 (Test World) (net.minecraft.server.integrated.IntegratedServer@11cc8555)
-2013-12-26 14:24:12 [INFO] [ForgeModLoader] Loading dimension -1 (Test World) (net.minecraft.server.integrated.IntegratedServer@11cc8555)
-2013-12-26 14:24:12 [INFO] [Minecraft-Server] Preparing start region for level 0
-2013-12-26 14:24:12 [FINEST] [mcp] Sending event FMLServerStartingEvent to mod mcp
-2013-12-26 14:24:12 [FINEST] [mcp] Sent event FMLServerStartingEvent to mod mcp
-2013-12-26 14:24:12 [FINEST] [FML] Sending event FMLServerStartingEvent to mod FML
-2013-12-26 14:24:12 [FINEST] [FML] Sent event FMLServerStartingEvent to mod FML
-2013-12-26 14:24:12 [FINEST] [Forge] Sending event FMLServerStartingEvent to mod Forge
-2013-12-26 14:24:12 [FINEST] [Forge] Sent event FMLServerStartingEvent to mod Forge
-2013-12-26 14:24:12 [FINEST] [netcraft] Sending event FMLServerStartingEvent to mod netcraft
-2013-12-26 14:24:12 [FINEST] [netcraft] Sent event FMLServerStartingEvent to mod netcraft
-2013-12-26 14:24:12 [FINEST] [mcp] Sending event FMLServerStartedEvent to mod mcp
-2013-12-26 14:24:12 [FINEST] [mcp] Sent event FMLServerStartedEvent to mod mcp
-2013-12-26 14:24:12 [FINEST] [FML] Sending event FMLServerStartedEvent to mod FML
-2013-12-26 14:24:12 [FINEST] [FML] Sent event FMLServerStartedEvent to mod FML
-2013-12-26 14:24:12 [FINEST] [Forge] Sending event FMLServerStartedEvent to mod Forge
-2013-12-26 14:24:12 [FINEST] [Forge] Sent event FMLServerStartedEvent to mod Forge
-2013-12-26 14:24:12 [FINEST] [netcraft] Sending event FMLServerStartedEvent to mod netcraft
-2013-12-26 14:24:12 [FINEST] [netcraft] Sent event FMLServerStartedEvent to mod netcraft
-2013-12-26 14:24:13 [INFO] [STDOUT] loading single player
-2013-12-26 14:24:13 [INFO] [Minecraft-Server] Player8[/127.0.0.1:0] logged in with entity id 190 at (242.97603071212123, 64.0, 253.31052405738592)
-2013-12-26 14:24:13 [INFO] [Minecraft-Server] Player8 joined the game
-2013-12-26 14:24:13 [INFO] [STDOUT] Setting up custom skins
-2013-12-26 14:24:13 [INFO] [Minecraft-Server] Saving and pausing game...
-2013-12-26 14:24:13 [INFO] [Minecraft-Server] Saving chunks for level 'Test World'/Overworld
-2013-12-26 14:24:14 [INFO] [Minecraft-Server] Saving chunks for level 'Test World'/Nether
-2013-12-26 14:24:14 [INFO] [Minecraft-Server] Saving chunks for level 'Test World'/The End
-2013-12-26 14:24:17 [INFO] [STDERR] net.minecraft.util.ReportedException: Ticking memory connection
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
-2013-12-26 14:24:17 [INFO] [STDERR] Caused by: java.lang.NullPointerException
-2013-12-26 14:24:17 [INFO] [STDERR] 	at com.nitrogenegames.netcraft.block.BlockCore.onBlockAdded(BlockCore.java:76)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.world.chunk.Chunk.setBlockIDWithMetadata(Chunk.java:758)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.world.World.setBlock(World.java:559)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:241)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:119)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
-2013-12-26 14:24:17 [INFO] [STDERR] 	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
-2013-12-26 14:24:17 [INFO] [STDERR] 	... 6 more
-2013-12-26 14:24:17 [SEVERE] [Minecraft-Server] Encountered an unexpected exception ReportedException
-net.minecraft.util.ReportedException: Ticking memory connection
-	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
-	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
-	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
-	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
-	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
-	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
-	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
-Caused by: java.lang.NullPointerException
-	at com.nitrogenegames.netcraft.block.BlockCore.onBlockAdded(BlockCore.java:76)
-	at net.minecraft.world.chunk.Chunk.setBlockIDWithMetadata(Chunk.java:758)
-	at net.minecraft.world.World.setBlock(World.java:559)
-	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:241)
-	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:119)
-	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
-	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
-	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
-	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
-	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
-	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
-	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
-	... 6 more
-2013-12-26 14:24:17 [SEVERE] [Minecraft-Server] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2013-12-26_14.24.17-server.txt
-2013-12-26 14:24:17 [INFO] [Minecraft-Server] Stopping server
-2013-12-26 14:24:17 [INFO] [Minecraft-Server] Saving players
-2013-12-26 14:24:17 [INFO] [Minecraft-Server] Player8 left the game
-2013-12-26 14:24:17 [INFO] [STDOUT] ---- Minecraft Crash Report ----
-2013-12-26 14:24:17 [INFO] [STDOUT] // You're mean.
-2013-12-26 14:24:17 [INFO] [STDOUT] 
-2013-12-26 14:24:17 [INFO] [STDOUT] Time: 12/26/13 2:24 PM
-2013-12-26 14:24:17 [INFO] [STDOUT] Description: Ticking memory connection
-2013-12-26 14:24:17 [INFO] [STDOUT] 
-2013-12-26 14:24:17 [INFO] [STDOUT] java.lang.NullPointerException
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at com.nitrogenegames.netcraft.block.BlockCore.onBlockAdded(BlockCore.java:76)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.world.chunk.Chunk.setBlockIDWithMetadata(Chunk.java:758)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.world.World.setBlock(World.java:559)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:241)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:119)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
-2013-12-26 14:24:17 [INFO] [STDOUT] 
-2013-12-26 14:24:17 [INFO] [STDOUT] 
-2013-12-26 14:24:17 [INFO] [STDOUT] A detailed walkthrough of the error, its code path and all known details is as follows:
-2013-12-26 14:24:17 [INFO] [STDOUT] ---------------------------------------------------------------------------------------
-2013-12-26 14:24:17 [INFO] [STDOUT] 
-2013-12-26 14:24:17 [INFO] [STDOUT] -- Head --
-2013-12-26 14:24:17 [INFO] [STDOUT] Stacktrace:
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at com.nitrogenegames.netcraft.block.BlockCore.onBlockAdded(BlockCore.java:76)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.world.chunk.Chunk.setBlockIDWithMetadata(Chunk.java:758)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.world.World.setBlock(World.java:559)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:241)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:119)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
-2013-12-26 14:24:17 [INFO] [STDOUT] 
-2013-12-26 14:24:17 [INFO] [STDOUT] -- Ticking connection --
-2013-12-26 14:24:17 [INFO] [STDOUT] Details:
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Connection: net.minecraft.network.NetServerHandler@24cab5b6
-2013-12-26 14:24:17 [INFO] [STDOUT] Stacktrace:
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
-2013-12-26 14:24:17 [INFO] [STDOUT] 
-2013-12-26 14:24:17 [INFO] [STDOUT] -- System Details --
-2013-12-26 14:24:17 [INFO] [STDOUT] Details:
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Minecraft Version: 1.6.4
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Operating System: Windows 7 (amd64) version 6.1
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Java Version: 1.7.0_45, Oracle Corporation
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Memory: 853537344 bytes (813 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
-2013-12-26 14:24:17 [INFO] [STDOUT] 	AABB Pool Size: 3320 (185920 bytes; 0 MB) allocated, 2550 (142800 bytes; 0 MB) used
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Suspicious classes: FML and Forge are installed
-2013-12-26 14:24:17 [INFO] [STDOUT] 	IntCache: cache: 0, tcache: 0, allocated: 3, tallocated: 63
-2013-12-26 14:24:17 [INFO] [STDOUT] 	FML: MCP v8.11 FML v6.4.49.965 Minecraft Forge 9.11.1.965 4 mods loaded, 4 mods active
-2013-12-26 14:24:17 [INFO] [STDOUT] 	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
-2013-12-26 14:24:17 [INFO] [STDOUT] 	FML{6.4.49.965} [Forge Mod Loader] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Forge{9.11.1.965} [Minecraft Forge] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
-2013-12-26 14:24:17 [INFO] [STDOUT] 	netcraft{Reloaded 0.0.1} [Netcraft] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Profiler Position: N/A (disabled)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Vec3 Pool Size: 1076 (60256 bytes; 0 MB) allocated, 1042 (58352 bytes; 0 MB) used
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Player Count: 1 / 8; [EntityPlayerMP['Player8'/190, l='Test World', x=242.98, y=64.00, z=253.31]]
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Type: Integrated Server (map_client.txt)
-2013-12-26 14:24:17 [INFO] [STDOUT] 	Is Modded: Definitely; Client brand changed to 'fml,forge'
-2013-12-26 14:24:17 [INFO] [STDOUT] #@!@# Game crashed! Crash report saved to: #@!@# .\crash-reports\crash-2013-12-26_14.24.17-server.txt
-2013-12-26 14:24:17 [INFO] [Minecraft-Server] Saving worlds
-2013-12-26 14:24:17 [INFO] [Minecraft-Server] Saving chunks for level 'Test World'/Overworld
-2013-12-26 14:24:17 [INFO] [Minecraft-Server] Stopping server
-2013-12-26 14:24:17 [INFO] [Minecraft-Server] Saving players
-2013-12-26 14:24:17 [INFO] [Minecraft-Server] Saving worlds
-2013-12-26 14:24:17 [INFO] [Minecraft-Server] Saving chunks for level 'Test World'/Overworld
+2013-12-26 16:53:27 [INFO] [ForgeModLoader] Forge Mod Loader version 6.4.49.965 for Minecraft 1.6.4 loading
+2013-12-26 16:53:27 [INFO] [ForgeModLoader] Java is Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_45, running on Windows 7:amd64:6.1, installed at C:\Program Files\Java\jre7
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Java classpath at launch is C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\eclipse\Minecraft\bin;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\ow2\asm\asm-debug-all\4.1\asm-debug-all-4.1.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\minecraft\launchwrapper\1.8\launchwrapper-1.8.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\versions\1.6.4\1.6.4.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\google\guava\guava\14.0\guava-14.0.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar;C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Java library path at launch is C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\versions\1.6.4\1.6.4-natives
+2013-12-26 16:53:27 [INFO] [ForgeModLoader] Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Instantiating coremod class FMLCorePlugin
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Enqueued coremod FMLCorePlugin
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Instantiating coremod class FMLForgePlugin
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Enqueued coremod FMLForgePlugin
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] All fundamental core mods are successfully located
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Discovering coremods
+2013-12-26 16:53:27 [INFO] [ForgeModLoader] Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+2013-12-26 16:53:27 [INFO] [ForgeModLoader] Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
+2013-12-26 16:53:27 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+2013-12-26 16:53:27 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+2013-12-26 16:53:27 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Injecting coremod FMLCorePlugin {cpw.mods.fml.relauncher.FMLCorePlugin} class transformers
+2013-12-26 16:53:27 [FINEST] [ForgeModLoader] Registering transformer cpw.mods.fml.common.asm.transformers.AccessTransformer
+2013-12-26 16:53:27 [INFO] [STDOUT] Loaded 40 rules from AccessTransformer config file fml_at.cfg
+2013-12-26 16:53:27 [FINEST] [ForgeModLoader] Registering transformer cpw.mods.fml.common.asm.transformers.MarkerTransformer
+2013-12-26 16:53:27 [FINEST] [ForgeModLoader] Registering transformer cpw.mods.fml.common.asm.transformers.SideTransformer
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Injection complete
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Running coremod plugin for FMLCorePlugin {cpw.mods.fml.relauncher.FMLCorePlugin}
+2013-12-26 16:53:27 [FINE] [ForgeModLoader] Running coremod plugin FMLCorePlugin
+2013-12-26 16:53:27 [SEVERE] [ForgeModLoader] The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+2013-12-26 16:53:28 [FINE] [ForgeModLoader] Coremod plugin class FMLCorePlugin run successfully
+2013-12-26 16:53:28 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+2013-12-26 16:53:28 [FINE] [ForgeModLoader] Injecting coremod FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin} class transformers
+2013-12-26 16:53:28 [FINEST] [ForgeModLoader] Registering transformer net.minecraftforge.transformers.ForgeAccessTransformer
+2013-12-26 16:53:28 [INFO] [STDOUT] Loaded 110 rules from AccessTransformer config file forge_at.cfg
+2013-12-26 16:53:28 [FINEST] [ForgeModLoader] Registering transformer net.minecraftforge.transformers.EventTransformer
+2013-12-26 16:53:28 [FINE] [ForgeModLoader] Injection complete
+2013-12-26 16:53:28 [FINE] [ForgeModLoader] Running coremod plugin for FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin}
+2013-12-26 16:53:28 [FINE] [ForgeModLoader] Running coremod plugin FMLForgePlugin
+2013-12-26 16:53:28 [FINE] [ForgeModLoader] Coremod plugin class FMLForgePlugin run successfully
+2013-12-26 16:53:28 [INFO] [ForgeModLoader] Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
+2013-12-26 16:53:28 [FINE] [ForgeModLoader] Validating minecraft
+2013-12-26 16:53:28 [FINE] [ForgeModLoader] Minecraft validated, launching...
+2013-12-26 16:53:28 [INFO] [ForgeModLoader] Launching wrapped minecraft {net.minecraft.client.main.Main}
+2013-12-26 16:53:29 [INFO] [Minecraft-Client] Setting user: Player735
+2013-12-26 16:53:29 [INFO] [Minecraft-Client] LWJGL Version: 2.9.0
+2013-12-26 16:53:30 [INFO] [Minecraft-Client] Reloading ResourceManager: Default
+2013-12-26 16:53:31 [INFO] [MinecraftForge] Attempting early MinecraftForge initialization
+2013-12-26 16:53:31 [INFO] [STDOUT] MinecraftForge v9.11.1.965 Initialized
+2013-12-26 16:53:31 [INFO] [ForgeModLoader] MinecraftForge v9.11.1.965 Initialized
+2013-12-26 16:53:31 [INFO] [STDOUT] Replaced 111 ore recipies
+2013-12-26 16:53:31 [INFO] [MinecraftForge] Completed early MinecraftForge initialization
+2013-12-26 16:53:31 [INFO] [ForgeModLoader] Reading custom logging properties from C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\config\logging.properties
+2013-12-26 16:53:31 [OFF] [ForgeModLoader] Logging level for ForgeModLoader logging is set to ALL
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Building injected Mod Containers [cpw.mods.fml.common.FMLDummyContainer, net.minecraftforge.common.ForgeDummyContainer]
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Attempting to load mods contained in the minecraft jar file and associated classes
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related directory at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\eclipse\Minecraft\bin, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\ow2\asm\asm-debug-all\4.1\asm-debug-all-4.1.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\minecraft\launchwrapper\1.8\launchwrapper-1.8.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\versions\1.6.4\1.6.4.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\sf\jopt-simple\jopt-simple\4.5\jopt-simple-4.5.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\codecjorbis\20101023\codecjorbis-20101023.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\codecwav\20101023\codecwav-20101023.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\libraryjavasound\20101123\libraryjavasound-20101123.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\librarylwjglopenal\20100824\librarylwjglopenal-20100824.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\paulscode\soundsystem\20120107\soundsystem-20120107.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\argo\argo\2.25_fixed\argo-2.25_fixed.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\bouncycastle\bcprov-jdk15on\1.47\bcprov-jdk15on-1.47.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\google\guava\guava\14.0\guava-14.0.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\apache\commons\commons-lang3\3.1\commons-lang3-3.1.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\commons-io\commons-io\2.4\commons-io-2.4.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\java\jutils\jutils\1.0.0\jutils-1.0.0.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\com\google\code\gson\gson\2.2.2\gson-2.2.2.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\net\java\jinput\jinput\2.0.5\jinput-2.0.5.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\lwjgl\lwjgl\lwjgl\2.9.0\lwjgl-2.9.0.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Found a minecraft related file at C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\libraries\org\lwjgl\lwjgl\lwjgl_util\2.9.0\lwjgl_util-2.9.0.jar, examining for mod candidates
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Minecraft jar mods loaded successfully
+2013-12-26 16:53:31 [INFO] [ForgeModLoader] Searching C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\mods for mods
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Examining directory bin for potential mods
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] No mcmod.info file found in directory bin
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package assets
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package assets.forge
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package assets.forge.lang
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package assets.netcraft
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package assets.netcraft.textures
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package assets.netcraft.textures.blocks
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package assets.netcraft.textures.gui
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package assets.netcraft.textures.items
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package com
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft.block
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft.gui
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft.item
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft.machine
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package com.nitrogenegames.netcraft.misc
+2013-12-26 16:53:31 [FINE] [ForgeModLoader] Identified an FMLMod type mod com.nitrogenegames.netcraft.Netcraft
+2013-12-26 16:53:31 [FINEST] [netcraft] Parsed dependency info : [] [] []
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.client
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.client.modloader
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.client.registry
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.asm
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.asm.transformers
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.asm.transformers.deobf
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.discovery
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.discovery.asm
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.event
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.functions
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.launcher
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.modloader
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.network
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.patcher
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.registry
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.toposort
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.common.versioning
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.relauncher
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage.com
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage.com.nothome
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.repackage.com.nothome.delta
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package cpw.mods.fml.server
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package ibxm
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.block
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.block.material
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.audio
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.entity
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui.achievement
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui.inventory
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.gui.mco
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.main
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.mco
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.model
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.multiplayer
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.particle
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.culling
+2013-12-26 16:53:31 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.entity
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.texture
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.renderer.tileentity
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.resources
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.resources.data
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.settings
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.client.stats
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.command
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.crash
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.creativetab
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.dispenser
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.enchantment
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.ai
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.ai.attributes
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.boss
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.effect
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.item
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.monster
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.passive
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.player
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.entity.projectile
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.inventory
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.item
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.item.crafting
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.logging
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.nbt
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.network
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.network.packet
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.network.rcon
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.pathfinding
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.potion
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.profiler
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.scoreboard
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.dedicated
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.gui
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.integrated
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.server.management
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.src
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.stats
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.tileentity
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.util
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.village
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.biome
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.chunk
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.chunk.storage
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.demo
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen.feature
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen.layer
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.gen.structure
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraft.world.storage
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.classloading
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.event
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.event.sound
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.model
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.model.obj
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.client.model.techne
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.common
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.common.network
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.common.network.packet
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.brewing
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.item
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.living
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.minecart
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.entity.player
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.terraingen
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.event.world
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.fluids
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.liquids
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.oredict
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.server
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.server.command
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package net.minecraftforge.transformers
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package paulscode
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package paulscode.sound
+2013-12-26 16:53:32 [FINEST] [ForgeModLoader] Recursing into package paulscode.sound.codecs
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file asm-debug-all-4.1.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container asm-debug-all-4.1.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file launchwrapper-1.8.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container launchwrapper-1.8.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file 1.6.4.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container 1.6.4.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file lzma-0.0.1.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container lzma-0.0.1.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file jopt-simple-4.5.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container jopt-simple-4.5.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file codecjorbis-20101023.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container codecjorbis-20101023.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file codecwav-20101023.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container codecwav-20101023.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file libraryjavasound-20101123.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container libraryjavasound-20101123.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file librarylwjglopenal-20100824.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container librarylwjglopenal-20100824.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file soundsystem-20120107.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container soundsystem-20120107.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file argo-2.25_fixed.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container argo-2.25_fixed.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file bcprov-jdk15on-1.47.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container bcprov-jdk15on-1.47.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] Examining file guava-14.0.jar for potential mods
+2013-12-26 16:53:32 [FINE] [ForgeModLoader] The mod container guava-14.0.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Examining file commons-lang3-3.1.jar for potential mods
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] The mod container commons-lang3-3.1.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Examining file commons-io-2.4.jar for potential mods
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] The mod container commons-io-2.4.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Examining file jutils-1.0.0.jar for potential mods
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] The mod container jutils-1.0.0.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Examining file gson-2.2.2.jar for potential mods
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] The mod container gson-2.2.2.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Examining file jinput-2.0.5.jar for potential mods
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] The mod container jinput-2.0.5.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Examining file lwjgl-2.9.0.jar for potential mods
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] The mod container lwjgl-2.9.0.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Examining file lwjgl_util-2.9.0.jar for potential mods
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] The mod container lwjgl_util-2.9.0.jar appears to be missing an mcmod.info file
+2013-12-26 16:53:33 [INFO] [ForgeModLoader] Forge Mod Loader has identified 4 mods to load
+2013-12-26 16:53:33 [FINER] [ForgeModLoader] Received a system property request ''
+2013-12-26 16:53:33 [FINER] [ForgeModLoader] System property request managing the state of 0 mods
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] After merging, found state information for 0 mods
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Reloading logging properties from C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\config\logging.properties
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Reloaded logging properties
+2013-12-26 16:53:33 [FINE] [mcp] Mod Logging channel mcp configured at default level.
+2013-12-26 16:53:33 [INFO] [mcp] Activating mod mcp
+2013-12-26 16:53:33 [FINE] [FML] Mod Logging channel FML configured at default level.
+2013-12-26 16:53:33 [INFO] [FML] Activating mod FML
+2013-12-26 16:53:33 [FINE] [Forge] Mod Logging channel Forge configured at default level.
+2013-12-26 16:53:33 [INFO] [Forge] Activating mod Forge
+2013-12-26 16:53:33 [FINE] [netcraft] Enabling mod netcraft
+2013-12-26 16:53:33 [FINE] [netcraft] Mod Logging channel netcraft configured at default level.
+2013-12-26 16:53:33 [INFO] [netcraft] Activating mod netcraft
+2013-12-26 16:53:33 [WARNING] [Forge Mod Loader] Mod Forge Mod Loader is missing a pack.mcmeta file, things may not work well
+2013-12-26 16:53:33 [WARNING] [Minecraft Forge] Mod Minecraft Forge is missing a pack.mcmeta file, things may not work well
+2013-12-26 16:53:33 [WARNING] [Netcraft] Mod Netcraft is missing a pack.mcmeta file, things may not work well
+2013-12-26 16:53:33 [INFO] [Minecraft-Client] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft
+2013-12-26 16:53:33 [FINER] [ForgeModLoader] Verifying mod requirements are satisfied
+2013-12-26 16:53:33 [FINER] [ForgeModLoader] All mod requirements are satisfied
+2013-12-26 16:53:33 [FINER] [ForgeModLoader] Sorting mods into an ordered list
+2013-12-26 16:53:33 [FINER] [ForgeModLoader] Mod sorting completed successfully
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Mod sorting data
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] 	netcraft(Netcraft:Reloaded 0.0.1): bin ()
+2013-12-26 16:53:33 [FINEST] [mcp] Sending event FMLConstructionEvent to mod mcp
+2013-12-26 16:53:33 [FINEST] [mcp] Sent event FMLConstructionEvent to mod mcp
+2013-12-26 16:53:33 [FINEST] [FML] Sending event FMLConstructionEvent to mod FML
+2013-12-26 16:53:33 [FINEST] [FML] Sent event FMLConstructionEvent to mod FML
+2013-12-26 16:53:33 [FINEST] [Forge] Sending event FMLConstructionEvent to mod Forge
+2013-12-26 16:53:33 [INFO] [ForgeModLoader] Registering Forge Packet Handler
+2013-12-26 16:53:33 [FINEST] [ForgeModLoader] Testing mod Forge to verify it accepts its own version in a remote connection
+2013-12-26 16:53:33 [FINEST] [ForgeModLoader] The mod Forge accepts its own version (9.11.1.965)
+2013-12-26 16:53:33 [INFO] [ForgeModLoader] Succeeded registering Forge Packet Handler
+2013-12-26 16:53:33 [FINEST] [Forge] Sent event FMLConstructionEvent to mod Forge
+2013-12-26 16:53:33 [FINEST] [netcraft] Sending event FMLConstructionEvent to mod netcraft
+2013-12-26 16:53:33 [FINEST] [ForgeModLoader] Testing mod netcraft to verify it accepts its own version in a remote connection
+2013-12-26 16:53:33 [FINEST] [ForgeModLoader] The mod netcraft accepts its own version (Reloaded 0.0.1)
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Attempting to inject @SidedProxy classes into netcraft
+2013-12-26 16:53:33 [FINEST] [netcraft] Sent event FMLConstructionEvent to mod netcraft
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] Mod signature data
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] 	mcp(Minecraft Coder Pack:8.09): minecraft.jar (NO VALID CERTIFICATE FOUND)
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] 	FML(Forge Mod Loader:6.4.49.965): bin (NO VALID CERTIFICATE FOUND)
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] 	Forge(Minecraft Forge:9.11.1.965): bin (NO VALID CERTIFICATE FOUND)
+2013-12-26 16:53:33 [FINE] [ForgeModLoader] 	netcraft(Netcraft:Reloaded 0.0.1): bin (NO VALID CERTIFICATE FOUND)
+2013-12-26 16:53:33 [FINEST] [mcp] Sending event FMLPreInitializationEvent to mod mcp
+2013-12-26 16:53:33 [FINEST] [mcp] Sent event FMLPreInitializationEvent to mod mcp
+2013-12-26 16:53:33 [FINEST] [FML] Sending event FMLPreInitializationEvent to mod FML
+2013-12-26 16:53:33 [FINEST] [FML] Sent event FMLPreInitializationEvent to mod FML
+2013-12-26 16:53:33 [FINEST] [Forge] Sending event FMLPreInitializationEvent to mod Forge
+2013-12-26 16:53:33 [INFO] [ForgeModLoader] Configured a dormant chunk cache size of 0
+2013-12-26 16:53:33 [FINEST] [Forge] Sent event FMLPreInitializationEvent to mod Forge
+2013-12-26 16:53:33 [FINEST] [netcraft] Sending event FMLPreInitializationEvent to mod netcraft
+2013-12-26 16:53:33 [FINEST] [netcraft] Sent event FMLPreInitializationEvent to mod netcraft
+2013-12-26 16:53:33 [FINEST] [mcp] Sending event FMLInitializationEvent to mod mcp
+2013-12-26 16:53:33 [FINEST] [mcp] Sent event FMLInitializationEvent to mod mcp
+2013-12-26 16:53:33 [FINEST] [FML] Sending event FMLInitializationEvent to mod FML
+2013-12-26 16:53:33 [FINEST] [FML] Sent event FMLInitializationEvent to mod FML
+2013-12-26 16:53:33 [FINEST] [Forge] Sending event FMLInitializationEvent to mod Forge
+2013-12-26 16:53:33 [FINEST] [Forge] Sent event FMLInitializationEvent to mod Forge
+2013-12-26 16:53:33 [FINEST] [netcraft] Sending event FMLInitializationEvent to mod netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCoil(4069) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCoil(4070) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4072) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4075) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4076) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4082) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModuleBase(4090) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4087) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4088) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4089) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4091) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4092) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4093) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4094) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4096) owned by netcraft
+2013-12-26 16:53:33 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemModules(4097) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemUpgrade(4083) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemUpgrade(4084) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemUpgrade(4085) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemUpgrade(4086) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemUpgrade(4098) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4099) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4100) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4101) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item com.nitrogenegames.netcraft.item.ItemCrafting(4102) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3815) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3817) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3821) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3823) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3825) owned by netcraft
+2013-12-26 16:53:34 [FINE] [fml.ItemTracker] Adding item net.minecraft.item.ItemBlock(3839) owned by netcraft
+2013-12-26 16:53:34 [FINEST] [netcraft] Sent event FMLInitializationEvent to mod netcraft
+2013-12-26 16:53:34 [FINEST] [ForgeModLoader] Attempting to deliver 0 IMC messages to mod mcp
+2013-12-26 16:53:34 [FINEST] [mcp] Sending event IMCEvent to mod mcp
+2013-12-26 16:53:34 [FINEST] [mcp] Sent event IMCEvent to mod mcp
+2013-12-26 16:53:34 [FINEST] [ForgeModLoader] Attempting to deliver 0 IMC messages to mod FML
+2013-12-26 16:53:34 [FINEST] [FML] Sending event IMCEvent to mod FML
+2013-12-26 16:53:34 [FINEST] [FML] Sent event IMCEvent to mod FML
+2013-12-26 16:53:34 [FINEST] [ForgeModLoader] Attempting to deliver 0 IMC messages to mod Forge
+2013-12-26 16:53:34 [FINEST] [Forge] Sending event IMCEvent to mod Forge
+2013-12-26 16:53:34 [FINEST] [Forge] Sent event IMCEvent to mod Forge
+2013-12-26 16:53:34 [FINEST] [ForgeModLoader] Attempting to deliver 0 IMC messages to mod netcraft
+2013-12-26 16:53:34 [FINEST] [netcraft] Sending event IMCEvent to mod netcraft
+2013-12-26 16:53:34 [FINEST] [netcraft] Sent event IMCEvent to mod netcraft
+2013-12-26 16:53:34 [FINEST] [mcp] Sending event FMLPostInitializationEvent to mod mcp
+2013-12-26 16:53:34 [FINEST] [mcp] Sent event FMLPostInitializationEvent to mod mcp
+2013-12-26 16:53:34 [FINEST] [FML] Sending event FMLPostInitializationEvent to mod FML
+2013-12-26 16:53:34 [FINEST] [FML] Sent event FMLPostInitializationEvent to mod FML
+2013-12-26 16:53:34 [FINEST] [Forge] Sending event FMLPostInitializationEvent to mod Forge
+2013-12-26 16:53:34 [FINEST] [Forge] Sent event FMLPostInitializationEvent to mod Forge
+2013-12-26 16:53:34 [FINEST] [netcraft] Sending event FMLPostInitializationEvent to mod netcraft
+2013-12-26 16:53:34 [FINEST] [netcraft] Sent event FMLPostInitializationEvent to mod netcraft
+2013-12-26 16:53:34 [FINEST] [mcp] Sending event FMLLoadCompleteEvent to mod mcp
+2013-12-26 16:53:34 [FINEST] [mcp] Sent event FMLLoadCompleteEvent to mod mcp
+2013-12-26 16:53:34 [FINEST] [FML] Sending event FMLLoadCompleteEvent to mod FML
+2013-12-26 16:53:34 [FINEST] [FML] Sent event FMLLoadCompleteEvent to mod FML
+2013-12-26 16:53:34 [FINEST] [Forge] Sending event FMLLoadCompleteEvent to mod Forge
+2013-12-26 16:53:34 [FINEST] [Forge] Sent event FMLLoadCompleteEvent to mod Forge
+2013-12-26 16:53:34 [FINEST] [netcraft] Sending event FMLLoadCompleteEvent to mod netcraft
+2013-12-26 16:53:34 [FINEST] [netcraft] Sent event FMLLoadCompleteEvent to mod netcraft
+2013-12-26 16:53:34 [INFO] [ForgeModLoader] Forge Mod Loader has successfully loaded 4 mods
+2013-12-26 16:53:34 [WARNING] [Forge Mod Loader] Mod Forge Mod Loader is missing a pack.mcmeta file, things may not work well
+2013-12-26 16:53:34 [WARNING] [Minecraft Forge] Mod Minecraft Forge is missing a pack.mcmeta file, things may not work well
+2013-12-26 16:53:34 [WARNING] [Netcraft] Mod Netcraft is missing a pack.mcmeta file, things may not work well
+2013-12-26 16:53:34 [INFO] [Minecraft-Client] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 16:53:34 [INFO] [STDOUT] tile.matrixcube
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 16:53:34 [SEVERE] [Minecraft-Client] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 16:53:34 [INFO] [STDOUT] 
+2013-12-26 16:53:34 [INFO] [STDOUT] Starting up SoundSystem...
+2013-12-26 16:53:34 [INFO] [STDOUT] Initializing LWJGL OpenAL
+2013-12-26 16:53:34 [INFO] [STDOUT]     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+2013-12-26 16:53:34 [INFO] [STDOUT] OpenAL initialized.
+2013-12-26 16:53:34 [INFO] [STDOUT] 
+2013-12-26 16:53:35 [SEVERE] [Minecraft-Client] Realms: Invalid session id
+2013-12-26 16:53:41 [INFO] [Minecraft-Server] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:53:41 [INFO] [Minecraft-Server] Generating keypair
+2013-12-26 16:53:41 [FINEST] [mcp] Sending event FMLServerAboutToStartEvent to mod mcp
+2013-12-26 16:53:41 [FINEST] [mcp] Sent event FMLServerAboutToStartEvent to mod mcp
+2013-12-26 16:53:41 [FINEST] [FML] Sending event FMLServerAboutToStartEvent to mod FML
+2013-12-26 16:53:41 [FINEST] [FML] Sent event FMLServerAboutToStartEvent to mod FML
+2013-12-26 16:53:41 [FINEST] [Forge] Sending event FMLServerAboutToStartEvent to mod Forge
+2013-12-26 16:53:41 [FINEST] [Forge] Sent event FMLServerAboutToStartEvent to mod Forge
+2013-12-26 16:53:41 [FINEST] [netcraft] Sending event FMLServerAboutToStartEvent to mod netcraft
+2013-12-26 16:53:41 [FINEST] [netcraft] Sent event FMLServerAboutToStartEvent to mod netcraft
+2013-12-26 16:53:41 [FINE] [fml.ItemTracker] The difference set is equal
+2013-12-26 16:53:41 [INFO] [ForgeModLoader] Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@42bbb8b5)
+2013-12-26 16:53:41 [INFO] [ForgeModLoader] Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@42bbb8b5)
+2013-12-26 16:53:41 [INFO] [ForgeModLoader] Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@42bbb8b5)
+2013-12-26 16:53:41 [INFO] [Minecraft-Server] Preparing start region for level 0
+2013-12-26 16:53:42 [FINEST] [mcp] Sending event FMLServerStartingEvent to mod mcp
+2013-12-26 16:53:42 [FINEST] [mcp] Sent event FMLServerStartingEvent to mod mcp
+2013-12-26 16:53:42 [FINEST] [FML] Sending event FMLServerStartingEvent to mod FML
+2013-12-26 16:53:42 [FINEST] [FML] Sent event FMLServerStartingEvent to mod FML
+2013-12-26 16:53:42 [FINEST] [Forge] Sending event FMLServerStartingEvent to mod Forge
+2013-12-26 16:53:42 [FINEST] [Forge] Sent event FMLServerStartingEvent to mod Forge
+2013-12-26 16:53:42 [FINEST] [netcraft] Sending event FMLServerStartingEvent to mod netcraft
+2013-12-26 16:53:42 [FINEST] [netcraft] Sent event FMLServerStartingEvent to mod netcraft
+2013-12-26 16:53:42 [FINEST] [mcp] Sending event FMLServerStartedEvent to mod mcp
+2013-12-26 16:53:42 [FINEST] [mcp] Sent event FMLServerStartedEvent to mod mcp
+2013-12-26 16:53:42 [FINEST] [FML] Sending event FMLServerStartedEvent to mod FML
+2013-12-26 16:53:42 [FINEST] [FML] Sent event FMLServerStartedEvent to mod FML
+2013-12-26 16:53:42 [FINEST] [Forge] Sending event FMLServerStartedEvent to mod Forge
+2013-12-26 16:53:42 [FINEST] [Forge] Sent event FMLServerStartedEvent to mod Forge
+2013-12-26 16:53:42 [FINEST] [netcraft] Sending event FMLServerStartedEvent to mod netcraft
+2013-12-26 16:53:42 [FINEST] [netcraft] Sent event FMLServerStartedEvent to mod netcraft
+2013-12-26 16:53:43 [INFO] [STDOUT] loading single player
+2013-12-26 16:53:43 [INFO] [Minecraft-Server] Player735[/127.0.0.1:0] logged in with entity id 56 at (1102.6425330972766, 4.0, -568.3032970062536)
+2013-12-26 16:53:43 [INFO] [Minecraft-Server] Player735 joined the game
+2013-12-26 16:53:43 [INFO] [STDOUT] Setting up custom skins
+2013-12-26 16:53:47 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:53:47 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:53:48 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:53:48 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:54:11 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:54:11 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:54:12 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:54:12 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:54:58 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:54:58 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:54:58 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:54:58 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:55:02 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:55:02 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:55:02 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:55:02 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:55:05 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:55:05 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:55:05 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:55:05 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:55:06 [INFO] [Minecraft-Client] [CHAT] Block must be within a 3 by 3 radiues of a core to be markable!
+2013-12-26 16:55:15 [INFO] [Minecraft-Server] [Player735: Set the time to 0]
+2013-12-26 16:55:15 [INFO] [Minecraft-Client] [CHAT] Set the time to 0
+2013-12-26 16:55:18 [INFO] [Minecraft-Client] [CHAT] Block marked at 1102, 3, -565!
+2013-12-26 16:55:50 [INFO] [Minecraft-Client] [CHAT] Block marked at 1096, 3, -560!
+2013-12-26 16:55:52 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:55:52 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:55:52 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:55:52 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:56:07 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:56:07 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:56:07 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:56:07 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:56:26 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:56:26 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:56:27 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:56:27 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:56:45 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:56:45 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:56:45 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:56:45 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:56:56 [INFO] [Minecraft-Client] [CHAT] Block marked at 1097, 3, -558!
+2013-12-26 16:57:07 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:57:07 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:57:07 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:57:07 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:57:41 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:57:41 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:57:41 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:57:41 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:57:52 [INFO] [Minecraft-Client] [CHAT] A nearby core attempted to teleport you to an invalid coordinate! (No core nearby)
+2013-12-26 16:58:27 [INFO] [Minecraft-Server] Saving and pausing game...
+2013-12-26 16:58:27 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:58:27 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:58:27 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:58:29 [INFO] [Minecraft-Client] Stopping!
+2013-12-26 16:58:29 [FINEST] [mcp] Sending event FMLServerStoppingEvent to mod mcp
+2013-12-26 16:58:29 [FINEST] [mcp] Sent event FMLServerStoppingEvent to mod mcp
+2013-12-26 16:58:29 [FINEST] [FML] Sending event FMLServerStoppingEvent to mod FML
+2013-12-26 16:58:29 [FINEST] [FML] Sent event FMLServerStoppingEvent to mod FML
+2013-12-26 16:58:29 [FINEST] [Forge] Sending event FMLServerStoppingEvent to mod Forge
+2013-12-26 16:58:29 [FINEST] [Forge] Sent event FMLServerStoppingEvent to mod Forge
+2013-12-26 16:58:29 [FINEST] [netcraft] Sending event FMLServerStoppingEvent to mod netcraft
+2013-12-26 16:58:29 [FINEST] [netcraft] Sent event FMLServerStoppingEvent to mod netcraft
+2013-12-26 16:58:29 [INFO] [Minecraft-Server] Stopping server
+2013-12-26 16:58:29 [INFO] [Minecraft-Server] Saving players
+2013-12-26 16:58:29 [INFO] [Minecraft-Server] Player735 left the game
+2013-12-26 16:58:29 [INFO] [STDOUT] 
+2013-12-26 16:58:29 [INFO] [STDOUT] SoundSystem shutting down...
+2013-12-26 16:58:29 [INFO] [Minecraft-Server] Saving worlds
+2013-12-26 16:58:29 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:58:29 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/Nether
+2013-12-26 16:58:29 [INFO] [Minecraft-Server] Saving chunks for level 'New World'/The End
+2013-12-26 16:58:29 [INFO] [ForgeModLoader] Unloading dimension 0
+2013-12-26 16:58:29 [INFO] [ForgeModLoader] Unloading dimension -1
+2013-12-26 16:58:29 [INFO] [ForgeModLoader] Unloading dimension 1
+2013-12-26 16:58:29 [FINEST] [mcp] Sending event FMLServerStoppedEvent to mod mcp
+2013-12-26 16:58:29 [FINEST] [mcp] Sent event FMLServerStoppedEvent to mod mcp
+2013-12-26 16:58:29 [FINEST] [FML] Sending event FMLServerStoppedEvent to mod FML
+2013-12-26 16:58:29 [FINEST] [FML] Sent event FMLServerStoppedEvent to mod FML
+2013-12-26 16:58:29 [FINEST] [Forge] Sending event FMLServerStoppedEvent to mod Forge
+2013-12-26 16:58:29 [FINEST] [Forge] Sent event FMLServerStoppedEvent to mod Forge
+2013-12-26 16:58:29 [FINEST] [netcraft] Sending event FMLServerStoppedEvent to mod netcraft
+2013-12-26 16:58:29 [FINEST] [netcraft] Sent event FMLServerStoppedEvent to mod netcraft
+2013-12-26 16:58:29 [INFO] [STDOUT]     Author: Paul Lamb, www.paulscode.com
+2013-12-26 16:58:29 [INFO] [STDOUT] 
+2013-12-26 16:58:29 [INFO] [Minecraft-Server] Stopping server
+2013-12-26 16:58:29 [INFO] [Minecraft-Server] Saving players
+2013-12-26 16:58:29 [INFO] [Minecraft-Server] Saving worlds

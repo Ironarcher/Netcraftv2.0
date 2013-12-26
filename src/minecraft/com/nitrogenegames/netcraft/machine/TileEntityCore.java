@@ -105,8 +105,12 @@ public class TileEntityCore extends TileEntity implements ISidedInventory {
                     if (slot >= 0 && slot < inv.length) {
                             inv[slot] = ItemStack.loadItemStackFromNBT(tag);
                     }
-            }   
-            powered = tagCompound.getBoolean("POWER");
+}
+			if(tagCompound.hasKey("POWER")){
+				powered = tagCompound.getBoolean("POWER");
+			} else{
+				powered = false;
+			}
     }
     
     @Override

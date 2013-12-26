@@ -35,12 +35,8 @@ import net.minecraftforge.common.ForgeDirection;
 
 public class BlockCore extends BlockContainer {
 	 public BlockCore (int id, String texture) {
-        super(id, Material.rock);
-        setCreativeTab(Netcraft.netcrafttab);
-        setHardness(4f);
- 		setResistance(10f);
- 		setLightValue(0f);
- 		setStepSound(Block.soundMetalFootstep);
+         super(id, Material.rock);
+         setCreativeTab(Netcraft.netcrafttab);
  }
 	 
 	 public void activatemodules(World world, int x, int y, int z) {
@@ -72,17 +68,14 @@ public class BlockCore extends BlockContainer {
 	          if (!par1World.isRemote)
 	          {
 	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
-	        	  		
-	        	  if(tileEntity.powered = null){
-	        		  System.out.println("HEY! ERROR!");
-	        	  }
-	                  System.out.println(tileEntity.powered);
-	                  boolean power = tileEntity.powered;
-	                  if (power && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
+	        	  	
+	                  
+	                  boolean powered = tileEntity.powered;
+	                  if (powered && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
 	                  {
 	                          par1World.scheduleBlockUpdate(par2, par3, par4, this.blockID, 4);
 	                  }
-	                  else if (!power && par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
+	                  else if (!powered && par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
 	                  {
 	                          tileEntity.powered = true;
 	                          activatemodules(par1World, par2, par3, par4);
@@ -137,8 +130,136 @@ public class BlockCore extends BlockContainer {
                   icons[i] = par1IconRegister.registerIcon(Netcraft.modid + ":" + (this.getUnlocalizedName().substring(5)) + i);
            }
      }
-	@Override
-	public TileEntity createNewTileEntity(World world) {
-		return null;
-	}
+     public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving, ItemStack par6ItemStack)
+     {
+         int l = MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+
+         if (l == 0)
+         {
+             par1World.setBlockMetadataWithNotify(par2, par3, par4, 2, 2);
+         }
+
+         if (l == 1)
+         {
+             par1World.setBlockMetadataWithNotify(par2, par3, par4, 5, 2);
+         }
+
+         if (l == 2)
+         {
+             par1World.setBlockMetadataWithNotify(par2, par3, par4, 3, 2);
+         }
+
+         if (l == 3)
+         {
+             par1World.setBlockMetadataWithNotify(par2, par3, par4, 4, 2);
+         }
+     }
+     @SideOnly(Side.CLIENT)
+     @Override
+     public Icon getIcon(int par1, int par2)
+     {
+                         switch(par1)
+                         {
+                         case 1:
+                        	 return icons[1];
+                         case 2:
+                        	 if(par2 == 2) {
+                                 return icons[2];
+                            	 } else {
+                                 return icons[1]; 
+                            	 }
+                         case 3:
+                        	 if(par2 == 3 || par2 == 0) {
+                             return icons[2];
+                        	 } else {
+                             return icons[1]; 
+                        	 }
+                        		 
+                         case 4:
+                        	 if(par2 == 4) {
+                                 return icons[2];
+                            	 } else {
+                                 return icons[1]; 
+                            	 }
+                         case 5:
+                        	 if(par2 == 5) {
+                                 return icons[2];
+                            	 } else {
+                                 return icons[1]; 
+                            	 }
+                         case 0:
+                        	 return icons[1];
+                         default:
+                             return icons[1];
+                         }
+
+     }
+     /*@SideOnly(Side.CLIENT)
+     public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
+     {
+           for(int i = 0; i < 2; i++)
+           {
+                  par3List.add(new ItemStack(par1, 1, i));
+           }
+     }
+     */
+
+        @Override
+        public boolean onBlockActivated(World world, int x, int y, int z,
+                        EntityPlayer player, int idk, float what, float these, float are) {
+                TileEntity tileEntity = world.getBlockTileEntity(x, y, z);
+                if (tileEntity == null || player.isSneaking()) {
+                        return false;
+                }
+        //code to open gui explained later
+        player.openGui(Netcraft.instance, 0, world, x, y, z);
+                return true;
+        }
+
+        @Override
+        public void breakBlock(World world, int x, int y, int z, int par5, int par6) {
+                dropItems(world, x, y, z);
+                super.breakBlock(world, x, y, z, par5, par6);
+        }
+
+        private void dropItems(World world, int x, int y, int z){
+                Random rand = new Random();
+
+                TileEntity tileEntity = world.getBlockTileEntity(x, y, z);
+                if (!(tileEntity instanceof IInventory)) {
+                        return;
+                }
+                IInventory inventory = (IInventory) tileEntity;
+
+                for (int i = 0; i < inventory.getSizeInventory(); i++) {
+                        ItemStack item = inventory.getStackInSlot(i);
+
+                        if (item != null && item.stackSize > 0) {
+                                float rx = rand.nextFloat() * 0.8F + 0.1F;
+                                float ry = rand.nextFloat() * 0.8F + 0.1F;
+                                float rz = rand.nextFloat() * 0.8F + 0.1F;
+
+                                EntityItem entityItem = new EntityItem(world,
+                                                x + rx, y + ry, z + rz,
+                                                new ItemStack(item.itemID, item.stackSize, item.getItemDamage()));
+
+                                if (item.hasTagCompound()) {
+                                        entityItem.getEntityItem().setTagCompound((NBTTagCompound) item.getTagCompound().copy());
+                                }
+
+                                float factor = 0.05F;
+                                entityItem.motionX = rand.nextGaussian() * factor;
+                                entityItem.motionY = rand.nextGaussian() * factor + 0.2F;
+                                entityItem.motionZ = rand.nextGaussian() * factor;
+                                world.spawnEntityInWorld(entityItem);
+                                item.stackSize = 0;
+                        }
+                }
+        }
+        @Override
+        public TileEntity createNewTileEntity(World mainworld) {
+            return new TileEntityCore();
+    }
+        
+
 }

@@ -210,3 +210,433 @@ Caused by: java.lang.NullPointerException
 2013-12-26 14:24:17 [SERVER] [INFO] Saving players
 2013-12-26 14:24:17 [SERVER] [INFO] Player8 left the game
 2013-12-26 14:24:17 [SERVER] [INFO] Stopping server
+2013-12-26 15:46:18 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 15:46:18 [SERVER] [INFO] Generating keypair
+2013-12-26 15:46:18 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 15:46:19 [SERVER] [INFO] Player566[/127.0.0.1:0] logged in with entity id 189 at (242.97603071212123, 64.0, 253.31052405738592)
+2013-12-26 15:46:19 [SERVER] [INFO] Player566 joined the game
+2013-12-26 15:46:23 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 15:46:23 [SERVER] [INFO] Saving chunks for level 'Test World'/Overworld
+2013-12-26 15:46:23 [SERVER] [INFO] Saving chunks for level 'Test World'/Nether
+2013-12-26 15:46:23 [SERVER] [INFO] Saving chunks for level 'Test World'/The End
+2013-12-26 15:46:47 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 15:46:47 [SERVER] [INFO] Saving chunks for level 'Test World'/Overworld
+2013-12-26 15:46:47 [SERVER] [INFO] Saving chunks for level 'Test World'/Nether
+2013-12-26 15:46:47 [SERVER] [INFO] Saving chunks for level 'Test World'/The End
+2013-12-26 15:47:12 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 15:47:12 [SERVER] [INFO] Saving chunks for level 'Test World'/Overworld
+2013-12-26 15:47:12 [SERVER] [INFO] Saving chunks for level 'Test World'/Nether
+2013-12-26 15:47:12 [SERVER] [INFO] Saving chunks for level 'Test World'/The End
+2013-12-26 15:47:17 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 15:47:17 [SERVER] [INFO] Saving chunks for level 'Test World'/Overworld
+2013-12-26 15:47:17 [SERVER] [INFO] Saving chunks for level 'Test World'/Nether
+2013-12-26 15:47:17 [SERVER] [INFO] Saving chunks for level 'Test World'/The End
+2013-12-26 15:47:32 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking memory connection
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.block.BlockCore.onBlockAdded(BlockCore.java:76)
+	at net.minecraft.world.chunk.Chunk.setBlockIDWithMetadata(Chunk.java:758)
+	at net.minecraft.world.World.setBlock(World.java:559)
+	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:241)
+	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:119)
+	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
+	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
+	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
+	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	... 6 more
+2013-12-26 15:47:32 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2013-12-26_15.47.32-server.txt
+2013-12-26 15:47:32 [SERVER] [INFO] Stopping server
+2013-12-26 15:47:32 [SERVER] [INFO] Saving players
+2013-12-26 15:47:32 [SERVER] [INFO] Player566 left the game
+2013-12-26 15:47:32 [SERVER] [INFO] Saving worlds
+2013-12-26 15:47:32 [SERVER] [INFO] Saving chunks for level 'Test World'/Overworld
+2013-12-26 15:47:32 [SERVER] [INFO] Stopping server
+2013-12-26 15:47:32 [SERVER] [INFO] Saving players
+2013-12-26 15:47:32 [SERVER] [INFO] Saving worlds
+2013-12-26 15:47:32 [SERVER] [INFO] Saving chunks for level 'Test World'/Overworld
+2013-12-26 15:49:45 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 15:49:45 [SERVER] [INFO] Generating keypair
+2013-12-26 15:49:45 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 15:49:46 [SERVER] [INFO] Player55[/127.0.0.1:0] logged in with entity id 246 at (242.0086123023522, 64.0, 253.2174833505676)
+2013-12-26 15:49:46 [SERVER] [INFO] Player55 joined the game
+2013-12-26 15:49:49 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking memory connection
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.block.BlockCore.onBlockAdded(BlockCore.java:77)
+	at net.minecraft.world.chunk.Chunk.setBlockIDWithMetadata(Chunk.java:758)
+	at net.minecraft.world.World.setBlock(World.java:559)
+	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:241)
+	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:119)
+	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
+	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
+	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
+	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	... 6 more
+2013-12-26 15:49:49 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2013-12-26_15.49.49-server.txt
+2013-12-26 15:49:49 [SERVER] [INFO] Stopping server
+2013-12-26 15:49:49 [SERVER] [INFO] Saving players
+2013-12-26 15:49:49 [SERVER] [INFO] Player55 left the game
+2013-12-26 15:49:49 [SERVER] [INFO] Saving worlds
+2013-12-26 15:49:49 [SERVER] [INFO] Saving chunks for level 'Test World'/Overworld
+2013-12-26 15:58:26 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 15:58:26 [SERVER] [INFO] Generating keypair
+2013-12-26 15:58:26 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 15:58:27 [SERVER] [INFO] Player766[/127.0.0.1:0] logged in with entity id 245 at (242.0086123023522, 64.0, 253.2174833505676)
+2013-12-26 15:58:27 [SERVER] [INFO] Player766 joined the game
+2013-12-26 15:58:30 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking memory connection
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.block.BlockCore.onBlockAdded(BlockCore.java:77)
+	at net.minecraft.world.chunk.Chunk.setBlockIDWithMetadata(Chunk.java:758)
+	at net.minecraft.world.World.setBlock(World.java:559)
+	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:241)
+	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:119)
+	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
+	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
+	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
+	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	... 6 more
+2013-12-26 15:58:30 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2013-12-26_15.58.30-server.txt
+2013-12-26 15:58:30 [SERVER] [INFO] Stopping server
+2013-12-26 15:58:30 [SERVER] [INFO] Saving players
+2013-12-26 15:58:30 [SERVER] [INFO] Player766 left the game
+2013-12-26 16:01:47 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:01:47 [SERVER] [INFO] Generating keypair
+2013-12-26 16:01:47 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:01:48 [SERVER] [INFO] Player821[/127.0.0.1:0] logged in with entity id 247 at (242.0086123023522, 64.0, 253.2174833505676)
+2013-12-26 16:01:48 [SERVER] [INFO] Player821 joined the game
+2013-12-26 16:01:50 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Exception while updating neighbours
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.block.BlockCore.onNeighborBlockChange(BlockCore.java:100)
+	at net.minecraft.world.World.notifyBlockOfNeighborChange(World.java:845)
+	at net.minecraft.world.World.notifyBlocksOfNeighborChange(World.java:787)
+	at net.minecraft.world.World.notifyBlockChange(World.java:741)
+	at net.minecraft.world.World.setBlock(World.java:573)
+	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:241)
+	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:119)
+	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
+	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
+	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
+	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	... 6 more
+2013-12-26 16:01:50 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2013-12-26_16.01.50-server.txt
+2013-12-26 16:01:50 [SERVER] [INFO] Stopping server
+2013-12-26 16:01:50 [SERVER] [INFO] Saving players
+2013-12-26 16:01:50 [SERVER] [INFO] Player821 left the game
+2013-12-26 16:01:50 [SERVER] [INFO] Saving worlds
+2013-12-26 16:01:50 [SERVER] [INFO] Saving chunks for level 'Test World'/Overworld
+2013-12-26 16:03:48 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:03:48 [SERVER] [INFO] Generating keypair
+2013-12-26 16:03:48 [SERVER] [INFO] Converting map!
+2013-12-26 16:03:48 [SERVER] [INFO] Scanning folders...
+2013-12-26 16:03:48 [SERVER] [INFO] Total conversion count is 0
+2013-12-26 16:03:48 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:03:49 [SERVER] [INFO] Preparing spawn area: 10%
+2013-12-26 16:03:50 [SERVER] [INFO] Preparing spawn area: 31%
+2013-12-26 16:03:51 [SERVER] [INFO] Preparing spawn area: 58%
+2013-12-26 16:03:52 [SERVER] [INFO] Preparing spawn area: 85%
+2013-12-26 16:03:53 [SERVER] [INFO] Player774[/127.0.0.1:0] logged in with entity id 209 at (200.5, 72.0, 257.5)
+2013-12-26 16:03:53 [SERVER] [INFO] Player774 joined the game
+2013-12-26 16:04:05 [SERVER] [INFO] Stopping server
+2013-12-26 16:04:05 [SERVER] [INFO] Saving players
+2013-12-26 16:04:05 [SERVER] [INFO] Player774 left the game
+2013-12-26 16:04:05 [SERVER] [INFO] Saving worlds
+2013-12-26 16:04:05 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:04:06 [SERVER] [INFO] Stopping server
+2013-12-26 16:04:22 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:04:22 [SERVER] [INFO] Generating keypair
+2013-12-26 16:04:22 [SERVER] [INFO] Converting map!
+2013-12-26 16:04:22 [SERVER] [INFO] Scanning folders...
+2013-12-26 16:04:22 [SERVER] [INFO] Total conversion count is 0
+2013-12-26 16:04:25 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:04:26 [SERVER] [INFO] Preparing spawn area: 45%
+2013-12-26 16:04:27 [SERVER] [INFO] Preparing spawn area: 87%
+2013-12-26 16:04:28 [SERVER] [INFO] Player904[/127.0.0.1:0] logged in with entity id 3 at (1104.5, 4.0, -565.5)
+2013-12-26 16:04:28 [SERVER] [INFO] Player904 joined the game
+2013-12-26 16:04:52 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:04:52 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:04:52 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:04:52 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:04:53 [SERVER] [INFO] Stopping server
+2013-12-26 16:04:53 [SERVER] [INFO] Saving players
+2013-12-26 16:04:53 [SERVER] [INFO] Player904 left the game
+2013-12-26 16:04:53 [SERVER] [INFO] Saving worlds
+2013-12-26 16:04:53 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:04:53 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:04:53 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:04:53 [SERVER] [INFO] Stopping server
+2013-12-26 16:07:31 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:07:31 [SERVER] [INFO] Generating keypair
+2013-12-26 16:07:31 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:07:32 [SERVER] [INFO] Preparing spawn area: 41%
+2013-12-26 16:07:33 [SERVER] [INFO] Preparing spawn area: 95%
+2013-12-26 16:07:34 [SERVER] [INFO] Player213[/127.0.0.1:0] logged in with entity id 0 at (1098.536714572362, 4.291497515084923, -564.3995274634335)
+2013-12-26 16:07:34 [SERVER] [INFO] Player213 joined the game
+2013-12-26 16:07:52 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:07:52 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:07:52 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:07:52 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:07:52 [SERVER] [INFO] Stopping server
+2013-12-26 16:07:52 [SERVER] [INFO] Saving players
+2013-12-26 16:07:52 [SERVER] [INFO] Player213 left the game
+2013-12-26 16:07:52 [SERVER] [INFO] Saving worlds
+2013-12-26 16:07:52 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:07:52 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:07:52 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:07:53 [SERVER] [INFO] Stopping server
+2013-12-26 16:11:04 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:11:04 [SERVER] [INFO] Generating keypair
+2013-12-26 16:11:05 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:11:06 [SERVER] [INFO] Preparing spawn area: 61%
+2013-12-26 16:11:06 [SERVER] [INFO] Player108[/127.0.0.1:0] logged in with entity id 0 at (1102.7857732785933, 4.0, -568.2687668284302)
+2013-12-26 16:11:06 [SERVER] [INFO] Player108 joined the game
+2013-12-26 16:11:20 [SERVER] [INFO] Stopping server
+2013-12-26 16:11:20 [SERVER] [INFO] Saving players
+2013-12-26 16:11:20 [SERVER] [INFO] Player108 left the game
+2013-12-26 16:11:20 [SERVER] [INFO] Saving worlds
+2013-12-26 16:11:20 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:11:20 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:11:20 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:11:20 [SERVER] [INFO] Stopping server
+2013-12-26 16:25:37 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:25:37 [SERVER] [INFO] Generating keypair
+2013-12-26 16:25:38 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:25:39 [SERVER] [INFO] Preparing spawn area: 67%
+2013-12-26 16:25:39 [SERVER] [INFO] Player994[/127.0.0.1:0] logged in with entity id 0 at (1103.182756789554, 4.0, -563.8247723140829)
+2013-12-26 16:25:39 [SERVER] [INFO] Player994 joined the game
+2013-12-26 16:25:57 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:25:57 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:25:57 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:25:57 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:25:59 [SERVER] [INFO] Stopping server
+2013-12-26 16:25:59 [SERVER] [INFO] Saving players
+2013-12-26 16:25:59 [SERVER] [INFO] Player994 left the game
+2013-12-26 16:25:59 [SERVER] [INFO] Saving worlds
+2013-12-26 16:25:59 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:25:59 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:25:59 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:32:18 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:32:18 [SERVER] [INFO] Generating keypair
+2013-12-26 16:32:18 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:32:19 [SERVER] [INFO] Player385[/127.0.0.1:0] logged in with entity id 20 at (1103.4678709935017, 5.0, -565.781837201459)
+2013-12-26 16:32:19 [SERVER] [INFO] Player385 joined the game
+2013-12-26 16:32:23 [SERVER] [INFO] Stopping server
+2013-12-26 16:32:23 [SERVER] [INFO] Saving players
+2013-12-26 16:32:23 [SERVER] [INFO] Player385 left the game
+2013-12-26 16:32:23 [SERVER] [INFO] Saving worlds
+2013-12-26 16:32:23 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:32:23 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:32:23 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:32:23 [SERVER] [INFO] Stopping server
+2013-12-26 16:38:33 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:38:33 [SERVER] [INFO] Generating keypair
+2013-12-26 16:38:34 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:38:35 [SERVER] [INFO] Player789[/127.0.0.1:0] logged in with entity id 19 at (1103.4678709935017, 5.0, -565.781837201459)
+2013-12-26 16:38:35 [SERVER] [INFO] Player789 joined the game
+2013-12-26 16:38:42 [SERVER] [INFO] Stopping server
+2013-12-26 16:38:42 [SERVER] [INFO] Saving players
+2013-12-26 16:38:42 [SERVER] [INFO] Player789 left the game
+2013-12-26 16:38:42 [SERVER] [INFO] Saving worlds
+2013-12-26 16:38:42 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:38:42 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:38:42 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:38:42 [SERVER] [INFO] Stopping server
+2013-12-26 16:39:13 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:39:13 [SERVER] [INFO] Generating keypair
+2013-12-26 16:39:13 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:39:14 [SERVER] [INFO] Player147[/127.0.0.1:0] logged in with entity id 19 at (1103.4678709935017, 5.0, -565.781837201459)
+2013-12-26 16:39:14 [SERVER] [INFO] Player147 joined the game
+2013-12-26 16:40:44 [SERVER] [WARNING] The save is being accessed from another location, aborting
+2013-12-26 16:41:16 [SERVER] [INFO] Stopping server
+2013-12-26 16:41:16 [SERVER] [INFO] Saving players
+2013-12-26 16:41:16 [SERVER] [INFO] Player147 left the game
+2013-12-26 16:41:16 [SERVER] [INFO] Saving worlds
+2013-12-26 16:41:16 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:41:16 [SERVER] [WARNING] The save is being accessed from another location, aborting
+2013-12-26 16:41:16 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:41:16 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:41:17 [SERVER] [INFO] Stopping server
+2013-12-26 16:42:30 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:42:30 [SERVER] [INFO] Generating keypair
+2013-12-26 16:42:30 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:42:31 [SERVER] [INFO] Player759[/127.0.0.1:0] logged in with entity id 21 at (1103.4678709935017, 5.0, -565.781837201459)
+2013-12-26 16:42:31 [SERVER] [INFO] Player759 joined the game
+2013-12-26 16:42:43 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:42:43 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:42:43 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:42:43 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:43:03 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:43:03 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:43:03 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:43:03 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:43:05 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:43:05 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:43:05 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:43:05 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:43:34 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:43:34 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:43:34 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:43:34 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:44:50 [SERVER] [INFO] [Player759: Set own game mode to Survival Mode]
+2013-12-26 16:44:58 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:44:58 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:44:58 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:44:58 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:45:35 [SERVER] [INFO] [Player759: Set own game mode to Creative Mode]
+2013-12-26 16:46:43 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:46:43 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:46:44 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:46:44 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:46:51 [SERVER] [INFO] [Player759: Set own game mode to Survival Mode]
+2013-12-26 16:46:54 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:46:54 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:46:54 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:46:54 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:47:21 [SERVER] [INFO] Player759 was slain by Zombie
+2013-12-26 16:47:30 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:47:30 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:47:30 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:47:30 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:47:31 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:47:31 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:47:31 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:47:31 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:47:34 [SERVER] [INFO] [Player759: Set own game mode to Creative Mode]
+2013-12-26 16:48:39 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:48:39 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:48:39 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:48:39 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:49:03 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Exception while updating neighbours
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.item.ItemModules.activate(ItemModules.java:159)
+	at com.nitrogenegames.netcraft.block.BlockCore.activatemodules(BlockCore.java:50)
+	at com.nitrogenegames.netcraft.block.BlockCore.onNeighborBlockChange(BlockCore.java:101)
+	at net.minecraft.world.World.notifyBlockOfNeighborChange(World.java:845)
+	at net.minecraft.world.World.notifyBlocksOfNeighborChange(World.java:787)
+	at net.minecraft.world.World.notifyBlockChange(World.java:741)
+	at net.minecraft.world.World.setBlockMetadataWithNotify(World.java:664)
+	at net.minecraft.block.BlockLever.onBlockActivated(BlockLever.java:314)
+	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:421)
+	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
+	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	... 6 more
+2013-12-26 16:49:03 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2013-12-26_16.49.03-server.txt
+2013-12-26 16:49:03 [SERVER] [INFO] Stopping server
+2013-12-26 16:49:03 [SERVER] [INFO] Saving players
+2013-12-26 16:49:03 [SERVER] [INFO] Player759 left the game
+2013-12-26 16:49:03 [SERVER] [INFO] Saving worlds
+2013-12-26 16:49:03 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:53:41 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-26 16:53:41 [SERVER] [INFO] Generating keypair
+2013-12-26 16:53:41 [SERVER] [INFO] Preparing start region for level 0
+2013-12-26 16:53:43 [SERVER] [INFO] Player735[/127.0.0.1:0] logged in with entity id 56 at (1102.6425330972766, 4.0, -568.3032970062536)
+2013-12-26 16:53:43 [SERVER] [INFO] Player735 joined the game
+2013-12-26 16:53:47 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:53:47 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:53:48 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:53:48 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:54:11 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:54:11 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:54:12 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:54:12 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:54:58 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:54:58 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:54:58 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:54:58 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:55:02 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:55:02 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:55:02 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:55:02 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:55:05 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:55:05 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:55:05 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:55:05 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:55:15 [SERVER] [INFO] [Player735: Set the time to 0]
+2013-12-26 16:55:52 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:55:52 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:55:52 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:55:52 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:56:07 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:56:07 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:56:07 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:56:07 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:56:26 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:56:26 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:56:27 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:56:27 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:56:45 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:56:45 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:56:45 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:56:45 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:57:07 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:57:07 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:57:07 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:57:07 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:57:41 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:57:41 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:57:41 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:57:41 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:58:27 [SERVER] [INFO] Saving and pausing game...
+2013-12-26 16:58:27 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:58:27 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:58:27 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:58:29 [SERVER] [INFO] Stopping server
+2013-12-26 16:58:29 [SERVER] [INFO] Saving players
+2013-12-26 16:58:29 [SERVER] [INFO] Player735 left the game
+2013-12-26 16:58:29 [SERVER] [INFO] Saving worlds
+2013-12-26 16:58:29 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-26 16:58:29 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-26 16:58:29 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-26 16:58:29 [SERVER] [INFO] Stopping server
