@@ -1,11 +1,12 @@
 package com.nitrogenegames.netcraft.block;
 
-import ic2.api.energy.tile.IEnergyTile;
+//import ic2.api.energy.tile.IEnergyTile;
 
 import java.util.List;
 import java.util.Random;
 
 import com.nitrogenegames.netcraft.Netcraft;
+import com.nitrogenegames.netcraft.item.ItemModules;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -71,14 +72,17 @@ public class BlockCore extends BlockContainer {
 	          if (!par1World.isRemote)
 	          {
 	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
-	        	  	
-	                  
-	                  boolean powered = tileEntity.powered;
-	                  if (powered && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
+	        	  		
+	        	  if(tileEntity.powered = null){
+	        		  System.out.println("HEY! ERROR!");
+	        	  }
+	                  System.out.println(tileEntity.powered);
+	                  boolean power = tileEntity.powered;
+	                  if (power && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
 	                  {
 	                          par1World.scheduleBlockUpdate(par2, par3, par4, this.blockID, 4);
 	                  }
-	                  else if (!powered && par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
+	                  else if (!power && par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
 	                  {
 	                          tileEntity.powered = true;
 	                          activatemodules(par1World, par2, par3, par4);

@@ -3,4 +3,12 @@
 <fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.SideOnly"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="net.minecraft.world.World"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.network.NetworkRegistry"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.DamageSourceTesla"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityCore"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.ContainerCore"/>
 </qualifiedTypeNameHistroy>

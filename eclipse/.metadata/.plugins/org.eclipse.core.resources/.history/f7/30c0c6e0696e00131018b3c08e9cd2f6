@@ -1,0 +1,7 @@
+package com.nitrogenegames.netcraft;
+
+import net.minecraft.creativetab.CreativeTabs;
+
+public class NetcraftTab extends CreativeTabs {
+
+}

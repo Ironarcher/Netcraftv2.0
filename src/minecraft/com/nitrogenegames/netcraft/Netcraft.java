@@ -8,6 +8,7 @@ import com.nitrogenegames.netcraft.block.BlockNodeBase;
 import com.nitrogenegames.netcraft.block.BlockNodeCondition;
 import com.nitrogenegames.netcraft.block.BlockNodeConnection;
 import com.nitrogenegames.netcraft.block.BlockNodeInput;
+import com.nitrogenegames.netcraft.gui.GuiHandler;
 import com.nitrogenegames.netcraft.item.ItemCoil;
 import com.nitrogenegames.netcraft.item.ItemCrafting;
 import com.nitrogenegames.netcraft.item.ItemModuleBase;
@@ -22,6 +23,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -35,6 +37,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class Netcraft {
 
 	public static final String modid = "netcraft";
+	
+	@Instance("netcraft")
+	public static Netcraft instance = new Netcraft();
 	
 	//basic crafting for starting	
 	public static Item glassfibrecoil;
@@ -76,7 +81,7 @@ public class Netcraft {
 	public static Item coreupgrade;
 	//misc
 
-	public static CreativeTabs netcrafttab;
+	public static CreativeTabs netcrafttab = new NetcraftTab(CreativeTabs.getNextID(), "Netcraft");
 
 	public static boolean isModule(ItemStack itemstack) {
 		Item par1item = itemstack.getItem();
@@ -394,16 +399,6 @@ public class Netcraft {
 	
 	@EventHandler
 	public void load(FMLInitializationEvent e){
-		netcrafttab = new CreativeTabs("netcraft"){
-			@SideOnly(Side.CLIENT)
-			public int getTabIconItemIndex(){
-				return Netcraft.design.itemID;
-			}
-		};
-		
-		LanguageRegistry.instance().addStringLocalization(netcrafttab.getTranslatedTabLabel(), "Netcraft");
-		
-		
 		
 		//declarations
 		glassfibrecoil = new ItemCoil(3813).setUnlocalizedName("glassfibrecoil");
@@ -437,6 +432,8 @@ public class Netcraft {
 		superdatachip = new ItemCrafting(3844, true).setUnlocalizedName("superdatachip");
 		forcefieldemitters = new ItemCrafting(3845, false).setUnlocalizedName("forcefieldemitters");
 		nuclearalloy = new ItemCrafting(3846, true).setUnlocalizedName("nuclearalloy");
+	
+		register();
 		
 		//gui
 		GameRegistry.registerTileEntity(TileEntityCore.class, "tileEntityCore");
@@ -453,6 +450,81 @@ public class Netcraft {
 	public void registerItem(Item item, String name){
 		GameRegistry.registerItem(item, item.getUnlocalizedName());
 		LanguageRegistry.addName(item, name);
+	}
+	
+	public void register(){
+		registerBlock(matrixcube, "Matrix Cube");
+		registerBlock(core, "Core");
+		registerBlock(node, "Node");
+		registerBlock(connectionnode, "Connection Node");
+		registerBlock(conditionalnode, "Conditional Node");
+		registerBlock(inputnode, "Input Node");
+		registerItem(glassfibrecoil, "Glass Fibre Coil");
+		registerItem(highvoltagecoil, "High Voltage Coil");
+		registerItem(netdatachip, "Net Datachip");
+		registerItem(communicator, "Communicator");
+		registerItem(centraldatachip, "Central Datachip");
+		registerItem(connector, "Connector");
+		registerItem(design, "Design");
+		registerItem(redmodule, "Redstone Emmission Module");
+		registerItem(deathmodule, "Tesla Field Module");
+		registerItem(powermodule, "Power Emmission Module");
+		registerItem(regenmodule, "Regeneration Module");
+		registerItem(resistmodule,"Resistance Module");
+		registerItem(weathermodule, "Weather Module");
+		registerItem(timemodule, "Celestial Manipulation Module");
+		registerItem(tpmodule, "Basic Teleportation Module");
+		registerItem(atpmodule, "Advanced Teleportation Module");
+		registerItem(baseupgrade, "Upgrade Template");
+		registerItem(euupgrade, "Energy Expansion Upgrade");
+		registerItem(storageupgrade, "Module Stroage Upgrade");
+		registerItem(rangeupgrade, "Range Upgrade");
+		registerItem(capacitorupgrade, "Quantum Capacitor Upgrade");
+		registerItem(coreupgrade, "Basic Upgrade");
+		registerItem(superdatachip, "Supernatural Datachip");
+		registerItem(forcefieldemitters, "Force Field Emitter");
+		registerItem(nuclearalloy, "Nuclear Alloy");
+		//register block through game registry
+		/*
+		GameRegistry.registerBlock(matrixcube, "matrixcube");
+		GameRegistry.registerBlock(core, "core");
+		GameRegistry.registerBlock(node, "node");
+		GameRegistry.registerBlock(connectionnode, "connection_node");
+		GameRegistry.registerBlock(conditionalnode, "conditional_node");
+		GameRegistry.registerBlock(inputnode, "input_node");\
+		//add block to language registry
+		LanguageRegistry.addName(glassfibrecoil, "Glass Fibre Coil");
+		LanguageRegistry.addName(highvoltagecoil, "High Voltage Coil");
+		LanguageRegistry.addName(netdatachip, "Net Datachip");
+		LanguageRegistry.addName(matrixcube, "Matrix Cube");
+		LanguageRegistry.addName(core, "Core");
+		LanguageRegistry.addName(communicator, "Communicator");
+		LanguageRegistry.addName(centraldatachip, "Central Datachip");
+		LanguageRegistry.addName(connector, "Connector");
+		LanguageRegistry.addName(design, "Design");
+		LanguageRegistry.addName(redmodule, "Redstone Emission Module");
+		LanguageRegistry.addName(deathmodule, "Tesla Field Module");
+		LanguageRegistry.addName(powermodule, "Power Emission Module");
+		LanguageRegistry.addName(node, "Node");
+		LanguageRegistry.addName(connectionnode, "Connection Node");
+		LanguageRegistry.addName(conditionalnode, "Conditional Node");
+		LanguageRegistry.addName(inputnode, "Input Node");
+		LanguageRegistry.addName(regenmodule, "Regenerative Module");
+		LanguageRegistry.addName(resistmodule, "Resistive Module");
+		LanguageRegistry.addName(weathermodule, "Weather Module");
+		LanguageRegistry.addName(timemodule, "Celestial Manipulation Module");
+		LanguageRegistry.addName(tpmodule, "Basic Teleportation Module");
+		LanguageRegistry.addName(atpmodule, "Advanced Teleportation Module");
+		LanguageRegistry.addName(baseupgrade, "Upgrade Template");
+		LanguageRegistry.addName(euupgrade, "Energy Expansion Upgrade");
+		LanguageRegistry.addName(storageupgrade, "Module Storage Upgrade");
+		LanguageRegistry.addName(rangeupgrade, "Range Upgrade");
+		LanguageRegistry.addName(capacitorupgrade, "Quantum Capacitor Upgrade");
+		LanguageRegistry.addName(coreupgrade, "Basic Upgrade");
+		LanguageRegistry.addName(superdatachip, "Supernatural Datachip");
+		LanguageRegistry.addName(forcefieldemitters, "Force Field Emitters");
+		LanguageRegistry.addName(nuclearalloy, "Nuclear Alloy");
+		*/
 	}
 	
 	public static int[] decompileNBT(String s)

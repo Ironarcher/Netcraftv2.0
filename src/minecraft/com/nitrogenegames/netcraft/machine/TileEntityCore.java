@@ -13,7 +13,7 @@ import net.minecraft.tileentity.TileEntity;
 public class TileEntityCore extends TileEntity implements ISidedInventory {
 	
 	private ItemStack[] inv = new ItemStack[1];
-	public boolean powered;
+	public boolean powered = false;
 	public int coreEnergyNeeded = 0;
 
 	@Override
@@ -127,11 +127,7 @@ public class TileEntityCore extends TileEntity implements ISidedInventory {
             tagCompound.setBoolean("POWER", powered);
     }
     
-	@Override
-	public boolean isStackValidForSlot(int i, ItemStack itemstack) {
-		// TODO Auto-generated method stub
-		return true;
-	}
+
 
 	@Override
 	public int[] getAccessibleSlotsFromSide(int var1) {
