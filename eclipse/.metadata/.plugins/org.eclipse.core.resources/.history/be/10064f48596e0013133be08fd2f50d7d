@@ -1,0 +1,15 @@
+package com.nitrogenegames.netcraft.item;
+
+import com.nitrogenegames.netcraft.Netcraft;
+
+import net.minecraft.item.Item;
+import cpw.mods.fml.relauncher.*;
+import net.minecraft.creativetab.CreativeTabs;
+
+
+public class ItemUpgrade extends Item {
+public ItemUpgrade(int par1) {
+	super(par1); //Returns super constructor: par1 is ID
+		setCreativeTab(Netcraft.netcrafttab); //Tells the game what creative mode tab it goes in
+	}
+}

@@ -1,0 +1,5 @@
+package com.nitrogenegames.netcraft.machine;
+
+public class TileEntityCore {
+
+}
