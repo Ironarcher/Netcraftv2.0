@@ -1,5 +1,6 @@
 package com.nitrogenegames.netcraft.block;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import com.nitrogenegames.netcraft.Netcraft;
@@ -74,15 +75,46 @@ public class BlockNodeConnection extends Block {
 			world.setBlockMetadataWithNotify(x, y, z, 4, 2);
 		}
 	}
-	@Override
-	public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
-		{
+	public void updateConnection(World par1World, int par2, int par3, int par4) {
 		state = Netcraft.isConectedToCore(par1World, par2, par3, par4);
 		if(state == false) {
 			par1World.setBlockMetadataWithNotify(par2, par3, par4, 2, 2);
 		} else {
 			par1World.setBlockMetadataWithNotify(par2, par3, par4, 4, 2);
 		}
+		ArrayList p = Netcraft.getConnectedObjects(par1World, par2, par3, par4);
+		for(int i = 0; i < p.size(); i++) {
+			int[] coords = (int[]) p.get(i);
+			if(Netcraft.isConectedToCore(par1World, par2, par3, par4)) {
+			par1World.setBlockMetadataWithNotify(par2, par3, par4, 4, 2);
+			} else {
+				par1World.setBlockMetadataWithNotify(par2, par3, par4, 2, 2);
+			}
+		}
+		/*
+		for(int c = -1; c <= 1; c++) {
+			System.out.println("Updating....");
+			if(par1World.getBlockId(par2 + c, par3, par4)  == Netcraft.connectionnode.blockID){
+				par1World.notifyBlockOfNeighborChange(par2 + c, par3, par4, Netcraft.connectionnode.blockID);
+			} 
+			if(par1World.getBlockId(par2, par3 + c, par4)  == Netcraft.connectionnode.blockID){
+				par1World.notifyBlockOfNeighborChange(par2, par3 + c, par4, Netcraft.connectionnode.blockID);
+			} 
+			if(par1World.getBlockId(par2, par3, par4 + c)  == Netcraft.connectionnode.blockID){
+				par1World.notifyBlockOfNeighborChange(par2, par3, par4 + c, Netcraft.connectionnode.blockID);
+			}  //				par1World.notifyBlockOfNeighborChange(par2, par3, par4, Netcraft.connectionnode.blockID);
+}
+*/
+	}
+	 @Override
+	 public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
+	 {
+			updateConnection(par1World, par2, par3, par4);
+	 }
+	@Override
+	public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
+		{
+		updateConnection(par1World, par2, par3, par4);
 	}
 	@SideOnly(Side.CLIENT)
 	@Override
@@ -104,7 +136,7 @@ public class BlockNodeConnection extends Block {
 		this.icon2 = par1IconRegister.registerIcon(Netcraft.modid + ":" + (this.getUnlocalizedName() + "_on"));    
 		
 	}
-	
+
 	
 	
 	

@@ -224,6 +224,216 @@ public class Netcraft {
 		}
 
 	}
+	private static ArrayList convertToArray(ArrayList p) {
+		ArrayList e = new ArrayList();
+		for(int i = 0; i < p.size(); i++) {
+			int[] coords = decompileNBT((String) p.get(i));
+			e.add(coords);
+		}
+		return e;
+	}
+	public static ArrayList getConnectedObjects(World world, int x, int y, int z) {
+		ArrayList p = new ArrayList();
+		for(int c = -1; c <= 1; c++) {
+			if(!(c==0)) {
+				if(isNetConductable(world.getBlockId(x + c, y, z))) {
+						//System.out.println("" + (x + c) + "," + (y) + "," + (z));
+							boolean repeat = false;
+						for(int i = 0; i < p.size(); i++) {
+
+							int[] coords = decompileNBT((String) p.get(i));
+							if(((coords[0] == (x + c)) && (coords[1] == (y)) && (coords[2] == (z)) )) {
+								
+								repeat = true;
+							} 
+						}
+						if(!(repeat == true)) {
+						p.add((x + c) + "," + (y) + "," + (z));
+							p = getConnectedObjectsFromNode(world, x + c, y, z, p);
+						}
+
+				} else 	if(isNetObject(world.getBlockId(x + c, y, z))) {
+					boolean repeat = false;
+				for(int i = 0; i < p.size(); i++) {
+
+					int[] coords = decompileNBT((String) p.get(i));
+					if(((coords[0] == (x+c)) && (coords[1] == (y)) && (coords[2] == (z)) )) {
+						
+						repeat = true;
+					} 
+				}
+				if(!(repeat == true)) {
+				p.add((x+ c) + "," + (y) + "," + (z));
+				}
+			} 
+				if(isNetConductable(world.getBlockId(x, y + c, z))) {
+						//System.out.println("" + (x + c) + "," + (y) + "," + (z));
+							boolean repeat = false;
+						for(int i = 0; i < p.size(); i++) {
+
+							int[] coords = decompileNBT((String) p.get(i));
+							if(((coords[0] == (x)) && (coords[1] == (y + c)) && (coords[2] == (z)) )) {
+								
+								repeat = true;
+							} 
+						}
+						if(!(repeat == true)) {
+						p.add((x) + "," + (y + c) + "," + (z));
+							p = getConnectedObjectsFromNode(world, x, y + c, z, p);
+						}
+
+				} else 	if(isNetObject(world.getBlockId(x, y + c, z))) {
+					boolean repeat = false;
+				for(int i = 0; i < p.size(); i++) {
+
+					int[] coords = decompileNBT((String) p.get(i));
+					if(((coords[0] == (x)) && (coords[1] == (y + c)) && (coords[2] == (z)) )) {
+						
+						repeat = true;
+					} 
+				}
+				if(!(repeat == true)) {
+				p.add((x) + "," + (y + c) + "," + (z));
+				}
+			} 
+				if(isNetConductable(world.getBlockId(x, y, z + c))) {
+						//System.out.println("" + (x + c) + "," + (y) + "," + (z));
+							boolean repeat = false;
+						for(int i = 0; i < p.size(); i++) {
+
+							int[] coords = decompileNBT((String) p.get(i));
+							if(((coords[0] == (x)) && (coords[1] == (y)) && (coords[2] == (z + c)) )) {
+								
+								repeat = true;
+							} 
+						}
+						if(!(repeat == true)) {
+						p.add((x) + "," + (y) + "," + (z + c));
+							p = getConnectedObjectsFromNode(world, x, y, z + c, p);
+						}
+
+				} else 	if(isNetObject(world.getBlockId(x, y, z + c))) {
+						boolean repeat = false;
+					for(int i = 0; i < p.size(); i++) {
+	
+						int[] coords = decompileNBT((String) p.get(i));
+						if(((coords[0] == (x)) && (coords[1] == (y)) && (coords[2] == (z + c)) )) {
+							
+							repeat = true;
+						} 
+					}
+					if(!(repeat == true)) {
+					p.add((x) + "," + (y) + "," + (z + c));
+					}
+				} 
+
+			}
+		
+
+		}
+		return convertToArray(p);
+	}
+	private static ArrayList getConnectedObjectsFromNode(World world, int x, int y, int z, ArrayList p) {
+		
+		for(int c = -1; c <= 1; c++) {
+			if(!(c==0)) {
+				if(isNetConductable(world.getBlockId(x + c, y, z))) {
+						//System.out.println("" + (x + c) + "," + (y) + "," + (z));
+							boolean repeat = false;
+						for(int i = 0; i < p.size(); i++) {
+
+							int[] coords = decompileNBT((String) p.get(i));
+							if(((coords[0] == (x + c)) && (coords[1] == (y)) && (coords[2] == (z)) )) {
+								
+								repeat = true;
+							} 
+						}
+						if(!(repeat == true)) {
+						p.add((x + c) + "," + (y) + "," + (z));
+							p = getConnectedObjectsFromNode(world, x + c, y, z, p);
+						}
+
+				} else 	if(isNetObject(world.getBlockId(x + c, y, z))) {
+					boolean repeat = false;
+				for(int i = 0; i < p.size(); i++) {
+
+					int[] coords = decompileNBT((String) p.get(i));
+					if(((coords[0] == (x+c)) && (coords[1] == (y)) && (coords[2] == (z)) )) {
+						
+						repeat = true;
+					} 
+				}
+				if(!(repeat == true)) {
+				p.add((x+ c) + "," + (y) + "," + (z));
+				}
+			} 
+				if(isNetConductable(world.getBlockId(x, y + c, z))) {
+						//System.out.println("" + (x + c) + "," + (y) + "," + (z));
+							boolean repeat = false;
+						for(int i = 0; i < p.size(); i++) {
+
+							int[] coords = decompileNBT((String) p.get(i));
+							if(((coords[0] == (x)) && (coords[1] == (y + c)) && (coords[2] == (z)) )) {
+								
+								repeat = true;
+							} 
+						}
+						if(!(repeat == true)) {
+						p.add((x) + "," + (y + c) + "," + (z));
+							p = getConnectedObjectsFromNode(world, x, y + c, z, p);
+						}
+
+				} else 	if(isNetObject(world.getBlockId(x, y + c, z))) {
+					boolean repeat = false;
+				for(int i = 0; i < p.size(); i++) {
+
+					int[] coords = decompileNBT((String) p.get(i));
+					if(((coords[0] == (x)) && (coords[1] == (y + c)) && (coords[2] == (z)) )) {
+						
+						repeat = true;
+					} 
+				}
+				if(!(repeat == true)) {
+				p.add((x) + "," + (y + c) + "," + (z));
+				}
+			} 
+				if(isNetConductable(world.getBlockId(x, y, z + c))) {
+						//System.out.println("" + (x + c) + "," + (y) + "," + (z));
+							boolean repeat = false;
+						for(int i = 0; i < p.size(); i++) {
+
+							int[] coords = decompileNBT((String) p.get(i));
+							if(((coords[0] == (x)) && (coords[1] == (y)) && (coords[2] == (z + c)) )) {
+								
+								repeat = true;
+							} 
+						}
+						if(!(repeat == true)) {
+						p.add((x) + "," + (y) + "," + (z + c));
+							p = getConnectedObjectsFromNode(world, x, y, z + c, p);
+						}
+
+				} else 	if(isNetObject(world.getBlockId(x, y, z + c))) {
+						boolean repeat = false;
+					for(int i = 0; i < p.size(); i++) {
+	
+						int[] coords = decompileNBT((String) p.get(i));
+						if(((coords[0] == (x)) && (coords[1] == (y)) && (coords[2] == (z + c)) )) {
+							
+							repeat = true;
+						} 
+					}
+					if(!(repeat == true)) {
+					p.add((x) + "," + (y) + "," + (z + c));
+					}
+				} 
+
+			}
+		
+
+		}
+		return p;
+	}
 	private static int[] getCoreCoordinatesFromNode(World world, int x, int y,
 			int z, ArrayList p) {
 		boolean isC = false;
@@ -240,12 +450,6 @@ public class Netcraft {
 							if(((coords[0] == (x + c)) && (coords[1] == (y)) && (coords[2] == (z)) )) {
 								
 								repeat = true;
-								System.out.println("REPEATED X");
-								System.out.println(x + c);
-								System.out.println(y);
-								System.out.println(z);
-								System.out.println(x);
-								System.out.println(c);
 							} 
 						}
 
@@ -266,7 +470,6 @@ public class Netcraft {
 							int[] coords = decompileNBT((String) p.get(i));
 							if(((coords[0] == (x)) && (coords[1] == (y + c)) && (coords[2] == (z)) )) {
 								repeat = true;
-								System.out.println("REPEATED Y");
 							} 
 						}
 						if(!(repeat == true)) {
@@ -287,7 +490,6 @@ public class Netcraft {
 							int[] coords = decompileNBT((String) p.get(i));
 							if(((coords[0] == (x)) && (coords[1] == (y)) && (coords[2] == (z + c)) )) {
 								repeat = true;
-								System.out.println("REPEATED Z");
 							} 
 						}
 						if(!(repeat == true)) {
@@ -561,6 +763,20 @@ public class Netcraft {
 		coords[2] = Integer.parseInt(toadd);
 		return coords;
 
+	}
+	public static boolean isNetConductable(int bid) {
+		if(bid == core.blockID || bid == connectionnode.blockID) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	public static boolean isNetObject(int bid) {
+		if(bid == core.blockID || bid == connectionnode.blockID || bid == conditionalnode.blockID) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }
