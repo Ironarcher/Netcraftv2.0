@@ -13,12 +13,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.MinecraftForge;
 
 public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory {
 	//ISidedInventory
-	public double energy = 0;
-	public double maxenergy = 10000;
+	public int energy = 5;
+	public int maxenergy = 10000;
 	private boolean init;
 	
 	private ItemStack[] inv = new ItemStack[1];
@@ -107,9 +108,9 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     public void readFromNBT(NBTTagCompound tagCompound) {
             super.readFromNBT(tagCompound);
             
-            //if(tagCompound.hasKey("energy")){
-           // 	this.energy = tagCompound.getDouble("energy");
-            //}
+            if(tagCompound.hasKey("energy")){
+            	this.energy = tagCompound.getInteger("energy");
+            }
             NBTTagList tagList = tagCompound.getTagList("Inventory");
             for (int i = 0; i < tagList.tagCount(); i++) {
                     NBTTagCompound tag = (NBTTagCompound) tagList.tagAt(i);
@@ -125,7 +126,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     public void writeToNBT(NBTTagCompound tagCompound) {
             super.writeToNBT(tagCompound);
             
-           // tagCompound.setDouble("energy", this.energy);
+           tagCompound.setInteger("energy", this.energy);
             
             NBTTagList itemList = new NBTTagList();
             for (int i = 0; i < inv.length; i++) {
@@ -144,7 +145,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     
     @Override
     public void updateEntity(){
-    	/*
+    	
     	if(!init && worldObj != null){
     		if(!worldObj.isRemote){
     			EnergyTileLoadEvent loadEvent = new EnergyTileLoadEvent(this);
@@ -152,13 +153,13 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     		}
     		init = true;
     	}
-    	*/
+    	
     }
 
     @Override
     public void invalidate(){
-    	//EnergyTileUnloadEvent unloadEvent = new EnergyTileUnloadEvent(this);
-		//MinecraftForge.EVENT_BUS.post(unloadEvent);
+    	EnergyTileUnloadEvent unloadEvent = new EnergyTileUnloadEvent(this);
+		MinecraftForge.EVENT_BUS.post(unloadEvent);
     }
     
 	@Override
@@ -182,24 +183,26 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	}
 
 	@Override
-	public boolean acceptsEnergyFrom(TileEntity emitter, Direction direction) {
-		//Can accept energy from any side.
+	public int getMaxSafeInput() {
+		return 512;
+	}
+
+	@Override
+	public boolean acceptsEnergyFrom(TileEntity emitter,
+			ForgeDirection direction) {
+		// TODO Auto-generated method stub
 		return true;
 	}
 
 	@Override
-	public boolean isAddedToEnergyNet() {
-		return false;
-	}
-
-	@Override
-	public int demandsEnergy() {
+	public double demandedEnergyUnits() {
 		return (int) (this.maxenergy - this.energy);
 	}
 
-
 	@Override
-	public int injectEnergy(Direction directionFrom, int amount) {
+	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
+		
+		System.out.println("HELO");
 		if(this.energy >= this.maxenergy) return amount;
 		
 		double openEnergy = this.maxenergy - this.energy;
@@ -212,11 +215,6 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 			return amount - (int) openEnergy;
 		}
 		return 0;
-	}
-
-	@Override
-	public int getMaxSafeInput() {
-		return 512;
 	}
 
 }

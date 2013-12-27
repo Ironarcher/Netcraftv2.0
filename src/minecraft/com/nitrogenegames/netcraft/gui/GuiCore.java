@@ -15,11 +15,11 @@ import com.nitrogenegames.netcraft.machine.ContainerCore;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
 public class GuiCore extends GuiContainer {
-		TileEntityCore tileentity1;
+		TileEntityCore te;
         public GuiCore (InventoryPlayer inventoryPlayer, TileEntityCore tileEntity) {
                 //the container is instanciated and passed to the superclass for handling
                 super(new ContainerCore(inventoryPlayer, tileEntity));
-                tileentity1 = tileEntity;
+                te = tileEntity;
         }
 
         @Override
@@ -27,9 +27,8 @@ public class GuiCore extends GuiContainer {
                 //draw text and stuff here
                 //the parameters for drawString are: string, x, y, color
                 fontRenderer.drawString("Net Core", 66, 6, 4210752);
-                fontRenderer.drawString("EU: " + "", 140, 6, 4210752);
-                fontRenderer.drawString(String.valueOf(tileentity1.energy), 145, 6, 4210752);
-                ItemStack par1ItemStack = tileentity1.getStackInSlot(0);
+                fontRenderer.drawString("EU: " + String.valueOf(te.energy), 140, 6, 4210752);
+                ItemStack par1ItemStack = te.getStackInSlot(0);
                 if(par1ItemStack != null) {
         		if( par1ItemStack.stackTagCompound == null )
                     par1ItemStack.setTagCompound( new NBTTagCompound( ) );

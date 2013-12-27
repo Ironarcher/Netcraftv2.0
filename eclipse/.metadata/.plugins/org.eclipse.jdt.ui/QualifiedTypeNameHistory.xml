@@ -16,4 +16,9 @@
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityCore"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.item.ItemModules"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft"/>
+<fullyQualifiedTypeName name="ic2.api.energy.tile.IEnergyTile"/>
+<fullyQualifiedTypeName name="ic2.api.energy.tile.IEnergySink"/>
+<fullyQualifiedTypeName name="ic2.api.energy.event.EnergyTileLoadEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.common.MinecraftForge"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
