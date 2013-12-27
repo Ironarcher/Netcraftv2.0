@@ -1,7 +1,11 @@
 package com.nitrogenegames.netcraft.machine;
 
-//import ic2.api.energy.tile.IEnergyTile;
-//import ic2.api.energy.*;
+import ic2.api.energy.tile.IEnergyTile;
+import ic2.api.energy.*;
+import ic2.api.Direction;
+import ic2.api.energy.event.EnergyTileLoadEvent;
+import ic2.api.energy.event.EnergyTileUnloadEvent;
+import ic2.api.energy.tile.IEnergySink;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.item.*;
 import net.minecraft.inventory.ISidedInventory;
@@ -9,8 +13,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.MinecraftForge;
 
-public class TileEntityCore extends TileEntity implements ISidedInventory {
+public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory {
+	//ISidedInventory
+	public double energy = 0;
+	public double maxenergy = 10000;
+	private boolean init;
 	
 	private ItemStack[] inv = new ItemStack[1];
 	public boolean powered = false;
@@ -98,6 +107,9 @@ public class TileEntityCore extends TileEntity implements ISidedInventory {
     public void readFromNBT(NBTTagCompound tagCompound) {
             super.readFromNBT(tagCompound);
             
+            //if(tagCompound.hasKey("energy")){
+           // 	this.energy = tagCompound.getDouble("energy");
+            //}
             NBTTagList tagList = tagCompound.getTagList("Inventory");
             for (int i = 0; i < tagList.tagCount(); i++) {
                     NBTTagCompound tag = (NBTTagCompound) tagList.tagAt(i);
@@ -106,17 +118,15 @@ public class TileEntityCore extends TileEntity implements ISidedInventory {
                             inv[slot] = ItemStack.loadItemStackFromNBT(tag);
                     }
 }
-			if(tagCompound.hasKey("POWER")){
 				powered = tagCompound.getBoolean("POWER");
-			} else{
-				powered = false;
-			}
     }
     
     @Override
     public void writeToNBT(NBTTagCompound tagCompound) {
             super.writeToNBT(tagCompound);
-                            
+            
+           // tagCompound.setDouble("energy", this.energy);
+            
             NBTTagList itemList = new NBTTagList();
             for (int i = 0; i < inv.length; i++) {
                     ItemStack stack = inv[i];
@@ -131,30 +141,82 @@ public class TileEntityCore extends TileEntity implements ISidedInventory {
             tagCompound.setBoolean("POWER", powered);
     }
     
+    
+    @Override
+    public void updateEntity(){
+    	/*
+    	if(!init && worldObj != null){
+    		if(!worldObj.isRemote){
+    			EnergyTileLoadEvent loadEvent = new EnergyTileLoadEvent(this);
+    			MinecraftForge.EVENT_BUS.post(loadEvent);
+    		}
+    		init = true;
+    	}
+    	*/
+    }
 
-
+    @Override
+    public void invalidate(){
+    	//EnergyTileUnloadEvent unloadEvent = new EnergyTileUnloadEvent(this);
+		//MinecraftForge.EVENT_BUS.post(unloadEvent);
+    }
+    
 	@Override
 	public int[] getAccessibleSlotsFromSide(int var1) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public boolean canInsertItem(int i, ItemStack itemstack, int j) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public boolean acceptsEnergyFrom(TileEntity emitter, Direction direction) {
+		//Can accept energy from any side.
+		return true;
+	}
+
+	@Override
+	public boolean isAddedToEnergyNet() {
+		return false;
+	}
+
+	@Override
+	public int demandsEnergy() {
+		return (int) (this.maxenergy - this.energy);
+	}
+
+
+	@Override
+	public int injectEnergy(Direction directionFrom, int amount) {
+		if(this.energy >= this.maxenergy) return amount;
+		
+		double openEnergy = this.maxenergy - this.energy;
+		
+		if(openEnergy >= amount){
+			this.energy += amount;
+			return 0;
+		} else if (amount > openEnergy){
+			this.energy = this.maxenergy;
+			return amount - (int) openEnergy;
+		}
+		return 0;
+	}
+
+	@Override
+	public int getMaxSafeInput() {
+		return 512;
 	}
 
 }

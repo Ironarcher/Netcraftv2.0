@@ -612,3 +612,95 @@ java.io.FileNotFoundException: netcraft:/gui/trap.png
 2013-12-26 16:56:56 [CLIENT] [INFO] [CHAT] Block marked at 1097, 3, -558!
 2013-12-26 16:57:52 [CLIENT] [INFO] [CHAT] A nearby core attempted to teleport you to an invalid coordinate! (No core nearby)
 2013-12-26 16:58:29 [CLIENT] [INFO] Stopping!
+2013-12-26 18:58:58 [CLIENT] [INFO] Setting user: Player828
+2013-12-26 18:58:59 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 18:58:59 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 18:59:02 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 18:59:18 [CLIENT] [INFO] Setting user: Player772
+2013-12-26 18:59:18 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 18:59:19 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 18:59:22 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 19:03:57 [CLIENT] [INFO] Setting user: Player563
+2013-12-26 19:03:57 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:03:58 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:04:00 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 19:09:57 [CLIENT] [INFO] Setting user: Player617
+2013-12-26 19:09:57 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:09:58 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:10:00 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 19:15:05 [CLIENT] [INFO] Setting user: Player557
+2013-12-26 19:15:05 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:15:06 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:15:08 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 19:16:12 [CLIENT] [INFO] Setting user: Player115
+2013-12-26 19:16:13 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:16:13 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:16:16 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 19:21:17 [CLIENT] [INFO] Setting user: Player385
+2013-12-26 19:21:18 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:21:19 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:21:21 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 19:29:40 [CLIENT] [INFO] Setting user: Player478
+2013-12-26 19:29:40 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:29:41 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:29:43 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 19:30:31 [CLIENT] [INFO] Setting user: Player553
+2013-12-26 19:30:31 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:30:32 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:30:34 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 19:35:45 [CLIENT] [INFO] Setting user: Player855
+2013-12-26 19:35:46 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:35:46 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:35:49 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 19:37:22 [CLIENT] [INFO] Setting user: Player907
+2013-12-26 19:37:23 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:37:23 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:37:26 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 19:38:08 [CLIENT] [INFO] Setting user: Player454
+2013-12-26 19:38:08 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:38:09 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:38:11 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft
+2013-12-26 19:38:12 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 19:38:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 19:38:13 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 19:38:34 [CLIENT] [INFO] Stopping!
+2013-12-26 19:39:40 [CLIENT] [INFO] Setting user: Player217
+2013-12-26 19:39:41 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:39:41 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:39:44 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft
+2013-12-26 19:39:45 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 19:39:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 19:39:46 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 19:39:55 [CLIENT] [INFO] Stopping!
+2013-12-26 19:40:34 [CLIENT] [INFO] Setting user: Player452
+2013-12-26 19:40:34 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 19:40:35 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 19:40:37 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2

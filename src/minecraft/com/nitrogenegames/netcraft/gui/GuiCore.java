@@ -28,6 +28,7 @@ public class GuiCore extends GuiContainer {
                 //the parameters for drawString are: string, x, y, color
                 fontRenderer.drawString("Net Core", 66, 6, 4210752);
                 fontRenderer.drawString("EU: " + "", 140, 6, 4210752);
+                fontRenderer.drawString(String.valueOf(tileentity1.energy), 145, 6, 4210752);
                 ItemStack par1ItemStack = tileentity1.getStackInSlot(0);
                 if(par1ItemStack != null) {
         		if( par1ItemStack.stackTagCompound == null )

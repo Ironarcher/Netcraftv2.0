@@ -87,8 +87,8 @@ public void drawScreen(int param1, int param2, float par3) {
 
 
 	drawDefaultBackground();
-    GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
     final ResourceLocation texture = new ResourceLocation(Netcraft.modid.toLowerCase(), "/textures/gui/guiModule.png");
+    GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
     this.mc.renderEngine.bindTexture(texture);
     int x = (this.width - this.xSize) / 2;
     int y = (this.height - this.ySize) / 2;
