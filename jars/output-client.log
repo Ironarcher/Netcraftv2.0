@@ -896,3 +896,627 @@ java.io.FileNotFoundException: netcraft:/gui/trap.png
 2013-12-26 22:06:32 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
 2013-12-26 22:06:33 [CLIENT] [SEVERE] Realms: Invalid session id
 2013-12-26 22:06:53 [CLIENT] [INFO] Stopping!
+2013-12-26 22:24:31 [CLIENT] [INFO] Setting user: Player538
+2013-12-26 22:24:32 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:24:32 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:24:35 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:24:40 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:24:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:24:41 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:24:41 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:24:41 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:24:42 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:25:24 [CLIENT] [INFO] Stopping!
+2013-12-26 22:26:58 [CLIENT] [INFO] Setting user: Player580
+2013-12-26 22:26:59 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:26:59 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:27:02 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:27:06 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:27:07 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:27:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:27:08 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:27:08 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:27:09 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:27:16 [CLIENT] [INFO] Stopping!
+2013-12-26 22:27:48 [CLIENT] [INFO] Setting user: Player452
+2013-12-26 22:27:49 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:27:49 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:27:53 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:27:57 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:27:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:27:58 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:27:58 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:27:59 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:28:30 [CLIENT] [INFO] Stopping!
+2013-12-26 22:29:13 [CLIENT] [INFO] Setting user: Player741
+2013-12-26 22:29:14 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:29:15 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:29:18 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:29:22 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:29:22 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:29:23 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:29:23 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:29:23 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:29:24 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:30:18 [CLIENT] [INFO] Stopping!
+2013-12-26 22:30:36 [CLIENT] [INFO] Setting user: Player374
+2013-12-26 22:30:37 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:30:37 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:30:40 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:30:44 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:30:45 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:30:45 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:30:46 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:30:46 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:30:47 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:30:55 [CLIENT] [INFO] Stopping!
+2013-12-26 22:31:31 [CLIENT] [INFO] Setting user: Player236
+2013-12-26 22:31:32 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:31:32 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:31:35 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:31:39 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:31:39 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:31:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:31:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:31:39 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:31:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:31:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:31:39 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:31:39 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:31:39 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:31:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:31:40 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:31:40 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:31:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:31:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:31:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:31:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:31:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:31:42 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:31:50 [CLIENT] [INFO] Stopping!
+2013-12-26 22:32:16 [CLIENT] [INFO] Setting user: Player809
+2013-12-26 22:32:17 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:32:18 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:32:21 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:32:25 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:32:25 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:32:26 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:32:26 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:32:26 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:32:27 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:32:49 [CLIENT] [INFO] Stopping!
+2013-12-26 22:33:27 [CLIENT] [INFO] Setting user: Player990
+2013-12-26 22:33:27 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:33:28 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:33:31 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:33:35 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:33:35 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:33:36 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:33:36 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:33:36 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:33:37 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:34:06 [CLIENT] [INFO] Stopping!
+2013-12-26 22:34:45 [CLIENT] [INFO] Setting user: Player978
+2013-12-26 22:34:45 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:34:46 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:34:49 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:34:53 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:34:53 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:34:54 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:34:54 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:34:54 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:34:55 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:35:06 [CLIENT] [INFO] Stopping!
+2013-12-26 22:36:18 [CLIENT] [INFO] Setting user: Player229
+2013-12-26 22:36:19 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:36:19 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:36:22 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:36:26 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:36:26 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:36:26 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:36:26 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:36:26 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:36:26 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:36:26 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:36:26 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:36:26 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:36:26 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:36:26 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:36:27 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:36:27 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:36:27 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:36:27 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:36:27 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:36:27 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:36:28 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:36:29 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:36:58 [CLIENT] [INFO] Stopping!
+2013-12-26 22:38:48 [CLIENT] [INFO] Setting user: Player666
+2013-12-26 22:38:49 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:38:49 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:38:53 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:38:56 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:38:57 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:38:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:38:58 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:38:58 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:38:59 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:40:33 [CLIENT] [INFO] Setting user: Player859
+2013-12-26 22:40:34 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:40:34 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:40:38 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:40:41 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:40:42 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:40:42 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:40:43 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:40:43 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:40:44 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:40:53 [CLIENT] [INFO] Stopping!
+2013-12-26 22:41:06 [CLIENT] [INFO] Setting user: Player546
+2013-12-26 22:41:07 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:41:07 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:41:10 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:41:14 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:41:14 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:41:15 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:41:15 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:41:15 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:41:17 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:41:26 [CLIENT] [INFO] Stopping!
+2013-12-26 22:43:15 [CLIENT] [INFO] Setting user: Player500
+2013-12-26 22:43:16 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:43:16 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:43:19 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:43:23 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:43:23 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:43:24 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:43:24 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:43:24 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:43:24 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:43:24 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:43:24 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:43:26 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:43:38 [CLIENT] [INFO] Stopping!
+2013-12-26 22:45:47 [CLIENT] [INFO] Setting user: Player714
+2013-12-26 22:45:48 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:45:48 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:45:52 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:45:56 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:45:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:45:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:45:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:45:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:45:58 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:46:23 [CLIENT] [INFO] Stopping!
+2013-12-26 22:50:09 [CLIENT] [INFO] Setting user: Player937
+2013-12-26 22:50:09 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 22:50:10 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 22:50:13 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:50:17 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 22:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 22:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 22:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 22:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 22:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 22:50:19 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 22:50:20 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 22:50:26 [CLIENT] [INFO] Stopping!
+2013-12-26 23:07:47 [CLIENT] [INFO] Setting user: Player168
+2013-12-26 23:07:48 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 23:07:48 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 23:07:52 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:07:56 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 23:07:56 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 23:07:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 23:07:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 23:07:57 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 23:07:58 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 23:08:23 [CLIENT] [INFO] [CHAT] Block marked at 1099, 3, -564!
+2013-12-26 23:08:24 [CLIENT] [INFO] [CHAT] Block marked at 1098, 3, -564!
+2013-12-26 23:08:25 [CLIENT] [INFO] [CHAT] Block marked at 1099, 3, -566!
+2013-12-26 23:08:40 [CLIENT] [INFO] Stopping!
+2013-12-26 23:09:30 [CLIENT] [INFO] Setting user: Player275
+2013-12-26 23:09:31 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 23:09:31 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 23:09:34 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:09:39 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 23:09:39 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 23:09:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 23:09:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 23:09:40 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 23:09:41 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 23:10:02 [CLIENT] [INFO] Stopping!
+2013-12-26 23:11:25 [CLIENT] [INFO] Setting user: Player634
+2013-12-26 23:11:26 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 23:11:27 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 23:11:30 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:11:34 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 23:11:34 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 23:11:35 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 23:11:35 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 23:11:35 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 23:11:36 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 23:12:00 [CLIENT] [INFO] Stopping!
+2013-12-26 23:14:02 [CLIENT] [INFO] Setting user: Player907
+2013-12-26 23:14:02 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 23:14:03 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 23:14:06 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:14:10 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:14:10 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 23:14:11 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 23:14:12 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 23:14:13 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 23:15:12 [CLIENT] [INFO] Setting user: Player463
+2013-12-26 23:15:13 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 23:15:13 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 23:15:17 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:15:21 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 23:15:21 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 23:15:22 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 23:15:22 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 23:15:22 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 23:15:23 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 23:16:22 [CLIENT] [INFO] Setting user: Player310
+2013-12-26 23:16:23 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 23:16:23 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 23:16:26 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:16:30 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:16:30 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 23:16:31 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 23:16:32 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 23:16:32 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 23:16:33 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 23:16:48 [CLIENT] [INFO] Stopping!
+2013-12-26 23:18:39 [CLIENT] [INFO] Setting user: Player500
+2013-12-26 23:18:40 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 23:18:41 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 23:18:44 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:18:47 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:18:47 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:18:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 23:18:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 23:18:47 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 23:18:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 23:18:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 23:18:47 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 23:18:47 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 23:18:47 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 23:18:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 23:18:48 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:18:48 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 23:18:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 23:18:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 23:18:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 23:18:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 23:18:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 23:18:50 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 23:19:07 [CLIENT] [INFO] Stopping!
+2013-12-26 23:19:20 [CLIENT] [INFO] Setting user: Player422
+2013-12-26 23:19:21 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 23:19:21 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 23:19:25 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:19:29 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 23:19:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 23:19:30 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 23:19:30 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 23:19:30 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 23:19:31 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 23:19:38 [CLIENT] [INFO] Stopping!
+2013-12-26 23:30:54 [CLIENT] [INFO] Setting user: Player432
+2013-12-26 23:30:55 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 23:30:55 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 23:30:58 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:31:03 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 23:31:03 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 23:31:04 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 23:31:04 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 23:31:04 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 23:31:05 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 23:31:11 [CLIENT] [INFO] Stopping!
+2013-12-26 23:43:38 [CLIENT] [INFO] Setting user: Player458
+2013-12-26 23:43:39 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2013-12-26 23:43:39 [CLIENT] [INFO] Reloading ResourceManager: Default
+2013-12-26 23:43:43 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:43:47 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4083_euupgrade.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4070_highvoltagecoil.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4086_capacitorupgrade.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4098_coreupgrade.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.baseupgrade.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4069_glassfibrecoil.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2013-12-26 23:43:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2013-12-26 23:43:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2013-12-26 23:43:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3839_inputnode.png
+2013-12-26 23:43:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2013-12-26 23:43:49 [CLIENT] [SEVERE] Realms: Invalid session id
+2013-12-26 23:43:56 [CLIENT] [INFO] Stopping!

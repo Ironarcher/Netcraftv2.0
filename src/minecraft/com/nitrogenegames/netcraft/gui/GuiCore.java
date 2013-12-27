@@ -7,6 +7,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
+import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
@@ -15,11 +16,11 @@ import com.nitrogenegames.netcraft.machine.ContainerCore;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
 public class GuiCore extends GuiContainer {
-		TileEntityCore te;
+		TileEntityCore tel;
         public GuiCore (InventoryPlayer inventoryPlayer, TileEntityCore tileEntity) {
                 //the container is instanciated and passed to the superclass for handling
                 super(new ContainerCore(inventoryPlayer, tileEntity));
-                te = tileEntity;
+                tel = tileEntity;
         }
 
         @Override
@@ -27,8 +28,8 @@ public class GuiCore extends GuiContainer {
                 //draw text and stuff here
                 //the parameters for drawString are: string, x, y, color
                 fontRenderer.drawString("Net Core", 66, 6, 4210752);
-                fontRenderer.drawString("EU: " + String.valueOf(te.energy), 140, 6, 4210752);
-                ItemStack par1ItemStack = te.getStackInSlot(0);
+                fontRenderer.drawString("EU: " + tel.getEnergy(), 140, 6, 4210752);
+                ItemStack par1ItemStack = tel.getStackInSlot(0);
                 if(par1ItemStack != null) {
         		if( par1ItemStack.stackTagCompound == null )
                     par1ItemStack.setTagCompound( new NBTTagCompound( ) );
@@ -39,9 +40,10 @@ public class GuiCore extends GuiContainer {
                     NBTTagCompound tag = (NBTTagCompound) tagList.tagAt(i);
                     fontRenderer.drawString(tag.getString("MarkedThing"), 90, (i * 10) + 30, 4210752);
                 }
+                }
                 //draws "Inventory" or your regional equivalent
                 fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, ySize - 96 + 2, 4210752);
-                }
+
         }
 
         @Override
