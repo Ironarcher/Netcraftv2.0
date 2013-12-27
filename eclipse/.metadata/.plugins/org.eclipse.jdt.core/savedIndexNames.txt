@@ -6,8 +6,13 @@ INDEX VERSION 1.126+C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\eclipse\.metad
 3171824084.index
 4108727661.index
 <<<<<<< HEAD
+<<<<<<< HEAD
 1693697772.index
 3196743160.index
+=======
+3974580528.index
+434989254.index
+>>>>>>> e695d2209a1a7557b1171e3ef809f4334d06e79f
 =======
 3974580528.index
 434989254.index
@@ -25,10 +30,13 @@ INDEX VERSION 1.126+C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\eclipse\.metad
 699745536.index
 3133528496.index
 <<<<<<< HEAD
+<<<<<<< HEAD
 3065916431.index
 3952006974.index
 3974580528.index
 1995173708.index
+=======
+>>>>>>> e695d2209a1a7557b1171e3ef809f4334d06e79f
 =======
 >>>>>>> e695d2209a1a7557b1171e3ef809f4334d06e79f
 4229343273.index
@@ -38,8 +46,11 @@ INDEX VERSION 1.126+C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\eclipse\.metad
 3929425484.index
 2633069639.index
 <<<<<<< HEAD
+<<<<<<< HEAD
 699745536.index
 =======
+=======
+>>>>>>> e695d2209a1a7557b1171e3ef809f4334d06e79f
 4091152162.index
 1531618230.index
 163172794.index
@@ -47,4 +58,7 @@ INDEX VERSION 1.126+C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\eclipse\.metad
 1697886153.index
 3965490705.index
 1498219845.index
+<<<<<<< HEAD
+>>>>>>> e695d2209a1a7557b1171e3ef809f4334d06e79f
+=======
 >>>>>>> e695d2209a1a7557b1171e3ef809f4334d06e79f
