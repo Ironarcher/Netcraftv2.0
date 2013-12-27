@@ -20,16 +20,17 @@ public class GuiCore extends GuiContainer {
 		TileEntityCore tel;
         public GuiCore (InventoryPlayer inventoryPlayer, TileEntityCore tileEntity) {
                 //the container is instanciated and passed to the superclass for handling
-                super(new GuiContainer(inventoryPlayer, tileEntity));
+                super(new ContainerCore(inventoryPlayer, tileEntity));
                 tel = tileEntity;
         }
 
         @Override
         protected void drawGuiContainerForegroundLayer(int param1, int param2) {
+        	System.out.println(((ContainerCore) super.inventorySlots).energy + " NEW");
                 //draw text and stuff here
                 //the parameters for drawString are: string, x, y, color
                 fontRenderer.drawString("Net Core", 66, 6, 4210752);
-                fontRenderer.drawString("EU: " + tel.getEnergy(), 140, 6, 4210752);
+                fontRenderer.drawString("EU: " + ((ContainerCore) super.inventorySlots).energy, 140, 6, 4210752);
                 ItemStack par1ItemStack = tel.getStackInSlot(0);
                 if(par1ItemStack != null) {
         		if( par1ItemStack.stackTagCompound == null )
