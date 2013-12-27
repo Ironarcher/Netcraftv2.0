@@ -1,27 +1,44 @@
 package com.nitrogenegames.netcraft.machine;
 
+import com.nitrogenegames.netcraft.gui.GuiCore;
+
+import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.common.network.Player;
+import ic2.api.energy.prefab.BasicSink;
 import ic2.api.energy.tile.IEnergyTile;
 import ic2.api.energy.*;
 import ic2.api.Direction;
 import ic2.api.energy.event.EnergyTileLoadEvent;
 import ic2.api.energy.event.EnergyTileUnloadEvent;
 import ic2.api.energy.tile.IEnergySink;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.item.*;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.INetworkManager;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.Packet132TileEntityData;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.MinecraftForge;
 
 public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory {
+<<<<<<< HEAD
 
 	public int energy = 5;
+=======
+	//ISidedInventory
+	private int id = 0;
+	public int energy = 0;
+>>>>>>> 9bdd1c8710ef85c39d309fcc627455cccd14fd8c
 	public int maxenergy = 10000;
 	private boolean init;
-	
+	//private BasicSink electricSlicer = new BasicSink(this, 32, 3);
 	private ItemStack[] inv = new ItemStack[1];
 	public boolean powered = false;
 	public int coreEnergyNeeded = 0;
@@ -30,7 +47,18 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     public int getSizeInventory() {
             return inv.length;
     }
-
+	
+	@Override
+	public Packet getDescriptionPacket() {
+	    NBTTagCompound tagCompound = new NBTTagCompound();
+	    writeToNBT(tagCompound);
+	    return new Packet132TileEntityData(xCoord, yCoord, zCoord, 1, tagCompound);
+	}
+	@Override
+	public void onDataPacket(INetworkManager networkManager, Packet132TileEntityData packet) {
+		worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+	}
+	
 	@Override
     public ItemStack getStackInSlot(int slot) {
        //System.out.println(slot + " debug message");
@@ -126,7 +154,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     public void writeToNBT(NBTTagCompound tagCompound) {
             super.writeToNBT(tagCompound);
             
-           tagCompound.setInteger("energy", this.energy);
+
             
             NBTTagList itemList = new NBTTagList();
             for (int i = 0; i < inv.length; i++) {
@@ -140,6 +168,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
             }
             tagCompound.setTag("Inventory", itemList);
             tagCompound.setBoolean("POWER", powered);
+            tagCompound.setInteger("energy", this.energy);
     }
     
     
@@ -201,18 +230,29 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 
 	@Override
 	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
+<<<<<<< HEAD
+=======
+		this.id = 1;
+		System.out.println("INEJCTING " + amount);
+>>>>>>> 9bdd1c8710ef85c39d309fcc627455cccd14fd8c
 		if(this.energy >= this.maxenergy) return amount;
 		
 		double openEnergy = this.maxenergy - this.energy;
 		
 		if(openEnergy >= amount){
+			System.out.println("CHK 1 " + this.energy);
 			this.energy += amount;
+			System.out.println("CHK 2 " + this.energy);
 			return 0;
 		} else if (amount > openEnergy){
 			this.energy = this.maxenergy;
 			return amount - (int) openEnergy;
 		}
+	
 		return 0;
+	}
+	public int getEnergy() {
+		return this.energy;
 	}
 
 }
