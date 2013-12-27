@@ -109,12 +109,12 @@ public class BlockCore extends BlockContainer {
 	          if (!par1World.isRemote)
 	          {
 	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
-	        	  	
                   
                   boolean powered = tileEntity.powered;
 	                  if (powered && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
 	                          tileEntity.powered = false;
 	          }
+	          
 	 }
 	 @SideOnly(Side.CLIENT)
      private Icon[] icons;

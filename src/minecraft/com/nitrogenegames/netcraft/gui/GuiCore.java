@@ -29,7 +29,7 @@ public class GuiCore extends GuiContainer {
                 //draw text and stuff here
                 //the parameters for drawString are: string, x, y, color
                 fontRenderer.drawString("Net Core", 66, 6, 4210752);
-                fontRenderer.drawString("EU: " + tel.getEnergy(), 140, 6, 4210752);
+                fontRenderer.drawString("EU: " + tel.energy, 140, 6, 4210752);
                 ItemStack par1ItemStack = tel.getStackInSlot(0);
                 if(par1ItemStack != null) {
         		if( par1ItemStack.stackTagCompound == null )

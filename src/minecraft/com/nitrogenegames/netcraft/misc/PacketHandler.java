@@ -22,13 +22,42 @@ public class PacketHandler implements IPacketHandler {
 	@Override
 	public void onPacketData(INetworkManager manager,
 			Packet250CustomPayload packet, Player player) {
-		if(packet.channel.equals("S"));
-			handleServerPacket(packet,player);
-		if(packet.channel.equals("C"));
-			handleClientPacket(packet, player);
+		if(packet.channel.equals("corepack"));
+			handleEnergyPacket(packet,player);
     }
-    
-	private void handleServerPacket(Packet250CustomPayload packet,Player player) {
+    private void handleEnergyPacket(Packet250CustomPayload packet, Player player) {
+		DataInputStream inputStream = new DataInputStream(new ByteArrayInputStream(packet.data));
+		int energy;
+		int xcoord;
+		int ycoord;
+		int zcoord;
+		
+		Entity playerEntity = (Entity)player;
+		TileEntity thisTileEntity;
+		TileEntityCore te2;
+			
+		try {
+			energy = inputStream.readInt();
+			xcoord = inputStream.readInt();
+			ycoord = inputStream.readInt();
+			zcoord = inputStream.readInt();
+			
+		} 		catch (Exception e) {
+			energy = 0;
+			xcoord = 0;
+			ycoord = 0;
+			zcoord = 0;
+		}
+		thisTileEntity = playerEntity.worldObj.getBlockTileEntity(xcoord, ycoord, zcoord);
+		try{
+			te2 = (TileEntityCore) thisTileEntity;
+			te2.energy = energy;
+		} catch (Exception e) {
+
+		}
+		
+    }
+	/*private void handleServerPacket(Packet250CustomPayload packet,Player player) {
 		DataInputStream inputStream = new DataInputStream(new ByteArrayInputStream(packet.data));
 		
 		String inputCode;
@@ -84,9 +113,10 @@ public class PacketHandler implements IPacketHandler {
 			}
 			
 		}
-		*/
+	
 	}
-
+	*/
+/*
 	private void handleClientPacket(Packet250CustomPayload packet, Player player){
 		DataInputStream inputStream = new DataInputStream(new ByteArrayInputStream(packet.data));
 		
@@ -110,4 +140,5 @@ public class PacketHandler implements IPacketHandler {
 		 }catch(Exception e){}
 
 	}
+	*/
 }

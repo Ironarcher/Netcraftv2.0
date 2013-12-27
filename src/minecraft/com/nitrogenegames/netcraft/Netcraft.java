@@ -15,6 +15,7 @@ import com.nitrogenegames.netcraft.item.ItemModuleBase;
 import com.nitrogenegames.netcraft.item.ItemModules;
 import com.nitrogenegames.netcraft.item.ItemUpgrade;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
+import com.nitrogenegames.netcraft.misc.PacketHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -33,9 +34,8 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid = Netcraft.modid, name = "Netcraft", version = "Reloaded 0.0.1")
-@NetworkMod(clientSideRequired = true, serverSideRequired = false)
+@NetworkMod(channels = { "corepack" }, packetHandler = PacketHandler.class)
 public class Netcraft {
-
 	public static final String modid = "netcraft";
 	
 	@Instance("netcraft")
