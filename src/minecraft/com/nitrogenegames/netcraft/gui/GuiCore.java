@@ -20,7 +20,7 @@ public class GuiCore extends GuiContainer {
 		TileEntityCore tel;
         public GuiCore (InventoryPlayer inventoryPlayer, TileEntityCore tileEntity) {
                 //the container is instanciated and passed to the superclass for handling
-                super(new ContainerCore(inventoryPlayer, tileEntity));
+                super(new GuiContainer(inventoryPlayer, tileEntity));
                 tel = tileEntity;
         }
 

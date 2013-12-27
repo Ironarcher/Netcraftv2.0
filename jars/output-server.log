@@ -1240,3 +1240,49 @@ java.lang.NullPointerException
 2013-12-26 23:43:56 [SERVER] [INFO] Saving chunks for level 'New World'/The End
 2013-12-26 23:43:57 [SERVER] [INFO] Stopping server
 >>>>>>> 9bdd1c8710ef85c39d309fcc627455cccd14fd8c
+2013-12-27 00:18:18 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-27 00:18:18 [SERVER] [INFO] Generating keypair
+2013-12-27 00:18:18 [SERVER] [INFO] Preparing start region for level 0
+2013-12-27 00:18:19 [SERVER] [INFO] Player334[/127.0.0.1:0] logged in with entity id 17 at (1098.238414904541, 5.0, -566.2913146307119)
+2013-12-27 00:18:19 [SERVER] [INFO] Player334 joined the game
+2013-12-27 00:18:23 [SERVER] [INFO] Saving and pausing game...
+2013-12-27 00:18:23 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-27 00:18:23 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-27 00:18:23 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-27 00:18:26 [SERVER] [INFO] Stopping server
+2013-12-27 00:18:26 [SERVER] [INFO] Saving players
+2013-12-27 00:18:26 [SERVER] [INFO] Player334 left the game
+2013-12-27 00:18:26 [SERVER] [INFO] Saving worlds
+2013-12-27 00:18:26 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-27 00:18:26 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-27 00:18:26 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-27 00:19:29 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2013-12-27 00:19:29 [SERVER] [INFO] Generating keypair
+2013-12-27 00:19:29 [SERVER] [INFO] Preparing start region for level 0
+2013-12-27 00:19:30 [SERVER] [INFO] Player915[/127.0.0.1:0] logged in with entity id 17 at (1098.238414904541, 5.0, -566.2913146307119)
+2013-12-27 00:19:30 [SERVER] [INFO] Player915 joined the game
+2013-12-27 00:19:53 [SERVER] [INFO] Saving and pausing game...
+2013-12-27 00:19:53 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-27 00:19:53 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-27 00:19:53 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-27 00:20:07 [SERVER] [INFO] Saving and pausing game...
+2013-12-27 00:20:07 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-27 00:20:07 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-27 00:20:07 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-27 00:20:07 [SERVER] [INFO] Saving and pausing game...
+2013-12-27 00:20:07 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-27 00:20:07 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-27 00:20:07 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-27 00:20:25 [SERVER] [INFO] Saving and pausing game...
+2013-12-27 00:20:25 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-27 00:20:25 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-27 00:20:25 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2013-12-27 00:20:26 [SERVER] [INFO] Player915 lost connection: disconnect.quitting
+2013-12-27 00:20:26 [SERVER] [INFO] Player915 left the game
+2013-12-27 00:20:26 [SERVER] [INFO] Stopping singleplayer server as player logged out
+2013-12-27 00:20:26 [SERVER] [INFO] Stopping server
+2013-12-27 00:20:26 [SERVER] [INFO] Saving players
+2013-12-27 00:20:26 [SERVER] [INFO] Saving worlds
+2013-12-27 00:20:26 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2013-12-27 00:20:26 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2013-12-27 00:20:26 [SERVER] [INFO] Saving chunks for level 'New World'/The End

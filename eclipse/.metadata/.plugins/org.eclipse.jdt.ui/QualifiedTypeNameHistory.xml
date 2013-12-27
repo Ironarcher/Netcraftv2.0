@@ -4,6 +4,7 @@
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.SideOnly"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="net.minecraft.world.World"/>
 <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.NetworkRegistry"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.DamageSourceTesla"/>
@@ -19,14 +20,7 @@
 <fullyQualifiedTypeName name="ic2.api.energy.tile.IEnergySink"/>
 <fullyQualifiedTypeName name="ic2.api.energy.event.EnergyTileLoadEvent"/>
 <fullyQualifiedTypeName name="net.minecraftforge.common.MinecraftForge"/>
-<fullyQualifiedTypeName name="ic2.api.energy.prefab.BasicSink"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="net.minecraft.world.World"/>
-<fullyQualifiedTypeName name="cpw.mods.fml.common.network.Player"/>
-<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiScreen"/>
-<fullyQualifiedTypeName name="cpw.mods.fml.client.FMLClientHandler"/>
-<fullyQualifiedTypeName name="net.minecraft.client.gui.inventory.GuiContainer"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.gui.GuiCore"/>
-<fullyQualifiedTypeName name="com.jcraft.jogg.Packet"/>
-<fullyQualifiedTypeName name="net.minecraft.network.packet.Packet"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="net.minecraft.client.renderer.Tessellator"/>
 </qualifiedTypeNameHistroy>

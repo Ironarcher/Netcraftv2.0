@@ -28,14 +28,10 @@ import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.MinecraftForge;
 
 public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory {
-<<<<<<< HEAD
 
 	public int energy = 5;
-=======
 	//ISidedInventory
 	private int id = 0;
-	public int energy = 0;
->>>>>>> 9bdd1c8710ef85c39d309fcc627455cccd14fd8c
 	public int maxenergy = 10000;
 	private boolean init;
 	//private BasicSink electricSlicer = new BasicSink(this, 32, 3);
@@ -230,11 +226,8 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 
 	@Override
 	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
-<<<<<<< HEAD
-=======
 		this.id = 1;
 		System.out.println("INEJCTING " + amount);
->>>>>>> 9bdd1c8710ef85c39d309fcc627455cccd14fd8c
 		if(this.energy >= this.maxenergy) return amount;
 		
 		double openEnergy = this.maxenergy - this.energy;
