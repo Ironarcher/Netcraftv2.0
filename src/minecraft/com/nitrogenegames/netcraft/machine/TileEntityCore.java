@@ -1,8 +1,12 @@
 package com.nitrogenegames.netcraft.machine;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+
 import com.nitrogenegames.netcraft.gui.GuiCore;
 
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.common.network.Player;
 import ic2.api.energy.prefab.BasicSink;
 import ic2.api.energy.tile.IEnergyTile;
@@ -22,6 +26,7 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.Packet132TileEntityData;
+import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
@@ -178,9 +183,9 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     		}
     		init = true;
     	}
+    	sendPacket();
     	
     }
-
     @Override
     public void invalidate(){
     	EnergyTileUnloadEvent unloadEvent = new EnergyTileUnloadEvent(this);
@@ -226,26 +231,48 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 
 	@Override
 	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
+
 		this.id = 1;
-		System.out.println("INEJCTING " + amount);
-		if(this.energy >= this.maxenergy) return amount;
+		if(this.energy >= this.maxenergy){
+			sendPacket();
+			return amount;
+		}
 		
 		double openEnergy = this.maxenergy - this.energy;
 		
 		if(openEnergy >= amount){
-			System.out.println("CHK 1 " + this.energy);
 			this.energy += amount;
-			System.out.println("CHK 2 " + this.energy);
+			sendPacket();
 			return 0;
 		} else if (amount > openEnergy){
 			this.energy = this.maxenergy;
+			sendPacket();
 			return amount - (int) openEnergy;
 		}
-	
+		sendPacket();
 		return 0;
 	}
 	public int getEnergy() {
 		return this.energy;
+	}
+	public void sendPacket() {
+		System.out.println("SENDING");
+    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+        DataOutputStream outputStream = new DataOutputStream(bos);
+        try {
+                outputStream.writeInt(this.energy);
+                outputStream.writeInt(this.xCoord);
+                outputStream.writeInt(this.yCoord);
+                outputStream.writeInt(this.zCoord);
+        } catch (Exception ex) {
+                ex.printStackTrace();
+        }
+
+        Packet250CustomPayload packet = new Packet250CustomPayload();
+        packet.channel = "corepack";
+        packet.data = bos.toByteArray();
+        packet.length = bos.size();
+    	PacketDispatcher.sendPacketToAllPlayers(packet); //Maybe change to players in radius?
 	}
 
 }

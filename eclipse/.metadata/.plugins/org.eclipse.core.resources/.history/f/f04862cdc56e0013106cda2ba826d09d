@@ -1,0 +1,18 @@
+package com.nitrogenegames.netcraft.misc;
+
+import com.google.common.collect.BiMap;
+import com.google.common.collect.ImmutableBiMap;
+
+public abstract class CorePacket {
+
+        public static final String CHANNEL = "demomod";
+        private static final BiMap<Integer, Class<? extends DemoPacket>> idMap;
+                
+        static {
+                ImmutableBiMap.Builder<Integer, Class<? extends DemoPacket>> builder = ImmutableBiMap.builder();
+                
+                // we add all our packets here later
+                
+                idMap = builder.build();
+        }
+}

@@ -1,7 +1,12 @@
 package com.nitrogenegames.netcraft.machine;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+
 import com.nitrogenegames.netcraft.Netcraft;
 
+import cpw.mods.fml.common.network.PacketDispatcher;
+import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,6 +15,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.packet.Packet250CustomPayload;
 
 public class ContainerCore extends Container {
 
@@ -30,6 +36,8 @@ public class ContainerCore extends Container {
         public boolean canInteractWith(EntityPlayer player) {
                 return tileEntity.isUseableByPlayer(player);
         }
+
+
         protected void bindPlayerInventory(InventoryPlayer inventoryPlayer) {
                 for (int i = 0; i < 3; i++) {
                         for (int j = 0; j < 9; j++) {
@@ -42,18 +50,34 @@ public class ContainerCore extends Container {
                         addSlotToContainer(new Slot(inventoryPlayer, i, 8 + i * 18, 142));
                 }
         }
-        @SideOnly(Side.CLIENT)
+        /*@SideOnly(Side.CLIENT)
         public void updateProgressBar(int par1, int par2)
         {
         	this.energy = par2;
-        }
+        } */
         public void detectAndSendChanges()
         {
         	super.detectAndSendChanges();
             for (int i = 0; i < this.crafters.size(); ++i)
             {
-            	ICrafting icrafting = (ICrafting)this.crafters.get(i);
-                icrafting.sendProgressBarUpdate(this, 1, this.energy);
+            	//ICrafting icrafting = (ICrafting)this.crafters.get(i);
+                //icrafting.sendProgressBarUpdate(this, 1, this.energy);
+                ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+                DataOutputStream outputStream = new DataOutputStream(bos);
+                try {
+                        outputStream.writeInt(this.energy);
+                        outputStream.writeInt(this.tileEntity.xCoord);
+                        outputStream.writeInt(this.tileEntity.yCoord);
+                        outputStream.writeInt(this.tileEntity.zCoord);
+                } catch (Exception ex) {
+                        ex.printStackTrace();
+                }
+
+                Packet250CustomPayload packet = new Packet250CustomPayload();
+                packet.channel = "corepack";
+                packet.data = bos.toByteArray();
+                packet.length = bos.size();
+                PacketDispatcher.sendPacketToPlayer(packet, (Player) crafters.get(i));
             }
         	this.energy = this.tileEntity.energy;
         	System.out.println(this.energy);
