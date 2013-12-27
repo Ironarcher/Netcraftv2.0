@@ -1,17 +1,45 @@
 package com.nitrogenegames.netcraft.machine;
 
-//import ic2.api.energy.tile.IEnergyTile;
-//import ic2.api.energy.*;
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+
+import com.nitrogenegames.netcraft.gui.GuiCore;
+
+import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.common.network.PacketDispatcher;
+import cpw.mods.fml.common.network.Player;
+import ic2.api.energy.prefab.BasicSink;
+import ic2.api.energy.tile.IEnergyTile;
+import ic2.api.energy.*;
+import ic2.api.Direction;
+import ic2.api.energy.event.EnergyTileLoadEvent;
+import ic2.api.energy.event.EnergyTileUnloadEvent;
+import ic2.api.energy.tile.IEnergySink;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.item.*;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.INetworkManager;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.Packet132TileEntityData;
+import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.MinecraftForge;
 
-public class TileEntityCore extends TileEntity implements ISidedInventory {
-	
+public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory {
+
+	public int energy = 5;
+	//ISidedInventory
+	private int id = 0;
+	public int maxenergy = 10000;
+	private boolean init;
+	//private BasicSink electricSlicer = new BasicSink(this, 32, 3);
 	private ItemStack[] inv = new ItemStack[1];
 	public boolean powered = false;
 	public int coreEnergyNeeded = 0;
@@ -20,7 +48,18 @@ public class TileEntityCore extends TileEntity implements ISidedInventory {
     public int getSizeInventory() {
             return inv.length;
     }
-
+	
+	@Override
+	public Packet getDescriptionPacket() {
+	    NBTTagCompound tagCompound = new NBTTagCompound();
+	    writeToNBT(tagCompound);
+	    return new Packet132TileEntityData(xCoord, yCoord, zCoord, 1, tagCompound);
+	}
+	@Override
+	public void onDataPacket(INetworkManager networkManager, Packet132TileEntityData packet) {
+		worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+	}
+	
 	@Override
     public ItemStack getStackInSlot(int slot) {
        //System.out.println(slot + " debug message");
@@ -98,6 +137,9 @@ public class TileEntityCore extends TileEntity implements ISidedInventory {
     public void readFromNBT(NBTTagCompound tagCompound) {
             super.readFromNBT(tagCompound);
             
+            if(tagCompound.hasKey("energy")){
+            	this.energy = tagCompound.getInteger("energy");
+            }
             NBTTagList tagList = tagCompound.getTagList("Inventory");
             for (int i = 0; i < tagList.tagCount(); i++) {
                     NBTTagCompound tag = (NBTTagCompound) tagList.tagAt(i);
@@ -105,14 +147,16 @@ public class TileEntityCore extends TileEntity implements ISidedInventory {
                     if (slot >= 0 && slot < inv.length) {
                             inv[slot] = ItemStack.loadItemStackFromNBT(tag);
                     }
-}  			boolean temp = (boolean) tagCompound.getBoolean("POWER");
-            powered = tagCompound.getBoolean("POWER");
+}
+				powered = tagCompound.getBoolean("POWER");
     }
     
     @Override
     public void writeToNBT(NBTTagCompound tagCompound) {
             super.writeToNBT(tagCompound);
-                            
+            
+
+            
             NBTTagList itemList = new NBTTagList();
             for (int i = 0; i < inv.length; i++) {
                     ItemStack stack = inv[i];
@@ -125,32 +169,110 @@ public class TileEntityCore extends TileEntity implements ISidedInventory {
             }
             tagCompound.setTag("Inventory", itemList);
             tagCompound.setBoolean("POWER", powered);
+            tagCompound.setInteger("energy", this.energy);
     }
     
-
-
+    
+    @Override
+    public void updateEntity(){
+    	
+    	if(!init && worldObj != null){
+    		if(!worldObj.isRemote){
+    			EnergyTileLoadEvent loadEvent = new EnergyTileLoadEvent(this);
+    			MinecraftForge.EVENT_BUS.post(loadEvent);
+    		}
+    		init = true;
+    	}
+    	sendPacket();
+    	
+    }
+    @Override
+    public void invalidate(){
+    	EnergyTileUnloadEvent unloadEvent = new EnergyTileUnloadEvent(this);
+		MinecraftForge.EVENT_BUS.post(unloadEvent);
+    }
+    
 	@Override
 	public int[] getAccessibleSlotsFromSide(int var1) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public boolean canInsertItem(int i, ItemStack itemstack, int j) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
-		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public int getMaxSafeInput() {
+		return 32;
+	}
+
+	@Override
+	public boolean acceptsEnergyFrom(TileEntity emitter,
+			ForgeDirection direction) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public double demandedEnergyUnits() {
+		return (int) (this.maxenergy - this.energy);
+	}
+
+	@Override
+	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
+
+		this.id = 1;
+		if(this.energy >= this.maxenergy){
+			sendPacket();
+			return amount;
+		}
+		
+		double openEnergy = this.maxenergy - this.energy;
+		
+		if(openEnergy >= amount){
+			this.energy += amount;
+			sendPacket();
+			return 0;
+		} else if (amount > openEnergy){
+			this.energy = this.maxenergy;
+			sendPacket();
+			return amount - (int) openEnergy;
+		}
+		sendPacket();
+		return 0;
+	}
+	public int getEnergy() {
+		return this.energy;
+	}
+	public void sendPacket() {
+		System.out.println("SENDING");
+    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+        DataOutputStream outputStream = new DataOutputStream(bos);
+        try {
+                outputStream.writeInt(this.energy);
+                outputStream.writeInt(this.xCoord);
+                outputStream.writeInt(this.yCoord);
+                outputStream.writeInt(this.zCoord);
+        } catch (Exception ex) {
+                ex.printStackTrace();
+        }
+
+        Packet250CustomPayload packet = new Packet250CustomPayload();
+        packet.channel = "corepack";
+        packet.data = bos.toByteArray();
+        packet.length = bos.size();
+    	PacketDispatcher.sendPacketToAllPlayers(packet); //Maybe change to players in radius?
 	}
 
 }

@@ -31,13 +31,14 @@ INDEX VERSION 1.126+C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\eclipse\.metad
 1995173708.index
 2518958397.index
 2400471022.index
-2505067621.index
 3905941873.index
+2505067621.index
 3952006974.index
 490513757.index
 1115467115.index
 4155206848.index
 699745536.index
+<<<<<<< HEAD
 3133528496.index
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,11 +57,15 @@ INDEX VERSION 1.126+C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\eclipse\.metad
 =======
 >>>>>>> e695d2209a1a7557b1171e3ef809f4334d06e79f
 4229343273.index
+=======
+>>>>>>> Bunch of MetaData Work, Fixed Core TIleEntitys
 229549708.index
+4229343273.index
+3133528496.index
 244817356.index
 1693697772.index
-3929425484.index
 2633069639.index
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,6 +78,9 @@ INDEX VERSION 1.126+C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\eclipse\.metad
 >>>>>>> e695d2209a1a7557b1171e3ef809f4334d06e79f
 =======
 >>>>>>> e695d2209a1a7557b1171e3ef809f4334d06e79f
+=======
+3929425484.index
+>>>>>>> Bunch of MetaData Work, Fixed Core TIleEntitys
 4091152162.index
 1531618230.index
 163172794.index

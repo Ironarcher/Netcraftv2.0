@@ -19,7 +19,7 @@ import net.minecraft.network.packet.Packet250CustomPayload;
 
 public class ContainerCore extends Container {
 
-        protected TileEntityCore tileEntity;
+        public TileEntityCore tileEntity;
         public int energy;
         public ContainerCore (InventoryPlayer inventoryPlayer, TileEntityCore te){
                 tileEntity = te;
@@ -55,6 +55,7 @@ public class ContainerCore extends Container {
         {
         	this.energy = par2;
         } */
+        @SideOnly(Side.SERVER)
         public void detectAndSendChanges()
         {
         	super.detectAndSendChanges();
@@ -62,6 +63,7 @@ public class ContainerCore extends Container {
             {
             	//ICrafting icrafting = (ICrafting)this.crafters.get(i);
                 //icrafting.sendProgressBarUpdate(this, 1, this.energy);
+        		/*if(!worldObj.isRemote) {
                 ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
                 DataOutputStream outputStream = new DataOutputStream(bos);
                 try {
@@ -78,9 +80,9 @@ public class ContainerCore extends Container {
                 packet.data = bos.toByteArray();
                 packet.length = bos.size();
                 PacketDispatcher.sendPacketToPlayer(packet, (Player) crafters.get(i));
+        		} */
             }
-        	this.energy = this.tileEntity.energy;
-        	System.out.println(this.energy);
+        	//this.energy = this.tileEntity.energy;
         	
         }
         public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)

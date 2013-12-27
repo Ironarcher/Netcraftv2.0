@@ -23,6 +23,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 
@@ -181,10 +182,10 @@ public class ItemModules extends Item {
 			} else if (type == 2) {
 				mode = EntityCreature.class;
 			} else {
-				mode = EntityLiving.class;
+				mode = EntityLivingBase.class;
 			}
 
-			
+
 
 			entities = world.getEntitiesWithinAABB(mode, AxisAlignedBB.getBoundingBox(x - trange, y - trange, z - trange, x + trange, y + trange, z + trange));
 
@@ -194,7 +195,7 @@ public class ItemModules extends Item {
 				if(i < entities.size()) {
 					DamageSourceTesla ds = new DamageSourceTesla("net");
 
-					EntityLiving mob = (EntityLiving) entities.get(i);
+					EntityLivingBase mob = (EntityLivingBase) entities.get(i);
 					mob.attackEntityFrom(ds, 4);
 				}
 				

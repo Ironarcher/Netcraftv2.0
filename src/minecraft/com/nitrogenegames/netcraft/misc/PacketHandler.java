@@ -16,6 +16,8 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IPacketHandler;
 import cpw.mods.fml.common.network.Player;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class PacketHandler implements IPacketHandler {
 	
@@ -31,7 +33,7 @@ public class PacketHandler implements IPacketHandler {
 		int xcoord;
 		int ycoord;
 		int zcoord;
-		
+		boolean error = false;
 		Entity playerEntity = (Entity)player;
 		TileEntity thisTileEntity;
 		TileEntityCore te2;
@@ -43,6 +45,7 @@ public class PacketHandler implements IPacketHandler {
 			zcoord = inputStream.readInt();
 			
 		} 		catch (Exception e) {
+			error = true;
 			energy = 0;
 			xcoord = 0;
 			ycoord = 0;
@@ -50,8 +53,11 @@ public class PacketHandler implements IPacketHandler {
 		}
 		thisTileEntity = playerEntity.worldObj.getBlockTileEntity(xcoord, ycoord, zcoord);
 		try{
+			if(!error) {
 			te2 = (TileEntityCore) thisTileEntity;
 			te2.energy = energy;
+			//System.out.println(energy + " ENERGY SENT");
+			}
 		} catch (Exception e) {
 
 		}

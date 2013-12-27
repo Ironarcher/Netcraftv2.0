@@ -35,6 +35,7 @@ import net.minecraftforge.common.MinecraftForge;
 public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory {
 
 	public int energy = 5;
+	public boolean isUsingPower = false;
 	//ISidedInventory
 	private int id = 0;
 	public int maxenergy = 10000;
@@ -183,6 +184,15 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     		}
     		init = true;
     	}
+    	int meta = worldObj.getBlockMetadata(xCoord, yCoord, zCoord);
+		if(!worldObj.isRemote) { //MAYBE A BIT LAGGY?
+    	if(meta <= 3 && powered == true) {
+    		worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, meta + 4, 2);
+    	} else if(meta >= 4 && powered == false) {
+    		worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, meta - 4, 2);
+    	}
+		}
+    	
     	sendPacket();
     	
     }
@@ -232,7 +242,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	@Override
 	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
 
-		this.id = 1;
+		this.isUsingPower = true;
 		if(this.energy >= this.maxenergy){
 			sendPacket();
 			return amount;
@@ -256,10 +266,11 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 		return this.energy;
 	}
 	public void sendPacket() {
-		System.out.println("SENDING");
+		if(!worldObj.isRemote) {
     	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
         DataOutputStream outputStream = new DataOutputStream(bos);
         try {
+        	//System.out.println(this.energy + " ENERGYS SENDING");
                 outputStream.writeInt(this.energy);
                 outputStream.writeInt(this.xCoord);
                 outputStream.writeInt(this.yCoord);
@@ -273,6 +284,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
         packet.data = bos.toByteArray();
         packet.length = bos.size();
     	PacketDispatcher.sendPacketToAllPlayers(packet); //Maybe change to players in radius?
+		}
 	}
 
 }

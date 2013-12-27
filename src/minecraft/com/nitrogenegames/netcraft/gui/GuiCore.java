@@ -28,6 +28,11 @@ public class GuiCore extends GuiContainer {
         protected void drawGuiContainerForegroundLayer(int param1, int param2) {
                 //draw text and stuff here
                 //the parameters for drawString are: string, x, y, color
+        		//tel = (TileEntityCore) tel.worldObj.getBlockTileEntity(tel.xCoord, tel.yCoord, tel.zCoord);
+        	ContainerCore parentContainer = (ContainerCore) super.inventorySlots;
+        	//System.out.println(tel.energy);
+        	//System.out.println(parentContainer.tileEntity.energy);
+
                 fontRenderer.drawString("Net Core", 66, 6, 4210752);
                 fontRenderer.drawString("EU: " + tel.energy, 140, 6, 4210752);
                 ItemStack par1ItemStack = tel.getStackInSlot(0);

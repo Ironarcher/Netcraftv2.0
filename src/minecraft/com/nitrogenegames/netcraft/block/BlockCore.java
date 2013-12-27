@@ -18,6 +18,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -65,6 +66,7 @@ public class BlockCore extends BlockContainer {
 	 @Override
 	 public void onBlockAdded(World par1World, int par2, int par3, int par4)
 	 {
+		 
 	          if (!par1World.isRemote)
 	          {
 	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
@@ -123,37 +125,24 @@ public class BlockCore extends BlockContainer {
      @Override
      public void registerIcons(IconRegister par1IconRegister)
      {
-           icons = new Icon[3];
-          
-           for(int i = 0; i < icons.length; i++)
-           {
-                  icons[i] = par1IconRegister.registerIcon(Netcraft.modid + ":" + (this.getUnlocalizedName().substring(5)) + i);
-           }
+           icons = new Icon[5];
+           icons[0] = par1IconRegister.registerIcon(Netcraft.modid + ":core_bottom");
+           icons[1] = par1IconRegister.registerIcon(Netcraft.modid + ":core_top");
+           icons[2] = par1IconRegister.registerIcon(Netcraft.modid + ":core_front");
+           icons[3] = par1IconRegister.registerIcon(Netcraft.modid + ":core_front_on");
+           icons[4] = par1IconRegister.registerIcon(Netcraft.modid + ":core_back");
      }
-     public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving, ItemStack par6ItemStack)
+     public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack)
      {
-         int l = MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
-
-         if (l == 0)
-         {
-             par1World.setBlockMetadataWithNotify(par2, par3, par4, 2, 2);
-         }
-
-         if (l == 1)
-         {
-             par1World.setBlockMetadataWithNotify(par2, par3, par4, 5, 2);
-         }
-
-         if (l == 2)
-         {
-             par1World.setBlockMetadataWithNotify(par2, par3, par4, 3, 2);
-         }
-
-         if (l == 3)
-         {
-             par1World.setBlockMetadataWithNotify(par2, par3, par4, 4, 2);
-         }
+     //int l = MathHelper.floor_double((double)(par5EntityLivingBase.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
+    //par1World.setBlockMetadataWithNotify(par2, par3, par4, l, 2);
+     
+    	 System.out.println("PLACED");
+    	 int l = MathHelper.floor_double((double)(par5EntityLivingBase.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
+         par1World.setBlockMetadataWithNotify(par2, par3, par4, l, 2);
+         System.out.println(l);
      }
+     
      @SideOnly(Side.CLIENT)
      @Override
      public Icon getIcon(int par1, int par2)
@@ -161,36 +150,45 @@ public class BlockCore extends BlockContainer {
                          switch(par1)
                          {
                          case 1:
+
                         	 return icons[1];
                          case 2:
                         	 if(par2 == 2) {
                                  return icons[2];
-                            	 } else {
-                                 return icons[1]; 
+                            	 } else if(par2 == 6) {
+                                     return icons[3];
+                               } else  {
+                                 return icons[4]; 
                             	 }
                          case 3:
-                        	 if(par2 == 3 || par2 == 0) {
+                        	 if(par2 == 0) {
                              return icons[2];
-                        	 } else {
-                             return icons[1]; 
+                        	 } else if(par2 == 4) {
+                                 return icons[3];
+                           } else  {
+                             return icons[4]; 
                         	 }
                         		 
                          case 4:
-                        	 if(par2 == 4) {
+                        	 if(par2 == 1) {
                                  return icons[2];
-                            	 } else {
-                                 return icons[1]; 
+                        	 } else if(par2 == 5) {
+                                 return icons[3];
+                           } else  {
+                                 return icons[4]; 
                             	 }
                          case 5:
-                        	 if(par2 == 5) {
+                        	 if(par2 == 3) {
                                  return icons[2];
-                            	 } else {
-                                 return icons[1]; 
+                        	 } else if(par2 == 7) {
+                                 return icons[3];
+                           } else  {
+                                 return icons[4]; 
                             	 }
                          case 0:
-                        	 return icons[1];
+                        	 return icons[0];
                          default:
-                             return icons[1];
+                             return icons[4];
                          }
 
      }
