@@ -17,7 +17,7 @@ import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.MinecraftForge;
 
 public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory {
-
+	//ISidedInventory
 	public int energy = 5;
 	public int maxenergy = 10000;
 	private boolean init;
@@ -184,7 +184,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 
 	@Override
 	public int getMaxSafeInput() {
-		return 32;
+		return 512;
 	}
 
 	@Override
@@ -201,6 +201,8 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 
 	@Override
 	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
+		
+		System.out.println("HELO");
 		if(this.energy >= this.maxenergy) return amount;
 		
 		double openEnergy = this.maxenergy - this.energy;
