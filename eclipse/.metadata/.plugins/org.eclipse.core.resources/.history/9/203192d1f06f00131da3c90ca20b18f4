@@ -1,0 +1,56 @@
+package com.nitrogenegames.netcraft.gui;
+ 
+import com.nitrogenegames.netcraft.Netcraft;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.util.ResourceLocation;
+ 
+public class TabButton extends GuiButton {
+	//syntax for sheet is following order of buttons, going from top to bottom: normal, normal hovered, pressed, pressed+hovered
+	private ResourceLocation texture;
+ 
+	//for default size: 120 width and 20 height
+    public TabButton(int id, int startx, int starty, String text, String reslocation)
+    {
+        this(id, startx, starty, 120, 20, text, reslocation);
+    }
+ 
+    //use this
+    public TabButton(int id, int startx, int starty, int width, int height, String text, String reslocation)
+    {
+        super(id, startx, starty, width, height, text);
+        texture = new ResourceLocation(Netcraft.modid.toLowerCase(), reslocation);
+    }
+    
+    protected int getHoverState(boolean flag)
+    {
+        byte byte0 = 1;
+        if (!enabled)
+        {
+                byte0 = 0;
+                }
+        else if (flag)
+        {
+                byte0 = 2;
+        }
+        return byte0;
+        }
+ 
+    public void drawButton(Minecraft mc, int mx, int my)
+    {
+        FontRenderer fontrenderer = mc.fontRenderer;
+        boolean flag = mx >= xPosition && my >= yPosition && mx < xPosition + width && my < yPosition + height;  //Flag, tells if your mouse is hovering the button
+        if (flag)
+        { // Hover Action
+                drawBorderedRect(xPosition, yPosition, xPosition + width, yPosition + height, 1, 0x90FFFFFF, 0x80000000);
+                drawCenteredString(fontrenderer, displayString, xPosition + width / 2, yPosition + (height - 8) / 2, 0xFFFFFFFF);
+        }
+        else { // Normal
+                drawBorderedRect(xPosition, yPosition, xPosition + width, yPosition + height, 1, 0x90FFFFFF, 0x60000000);
+                drawCenteredString(fontrenderer, displayString, xPosition + width / 2, yPosition + (height - 8) / 2, 0xFFCCCCCC);
+        }
+    }
+ 
+}

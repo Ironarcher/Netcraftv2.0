@@ -1,0 +1,74 @@
+package com.nitrogenegames.netcraft.gui;
+ 
+import org.lwjgl.opengl.GL11;
+
+import com.nitrogenegames.netcraft.Netcraft;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.util.ResourceLocation;
+ 
+public class TabButton extends GuiButton {
+	//syntax for sheet is following order of buttons, going from top to bottom: normal, normal hovered, pressed, pressed+hovered
+	private ResourceLocation texture1;
+	private boolean pressed;
+ 
+	//for default size: 120 width and 20 height
+    public TabButton(int id, int startx, int starty, String text, String reslocation)
+    {
+        this(id, startx, starty, 120, 20, text, reslocation);
+    }
+ 
+    //use this
+    public TabButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation)
+    {
+        super(id, xposition, yposition, width, height, text);
+        texture1 = new ResourceLocation(Netcraft.modid.toLowerCase(), reslocation);
+    }
+    
+    public boolean getPressed(){
+    	return pressed;
+    }
+    @Override
+    protected int getHoverState(boolean flag)
+    {
+        byte byte0 = 1;
+        if (!enabled)
+        {
+                byte0 = 0;
+                }
+        else if (flag)
+        {
+                byte0 = 2;
+        }
+        return byte0;
+        }
+    
+    public void drawButton(Minecraft mc, int mx, int my)
+    {
+        FontRenderer fontrenderer = mc.fontRenderer;
+        mc.renderEngine.bindTexture(texture1);
+        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+        boolean flag = mx >= xPosition && my >= yPosition && mx < xPosition + width && my < yPosition + height;  //Flag, tells if your mouse is hovering the button
+        if(pressed){
+	        if (flag)
+	        { // Hover Action
+	        	drawTexturedModalRect(this.xPosition, this.yPosition, 0, 0, this.width, this.height);
+	        }
+	        else { // Normal
+	        	drawTexturedModalRect(this.xPosition, this.yPosition, 0, height*1, this.width, this.height);
+	        }
+        } else{
+        	if (flag)
+	        { // Hover Action
+        		drawTexturedModalRect(this.xPosition, this.yPosition, 0, height*2, this.width, this.height); 
+	        }
+	        else { // Normal
+	        	drawTexturedModalRect(this.xPosition, this.yPosition, 0, height*3, this.width, this.height);
+	        }
+        	drawCenteredString(fontrenderer, displayString, xPosition + width / 2, yPosition + (height - 8) / 2, 0xFFCCCCCC);
+        }
+    }
+ 
+}

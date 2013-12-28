@@ -1,0 +1,99 @@
+---- Minecraft Crash Report ----
+// Oops.
+
+Time: 12/28/13 2:37 PM
+Description: Updating screen events
+
+java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.nitrogenegames.netcraft.gui.GuiCore.actionPerformed(GuiCore.java:94)
+	at net.minecraft.client.gui.GuiScreen.mouseClicked(GuiScreen.java:120)
+	at net.minecraft.client.gui.inventory.GuiContainer.mouseClicked(GuiContainer.java:482)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:208)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:176)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1566)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:910)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:838)
+	at net.minecraft.client.main.Main.main(Main.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:131)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:27)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.nitrogenegames.netcraft.gui.GuiCore.actionPerformed(GuiCore.java:94)
+	at net.minecraft.client.gui.GuiScreen.mouseClicked(GuiScreen.java:120)
+	at net.minecraft.client.gui.inventory.GuiContainer.mouseClicked(GuiContainer.java:482)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:208)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:176)
+
+-- Affected screen --
+Details:
+	Screen name: com.nitrogenegames.netcraft.gui.GuiCore
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player543'/98, l='MpServer', x=1087.89, y=6.62, z=-568.49]]
+	Chunk stats: MultiplayerChunkCache: 345
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (1096,4,-562), Chunk: (at 8,0,14 in 68,-36; contains blocks 1088,0,-576 to 1103,255,-561), Region: (2,-2; contains chunks 64,-64 to 95,-33, blocks 1024,0,-1024 to 1535,255,-513)
+	Level time: 109551 game time, 14502 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 39 total; [EntitySkeleton['Skeleton'/68, l='MpServer', x=1104.44, y=4.00, z=-506.94], EntityZombie['Zombie'/70, l='MpServer', x=1129.49, y=4.00, z=-594.45], EntitySheep['Sheep'/71, l='MpServer', x=1133.13, y=4.00, z=-581.91], EntityZombie['Zombie'/65, l='MpServer', x=1105.35, y=4.00, z=-595.21], EntityZombie['Zombie'/66, l='MpServer', x=1115.50, y=4.00, z=-585.50], EntityPig['Pig'/67, l='MpServer', x=1111.61, y=4.00, z=-520.78], EntityCreeper['Creeper'/79, l='MpServer', x=1147.22, y=4.00, z=-615.91], EntitySpider['Spider'/72, l='MpServer', x=1128.72, y=4.00, z=-584.41], EntityZombie['Zombie'/73, l='MpServer', x=1122.11, y=4.00, z=-573.90], EntitySpider['Spider'/87, l='MpServer', x=1160.19, y=4.00, z=-645.97], EntitySheep['Sheep'/81, l='MpServer', x=1149.07, y=4.00, z=-514.17], EntityZombie['Zombie'/80, l='MpServer', x=1136.72, y=4.00, z=-574.78], EntitySkeleton['Skeleton'/83, l='MpServer', x=1150.52, y=4.00, z=-491.17], EntityCreeper['Creeper'/82, l='MpServer', x=1141.49, y=4.00, z=-496.85], EntityClientPlayerMP['Player543'/98, l='MpServer', x=1087.89, y=6.62, z=-568.49], EntityCreeper['Creeper'/89, l='MpServer', x=1157.00, y=4.00, z=-542.44], EntityCow['Cow'/29, l='MpServer', x=1009.63, y=4.00, z=-517.69], EntitySpider['Spider'/88, l='MpServer', x=1165.84, y=4.00, z=-641.41], EntityCreeper['Creeper'/91, l='MpServer', x=1153.38, y=4.00, z=-520.00], EntitySheep['Sheep'/90, l='MpServer', x=1159.66, y=4.00, z=-542.38], EntityCreeper['Creeper'/30, l='MpServer', x=1017.96, y=4.00, z=-502.05], EntitySpider['Spider'/35, l='MpServer', x=1032.75, y=4.00, z=-626.75], EntityZombie['Zombie'/38, l='MpServer', x=1034.09, y=4.00, z=-569.31], EntityEnderman['Enderman'/39, l='MpServer', x=1036.00, y=4.00, z=-554.63], EntityCreeper['Creeper'/36, l='MpServer', x=1027.70, y=4.00, z=-639.93], EntitySkeleton['Skeleton'/37, l='MpServer', x=1034.69, y=4.00, z=-565.22], EntityCreeper['Creeper'/40, l='MpServer', x=1033.97, y=4.00, z=-497.50], EntitySlime['Slime'/46, l='MpServer', x=1042.00, y=4.00, z=-615.34], EntitySpider['Spider'/47, l='MpServer', x=1053.83, y=4.00, z=-622.57], EntitySpider['Spider'/44, l='MpServer', x=1049.47, y=4.00, z=-647.09], EntitySkeleton['Skeleton'/45, l='MpServer', x=1053.84, y=4.00, z=-629.34], EntityCreeper['Creeper'/49, l='MpServer', x=1053.44, y=4.00, z=-553.34], EntityPig['Pig'/48, l='MpServer', x=1055.33, y=4.00, z=-600.10], EntityCreeper['Creeper'/53, l='MpServer', x=1059.88, y=4.00, z=-599.75], EntitySpider['Spider'/52, l='MpServer', x=1063.94, y=4.00, z=-642.22], EntityCreeper['Creeper'/59, l='MpServer', x=1097.84, y=4.00, z=-627.16], EntityCreeper['Creeper'/62, l='MpServer', x=1090.53, y=4.00, z=-509.97], EntityPig['Pig'/61, l='MpServer', x=1096.58, y=4.00, z=-521.43], EntityZombie['Zombie'/60, l='MpServer', x=1094.16, y=4.00, z=-535.34]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:440)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2312)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:856)
+	at net.minecraft.client.main.Main.main(Main.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:131)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:27)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.4
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.7.0_45, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 648973944 bytes (618 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 691 (38696 bytes; 0 MB) allocated, 2 (112 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v8.11 FML v6.4.49.965 Minecraft Forge 9.11.1.965 5 mods loaded, 5 mods active
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{6.4.49.965} [Forge Mod Loader] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{9.11.1.965} [Minecraft Forge] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	netcraft{Reloaded 0.0.1} [Netcraft] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{2.0.344-experimental} [IndustrialCraft 2] (industrialcraft-2-dev-deobf_2.0.344-experimental.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 1.6
+	LWJGL: 2.9.0
+	OpenGL: AMD Radeon HD 7800 Series GL version 4.2.12430 Compatibility Profile Context 13.152.1.8000, ATI Technologies Inc.
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Pack: Default
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 137 (7672 bytes; 0 MB) allocated, 16 (896 bytes; 0 MB) used

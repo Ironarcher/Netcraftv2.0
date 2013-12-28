@@ -1,5 +1,8 @@
 package com.nitrogenegames.netcraft.gui;
 
+import java.util.ArrayList;
+
+import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -17,7 +20,11 @@ import com.nitrogenegames.netcraft.machine.ContainerCore;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
 public class GuiCore extends GuiContainer {
+	
 		TileEntityCore tel;
+		ArrayList<TabButton> tabs;
+		int x,y;
+		
         public GuiCore (InventoryPlayer inventoryPlayer, TileEntityCore tileEntity) {
                 //the container is instanciated and passed to the superclass for handling
                 super(new ContainerCore(inventoryPlayer, tileEntity));
@@ -36,12 +43,12 @@ public class GuiCore extends GuiContainer {
         	//System.out.println(tel.energy);
         	//System.out.println(parentContainer.tileEntity.energy);
 
-                fontRenderer.drawString("Net Core", 66, 6, 4210752);
+                fontRenderer.drawString("Net Core", x+66, y+6, 4210752);
                 //202, 252, middle is 227
                 int ewidth = fontRenderer.getStringWidth("EU:");
-                fontRenderer.drawString("EU:", 227-(ewidth/2), 120, 4210752);
+                fontRenderer.drawString("EU:", x+227-(ewidth/2), y+120, 4210752);
                 int nwidth = fontRenderer.getStringWidth(tel.energy + "");
-                fontRenderer.drawString(tel.energy + "", 227-(nwidth/2), 135, 4210752);
+                fontRenderer.drawString(tel.energy + "", x+227-(nwidth/2), y+135, 4210752);
                 ItemStack par1ItemStack = tel.getStackInSlot(0);
                 if(par1ItemStack != null) {
         		if( par1ItemStack.stackTagCompound == null )
@@ -51,11 +58,11 @@ public class GuiCore extends GuiContainer {
                 NBTTagList tagList = tagCompound.getTagList("Marked");
                 for (int i = 0; i < tagList.tagCount(); i++) {
                     NBTTagCompound tag = (NBTTagCompound) tagList.tagAt(i);
-                    fontRenderer.drawString(tag.getString("MarkedThing"), 90, (i * 10) + 30, 4210752);
+                    fontRenderer.drawString(tag.getString("MarkedThing"), x+90, (i * 10) + 30 + y, 4210752);
                 }
                 }
                 //draws "Inventory" or your regional equivalent
-                fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8 + (12), ySize - 96 + 2, 4210752);
+                fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), x+ 8 + (12), y + ySize - 96 + 2, 4210752);
 
         }
 
@@ -65,19 +72,28 @@ public class GuiCore extends GuiContainer {
         	final ResourceLocation texture = new ResourceLocation(Netcraft.modid.toLowerCase(), "/textures/gui/coregui.png");
             GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
             this.mc.renderEngine.bindTexture(texture);
-            int x = (this.width - this.xSize) / 2;
-            int y = (this.height - this.ySize) / 2;
+            x = (this.width - this.xSize + 50) / 2;
+            y = (this.height - this.ySize + 15) / 2;
             //this.drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
             //par1 = actual x, par2 = actual y, par3 = (u) x on texture file, par4 = (v) y on texture file, par5 = width, par6 = height
-            drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
+            drawTexturedModalRect(this.x, this.y, 0, 0, this.xSize, this.ySize);
             
             int k = this.tel.getEnergyScaled(78);
             /*
             218 is width from gui border left
             20 is length from gui border top, with 78 being the height of the energy bar (subtracting k to make it grow from the bottom)
             (0,166) is the location of the texturefile energy bar, top left
+            16 is width of texture, k is height (displays from bottom - up)
             */
-            drawTexturedModalRect(guiLeft + 218, guiTop + 20 + 78 - k, 0, 166 + 78 - k, 16, k);
+            drawTexturedModalRect(x + 218, y + 20 + 78 - k, 0, 166 + 78 - k, 16, k);
+        }
+        
+        public void actionPerformed(GuiButton button)
+        {
+        	for(int i = 0; i < tabs.size(); i++){
+        		tabs.get(i).setPressed(false);
+        	}
+        	tabs.get(button.id - 20).togglePressed();
         }
         
         public static void drawTexturedQuadFit(double x, double y, double width, double height, double zLevel){
@@ -89,5 +105,24 @@ public class GuiCore extends GuiContainer {
             tessellator.addVertexWithUV(x + 0, y + 0, zLevel, 0, 0);
             tessellator.draw();
     	}
+        
+        public void initGui(){
+        	x = (this.width - this.xSize + 50) / 2;
+            y = (this.height - this.ySize + 15) / 2;
+        	initTabs();
+        }
+        
+        private void initTabs(){
+        	tabs = new ArrayList<TabButton>();
+        	createTab(tabs.size(), "Modules");
+        	createTab(tabs.size(), "Nodes");
+        	createTab(tabs.size(), "Power");
+        }
+        
+        public void createTab(int placement, String text){
+        	TabButton temp = new TabButton(placement + 20, x - 52, y + placement*16, 50, 15, text, "/textures/gui/tabButtonBlueBig.png");
+        	this.buttonList.add(temp);
+        	tabs.add(temp);
+        }
 
 }
