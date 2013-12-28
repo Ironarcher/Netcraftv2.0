@@ -26,7 +26,7 @@ public class ContainerCore extends Container {
                 energy = te.energy;
                 //the Slot constructor takes the IInventory and the slot number in that it binds to
                 //and the x-y coordinates it resides on-screen
-                addSlotToContainer(new SlotModuleCore(tileEntity, 0, 10, 10));
+                addSlotToContainer(new SlotModuleCore(tileEntity, 0, 20, 13));
 
                 //commonly used vanilla code that adds the player's inventory
                 bindPlayerInventory(inventoryPlayer);
@@ -42,12 +42,12 @@ public class ContainerCore extends Container {
                 for (int i = 0; i < 3; i++) {
                         for (int j = 0; j < 9; j++) {
                                 addSlotToContainer(new Slot(inventoryPlayer, j + i * 9 + 9,
-                                                8 + j * 18, 84 + i * 18));
+                                                8 + (12) + j * 18, 84 + i * 18));
                         }
                 }
 
                 for (int i = 0; i < 9; i++) {
-                        addSlotToContainer(new Slot(inventoryPlayer, i, 8 + i * 18, 142));
+                        addSlotToContainer(new Slot(inventoryPlayer, i, 8 + (12) + i * 18, 142));
                 }
         }
         /*@SideOnly(Side.CLIENT)
