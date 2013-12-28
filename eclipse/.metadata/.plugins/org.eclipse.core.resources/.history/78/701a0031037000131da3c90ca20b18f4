@@ -26,6 +26,7 @@ public class TabButton extends GuiButton {
     {
         super(id, xposition, yposition, width, height, text);
         texture1 = new ResourceLocation(Netcraft.modid.toLowerCase(), reslocation);
+        System.out.println("YAY");
         }
 
     private static String charFit(String s){

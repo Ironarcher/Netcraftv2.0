@@ -24,8 +24,9 @@ public class TabButton extends GuiButton {
     //use this
     public TabButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation)
     {
-        super(id, xposition, yposition, width, height, text);
+        super(id, xposition, yposition, width, height, charFit(text));
         texture1 = new ResourceLocation(Netcraft.modid.toLowerCase(), reslocation);
+        System.out.println("YAY");
         }
 
     private static String charFit(String s){
@@ -73,7 +74,7 @@ public class TabButton extends GuiButton {
 	        	drawTexturedModalRect(this.xPosition, this.yPosition, 0, height*3, this.width, this.height);
 	        }
         }
-        drawCenteredString(fontrenderer, charFit(displayString), xPosition + width / 2, yPosition + (height - 8) / 2, 0xFFCCCCCC);
+        drawCenteredString(fontrenderer, displayString, xPosition + width / 2, yPosition + (height - 8) / 2, 0xFFCCCCCC);
     }
    
     public void togglePressed(){

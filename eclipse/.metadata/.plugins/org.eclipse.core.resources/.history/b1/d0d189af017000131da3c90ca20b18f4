@@ -134,7 +134,6 @@ public class GuiCore extends GuiContainer {
         	createTab(tabs.size(), "Modules");
         	createTab(tabs.size(), "Nodes");
         	createTab(tabs.size(), "Power");
-        	createTab(tabs.size(), "Tesla Field Module");
         }
         
         public void createTab(int placement, String text){

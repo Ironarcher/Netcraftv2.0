@@ -23,7 +23,6 @@ public class GuiCore extends GuiContainer {
 	
 		TileEntityCore tel;
 		ArrayList<TabButton> tabs;
-		private String selected;
 		int x,y;
 		
         public GuiCore (InventoryPlayer inventoryPlayer, TileEntityCore tileEntity) {
@@ -64,14 +63,7 @@ public class GuiCore extends GuiContainer {
                 }
                 //draws "Inventory" or your regional equivalent
                 fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), x+ 8 + (12), y + ySize - 96 + 2, 4210752);
-                
-                if(selected == "Modules"){
-                	
-                } else if(selected == "Power"){
-                	
-                } else if(selected == "Nodes"){
-                	
-                }
+
         }
 
         @Override
@@ -94,14 +86,6 @@ public class GuiCore extends GuiContainer {
             16 is width of texture, k is height (displays from bottom - up)
             */
             drawTexturedModalRect(x + 218, y + 20 + 78 - k, 0, 166 + 78 - k, 16, k);
-            
-            if(selected == "Modules"){
-            	
-            } else if(selected == "Power"){
-            	
-            } else if(selected == "Nodes"){
-            	
-            }
         }
         
         public void actionPerformed(GuiButton button)
@@ -110,7 +94,6 @@ public class GuiCore extends GuiContainer {
         		tabs.get(i).setPressed(false);
         	}
         	tabs.get(button.id - 20).togglePressed();
-        	this.selected = tabs.get(button.id-20).displayString;
         }
         
         public static void drawTexturedQuadFit(double x, double y, double width, double height, double zLevel){
@@ -134,7 +117,6 @@ public class GuiCore extends GuiContainer {
         	createTab(tabs.size(), "Modules");
         	createTab(tabs.size(), "Nodes");
         	createTab(tabs.size(), "Power");
-        	createTab(tabs.size(), "Tesla Field Module");
         }
         
         public void createTab(int placement, String text){
