@@ -15,6 +15,8 @@ import ic2.api.Direction;
 import ic2.api.energy.event.EnergyTileLoadEvent;
 import ic2.api.energy.event.EnergyTileUnloadEvent;
 import ic2.api.energy.tile.IEnergySink;
+import ic2.api.item.ElectricItem;
+import ic2.api.item.IElectricItem;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
@@ -41,7 +43,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public int maxenergy = 10000;
 	private boolean init;
 	//private BasicSink electricSlicer = new BasicSink(this, 32, 3);
-	private ItemStack[] inv = new ItemStack[1];
+	private ItemStack[] inv = new ItemStack[2];
 	public boolean powered = false;
 	public int coreEnergyNeeded = 0;
 
@@ -192,12 +194,15 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     		worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, meta - 4, 2);
     	}
 		}
-    	
+		if(!(this.getStackInSlot(1) == null)) {
+
+		}
     	sendPacket();
     	
     }
     @Override
     public void invalidate(){
+    	
     	EnergyTileUnloadEvent unloadEvent = new EnergyTileUnloadEvent(this);
 		MinecraftForge.EVENT_BUS.post(unloadEvent);
     }

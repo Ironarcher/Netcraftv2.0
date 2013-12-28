@@ -328,7 +328,13 @@ public class ItemModules extends Item {
 		return false;
 	}
 	
-	
+	public int getEuUsed() {
+		//this.getUnlocalizedName().equals("item.tpmodule") YADAYADA LATER
+		/*if(this.getUnlocalizedName().equals("item.tpmodule")) {
+			return 10;
+		}*/ //piece of cake
+		return 20;
+	}
 	public void registerIcons(IconRegister par1IconRegister)
     {
         this.itemIcon = par1IconRegister.registerIcon(Netcraft.modid + ":" + this.getUnlocalizedName());

@@ -48,7 +48,13 @@ public class BlockCore extends BlockContainer {
         	if (!(stack.getItem() == null)) {
         	 if(Netcraft.isModule(stack)) {
         		 ItemModules module = (ItemModules) stack.getItem();
+        		 if(tileEntity.energy >= module.getEuUsed()) {
+        			 tileEntity.energy -= module.getEuUsed();
         		 module.activate(world, stack, x, y, z);
+        		 
+        		 } else {
+        			 //NOT ENOUGH POWER
+        		 }
         	 }
          	}
             }

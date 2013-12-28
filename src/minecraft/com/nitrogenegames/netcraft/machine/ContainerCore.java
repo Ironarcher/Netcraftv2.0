@@ -27,7 +27,7 @@ public class ContainerCore extends Container {
                 //the Slot constructor takes the IInventory and the slot number in that it binds to
                 //and the x-y coordinates it resides on-screen
                 addSlotToContainer(new SlotModuleCore(tileEntity, 0, 20, 13));
-
+                addSlotToContainer(new Slot(tileEntity, 1, 220, 13));
                 //commonly used vanilla code that adds the player's inventory
                 bindPlayerInventory(inventoryPlayer);
         }
