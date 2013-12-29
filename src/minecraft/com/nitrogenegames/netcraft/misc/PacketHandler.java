@@ -60,6 +60,7 @@ public class PacketHandler implements IPacketHandler {
 			if(!error) {
 			te2 = (TileEntityCore) thisTileEntity;
 			te2.tabPage = tab;
+			playerEntity.worldObj.markBlockForUpdate(xcoord, ycoord, zcoord);
 			//System.out.println(energy + " ENERGY SENT");
 			}
 		} catch (Exception e) {
@@ -68,13 +69,15 @@ public class PacketHandler implements IPacketHandler {
 		
     }
     private void handleEnergyPacket(Packet250CustomPayload packet, Player player) {
+		Entity playerEntity = (Entity)player;
+
 		DataInputStream inputStream = new DataInputStream(new ByteArrayInputStream(packet.data));
 		int energy;
 		int xcoord;
 		int ycoord;
 		int zcoord;
 		boolean error = false;
-		Entity playerEntity = (Entity)player;
+
 		TileEntity thisTileEntity;
 		TileEntityCore te2;
 			
@@ -96,12 +99,13 @@ public class PacketHandler implements IPacketHandler {
 			if(!error) {
 			te2 = (TileEntityCore) thisTileEntity;
 			te2.energy = energy;
+			playerEntity.worldObj.markBlockForUpdate(xcoord, ycoord, zcoord);
 			//System.out.println(energy + " ENERGY SENT");
 			}
 		} catch (Exception e) {
 
-		}
 		
+    	}
     }
 	/*private void handleServerPacket(Packet250CustomPayload packet,Player player) {
 		DataInputStream inputStream = new DataInputStream(new ByteArrayInputStream(packet.data));

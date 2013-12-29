@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="net.minecraft.world.World"/>
 <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.NetworkRegistry"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.DamageSourceTesla"/>
@@ -13,7 +11,6 @@
 <fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityCore"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.item.ItemModules"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft"/>
 <fullyQualifiedTypeName name="ic2.api.energy.tile.IEnergyTile"/>
 <fullyQualifiedTypeName name="ic2.api.energy.tile.IEnergySink"/>
 <fullyQualifiedTypeName name="ic2.api.energy.event.EnergyTileLoadEvent"/>
@@ -25,7 +22,6 @@
 <fullyQualifiedTypeName name="net.minecraft.network.packet.Packet250CustomPayload"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.PacketDispatcher"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.Player"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.SideOnly"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.PacketHandler"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.EntityLivingBase"/>
@@ -33,4 +29,16 @@
 <fullyQualifiedTypeName name="ic2.api.item.ElectricItem"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.gui.GuiCore"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
+<fullyQualifiedTypeName name="net.minecraft.block.BlockContainer"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.Mod.Block"/>
+<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="net.minecraft.world.World"/>
+<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.net.NetEntity"/>
 </qualifiedTypeNameHistroy>

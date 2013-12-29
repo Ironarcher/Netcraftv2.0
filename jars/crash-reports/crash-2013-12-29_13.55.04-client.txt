@@ -1,0 +1,118 @@
+---- Minecraft Crash Report ----
+// Why is it breaking :(
+
+Time: 12/29/13 1:55 PM
+Description: Exception in world tick
+
+java.lang.IndexOutOfBoundsException: Index: 36, Size: 36
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at net.minecraft.inventory.Container.getSlot(Container.java:133)
+	at net.minecraft.inventory.Container.putStacksInSlots(Container.java:562)
+	at net.minecraft.client.multiplayer.NetClientHandler.handleWindowItems(NetClientHandler.java:1288)
+	at net.minecraft.network.packet.Packet104WindowItems.processPacket(Packet104WindowItems.java:67)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.client.multiplayer.NetClientHandler.processReadPackets(NetClientHandler.java:281)
+	at net.minecraft.client.multiplayer.WorldClient.tick(WorldClient.java:99)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1930)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:910)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:838)
+	at net.minecraft.client.main.Main.main(Main.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:131)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:27)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at net.minecraft.inventory.Container.getSlot(Container.java:133)
+	at net.minecraft.inventory.Container.putStacksInSlots(Container.java:562)
+	at net.minecraft.client.multiplayer.NetClientHandler.handleWindowItems(NetClientHandler.java:1288)
+	at net.minecraft.network.packet.Packet104WindowItems.processPacket(Packet104WindowItems.java:67)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.client.multiplayer.NetClientHandler.processReadPackets(NetClientHandler.java:281)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player879'/97, l='MpServer', x=1103.62, y=5.62, z=-567.97]]
+	Chunk stats: MultiplayerChunkCache: 305
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (1096,4,-562), Chunk: (at 8,0,14 in 68,-36; contains blocks 1088,0,-576 to 1103,255,-561), Region: (2,-2; contains chunks 64,-64 to 95,-33, blocks 1024,0,-1024 to 1535,255,-513)
+	Level time: 161159 game time, 14502 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 45 total; [EntityZombie['Zombie'/68, l='MpServer', x=1156.28, y=4.00, z=-638.22], EntitySpider['Spider'/69, l='MpServer', x=1152.09, y=4.00, z=-579.00], EntitySheep['Sheep'/70, l='MpServer', x=1155.31, y=4.00, z=-544.25], EntitySpider['Spider'/71, l='MpServer', x=1150.41, y=4.00, z=-517.54], EntitySpider['Spider'/64, l='MpServer', x=1153.00, y=4.00, z=-504.59], EntityCreeper['Creeper'/78, l='MpServer', x=1170.72, y=4.00, z=-525.96], EntityCreeper['Creeper'/79, l='MpServer', x=1172.88, y=4.00, z=-534.25], EntityHorse['Horse'/14, l='MpServer', x=1025.84, y=4.00, z=-648.72], EntitySkeleton['Skeleton'/15, l='MpServer', x=1036.50, y=4.00, z=-629.50], EntitySpider['Spider'/17, l='MpServer', x=1038.78, y=4.00, z=-636.47], EntitySkeleton['Skeleton'/16, l='MpServer', x=1036.23, y=4.00, z=-625.13], EntityPig['Pig'/19, l='MpServer', x=1033.97, y=4.00, z=-601.94], EntitySkeleton['Skeleton'/18, l='MpServer', x=1038.56, y=4.00, z=-628.13], EntitySpider['Spider'/81, l='MpServer', x=1172.71, y=4.00, z=-503.84], EntitySpider['Spider'/21, l='MpServer', x=1035.19, y=4.00, z=-544.78], EntityCreeper['Creeper'/80, l='MpServer', x=1174.28, y=4.00, z=-522.91], EntityCow['Cow'/20, l='MpServer', x=1022.06, y=4.00, z=-552.83], EntityZombie['Zombie'/23, l='MpServer', x=1037.50, y=4.00, z=-525.50], EntitySpider['Spider'/82, l='MpServer', x=1171.88, y=4.00, z=-492.25], EntitySpider['Spider'/22, l='MpServer', x=1031.25, y=4.00, z=-535.53], EntitySpider['Spider'/27, l='MpServer', x=1055.88, y=4.00, z=-637.94], EntityZombie['Zombie'/28, l='MpServer', x=1054.91, y=4.00, z=-531.72], EntityZombie['Zombie'/31, l='MpServer', x=1066.50, y=4.00, z=-639.50], EntityCreeper['Creeper'/34, l='MpServer', x=1064.50, y=4.00, z=-543.50], EntityZombie['Zombie'/35, l='MpServer', x=1061.59, y=4.00, z=-534.22], EntitySpider['Spider'/32, l='MpServer', x=1055.80, y=4.00, z=-625.31], EntitySpider['Spider'/33, l='MpServer', x=1057.94, y=4.00, z=-616.88], EntityClientPlayerMP['Player879'/97, l='MpServer', x=1103.62, y=5.62, z=-567.97], EntityZombie['Zombie'/36, l='MpServer', x=1065.28, y=4.00, z=-534.31], EntityZombie['Zombie'/37, l='MpServer', x=1064.15, y=4.00, z=-529.41], EntityCreeper['Creeper'/46, l='MpServer', x=1075.66, y=4.00, z=-495.06], EntityCreeper['Creeper'/44, l='MpServer', x=1076.22, y=4.00, z=-589.16], EntitySlime['Slime'/45, l='MpServer', x=1090.27, y=4.00, z=-563.56], EntitySpider['Spider'/51, l='MpServer', x=1106.71, y=4.00, z=-527.91], EntitySlime['Slime'/50, l='MpServer', x=1109.00, y=4.00, z=-569.06], EntityCreeper['Creeper'/48, l='MpServer', x=1102.38, y=4.00, z=-499.06], EntityCreeper['Creeper'/53, l='MpServer', x=1131.25, y=4.00, z=-569.88], EntityZombie['Zombie'/52, l='MpServer', x=1105.31, y=1.00, z=-519.38], EntitySheep['Sheep'/59, l='MpServer', x=1150.50, y=4.00, z=-579.44], EntityZombie['Zombie'/58, l='MpServer', x=1150.50, y=4.00, z=-594.50], EntityZombie['Zombie'/57, l='MpServer', x=1151.56, y=4.00, z=-643.03], EntitySpider['Spider'/63, l='MpServer', x=1149.22, y=4.00, z=-512.00], EntitySheep['Sheep'/62, l='MpServer', x=1147.63, y=4.00, z=-542.75], EntityCreeper['Creeper'/61, l='MpServer', x=1134.28, y=4.00, z=-581.70], EntitySpider['Spider'/60, l='MpServer', x=1142.81, y=4.00, z=-583.43]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:440)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1943)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:910)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:838)
+	at net.minecraft.client.main.Main.main(Main.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:131)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:27)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player879'/97, l='MpServer', x=1103.62, y=5.62, z=-567.97]]
+	Chunk stats: MultiplayerChunkCache: 305
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (1096,4,-562), Chunk: (at 8,0,14 in 68,-36; contains blocks 1088,0,-576 to 1103,255,-561), Region: (2,-2; contains chunks 64,-64 to 95,-33, blocks 1024,0,-1024 to 1535,255,-513)
+	Level time: 161159 game time, 14502 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 45 total; [EntityZombie['Zombie'/68, l='MpServer', x=1156.28, y=4.00, z=-638.22], EntitySpider['Spider'/69, l='MpServer', x=1152.09, y=4.00, z=-579.00], EntitySheep['Sheep'/70, l='MpServer', x=1155.31, y=4.00, z=-544.25], EntitySpider['Spider'/71, l='MpServer', x=1150.41, y=4.00, z=-517.54], EntitySpider['Spider'/64, l='MpServer', x=1153.00, y=4.00, z=-504.59], EntityCreeper['Creeper'/78, l='MpServer', x=1170.72, y=4.00, z=-525.96], EntityCreeper['Creeper'/79, l='MpServer', x=1172.88, y=4.00, z=-534.25], EntityHorse['Horse'/14, l='MpServer', x=1025.84, y=4.00, z=-648.72], EntitySkeleton['Skeleton'/15, l='MpServer', x=1036.50, y=4.00, z=-629.50], EntitySpider['Spider'/17, l='MpServer', x=1038.78, y=4.00, z=-636.47], EntitySkeleton['Skeleton'/16, l='MpServer', x=1036.23, y=4.00, z=-625.13], EntityPig['Pig'/19, l='MpServer', x=1033.97, y=4.00, z=-601.94], EntitySkeleton['Skeleton'/18, l='MpServer', x=1038.56, y=4.00, z=-628.13], EntitySpider['Spider'/81, l='MpServer', x=1172.71, y=4.00, z=-503.84], EntitySpider['Spider'/21, l='MpServer', x=1035.19, y=4.00, z=-544.78], EntityCreeper['Creeper'/80, l='MpServer', x=1174.28, y=4.00, z=-522.91], EntityCow['Cow'/20, l='MpServer', x=1022.06, y=4.00, z=-552.83], EntityZombie['Zombie'/23, l='MpServer', x=1037.50, y=4.00, z=-525.50], EntitySpider['Spider'/82, l='MpServer', x=1171.88, y=4.00, z=-492.25], EntitySpider['Spider'/22, l='MpServer', x=1031.25, y=4.00, z=-535.53], EntitySpider['Spider'/27, l='MpServer', x=1055.88, y=4.00, z=-637.94], EntityZombie['Zombie'/28, l='MpServer', x=1054.91, y=4.00, z=-531.72], EntityZombie['Zombie'/31, l='MpServer', x=1066.50, y=4.00, z=-639.50], EntityCreeper['Creeper'/34, l='MpServer', x=1064.50, y=4.00, z=-543.50], EntityZombie['Zombie'/35, l='MpServer', x=1061.59, y=4.00, z=-534.22], EntitySpider['Spider'/32, l='MpServer', x=1055.80, y=4.00, z=-625.31], EntitySpider['Spider'/33, l='MpServer', x=1057.94, y=4.00, z=-616.88], EntityClientPlayerMP['Player879'/97, l='MpServer', x=1103.62, y=5.62, z=-567.97], EntityZombie['Zombie'/36, l='MpServer', x=1065.28, y=4.00, z=-534.31], EntityZombie['Zombie'/37, l='MpServer', x=1064.15, y=4.00, z=-529.41], EntityCreeper['Creeper'/46, l='MpServer', x=1075.66, y=4.00, z=-495.06], EntityCreeper['Creeper'/44, l='MpServer', x=1076.22, y=4.00, z=-589.16], EntitySlime['Slime'/45, l='MpServer', x=1090.27, y=4.00, z=-563.56], EntitySpider['Spider'/51, l='MpServer', x=1106.71, y=4.00, z=-527.91], EntitySlime['Slime'/50, l='MpServer', x=1109.00, y=4.00, z=-569.06], EntityCreeper['Creeper'/48, l='MpServer', x=1102.38, y=4.00, z=-499.06], EntityCreeper['Creeper'/53, l='MpServer', x=1131.25, y=4.00, z=-569.88], EntityZombie['Zombie'/52, l='MpServer', x=1105.31, y=1.00, z=-519.38], EntitySheep['Sheep'/59, l='MpServer', x=1150.50, y=4.00, z=-579.44], EntityZombie['Zombie'/58, l='MpServer', x=1150.50, y=4.00, z=-594.50], EntityZombie['Zombie'/57, l='MpServer', x=1151.56, y=4.00, z=-643.03], EntitySpider['Spider'/63, l='MpServer', x=1149.22, y=4.00, z=-512.00], EntitySheep['Sheep'/62, l='MpServer', x=1147.63, y=4.00, z=-542.75], EntityCreeper['Creeper'/61, l='MpServer', x=1134.28, y=4.00, z=-581.70], EntitySpider['Spider'/60, l='MpServer', x=1142.81, y=4.00, z=-583.43]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.4
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.7.0_05, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 618651784 bytes (589 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 2595 (145320 bytes; 0 MB) allocated, 764 (42784 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v8.11 FML v6.4.49.965 Minecraft Forge 9.11.1.965 5 mods loaded, 5 mods active
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{6.4.49.965} [Forge Mod Loader] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{9.11.1.965} [Minecraft Forge] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	netcraft{Reloaded 0.0.1} [Netcraft] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{2.0.344-experimental} [IndustrialCraft 2] (industrialcraft-2-dev-deobf_2.0.344-experimental.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 1.6
+	LWJGL: 2.9.0
+	OpenGL: Intel(R) HD Graphics 3000 GL version 3.1.0 - Build 8.15.10.2653, Intel
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Pack: Default
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 327 (18312 bytes; 0 MB) allocated, 106 (5936 bytes; 0 MB) used

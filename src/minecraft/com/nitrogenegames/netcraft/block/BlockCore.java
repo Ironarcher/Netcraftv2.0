@@ -8,6 +8,7 @@ import java.util.Random;
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.item.ItemModules;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
+import com.nitrogenegames.netcraft.net.NetEntity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -76,7 +77,8 @@ public class BlockCore extends BlockContainer {
 	          if (!par1World.isRemote)
 	          {
 	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
-	        	  	
+	        	  	tileEntity.net = new NetEntity(par1World);
+	        	  	tileEntity.net.objects = Netcraft.getConnectedObjects(par1World, par2, par3, par4);
 	                  
 	                  boolean powered = tileEntity.powered;
 	                  if (powered && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
@@ -143,10 +145,8 @@ public class BlockCore extends BlockContainer {
      //int l = MathHelper.floor_double((double)(par5EntityLivingBase.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
     //par1World.setBlockMetadataWithNotify(par2, par3, par4, l, 2);
      
-    	 System.out.println("PLACED");
     	 int l = MathHelper.floor_double((double)(par5EntityLivingBase.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
          par1World.setBlockMetadataWithNotify(par2, par3, par4, l, 2);
-         System.out.println(l);
      }
      
      @SideOnly(Side.CLIENT)

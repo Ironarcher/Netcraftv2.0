@@ -2,6 +2,8 @@ package com.nitrogenegames.netcraft.machine;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.gui.GuiCore;
@@ -25,19 +27,50 @@ public class ContainerCore extends Container {
         public int selected = 0;
         public int x = 25;
         public int y = 0;
+        public ArrayList pagedSlot = new ArrayList();
         public ContainerCore (InventoryPlayer inventoryPlayer, TileEntityCore te){
                 tileEntity = te;
                 energy = te.energy;
+                bindPlayerInventory(inventoryPlayer);
                 //the Slot constructor takes the IInventory and the slot number in that it binds to
                 //and the x-y coordinates it resides on-screen
-                addSlotToContainer(new SlotModuleCore(tileEntity, 0, 20 + this.getX(), 13 + this.getY()));
+                addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 20 + this.getX(), 13 + this.getY(), 0));
 
-                addSlotToContainer(new Slot(tileEntity, 1, 220 + this.getX(), 13 + this.getY()));
+                addPageSlotToContainer(new SlotCore(tileEntity, 1, 220 + this.getX(), 13 + this.getY(), 0));
                 //commonly used vanilla code that adds the player's inventory
-                bindPlayerInventory(inventoryPlayer);
+                
+        }
+        @Override
+        protected Slot addSlotToContainer(Slot par1Slot)
+        {
+        	this.addSlotToContainer(par1Slot, this.inventorySlots.size());
+        	return par1Slot;
+        }
+        protected Slot addSlotToContainer(Slot par1Slot, int i)
+        {
+            par1Slot.slotNumber = i;//par1Slot.getSlotIndex();
+            this.inventorySlots.add(par1Slot);
+            this.inventoryItemStacks.add((Object)null);
+            return par1Slot;
         }
         public void updateTab() {
+    		//for(int i = 0; i < this.inventorySlots.size(); i++) {
+        		/*for(int j = 0; j < this.pagedSlot.size(); j++) {
+        			this.inventorySlots.remove(this.pagedSlot.get(j));
+    				this.inventoryItemStacks.remove(((SlotCore) this.pagedSlot.get(j)).getStack());
+        			if(((SlotCore)pagedSlot.get(j)).pageId == selected) {
+        				addSlotToContainer((SlotCore)pagedSlot.get(j), ((SlotCore)pagedSlot.get(j)).slotNumber);
 
+        			}
+        		}*/
+        		for(int j = 0; j < this.pagedSlot.size(); j++) {
+        			if(((SlotCore)pagedSlot.get(j)).pageId == selected) {
+        				((SlotCore)pagedSlot.get(j)).show();
+        				
+        			} else {
+        				((SlotCore)pagedSlot.get(j)).hide();
+        			}
+        		}
         }
         @Override
         public boolean canInteractWith(EntityPlayer player) {
@@ -96,6 +129,10 @@ public class ContainerCore extends Container {
             }
         	//this.energy = this.tileEntity.energy;
         	
+        }
+        public void addPageSlotToContainer(SlotCore s) {
+        	addSlotToContainer(s);
+        	pagedSlot.add(s);
         }
         public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)
         {
