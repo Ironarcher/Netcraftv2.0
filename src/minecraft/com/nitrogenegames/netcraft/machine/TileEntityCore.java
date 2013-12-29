@@ -8,6 +8,7 @@ import com.nitrogenegames.netcraft.gui.GuiCore;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.common.network.Player;
+import cpw.mods.fml.relauncher.Side;
 import ic2.api.energy.prefab.BasicSink;
 import ic2.api.energy.tile.IEnergyTile;
 import ic2.api.energy.*;
@@ -57,6 +58,9 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public Packet getDescriptionPacket() {
 	    NBTTagCompound tagCompound = new NBTTagCompound();
 	    writeToNBT(tagCompound);
+        if(!worldObj.isRemote) {
+        sendTabPacket(Side.CLIENT);
+        }
 	    return new Packet132TileEntityData(xCoord, yCoord, zCoord, 1, tagCompound);
 	}
 	@Override
@@ -138,6 +142,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     
     public void setPressed(int p) {
     	this.tabPage = p;
+    	sendTabPacket(Side.SERVER);
     	//SEND PACKET TO SERVER AND BACK TO CLIENT :O
     }
     @Override
@@ -149,7 +154,8 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
             }
             if(tagCompound.hasKey("pressed")){
             	this.tabPage = tagCompound.getInteger("pressed");
-            }
+
+           }
             NBTTagList tagList = tagCompound.getTagList("Inventory");
             for (int i = 0; i < tagList.tagCount(); i++) {
                     NBTTagCompound tag = (NBTTagCompound) tagList.tagAt(i);
@@ -181,6 +187,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
             tagCompound.setBoolean("POWER", powered);
             tagCompound.setInteger("energy", this.energy);
             tagCompound.setInteger("pressed", this.tabPage);
+            
     }
     
     
@@ -205,7 +212,8 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 		if(!(this.getStackInSlot(1) == null)) {
 
 		}
-    	sendPacket();
+		sendEnergyPacket(Side.CLIENT);
+		
     	
     }
     @Override
@@ -257,7 +265,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 
 		this.isUsingPower = true;
 		if(this.energy >= this.maxenergy){
-			sendPacket();
+			sendEnergyPacket(Side.CLIENT);
 			return amount;
 		}
 		
@@ -265,21 +273,21 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 		
 		if(openEnergy >= amount){
 			this.energy += amount;
-			sendPacket();
+			sendEnergyPacket(Side.CLIENT);
 			return 0;
 		} else if (amount > openEnergy){
 			this.energy = this.maxenergy;
-			sendPacket();
+			sendEnergyPacket(Side.CLIENT);
 			return amount - (int) openEnergy;
 		}
-		sendPacket();
+		sendEnergyPacket(Side.CLIENT);
 		return 0;
 	}
 	public int getEnergy() {
 		return this.energy;
 	}
-	public void sendPacket() {
-		if(!worldObj.isRemote) {
+	public void sendEnergyPacket(Side s) {
+		if(s == Side.CLIENT) {
     	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
         DataOutputStream outputStream = new DataOutputStream(bos);
         try {
@@ -297,11 +305,71 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
         packet.data = bos.toByteArray();
         packet.length = bos.size();
     	PacketDispatcher.sendPacketToAllPlayers(packet); //Maybe change to players in radius?
-		}
-	}
+		} else if(s == Side.SERVER) {
+		    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+		        DataOutputStream outputStream = new DataOutputStream(bos);
+		        try {
+		        	//System.out.println(this.energy + " ENERGYS SENDING");
+		                outputStream.writeInt(this.energy);
+		                outputStream.writeInt(this.xCoord);
+		                outputStream.writeInt(this.yCoord);
+		                outputStream.writeInt(this.zCoord);
+		        } catch (Exception ex) {
+		                ex.printStackTrace();
+		        }
 
+		        Packet250CustomPayload packet = new Packet250CustomPayload();
+		        packet.channel = "corepack";
+		        packet.data = bos.toByteArray();
+		        packet.length = bos.size();
+		    	PacketDispatcher.sendPacketToServer(packet); //Maybe change to players in radius?
+				}
+	}
+	public void sendTabPacket(Side s) {
+		if(s == Side.CLIENT) {
+    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+        DataOutputStream outputStream = new DataOutputStream(bos);
+        try {
+        	//System.out.println(this.energy + " ENERGYS SENDING");
+                outputStream.writeInt(this.tabPage);
+                outputStream.writeInt(this.xCoord);
+                outputStream.writeInt(this.yCoord);
+                outputStream.writeInt(this.zCoord);
+        } catch (Exception ex) {
+                ex.printStackTrace();
+        }
+
+        Packet250CustomPayload packet = new Packet250CustomPayload();
+        packet.channel = "coretab";
+        packet.data = bos.toByteArray();
+        packet.length = bos.size();
+    	PacketDispatcher.sendPacketToAllPlayers(packet); //Maybe change to players in radius?
+		} else if(s == Side.SERVER) { 
+		    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+		        DataOutputStream outputStream = new DataOutputStream(bos);
+		        try {
+		        	//System.out.println(this.energy + " ENERGYS SENDING");
+		                outputStream.writeInt(this.tabPage);
+		                outputStream.writeInt(this.xCoord);
+		                outputStream.writeInt(this.yCoord);
+		                outputStream.writeInt(this.zCoord);
+		        } catch (Exception ex) {
+		                ex.printStackTrace();
+		        }
+
+		        Packet250CustomPayload packet = new Packet250CustomPayload();
+		        packet.channel = "coretab";
+		        packet.data = bos.toByteArray();
+		        packet.length = bos.size();
+		    	PacketDispatcher.sendPacketToServer(packet); //Maybe change to players in radius?
+				}
+	}
 	public int getEnergyScaled(int i) {
 		return this.energy * i / maxenergy;
+	}
+	public int getTabPage() {
+		
+		return tabPage;
 	}
 
 }

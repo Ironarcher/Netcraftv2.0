@@ -22,6 +22,7 @@ public class ContainerCore extends Container {
 
         public TileEntityCore tileEntity;
         public int energy;
+        public int selected = 0;
         public int x = 25;
         public int y = 0;
         public ContainerCore (InventoryPlayer inventoryPlayer, TileEntityCore te){
@@ -30,11 +31,14 @@ public class ContainerCore extends Container {
                 //the Slot constructor takes the IInventory and the slot number in that it binds to
                 //and the x-y coordinates it resides on-screen
                 addSlotToContainer(new SlotModuleCore(tileEntity, 0, 20 + this.getX(), 13 + this.getY()));
+
                 addSlotToContainer(new Slot(tileEntity, 1, 220 + this.getX(), 13 + this.getY()));
                 //commonly used vanilla code that adds the player's inventory
                 bindPlayerInventory(inventoryPlayer);
         }
+        public void updateTab() {
 
+        }
         @Override
         public boolean canInteractWith(EntityPlayer player) {
                 return tileEntity.isUseableByPlayer(player);

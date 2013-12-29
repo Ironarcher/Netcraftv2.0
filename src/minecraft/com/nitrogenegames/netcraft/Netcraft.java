@@ -34,7 +34,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid = Netcraft.modid, name = "Netcraft", version = "Reloaded 0.0.1")
-@NetworkMod(channels = { "corepack" }, packetHandler = PacketHandler.class)
+@NetworkMod(channels = { "corepack", "coretab" }, packetHandler = PacketHandler.class)
 public class Netcraft {
 	public static final String modid = "netcraft";
 	

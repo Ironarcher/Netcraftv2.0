@@ -26,11 +26,11 @@
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.PacketDispatcher"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.network.Player"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.SideOnly"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.PacketHandler"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.EntityLivingBase"/>
 <fullyQualifiedTypeName name="ic2.api.item.IElectricItem"/>
 <fullyQualifiedTypeName name="ic2.api.item.ElectricItem"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.gui.GuiCore"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
 </qualifiedTypeNameHistroy>
