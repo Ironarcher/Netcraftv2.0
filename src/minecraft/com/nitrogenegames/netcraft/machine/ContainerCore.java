@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 
 import com.nitrogenegames.netcraft.Netcraft;
+import com.nitrogenegames.netcraft.gui.GuiCore;
 
 import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.common.network.Player;
@@ -21,13 +22,15 @@ public class ContainerCore extends Container {
 
         public TileEntityCore tileEntity;
         public int energy;
+        public int x = 25;
+        public int y = 0;
         public ContainerCore (InventoryPlayer inventoryPlayer, TileEntityCore te){
                 tileEntity = te;
                 energy = te.energy;
                 //the Slot constructor takes the IInventory and the slot number in that it binds to
                 //and the x-y coordinates it resides on-screen
-                addSlotToContainer(new SlotModuleCore(tileEntity, 0, 20, 13));
-                addSlotToContainer(new Slot(tileEntity, 1, 220, 13));
+                addSlotToContainer(new SlotModuleCore(tileEntity, 0, 20 + this.getX(), 13 + this.getY()));
+                addSlotToContainer(new Slot(tileEntity, 1, 220 + this.getX(), 13 + this.getY()));
                 //commonly used vanilla code that adds the player's inventory
                 bindPlayerInventory(inventoryPlayer);
         }
@@ -36,18 +39,23 @@ public class ContainerCore extends Container {
         public boolean canInteractWith(EntityPlayer player) {
                 return tileEntity.isUseableByPlayer(player);
         }
-
+        public int getX() {
+        	return x;
+        }
+        public int getY() {
+        	return y;
+        }
 
         protected void bindPlayerInventory(InventoryPlayer inventoryPlayer) {
                 for (int i = 0; i < 3; i++) {
                         for (int j = 0; j < 9; j++) {
                                 addSlotToContainer(new Slot(inventoryPlayer, j + i * 9 + 9,
-                                                8 + (12) + j * 18, 84 + i * 18));
+                                                8 + (12) + this.getX() + j * 18, this.getY() + 84 + i * 18));
                         }
                 }
 
                 for (int i = 0; i < 9; i++) {
-                        addSlotToContainer(new Slot(inventoryPlayer, i, 8 + (12) + i * 18, 142));
+                        addSlotToContainer(new Slot(inventoryPlayer, i, 8+ this.getX() + (12) + i * 18, this.getY() +142));
                 }
         }
         /*@SideOnly(Side.CLIENT)
