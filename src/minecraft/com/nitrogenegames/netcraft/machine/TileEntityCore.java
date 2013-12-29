@@ -1,9 +1,16 @@
 package com.nitrogenegames.netcraft.machine;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
+import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.gui.GuiCore;
+import com.nitrogenegames.netcraft.net.NetEntity;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.network.PacketDispatcher;
@@ -41,6 +48,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public int tabPage = 0;
 	public boolean isUsingPower = false;
 	//ISidedInventory
+	public NetEntity net;
 	private int id = 0;
 	public int maxenergy = 10000;
 	private boolean init;
@@ -48,7 +56,6 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	private ItemStack[] inv = new ItemStack[2];
 	public boolean powered = false;
 	public int coreEnergyNeeded = 0;
-
 	@Override
     public int getSizeInventory() {
             return inv.length;
@@ -152,6 +159,18 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
             if(tagCompound.hasKey("energy")){
             	this.energy = tagCompound.getInteger("energy");
             }
+            if(tagCompound.hasKey("net")){
+            	try {
+					this.net = ((NetEntity) deserialize(tagCompound.getByteArray("net")));
+					System.out.println(net.objects.get(0));
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+				}
+            } else {
+            	
+            }
             if(tagCompound.hasKey("pressed")){
             	this.tabPage = tagCompound.getInteger("pressed");
 
@@ -166,7 +185,18 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 }
 				powered = tagCompound.getBoolean("POWER");
     }
-    
+    public static byte[] serialize(Object obj) throws IOException {
+        ByteArrayOutputStream b = new ByteArrayOutputStream();
+        ObjectOutputStream o = new ObjectOutputStream(b);
+        o.writeObject(obj);
+        return b.toByteArray();
+    }
+
+    public static Object deserialize(byte[] bytes) throws IOException, ClassNotFoundException {
+        ByteArrayInputStream b = new ByteArrayInputStream(bytes);
+        ObjectInputStream o = new ObjectInputStream(b);
+        return o.readObject();
+    }
     @Override
     public void writeToNBT(NBTTagCompound tagCompound) {
             super.writeToNBT(tagCompound);
@@ -187,7 +217,11 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
             tagCompound.setBoolean("POWER", powered);
             tagCompound.setInteger("energy", this.energy);
             tagCompound.setInteger("pressed", this.tabPage);
-            
+            try {
+				tagCompound.setByteArray("net", serialize(this.net));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
     }
     
     
@@ -287,7 +321,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 		return this.energy;
 	}
 	public void sendEnergyPacket(Side s) {
-		if(s == Side.CLIENT) {
+		if(s == Side.CLIENT && !worldObj.isRemote) {
     	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
         DataOutputStream outputStream = new DataOutputStream(bos);
         try {
@@ -305,7 +339,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
         packet.data = bos.toByteArray();
         packet.length = bos.size();
     	PacketDispatcher.sendPacketToAllPlayers(packet); //Maybe change to players in radius?
-		} else if(s == Side.SERVER) {
+		} else if(s == Side.SERVER && worldObj.isRemote) {
 		    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
 		        DataOutputStream outputStream = new DataOutputStream(bos);
 		        try {
@@ -326,7 +360,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 				}
 	}
 	public void sendTabPacket(Side s) {
-		if(s == Side.CLIENT) {
+		if(s == Side.CLIENT && !worldObj.isRemote) {
     	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
         DataOutputStream outputStream = new DataOutputStream(bos);
         try {
@@ -344,7 +378,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
         packet.data = bos.toByteArray();
         packet.length = bos.size();
     	PacketDispatcher.sendPacketToAllPlayers(packet); //Maybe change to players in radius?
-		} else if(s == Side.SERVER) { 
+		} else if(s == Side.SERVER && worldObj.isRemote) { 
 		    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
 		        DataOutputStream outputStream = new DataOutputStream(bos);
 		        try {
@@ -370,6 +404,9 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public int getTabPage() {
 		
 		return tabPage;
+	}
+	public NetEntity getNet() {
+		return net;
 	}
 
 }

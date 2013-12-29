@@ -157,6 +157,7 @@ public class GuiCore extends GuiContainer {
                 	((ContainerCore) super.inventorySlots).selected = tabs.get(i).id;
         		}
         	}
+        	((ContainerCore)this.inventorySlots).updateTab();
         }
         private void initTabs(){
         	tabs = new ArrayList<TabButton>();
