@@ -116,11 +116,8 @@ public class GuiCore extends GuiContainer {
         {
         	for(int i = 0; i < tabs.size(); i++){
         		tabs.get(i).setPressed(false);
-        		if(tabs.get(i).id == button.id) {
-                	tabs.get(i).togglePressed();
-        		}
         	}
-
+        	tabs.get(button.id - 20).togglePressed();
         	this.selected = button.id;
         	tel.setPressed(button.id);
         }
@@ -143,12 +140,6 @@ public class GuiCore extends GuiContainer {
             //this.guiTop = (this.height - this.ySize) / 2;
             initTabs();
         	this.selected = tel.tabPage;
-        	for(int i = 0; i < tabs.size(); i++){
-        		tabs.get(i).setPressed(false);
-        		if(tabs.get(i).id == this.selected) {
-                	tabs.get(i).togglePressed();
-        		}
-        	}
         }
         
         private void initTabs(){

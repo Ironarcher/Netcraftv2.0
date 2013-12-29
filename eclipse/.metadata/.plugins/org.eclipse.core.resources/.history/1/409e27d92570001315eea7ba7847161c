@@ -36,8 +36,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory {
 
-	public int energy = 0;
-	public int tabPage = 0;
+	public int energy = 5;
 	public boolean isUsingPower = false;
 	//ISidedInventory
 	private int id = 0;
@@ -136,19 +135,13 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     @Override
     public void closeChest() {}
     
-    public void setPressed(int p) {
-    	this.tabPage = p;
-    	//SEND PACKET TO SERVER AND BACK TO CLIENT :O
-    }
+    
     @Override
     public void readFromNBT(NBTTagCompound tagCompound) {
             super.readFromNBT(tagCompound);
             
             if(tagCompound.hasKey("energy")){
             	this.energy = tagCompound.getInteger("energy");
-            }
-            if(tagCompound.hasKey("pressed")){
-            	this.tabPage = tagCompound.getInteger("pressed");
             }
             NBTTagList tagList = tagCompound.getTagList("Inventory");
             for (int i = 0; i < tagList.tagCount(); i++) {
@@ -180,7 +173,6 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
             tagCompound.setTag("Inventory", itemList);
             tagCompound.setBoolean("POWER", powered);
             tagCompound.setInteger("energy", this.energy);
-            tagCompound.setInteger("pressed", this.tabPage);
     }
     
     

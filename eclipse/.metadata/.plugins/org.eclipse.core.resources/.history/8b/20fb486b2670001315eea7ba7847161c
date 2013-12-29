@@ -136,10 +136,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     @Override
     public void closeChest() {}
     
-    public void setPressed(int p) {
-    	this.tabPage = p;
-    	//SEND PACKET TO SERVER AND BACK TO CLIENT :O
-    }
+    
     @Override
     public void readFromNBT(NBTTagCompound tagCompound) {
             super.readFromNBT(tagCompound);

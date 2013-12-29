@@ -22,11 +22,10 @@ public class TabButton extends GuiButton {
     }
  
     //use this
-    public TabButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation, boolean pressed)
+    public TabButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation)
     {
         super(id, xposition, yposition, width, height, text);
         texture1 = new ResourceLocation(Netcraft.modid.toLowerCase(), reslocation);
-        this.setPressed(pressed);
         }
 
     private static String charFit(String s){
@@ -35,10 +34,7 @@ public class TabButton extends GuiButton {
     	}
     	return s;
     }
-    public TabButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation)
-    {
-    	this(id, xposition, yposition, width, height, text, reslocation, false);
-    }
+    
     protected int getHoverState(boolean flag)
     {
         byte byte0 = 1;

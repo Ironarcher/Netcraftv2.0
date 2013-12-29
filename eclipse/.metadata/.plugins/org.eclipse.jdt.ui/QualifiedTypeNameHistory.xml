@@ -32,4 +32,5 @@
 <fullyQualifiedTypeName name="net.minecraft.entity.EntityLivingBase"/>
 <fullyQualifiedTypeName name="ic2.api.item.IElectricItem"/>
 <fullyQualifiedTypeName name="ic2.api.item.ElectricItem"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.gui.GuiCore"/>
 </qualifiedTypeNameHistroy>
