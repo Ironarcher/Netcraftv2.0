@@ -333,6 +333,11 @@ public class ItemModules extends Item {
 		/*if(this.getUnlocalizedName().equals("item.tpmodule")) {
 			return 10;
 		}*/ //piece of cake
+		switch(this.getUnlocalizedName()){
+		case "item.deathmodule": return 20;
+		case "item.regenmodule": return 80;
+		case "item.resistmodule": return 120;
+		}
 		return 20;
 	}
 	public void registerIcons(IconRegister par1IconRegister)

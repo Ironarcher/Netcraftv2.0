@@ -56,6 +56,11 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	private ItemStack[] inv = new ItemStack[2];
 	public boolean powered = false;
 	public int coreEnergyNeeded = 0;
+	
+	public int moduleCurrentPage = 1;
+	public int moduleMaxPages = 3;
+	public String moduleSelected = "None";
+	
 	@Override
     public int getSizeInventory() {
             return inv.length;

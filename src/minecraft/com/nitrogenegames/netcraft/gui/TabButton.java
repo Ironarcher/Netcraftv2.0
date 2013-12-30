@@ -10,6 +10,12 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.util.ResourceLocation;
  
 public class TabButton extends GuiButton {
+	
+	/*
+	 * Stores the information for the tab button on the core GUI
+	 * Also has the information of the tab itself
+	 */
+	
 	//syntax for sheet is following order of buttons, going from top to bottom: normal, normal hovered, pressed, pressed+hovered
 	private ResourceLocation texture1;
 	private boolean pressed = false;

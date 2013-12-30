@@ -19,6 +19,7 @@ import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.machine.ContainerCore;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
 public class GuiCore extends GuiContainer {
@@ -26,6 +27,7 @@ public class GuiCore extends GuiContainer {
 		TileEntityCore tel;
 		ArrayList<TabButton> tabs;
 		private int selected = 0;
+		
 		//public boolean tabbed = false;
 		//int x,y;
 		
@@ -75,6 +77,7 @@ public class GuiCore extends GuiContainer {
                 fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8 + (12) + 25,  ySize - 96 + 2, 4210752);
                 
                 if(selected == 0){
+                	fontRenderer.drawString("Module Running: " + tel.moduleSelected, 66+25, 74, 4210752);
                 	
                 } else if(selected == 1){
                 	
