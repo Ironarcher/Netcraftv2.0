@@ -1,6 +1,9 @@
 package com.nitrogenegames.netcraft.gui;
 
+import org.lwjgl.opengl.GL11;
+
 import com.nitrogenegames.netcraft.Netcraft;
+import com.nitrogenegames.netcraft.machine.ContainerNetworkFabricator;
 import com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -32,7 +35,9 @@ public class GuiNetworkFabricator extends GuiContainer{
 	}
 	
 	protected void drawGuiContainerBackgroundLayer(float f, int i, int j) {
-		
+		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+        this.mc.renderEngine.bindTexture(texture);
+        drawTexturedModalRect(0, 0, 0, 0, this.xSize, this.ySize);
 	}
 
 }

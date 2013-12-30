@@ -2,11 +2,13 @@ package net.minecraft.client.gui.inventory;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiScreen;
@@ -22,9 +24,12 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
+
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
+import com.nitrogenegames.netcraft.machine.ContainerNetworkFabricator;
 
 @SideOnly(Side.CLIENT)
 public abstract class GuiContainer extends GuiScreen
@@ -89,7 +94,7 @@ public abstract class GuiContainer extends GuiScreen
         this.field_94068_E = true;
     }
 
-    /**
+	/**
      * Adds the buttons (and other controls) to the screen in question.
      */
     public void initGui()

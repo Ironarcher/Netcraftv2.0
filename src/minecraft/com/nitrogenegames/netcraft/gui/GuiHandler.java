@@ -7,7 +7,9 @@ import java.lang.ref.Reference;
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.machine.ContainerCore;
 import com.nitrogenegames.netcraft.machine.ContainerModule;
+import com.nitrogenegames.netcraft.machine.ContainerNetworkFabricator;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
+import com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -29,6 +31,9 @@ public class GuiHandler implements IGuiHandler {
                 	world.markBlockForUpdate(x, y, z);
                         return new ContainerCore(player.inventory, (TileEntityCore) world.getBlockTileEntity(x, y, z));
                 } 
+                if(tileEntity instanceof TileEntityNetworkFabricator){
+                	return new ContainerNetworkFabricator(player.inventory, (TileEntityNetworkFabricator) tileEntity);
+                }
                 if(Netcraft.isModule(player.getHeldItem()))
                 {
                 	return new ContainerModule(player.inventory);
@@ -44,6 +49,9 @@ public class GuiHandler implements IGuiHandler {
                 if(tileEntity instanceof TileEntityCore){
                 	syncWithGUI(x,y,z);
                         return new GuiCore(player.inventory, (TileEntityCore) world.getBlockTileEntity(x, y, z));
+                }
+                if(tileEntity instanceof TileEntityNetworkFabricator){
+                	return new GuiNetworkFabricator(player.inventory, (TileEntityNetworkFabricator) tileEntity);
                 }
                 if(Netcraft.isMarkableModule(player.getHeldItem()))
                 {

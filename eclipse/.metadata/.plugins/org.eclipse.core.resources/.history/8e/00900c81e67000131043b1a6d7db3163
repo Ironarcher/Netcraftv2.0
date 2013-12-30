@@ -1,0 +1,17 @@
+package com.nitrogenegames.netcraft.machine;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
+
+public class ContainerNetworkFabricator extends Container{
+
+	public ContainerNetworkFabricator(InventoryPlayer invplayer, TileEntityNetworkFabricator tileEntity){
+		
+	}
+	
+	public boolean canInteractWith(EntityPlayer entityplayer){
+		return false;
+	}
+
+}

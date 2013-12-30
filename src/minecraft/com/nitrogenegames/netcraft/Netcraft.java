@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.nitrogenegames.netcraft.block.BlockCore;
 import com.nitrogenegames.netcraft.block.BlockMatrixCube;
+import com.nitrogenegames.netcraft.block.BlockNetworkFabricator;
 import com.nitrogenegames.netcraft.block.BlockNodeBase;
 import com.nitrogenegames.netcraft.block.BlockNodeCondition;
 import com.nitrogenegames.netcraft.block.BlockNodeConnection;
@@ -15,6 +16,7 @@ import com.nitrogenegames.netcraft.item.ItemModuleBase;
 import com.nitrogenegames.netcraft.item.ItemModules;
 import com.nitrogenegames.netcraft.item.ItemUpgrade;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
+import com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator;
 import com.nitrogenegames.netcraft.misc.PacketHandler;
 
 import net.minecraft.block.Block;
@@ -41,7 +43,11 @@ public class Netcraft {
 	@Instance("netcraft")
 	public static Netcraft instance = new Netcraft();
 	
+	public static final int GuiIDNetworkFabricator = 1;
+	
 	//basic crafting for starting	
+	public static Block blockNetworkFabricatorActive;
+	public static Block blockNetworkFabricatorIdle;
 	public static Item glassfibrecoil;
 	public static Item highvoltagecoil;
 	public static Block core;
@@ -603,6 +609,8 @@ public class Netcraft {
 	public void load(FMLInitializationEvent e){
 		
 		//declarations
+		blockNetworkFabricatorActive = new BlockNetworkFabricator(3850, true).setUnlocalizedName("networkfabricatoractive").setLightValue(0.8f);
+		blockNetworkFabricatorIdle = new BlockNetworkFabricator(3851, false).setUnlocalizedName("networkfabricatoridle").setCreativeTab(netcrafttab);
 		glassfibrecoil = new ItemCoil(3813).setUnlocalizedName("glassfibrecoil");
 		highvoltagecoil = new ItemCoil(3814).setUnlocalizedName("highvoltagecoil");
 		netdatachip = new ItemCrafting(3816, false).setUnlocalizedName("netdatachip");
@@ -638,6 +646,8 @@ public class Netcraft {
 		register();
 		
 		//gui
+		GameRegistry.registerTileEntity(TileEntityNetworkFabricator.class, "tilEntityNetworkFabricator");
+		LanguageRegistry.instance().addStringLocalization("container.networkFabricator", "Network Fabricator");
 		GameRegistry.registerTileEntity(TileEntityCore.class, "tileEntityCore");
 	    NetworkRegistry.instance().registerGuiHandler(this, new GuiHandler());
 	}
@@ -655,6 +665,8 @@ public class Netcraft {
 	}
 	
 	public void register(){
+		registerBlock(blockNetworkFabricatorActive, "Network Fabricator Active");
+		registerBlock(blockNetworkFabricatorIdle, "Network Fabricator");
 		registerBlock(matrixcube, "Matrix Cube");
 		registerBlock(core, "Core");
 		registerBlock(node, "Node");
