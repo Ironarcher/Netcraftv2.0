@@ -30,7 +30,7 @@ public class ContainerNetworkFabricator extends Container{
 	}
 	
 	public boolean canInteractWith(EntityPlayer entityplayer){
-		return false;
+		return true;
 	}
 
 }

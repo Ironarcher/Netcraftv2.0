@@ -1,8 +1,11 @@
 package com.nitrogenegames.netcraft.machine;
 
+import com.nitrogenegames.netcraft.Netcraft;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityNetworkFabricator extends TileEntity implements ISidedInventory
@@ -11,7 +14,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 	private String localizedName;
 	
 	//slots 0,1,2 are the top 3 from left to right, slot 3 is the bottom slot
-	private ItemStack[] slots = new ItemStack[3];
+	private ItemStack[] slots = new ItemStack[4];
 	
 	private static final int[] slots_top = new int[]{0,1,2};
 	private static final int[] slots_bottom = new int[]{3};
@@ -69,7 +72,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer entityplayer) {
-		return false;
+		return true;
 	}
 
 	@Override
@@ -94,6 +97,9 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 			}
 		}
 		*/
+		if(this.canSmelt()) {
+			this.smeltItem();
+		}
 	}
 	
 	public static int getItemFabricateTime(ItemStack baseitem, ItemStack topitemleft, ItemStack topitemmiddle, ItemStack topitemright){
@@ -119,7 +125,52 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
 		return i == 3 ? false : true;
 	}
+	public boolean canSmelt() {
+		try{
+		if (Netcraft.getFabricatorResult(slots[0].itemID, slots[1].itemID, slots[2].itemID) != null)
+        {
+        	return true;
+        } else {
+        	return false;
+        }
+		} catch (Exception e) {
+			return false;
+		}
+	}
+    public void smeltItem()
+    {
+        if (canSmelt())
+        {
+            ItemStack itemstack = Netcraft.getFabricatorResult(slots[0].itemID, slots[1].itemID, slots[2].itemID);
 
+            if (this.slots[3] == null)
+            {
+                this.slots[3] = itemstack.copy();
+            }
+            else if (this.slots[3].isItemEqual(itemstack))
+            {
+                slots[3].stackSize += itemstack.stackSize;
+            }
+
+            --this.slots[0].stackSize;
+            --this.slots[1].stackSize;
+            --this.slots[2].stackSize;
+
+            if (this.slots[0].stackSize <= 0)
+            {
+                this.slots[0] = null;
+            }
+            if (this.slots[1].stackSize <= 0)
+            {
+                this.slots[1] = null;
+            }
+            if (this.slots[2].stackSize <= 0)
+            {
+                this.slots[2] = null;
+            }
+        }
+    }
+    
 	@Override
 	public int[] getAccessibleSlotsFromSide(int var1) {
 		return var1 == 0 ? slots_bottom : (var1 == 1 ? slots_top : slots_sides);

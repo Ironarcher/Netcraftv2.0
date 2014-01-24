@@ -26,7 +26,7 @@ public class BlockNetworkFabricator extends BlockContainer{
 	
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int i, float a, float b, float c){
-		FMLNetworkHandler.openGui(player, Netcraft.instance, Netcraft.GuiIDNetworkFabricator, world, x, y, z);
+        player.openGui(Netcraft.instance, Netcraft.GuiIDNetworkFabricator, world, x, y, z);
 	    return true;
 	}
 

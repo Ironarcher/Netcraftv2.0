@@ -790,5 +790,12 @@ public class Netcraft {
 			return false;
 		}
 	}
+	public static ItemStack getFabricatorResult(int stack1, int stack2, int stack3) {
+		if(stack1 == core.blockID && stack2 == core.blockID && stack3 == core.blockID) {
+			return new ItemStack(Block.bedrock, 20);
+		} else {
+			return null;
+		}
+	} //WORK ON THIS
 
 }

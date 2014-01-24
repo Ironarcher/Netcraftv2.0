@@ -31,8 +31,9 @@ public class GuiHandler implements IGuiHandler {
                 	world.markBlockForUpdate(x, y, z);
                         return new ContainerCore(player.inventory, (TileEntityCore) world.getBlockTileEntity(x, y, z));
                 } 
+                
                 if(tileEntity instanceof TileEntityNetworkFabricator){
-                	return new ContainerNetworkFabricator(player.inventory, (TileEntityNetworkFabricator) tileEntity);
+                	return new ContainerNetworkFabricator(player.inventory, (TileEntityNetworkFabricator) world.getBlockTileEntity(x, y, z));
                 }
                 if(Netcraft.isModule(player.getHeldItem()))
                 {
@@ -51,7 +52,7 @@ public class GuiHandler implements IGuiHandler {
                         return new GuiCore(player.inventory, (TileEntityCore) world.getBlockTileEntity(x, y, z));
                 }
                 if(tileEntity instanceof TileEntityNetworkFabricator){
-                	return new GuiNetworkFabricator(player.inventory, (TileEntityNetworkFabricator) tileEntity);
+                	return new GuiNetworkFabricator(player.inventory, (TileEntityNetworkFabricator) world.getBlockTileEntity(x, y, z));
                 }
                 if(Netcraft.isMarkableModule(player.getHeldItem()))
                 {
