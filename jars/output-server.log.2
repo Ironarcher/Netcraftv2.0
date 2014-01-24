@@ -46,3 +46,40 @@
 2013-12-28 22:41:59 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
 2013-12-28 22:41:59 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
 2013-12-28 22:41:59 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-24 16:47:00 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-24 16:47:00 [SERVER] [INFO] Generating keypair
+2014-01-24 16:47:01 [SERVER] [INFO] Preparing start region for level 0
+2014-01-24 16:47:01 [SERVER] [INFO] Player375[/127.0.0.1:0] logged in with entity id 10853 at (1101.4049415396057, 4.0, -582.6513140967394)
+2014-01-24 16:47:01 [SERVER] [INFO] Player375 joined the game
+2014-01-24 16:48:08 [SERVER] [INFO] Saving and pausing game...
+2014-01-24 16:48:08 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-24 16:48:08 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-24 16:48:08 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-24 16:48:14 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking memory connection
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.ClassCastException: com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator cannot be cast to net.minecraft.tileentity.TileEntityFurnace
+	at net.minecraft.block.BlockFurnace.breakBlock(BlockFurnace.java:263)
+	at net.minecraft.world.chunk.Chunk.setBlockIDWithMetadata(Chunk.java:711)
+	at net.minecraft.world.World.setBlock(World.java:559)
+	at net.minecraft.world.World.setBlockToAir(World.java:688)
+	at net.minecraft.block.Block.removeBlockByPlayer(Block.java:1662)
+	at net.minecraft.item.ItemInWorldManager.removeBlock(ItemInWorldManager.java:277)
+	at net.minecraft.item.ItemInWorldManager.tryHarvestBlock(ItemInWorldManager.java:311)
+	at net.minecraft.item.ItemInWorldManager.onBlockClicked(ItemInWorldManager.java:172)
+	at net.minecraft.network.NetServerHandler.handleBlockDig(NetServerHandler.java:493)
+	at net.minecraft.network.packet.Packet14BlockDig.processPacket(Packet14BlockDig.java:67)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	... 6 more
+2014-01-24 16:48:14 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-01-24_16.48.14-server.txt
+2014-01-24 16:48:14 [SERVER] [INFO] Stopping server
+2014-01-24 16:48:14 [SERVER] [INFO] Saving players
+2014-01-24 16:48:15 [SERVER] [INFO] Player375 left the game

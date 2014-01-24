@@ -85,6 +85,7 @@ public class Netcraft {
 	public static Item rangeupgrade;
 	public static Item capacitorupgrade;
 	public static Item coreupgrade;
+	public ArrayList fabricatorRecipes;
 	//misc
 
 	public static CreativeTabs netcrafttab = new NetcraftTab(CreativeTabs.getNextID(), "Netcraft");
@@ -607,7 +608,7 @@ public class Netcraft {
 	
 	@EventHandler
 	public void load(FMLInitializationEvent e){
-		
+		addRecipes();
 		//declarations
 		blockNetworkFabricatorActive = new BlockNetworkFabricator(3850, true).setUnlocalizedName("networkfabricatoractive").setLightValue(0.8f);
 		blockNetworkFabricatorIdle = new BlockNetworkFabricator(3851, false).setUnlocalizedName("networkfabricatoridle").setCreativeTab(netcrafttab);
@@ -740,7 +741,9 @@ public class Netcraft {
 		LanguageRegistry.addName(nuclearalloy, "Nuclear Alloy");
 		*/
 	}
-	
+	public void addRecipes() {
+		
+	}
 	public static int[] decompileNBT(String s)
 	{
 		int[] coords = new int[3];
