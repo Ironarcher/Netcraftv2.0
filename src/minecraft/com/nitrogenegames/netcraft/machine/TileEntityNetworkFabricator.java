@@ -27,7 +27,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 	private static final int[] slots_sides = new int[]{0,1,2};
 	
 	//speed of the machine, less is faster
-	public int furnaceCookTime = 200;
+	public int furnaceCookTime = 300;
 	
 	//How long left before fabricated
 	public int furnaceBurnTime;
@@ -64,6 +64,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 	     * Removes from an inventory slot (first arg) up to a specified number (second arg) of items and returns them in a
 	     * new stack.
 	     */
+	    @SideOnly(Side.CLIENT)
 	    public int getCookProgressScaled(int par1)
 	    {
 	        return this.furnaceCookTime * par1 / 200;
@@ -77,12 +78,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 	     */
 	    public int getBurnTimeRemainingScaled(int par1)
 	    {
-	        if (this.currentItemBurnTime == 0)
-	        {
-	            this.currentItemBurnTime = 200;
-	        }
-
-	        return this.currentItemBurnTime/2;
+	        return this.currentItemBurnTime*par1/200;
 	    }
 
 	    /**
@@ -107,8 +103,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 	            if (this.isBurning() && this.canSmelt())
 	            {
 	                this.furnaceCookTime += 20; //EDITABLE
-
-	                if (this.furnaceCookTime == 200)
+	                if (this.furnaceCookTime == 300)
 	                {
 	                    this.furnaceCookTime = 0;
 	                    this.smeltItem();
@@ -135,18 +130,15 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 	     */
 	    private boolean canSmelt()
 	    {
-	        if (this.slots[1] == null || this.slots[0] == null || this.slots[2] == null)
+	        if (this.slots[1] == null || this.slots[0] == null || this.slots[2] == null || this.slots[3] == null)
 	        {
 	            return false;
 	        }
 	        else
 	        {
-	            ItemStack itemstack = 	Netcraft.getFabricatorResult(slots[0].itemID, slots[1].itemID, slots[2].itemID);
+	            ItemStack itemstack = Netcraft.getFabricatorResult(slots[3].itemID, slots[0].itemID, slots[1].itemID, slots[2].itemID);
 	            if (itemstack == null) return false;
-	            if (this.slots[3] == null) return true;
-	            if (!this.slots[3].isItemEqual(itemstack)) return false;
-	            int result = slots[3].stackSize + itemstack.stackSize;
-	            return (result <= getInventoryStackLimit() && result <= itemstack.getMaxStackSize());
+	            return true;
 	        }
 	    }
 	    public ItemStack decrStackSize(int par1, int par2)
@@ -261,16 +253,9 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
     {
         if (canSmelt())
         {
-            ItemStack itemstack = Netcraft.getFabricatorResult(slots[0].itemID, slots[1].itemID, slots[2].itemID);
+            ItemStack itemstack = Netcraft.getFabricatorResult(slots[3].itemID, slots[0].itemID, slots[1].itemID, slots[2].itemID);
 
-            if (this.slots[3] == null)
-            {
                 this.slots[3] = itemstack.copy();
-            }
-            else if (this.slots[3].isItemEqual(itemstack))
-            {
-                slots[3].stackSize += itemstack.stackSize;
-            }
 
             --this.slots[0].stackSize;
             --this.slots[1].stackSize;

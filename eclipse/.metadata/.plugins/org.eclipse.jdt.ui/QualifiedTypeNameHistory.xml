@@ -47,4 +47,5 @@
 <fullyQualifiedTypeName name="net.minecraft.inventory.ISidedInventory"/>
 <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.FabricatorRecipe"/>
 </qualifiedTypeNameHistroy>

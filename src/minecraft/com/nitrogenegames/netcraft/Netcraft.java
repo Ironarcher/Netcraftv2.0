@@ -17,6 +17,7 @@ import com.nitrogenegames.netcraft.item.ItemModules;
 import com.nitrogenegames.netcraft.item.ItemUpgrade;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 import com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator;
+import com.nitrogenegames.netcraft.misc.FabricatorRecipe;
 import com.nitrogenegames.netcraft.misc.PacketHandler;
 
 import net.minecraft.block.Block;
@@ -85,7 +86,7 @@ public class Netcraft {
 	public static Item rangeupgrade;
 	public static Item capacitorupgrade;
 	public static Item coreupgrade;
-	public ArrayList fabricatorRecipes;
+	public static ArrayList fabricatorRecipes;
 	//misc
 
 	public static CreativeTabs netcrafttab = new NetcraftTab(CreativeTabs.getNextID(), "Netcraft");
@@ -608,7 +609,7 @@ public class Netcraft {
 	
 	@EventHandler
 	public void load(FMLInitializationEvent e){
-		addRecipes();
+
 		//declarations
 		blockNetworkFabricatorActive = new BlockNetworkFabricator(3850, true).setUnlocalizedName("networkfabricatoractive").setLightValue(0.8f);
 		blockNetworkFabricatorIdle = new BlockNetworkFabricator(3851, false).setUnlocalizedName("networkfabricatoridle").setCreativeTab(netcrafttab);
@@ -651,6 +652,7 @@ public class Netcraft {
 		LanguageRegistry.instance().addStringLocalization("container.networkFabricator", "Network Fabricator");
 		GameRegistry.registerTileEntity(TileEntityCore.class, "tileEntityCore");
 	    NetworkRegistry.instance().registerGuiHandler(this, new GuiHandler());
+		addRecipes();
 	}
 	
 	
@@ -742,7 +744,8 @@ public class Netcraft {
 		*/
 	}
 	public void addRecipes() {
-		
+		fabricatorRecipes = new ArrayList<FabricatorRecipe>();
+		fabricatorRecipes.add(new FabricatorRecipe(Block.blockDiamond.blockID, Item.diamond.itemID, Item.emerald.itemID, core.blockID, new ItemStack(Block.bedrock, 20)));
 	}
 	public static int[] decompileNBT(String s)
 	{
@@ -793,12 +796,15 @@ public class Netcraft {
 			return false;
 		}
 	}
-	public static ItemStack getFabricatorResult(int stack1, int stack2, int stack3) {
-		if(stack1 == core.blockID && stack2 == core.blockID && stack3 == core.blockID) {
-			return new ItemStack(Block.bedrock, 20);
-		} else {
-			return null;
+	public static ItemStack getFabricatorResult(int main, int a1, int a2, int a3) {
+		for(int i = 0; i < fabricatorRecipes.size(); i++) {
+			FabricatorRecipe recipe = (FabricatorRecipe) fabricatorRecipes.get(i);
+			if(recipe.canFabricateUsing(main, a1, a2, a3)) {
+				System.out.println("RESULT FOUND");
+				return recipe.result;
+			}
 		}
+		return null;
 	} //WORK ON THIS
 
 }

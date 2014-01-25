@@ -1,8 +1,11 @@
 package com.nitrogenegames.netcraft.machine;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
@@ -11,15 +14,18 @@ import net.minecraft.tileentity.TileEntityFurnace;
 
 public class ContainerNetworkFabricator extends Container{
 	
-	private TileEntityNetworkFabricator networkFabricator;
+	private TileEntityNetworkFabricator furnace;
+    private int lastCookTime;
+    private int lastBurnTime;
+    private int lastItemBurnTime;
 
 	public ContainerNetworkFabricator(InventoryPlayer inventory, TileEntityNetworkFabricator tileEntity){
-		this.networkFabricator = tileEntity;
+		this.furnace = tileEntity;
 		
 		this.addSlotToContainer(new Slot(tileEntity, 0, 20, 8));
 		this.addSlotToContainer(new Slot(tileEntity, 1, 49, 8));
 		this.addSlotToContainer(new Slot(tileEntity, 2, 78, 8));
-		this.addSlotToContainer(new SlotFurnace(inventory.player, tileEntity, 3, 49, 62));
+		this.addSlotToContainer(new SlotFabricator(tileEntity, 3, 49, 62));
 		
 		for(int i = 0; i < 3; i++){
 			for(int j = 0; j < 9; j++){
@@ -45,7 +51,7 @@ public class ContainerNetworkFabricator extends Container{
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-            if (par2 == 3)
+            /*if (par2 == 3)
             {
                 if (!this.mergeItemStack(itemstack1, 3, 39, true))
                 {
@@ -54,14 +60,21 @@ public class ContainerNetworkFabricator extends Container{
 
                 slot.onSlotChange(itemstack1, itemstack);
             }
-            else if (par2 != 1 && par2 != 0 && par2 != 2)
+            else*/ if (par2 != 1 && par2 != 0 && par2 != 2 && par2 != 3)
             {
+            	if(itemstack1.stackSize == 1) {
+                    if (!this.mergeItemStack(itemstack1, 0, 4, false))
+                    {
+                            return null;
+                    }
+            	} else {
                 if (!this.mergeItemStack(itemstack1, 0, 3, false))
                 {
                         return null;
                 }
+            	}
             }
-                else if (par2 >= 3 && par2 < 30)
+                else if (par2 >= 4 && par2 < 30)
                 {
                     if (!this.mergeItemStack(itemstack1, 30, 39, false))
                     {
@@ -96,6 +109,64 @@ public class ContainerNetworkFabricator extends Container{
         }
 
         return itemstack;
+    }
+    public void addCraftingToCrafters(ICrafting par1ICrafting)
+    {
+        super.addCraftingToCrafters(par1ICrafting);
+        par1ICrafting.sendProgressBarUpdate(this, 0, this.furnace.furnaceCookTime);
+        par1ICrafting.sendProgressBarUpdate(this, 1, this.furnace.furnaceBurnTime);
+        par1ICrafting.sendProgressBarUpdate(this, 2, this.furnace.currentItemBurnTime);
+    }
+
+    /**
+     * Looks for changes made in the container, sends them to every listener.
+     */
+    public void detectAndSendChanges()
+    {
+        super.detectAndSendChanges();
+
+        for (int i = 0; i < this.crafters.size(); ++i)
+        {
+            ICrafting icrafting = (ICrafting)this.crafters.get(i);
+
+            if (this.lastCookTime != this.furnace.furnaceCookTime)
+            {
+                icrafting.sendProgressBarUpdate(this, 0, this.furnace.furnaceCookTime);
+            }
+
+            if (this.lastBurnTime != this.furnace.furnaceBurnTime)
+            {
+                icrafting.sendProgressBarUpdate(this, 1, this.furnace.furnaceBurnTime);
+            }
+
+            if (this.lastItemBurnTime != this.furnace.currentItemBurnTime)
+            {
+                icrafting.sendProgressBarUpdate(this, 2, this.furnace.currentItemBurnTime);
+            }
+        }
+
+        this.lastCookTime = this.furnace.furnaceCookTime;
+        this.lastBurnTime = this.furnace.furnaceBurnTime;
+        this.lastItemBurnTime = this.furnace.currentItemBurnTime;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void updateProgressBar(int par1, int par2)
+    {
+        if (par1 == 0)
+        {
+            this.furnace.furnaceCookTime = par2;
+        }
+
+        if (par1 == 1)
+        {
+            this.furnace.furnaceBurnTime = par2;
+        }
+
+        if (par1 == 2)
+        {
+            this.furnace.currentItemBurnTime = par2;
+        }
     }
 
 }
