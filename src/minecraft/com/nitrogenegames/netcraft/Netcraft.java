@@ -8,7 +8,8 @@ import com.nitrogenegames.netcraft.block.BlockNetworkFabricator;
 import com.nitrogenegames.netcraft.block.BlockNodeBase;
 import com.nitrogenegames.netcraft.block.BlockNodeCondition;
 import com.nitrogenegames.netcraft.block.BlockNodeConnection;
-import com.nitrogenegames.netcraft.block.BlockNodeInput;
+import com.nitrogenegames.netcraft.block.BlockNodeItem;
+import com.nitrogenegames.netcraft.block.BlockNodeWirelessTerminal;
 import com.nitrogenegames.netcraft.gui.GuiHandler;
 import com.nitrogenegames.netcraft.item.ItemCoil;
 import com.nitrogenegames.netcraft.item.ItemCrafting;
@@ -69,6 +70,11 @@ public class Netcraft {
 	public static Item powermodule;
 	public static Item regenmodule;
 	public static Item resistmodule;
+	public static Item forcefieldmodule; //req
+	public static Item itemstoragemodule; //req
+	public static Item speedmodule; //req
+	public static Item expmodule; //req
+	public static Item sirenmodule; //req
 	public static Item weathermodule; //req
 	public static Item timemodule; //req
 	public static Item tpmodule; 
@@ -77,7 +83,8 @@ public class Netcraft {
 	//nodes
 	public static Block connectionnode;
 	public static Block conditionalnode;
-	public static Block inputnode; //req, 1.6
+	public static Block itemnode;
+	public static Block wirelessitemterminal;
 
 	//upgrades
 	public static Item baseupgrade;
@@ -627,20 +634,17 @@ public class Netcraft {
 		powermodule = new ItemModules(3833).setUnlocalizedName("powermodule");
 		node= new BlockNodeBase(3821, "node").setUnlocalizedName("node");
 		connectionnode= new BlockNodeConnection(3823, "connectionnode").setUnlocalizedName("connectionnode");
+		itemnode = new BlockNodeItem(3824, "itemnode").setUnlocalizedName("itemnode");
+		wirelessitemterminal = new BlockNodeWirelessTerminal(3827, "wirelessitemterminal").setUnlocalizedName("wirelessitemterminal");
 		conditionalnode= new BlockNodeCondition(3825, "conditionalnode").setUnlocalizedName("conditionalnode");
 		regenmodule = new ItemModules(3835).setUnlocalizedName("regenmodule");
 		resistmodule = new ItemModules(3836).setUnlocalizedName("resistmodule");
 		weathermodule = new ItemModules(3837).setUnlocalizedName("weathermodule");
 		timemodule = new ItemModules(3838).setUnlocalizedName("timemodule");
-		inputnode= new BlockNodeInput(3839, "inputnode").setUnlocalizedName("inputnode");
 		tpmodule = new ItemModules(3840).setUnlocalizedName("tpmodule");
 		atpmodule = new ItemModules(3841).setUnlocalizedName("atpmodule");
-		euupgrade = new ItemUpgrade(3827).setUnlocalizedName("euupgrade");
 		storageupgrade = new ItemUpgrade(3828).setUnlocalizedName("storageupgrade");
 		rangeupgrade = new ItemUpgrade(3829).setUnlocalizedName("rangeupgrade");
-		capacitorupgrade = new ItemUpgrade(3830).setUnlocalizedName("capacitorupgrade");
-		coreupgrade = new ItemUpgrade(3842).setUnlocalizedName("coreupgrade");
-		baseupgrade = new ItemCrafting(3843, false).setUnlocalizedName("baseupgrade");
 		superdatachip = new ItemCrafting(3844, true).setUnlocalizedName("superdatachip");
 		forcefieldemitters = new ItemCrafting(3845, false).setUnlocalizedName("forcefieldemitters");
 		nuclearalloy = new ItemCrafting(3846, true).setUnlocalizedName("nuclearalloy");
@@ -675,7 +679,8 @@ public class Netcraft {
 		registerBlock(node, "Node");
 		registerBlock(connectionnode, "Connection Node");
 		registerBlock(conditionalnode, "Conditional Node");
-		registerBlock(inputnode, "Input Node");
+		registerBlock(itemnode, "Item Node");
+		registerBlock(wirelessitemterminal, "Wireless Item Terminal");
 		registerItem(glassfibrecoil, "Glass Fibre Coil");
 		registerItem(highvoltagecoil, "High Voltage Coil");
 		registerItem(netdatachip, "Net Datachip");
@@ -692,15 +697,16 @@ public class Netcraft {
 		registerItem(timemodule, "Celestial Manipulation Module");
 		registerItem(tpmodule, "Basic Teleportation Module");
 		registerItem(atpmodule, "Advanced Teleportation Module");
-		registerItem(baseupgrade, "Upgrade Template");
-		registerItem(euupgrade, "Energy Expansion Upgrade");
 		registerItem(storageupgrade, "Module Stroage Upgrade");
 		registerItem(rangeupgrade, "Range Upgrade");
-		registerItem(capacitorupgrade, "Quantum Capacitor Upgrade");
-		registerItem(coreupgrade, "Basic Upgrade");
 		registerItem(superdatachip, "Supernatural Datachip");
 		registerItem(forcefieldemitters, "Force Field Emitter");
 		registerItem(nuclearalloy, "Nuclear Alloy");
+		
+		GameRegistry.addRecipe(new ItemStack(Netcraft.matrixcube,1), new Object[]{
+			"SDS","DAD","SDS",'S', Block.stone, 'D', Netcraft.netdatachip, 'A', ic2.api.item.Items.getItem("advancedMachine"),
+			});
+		
 		//register block through game registry
 		/*
 		GameRegistry.registerBlock(matrixcube, "matrixcube");
@@ -745,8 +751,24 @@ public class Netcraft {
 	}
 	public void addRecipes() {
 		fabricatorRecipes = new ArrayList<FabricatorRecipe>();
-		fabricatorRecipes.add(new FabricatorRecipe(Block.blockDiamond.blockID, Item.diamond.itemID, Item.emerald.itemID, core.blockID, new ItemStack(Block.bedrock, 20)));
-	}
+		
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.matrixcube.blockID, ic2.api.item.Items.getItem("lapotronCrystal").itemID, ic2.api.item.Items.getItem("lapotronCrystal").itemID, Netcraft.centraldatachip.itemID, new ItemStack(Netcraft.core, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(ic2.api.item.Items.getItem("plategold").itemID, ic2.api.item.Items.getItem("electronicCircuit").itemID, ic2.api.item.Items.getItem("electronicCircuit").itemID, ic2.api.item.Items.getItem("casingbronze").itemID, new ItemStack(Netcraft.netdatachip, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(ic2.api.item.Items.getItem("plategold").itemID, ic2.api.item.Items.getItem("electronicCircuit").itemID, ic2.api.item.Items.getItem("electronicCircuit").itemID, ic2.api.item.Items.getItem("casingbronze").itemID, new ItemStack(Netcraft.communicator, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(ic2.api.item.Items.getItem("plategold").itemID, ic2.api.item.Items.getItem("advancedCircuit").itemID, ic2.api.item.Items.getItem("advancedCircuit").itemID, ic2.api.item.Items.getItem("matter").itemID, new ItemStack(Netcraft.centraldatachip, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.netdatachip.itemID, Item.paper.itemID, Item.paper.itemID, Item.paper.itemID, new ItemStack(Netcraft.design, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(ic2.api.item.Items.getItem("iridiumPlate").itemID, ic2.api.item.Items.getItem("reactorCoolantSix").itemID, Item.eyeOfEnder.itemID, Item.eyeOfEnder.itemID, new ItemStack(Netcraft.superdatachip, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.communicator.itemID, Item.enderPearl.itemID, Item.enderPearl.itemID, Item.enderPearl.itemID, new ItemStack(Netcraft.forcefieldemitters, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(ic2.api.item.Items.getItem("electronicCircuit").itemID, ic2.api.item.Items.getItem("glassFiberCableItem").itemID, ic2.api.item.Items.getItem("glassFiberCableItem").itemID, Block.chest.blockID, new ItemStack(Netcraft.storageupgrade, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(ic2.api.item.Items.getItem("electronicCircuit").itemID, Netcraft.communicator.itemID, Netcraft.communicator.itemID, Netcraft.communicator.itemID, new ItemStack(Netcraft.rangeupgrade, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.matrixcube.blockID, ic2.api.item.Items.getItem("glassFiberCableItem").itemID, ic2.api.item.Items.getItem("glassFiberCableItem").itemID, Block.chest.blockID, new ItemStack(Netcraft.connectionnode, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.matrixcube.blockID, ic2.api.item.Items.getItem("glassFiberCableItem").itemID, Block.chest.blockID, Block.chest.blockID, new ItemStack(Netcraft.itemnode, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.matrixcube.blockID, ic2.api.item.Items.getItem("glassFiberCableItem").itemID, ic2.api.item.Items.getItem("frequencyTransmitter").itemID, Netcraft.communicator.itemID, new ItemStack(Netcraft.wirelessitemterminal, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.matrixcube.blockID, ic2.api.item.Items.getItem("glassFiberCableItem").itemID, Item.comparator.itemID, Item.comparator.itemID, new ItemStack(Netcraft.conditionalnode, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.design.itemID, ic2.api.item.Items.getItem("glassFiberCableItem").itemID, Item.comparator.itemID, Item.comparator.itemID, new ItemStack(Netcraft.redmodule, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.design.itemID, ic2.api.item.Items.getItem("glassFiberCableItem").itemID, ic2.api.item.Items.getItem("glassFiberCableItem").itemID, ic2.api.item.Items.getItem("frequencyTransmitter").itemID, new ItemStack(Netcraft.powermodule, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.design.itemID, ic2.api.item.Items.getItem("teslaCoil").itemID, ic2.api.item.Items.getItem("teslaCoil").itemID, ic2.api.item.Items.getItem("teslaCoil").itemID, new ItemStack(Netcraft.deathmodule, 1)));
+		}
 	public static int[] decompileNBT(String s)
 	{
 		int[] coords = new int[3];
