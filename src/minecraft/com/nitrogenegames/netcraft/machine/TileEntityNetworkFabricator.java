@@ -1,7 +1,13 @@
 package com.nitrogenegames.netcraft.machine;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+
+import ic2.api.energy.tile.IEnergySink;
+
 import com.nitrogenegames.netcraft.Netcraft;
 
+import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -12,16 +18,31 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.MinecraftForge;
+import ic2.api.energy.prefab.BasicSink;
+import ic2.api.energy.tile.IEnergyTile;
+import ic2.api.energy.*;
+import ic2.api.Direction;
+import ic2.api.energy.event.EnergyTileLoadEvent;
+import ic2.api.energy.event.EnergyTileUnloadEvent;
+import ic2.api.energy.tile.IEnergySink;
+import ic2.api.item.ElectricItem;
+import ic2.api.item.IElectricItem;
 
-public class TileEntityNetworkFabricator extends TileEntity implements ISidedInventory
+public class TileEntityNetworkFabricator extends TileEntity implements IEnergySink, ISidedInventory
 {
 
 	private String localizedName;
 	
 	//slots 0,1,2 are the top 3 from left to right, slot 3 is the bottom slot
 	private ItemStack[] slots = new ItemStack[4];
-	
+	public int energy = 0;
+	public int maxenergy = 10000;
+	public boolean isUsingPower = false;
+	private boolean init = false;
 	private static final int[] slots_top = new int[]{0,1,2};
 	private static final int[] slots_bottom = new int[]{3};
 	private static final int[] slots_sides = new int[]{0,1,2};
@@ -95,14 +116,23 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 	     */
 	    public void updateEntity()
 	    {
+	    	if(!init && worldObj != null){
+	    		if(!worldObj.isRemote){
+	    			EnergyTileLoadEvent loadEvent = new EnergyTileLoadEvent(this);
+	    			MinecraftForge.EVENT_BUS.post(loadEvent);
+	    		}
+	    		init = true;
+	    	}
+			sendEnergyPacket(Side.CLIENT);
 	        boolean flag1 = false;
 
 	        if (!this.worldObj.isRemote)
 	        {
 
-	            if (this.isBurning() && this.canSmelt())
+	            if (this.isBurning() && this.canSmelt(20))
 	            {
 	                this.furnaceCookTime += 20; //EDITABLE
+	                this.energy -= 20; //ALSO EDITABLE
 	                if (this.furnaceCookTime == 300)
 	                {
 	                    this.furnaceCookTime = 0;
@@ -128,8 +158,11 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 	    /**
 	     * Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc.
 	     */
-	    private boolean canSmelt()
+	    private boolean canSmelt(int energy)
 	    {
+	    	if(this.energy < energy) {
+	    		return false;
+	    	}
 	        if (this.slots[1] == null || this.slots[0] == null || this.slots[2] == null || this.slots[3] == null)
 	        {
 	            return false;
@@ -251,8 +284,6 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
 
     public void smeltItem()
     {
-        if (canSmelt())
-        {
             ItemStack itemstack = Netcraft.getFabricatorResult(slots[3].itemID, slots[0].itemID, slots[1].itemID, slots[2].itemID);
 
                 this.slots[3] = itemstack.copy();
@@ -273,7 +304,6 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
             {
                 this.slots[2] = null;
             }
-        }
     }
     
 	@Override
@@ -293,6 +323,9 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
     public void readFromNBT(NBTTagCompound par1NBTTagCompound)
     {
         super.readFromNBT(par1NBTTagCompound);
+        if(par1NBTTagCompound.hasKey("energy")){
+        	this.energy = par1NBTTagCompound.getInteger("energy");
+        }
         NBTTagList nbttaglist = par1NBTTagCompound.getTagList("Items");
         this.slots = new ItemStack[this.getSizeInventory()];
 
@@ -331,7 +364,87 @@ public class TileEntityNetworkFabricator extends TileEntity implements ISidedInv
         }
 
         par1NBTTagCompound.setTag("Items", nbttaglist);
+        par1NBTTagCompound.setInteger("energy", this.energy);
     }
 
+	@Override
+	public int getMaxSafeInput() {
+		return 32;
+	}
+
+	@Override
+	public boolean acceptsEnergyFrom(TileEntity emitter,
+			ForgeDirection direction) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public double demandedEnergyUnits() {
+		return (int) (this.maxenergy - this.energy);
+	}
+
+	@Override
+	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
+
+		this.isUsingPower = true;
+		if(this.energy >= this.maxenergy){
+			sendEnergyPacket(Side.CLIENT);
+			return amount;
+		}
+		
+		double openEnergy = this.maxenergy - this.energy;
+		
+		if(openEnergy >= amount){
+			this.energy += amount;
+			sendEnergyPacket(Side.CLIENT);
+			return 0;
+		} else if (amount > openEnergy){
+			this.energy = this.maxenergy;
+			sendEnergyPacket(Side.CLIENT);
+			return amount - (int) openEnergy;
+		}
+		sendEnergyPacket(Side.CLIENT);
+		return 0;
+	}
+	public void sendEnergyPacket(Side s) {
+		if(s == Side.CLIENT && !worldObj.isRemote) {
+    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+        DataOutputStream outputStream = new DataOutputStream(bos);
+        try {
+        	//System.out.println(this.energy + " ENERGYS SENDING");
+                outputStream.writeInt(this.energy);
+                outputStream.writeInt(this.xCoord);
+                outputStream.writeInt(this.yCoord);
+                outputStream.writeInt(this.zCoord);
+        } catch (Exception ex) {
+                ex.printStackTrace();
+        }
+
+        Packet250CustomPayload packet = new Packet250CustomPayload();
+        packet.channel = "netpack";
+        packet.data = bos.toByteArray();
+        packet.length = bos.size();
+    	PacketDispatcher.sendPacketToAllPlayers(packet); //Maybe change to players in radius?
+		} else if(s == Side.SERVER && worldObj.isRemote) {
+		    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+		        DataOutputStream outputStream = new DataOutputStream(bos);
+		        try {
+		        	//System.out.println(this.energy + " ENERGYS SENDING");
+		                outputStream.writeInt(this.energy);
+		                outputStream.writeInt(this.xCoord);
+		                outputStream.writeInt(this.yCoord);
+		                outputStream.writeInt(this.zCoord);
+		        } catch (Exception ex) {
+		                ex.printStackTrace();
+		        }
+
+		        Packet250CustomPayload packet = new Packet250CustomPayload();
+		        packet.channel = "netpack";
+		        packet.data = bos.toByteArray();
+		        packet.length = bos.size();
+		    	PacketDispatcher.sendPacketToServer(packet); //Maybe change to players in radius?
+				}
+	}
 	
 }

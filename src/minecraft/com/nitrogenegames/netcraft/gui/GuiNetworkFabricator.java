@@ -32,6 +32,7 @@ public class GuiNetworkFabricator extends GuiContainer{
 		
 		this.fontRenderer.drawString(name, this.xSize / 2 - this.fontRenderer.getStringWidth(name), 6, 4210752);
 		this.fontRenderer.drawString(I18n.getString("container.inventory"), 8, this.ySize - 96 + 2, 4210752);
+		this.fontRenderer.drawString("" + this.networkFabricator.energy, 120, 10, 4210752);
 	}
 	
 	protected void drawGuiContainerBackgroundLayer(float f, int i, int j) {
