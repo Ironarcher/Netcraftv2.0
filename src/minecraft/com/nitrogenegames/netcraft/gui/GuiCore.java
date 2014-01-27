@@ -1,14 +1,22 @@
 package com.nitrogenegames.netcraft.gui;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Locale;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.Icon;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
@@ -17,6 +25,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.machine.ContainerCore;
+import com.nitrogenegames.netcraft.machine.SlotCore;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -25,7 +34,7 @@ import cpw.mods.fml.relauncher.Side;
 public class GuiCore extends GuiContainer {
 	
 		TileEntityCore tel;
-		ArrayList<TabButton> tabs;
+		ArrayList<GuiTabButton> tabs;
 		private int selected = 0;
 		
 		//public boolean tabbed = false;
@@ -163,7 +172,7 @@ public class GuiCore extends GuiContainer {
         	((ContainerCore)this.inventorySlots).updateTab();
         }
         private void initTabs(){
-        	tabs = new ArrayList<TabButton>();
+        	tabs = new ArrayList<GuiTabButton>();
         	createTab(tabs.size(), "Modules", 0, false);
         	createTab(tabs.size(), "Nodes", 1, false);
         	createTab(tabs.size(), "Power", 2, false);
@@ -173,9 +182,106 @@ public class GuiCore extends GuiContainer {
         public void createTab(int placement, String text, int id, boolean press){
                 	int x = (this.width - this.xSize + 50) / 2;
              int y = (this.height - this.ySize) / 2;
-        	TabButton temp = new TabButton(id, x - 52, y + placement*16, 50, 15, text, "/textures/gui/tabButtonBlueBig.png");
+        	GuiTabButton temp = new GuiTabButton(id, x - 52, y + placement*16, 50, 15, text, "/textures/gui/tabButtonBlueBig.png");
         	this.buttonList.add(temp);
         	tabs.add(temp);
         } 
+        /* WIP
+        @Override
+        protected void drawSlotInventory(Slot par1Slot)
+        {
+        	boolean flag = false;
+            if(par1Slot instanceof SlotCore) {
+            	if(((SlotCore) par1Slot).hidden == true) {
+            		flag = true;
+            	}
+            }
+            if(!flag) {
+            	super.drawSlotInventory(par1Slot);
+            }
+        }
+        public Slot getSlotAtPosition(int par1, int par2)
+        {
+            for (int k = 0; k < this.inventorySlots.inventorySlots.size(); ++k)
+            {
+                Slot slot = (Slot)this.inventorySlots.inventorySlots.get(k);
+
+                if (this.publicMouseOverSlot(slot, par1, par2))
+                {
+                	if(slot instanceof SlotCore) {
+                		if(!(((SlotCore) slot).hidden == true)) {
+                            return slot;
+                		}
+                	} else {
+                    return slot;
+                	}
+                }
+            }
+
+            return null;
+        }
+        @Override
+        protected void mouseClicked(int par1, int par2, int par3)
+        {
+        	try {
+				Method m = this.getClass().getSuperclass().getDeclaredMethod("mouseClicked");
+				try {
+					m.invoke(this, par1, par2, par3);
+				} catch (IllegalAccessException e) {
+					e.printStackTrace();
+				} catch (IllegalArgumentException e) {
+					e.printStackTrace();
+				} catch (InvocationTargetException e) {
+					e.printStackTrace();
+				}
+			} catch (NoSuchMethodException e) {
+				e.printStackTrace();
+			} catch (SecurityException e) {
+				e.printStackTrace();
+			}
+        }
+        
+        public boolean publicMouseOverSlot(Slot par1Slot, int par2, int par3) {
+            return this.isPointInRegion(par1Slot.xDisplayPosition, par1Slot.yDisplayPosition, 16, 16, par2, par3);
+        }
+        protected void mouseClickMove(int par1, int par2, int par3, long par4)
+        {
+        	try {
+				Method m = this.getClass().getSuperclass().getDeclaredMethod("mouseClickMove");
+				try {
+					m.invoke(this, par1, par2, par3, par4);
+				} catch (IllegalAccessException e) {
+					e.printStackTrace();
+				} catch (IllegalArgumentException e) {
+					e.printStackTrace();
+				} catch (InvocationTargetException e) {
+					e.printStackTrace();
+				}
+			} catch (NoSuchMethodException e) {
+				e.printStackTrace();
+			} catch (SecurityException e) {
+				e.printStackTrace();
+			}
+        }
+        protected void mouseMovedOrUp(int par1, int par2, int par3)
+        {
+        	try {
+				Method m = this.getClass().getSuperclass().getDeclaredMethod("mouseMovedOrUp");
+				try {
+					m.invoke(this, par1, par2, par3);
+				} catch (IllegalAccessException e) {
+					e.printStackTrace();
+				} catch (IllegalArgumentException e) {
+					e.printStackTrace();
+				} catch (InvocationTargetException e) {
+					e.printStackTrace();
+				}
+			} catch (NoSuchMethodException e) {
+				e.printStackTrace();
+			} catch (SecurityException e) {
+				e.printStackTrace();
+			}
+        }*/
+
 
 }

@@ -13,7 +13,6 @@ public final class NetcraftTab extends CreativeTabs
 	@SideOnly(Side.CLIENT)
 	public int getTabIconItemIndex()
 		{
-		//there is a difference between items and blocks. will give an example of both
 		return Netcraft.design.itemID;
 		}
 	//sets the title/name for the creative tab

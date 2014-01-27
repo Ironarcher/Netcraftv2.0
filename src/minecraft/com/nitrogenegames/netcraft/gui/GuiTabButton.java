@@ -9,7 +9,7 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.util.ResourceLocation;
  
-public class TabButton extends GuiButton {
+public class GuiTabButton extends GuiButton {
 	
 	/*
 	 * Stores the information for the tab button on the core GUI
@@ -22,13 +22,13 @@ public class TabButton extends GuiButton {
 
  
 	//for default size: 120 width and 20 height
-    public TabButton(int id, int startx, int starty, String text, String reslocation)
+    public GuiTabButton(int id, int startx, int starty, String text, String reslocation)
     {
         this(id, startx, starty, 120, 20, text, reslocation);
     }
  
     //use this
-    public TabButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation, boolean pressed)
+    public GuiTabButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation, boolean pressed)
     {
         super(id, xposition, yposition, width, height, text);
         texture1 = new ResourceLocation(Netcraft.modid.toLowerCase(), reslocation);
@@ -41,7 +41,7 @@ public class TabButton extends GuiButton {
     	}
     	return s;
     }
-    public TabButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation)
+    public GuiTabButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation)
     {
     	this(id, xposition, yposition, width, height, text, reslocation, false);
     }

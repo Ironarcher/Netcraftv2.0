@@ -48,7 +48,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	private static final int[] slots_sides = new int[]{0,1,2};
 	
 	//speed of the machine, less is faster
-	public int furnaceCookTime = 300;
+	public int furnaceCookTime = 0;
 	
 	//How long left before fabricated
 	public int furnaceBurnTime;
@@ -139,10 +139,6 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	                    this.smeltItem();
 	                    flag1 = true;
 	                }
-	            }
-	            else
-	            {
-	                this.furnaceCookTime = 0;
 	            }
 
 	                flag1 = true;

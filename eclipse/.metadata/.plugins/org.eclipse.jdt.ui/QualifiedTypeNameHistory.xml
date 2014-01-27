@@ -48,4 +48,7 @@
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.FabricatorRecipe"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.SlotCore"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Method"/>
+<fullyQualifiedTypeName name="java.util.Locale"/>
 </qualifiedTypeNameHistroy>

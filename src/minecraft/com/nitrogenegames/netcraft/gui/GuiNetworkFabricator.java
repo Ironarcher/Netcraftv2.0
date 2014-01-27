@@ -44,7 +44,7 @@ public class GuiNetworkFabricator extends GuiContainer{
         
         //draw the Model for progress bar
         int h = this.networkFabricator.getCookProgressScaled(33);
-        drawTexturedModalRect(x + 21, y + 27, 0, 166, 74, h);
+        drawTexturedModalRect(x + 21, y + 27, 0, 166, 74, h); //NEEDS A BIT OF WORK
 	}
 
 }

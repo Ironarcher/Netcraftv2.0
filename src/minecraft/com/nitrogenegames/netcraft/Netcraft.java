@@ -822,7 +822,6 @@ public class Netcraft {
 		for(int i = 0; i < fabricatorRecipes.size(); i++) {
 			FabricatorRecipe recipe = (FabricatorRecipe) fabricatorRecipes.get(i);
 			if(recipe.canFabricateUsing(main, a1, a2, a3)) {
-				System.out.println("RESULT FOUND");
 				return recipe.result;
 			}
 		}
