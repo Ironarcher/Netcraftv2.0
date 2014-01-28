@@ -25,7 +25,7 @@ public class ContainerNetworkFabricator extends Container{
 		this.addSlotToContainer(new Slot(tileEntity, 0, 20, 8));
 		this.addSlotToContainer(new Slot(tileEntity, 1, 49, 8));
 		this.addSlotToContainer(new Slot(tileEntity, 2, 78, 8));
-		this.addSlotToContainer(new SlotFabricator(tileEntity, 3, 49, 62));
+		this.addSlotToContainer(new SlotNetcraft(tileEntity, 3, 49, 62, 0, 1));
 		
 		for(int i = 0; i < 3; i++){
 			for(int j = 0; j < 9; j++){

@@ -2,12 +2,14 @@ package com.nitrogenegames.netcraft.block;
 
 //import ic2.api.energy.tile.IEnergyTile;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.item.ItemModules;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
+import com.nitrogenegames.netcraft.net.INet;
 import com.nitrogenegames.netcraft.net.NetEntity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -266,6 +268,7 @@ public class BlockCore extends BlockContainer {
         public TileEntity createNewTileEntity(World mainworld) {
             return new TileEntityCore();
     }
+
         
 
 }

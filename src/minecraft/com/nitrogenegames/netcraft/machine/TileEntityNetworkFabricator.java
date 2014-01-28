@@ -43,6 +43,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	public int maxenergy = 10000;
 	public boolean isUsingPower = false;
 	private boolean init = false;
+	public int cookGoal = 300;
 	private static final int[] slots_top = new int[]{0,1,2};
 	private static final int[] slots_bottom = new int[]{3};
 	private static final int[] slots_sides = new int[]{0,1,2};
@@ -92,7 +93,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	    @SideOnly(Side.CLIENT)
 	    public int getCookProgressScaled(int par1)
 	    {
-	        return this.furnaceCookTime * par1 / 300;
+	        return this.furnaceCookTime * par1 / cookGoal;
 	    }
 
 	    @SideOnly(Side.CLIENT)
@@ -103,7 +104,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	     */
 	    public int getBurnTimeRemainingScaled(int par1)
 	    {
-	        return (this.currentItemBurnTime*par1)/300;
+	        return (this.currentItemBurnTime*par1)/cookGoal;
 	    }
 
 	    /**
@@ -137,7 +138,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	            {
 	                this.furnaceCookTime+=10; //EDITABLE
 	                this.energy -= 20; //ALSO EDITABLE
-	                if (this.furnaceCookTime == 300)
+	                if (this.furnaceCookTime >= cookGoal)
 	                {
 	                    this.furnaceCookTime = 0;
 	                    this.smeltItem();

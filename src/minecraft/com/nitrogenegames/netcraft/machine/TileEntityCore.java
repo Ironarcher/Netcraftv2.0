@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.gui.GuiCore;
+import com.nitrogenegames.netcraft.net.INet;
 import com.nitrogenegames.netcraft.net.NetEntity;
 
 import cpw.mods.fml.client.FMLClientHandler;
@@ -42,7 +43,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.MinecraftForge;
 
-public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory {
+public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory, INet {
 
 	public int energy = 0;
 	public int tabPage = 0;
@@ -167,7 +168,6 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
             if(tagCompound.hasKey("net")){
             	try {
 					this.net = ((NetEntity) deserialize(tagCompound.getByteArray("net")));
-					System.out.println(net.objects.get(0));
 				} catch (ClassNotFoundException e) {
 					// TODO Auto-generated catch block
 				} catch (IOException e) {
@@ -413,6 +413,21 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	}
 	public NetEntity getNet() {
 		return net;
+	}
+
+	@Override
+	public ArrayList getConnected() {
+		return Netcraft.getConnectedObjects(worldObj, this.xCoord, this.yCoord, this.zCoord);
+	}
+
+	@Override
+	public int[] getCore() {
+		return new int[] {xCoord, yCoord, zCoord};
+	}
+
+	@Override
+	public NetEntity getEntity() {
+		return this.getNet();
 	}
 
 }

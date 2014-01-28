@@ -9,10 +9,10 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class SlotModuleCore extends SlotCore {
-    public SlotModuleCore(IInventory par2IInventory, int par3, int par4, int par5, int par6)
+public class SlotModuleCore extends SlotNetcraft {
+    public SlotModuleCore(IInventory par2IInventory, int par3, int par4, int par5, int par6, int stack)
     {
-        super(par2IInventory, par3, par4, par5, par6);
+        super(par2IInventory, par3, par4, par5, par6, stack);
         //this.brewingStand = par1ContainerCore;
     }
     @Override

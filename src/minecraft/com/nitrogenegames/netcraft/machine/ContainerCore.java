@@ -34,9 +34,9 @@ public class ContainerCore extends Container {
                 bindPlayerInventory(inventoryPlayer);
                 //the Slot constructor takes the IInventory and the slot number in that it binds to
                 //and the x-y coordinates it resides on-screen
-                addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 20 + this.getX(), 13 + this.getY(), 0));
+                addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 20 + this.getX(), 13 + this.getY(), 0, 1));
 
-                addPageSlotToContainer(new SlotCore(tileEntity, 1, 220 + this.getX(), 13 + this.getY(), 0));
+                addPageSlotToContainer(new SlotNetcraft(tileEntity, 1, 220 + this.getX(), 13 + this.getY(), 0, 1));
                 //commonly used vanilla code that adds the player's inventory
                 
         }
@@ -64,11 +64,11 @@ public class ContainerCore extends Container {
         			}
         		}*/
         		for(int j = 0; j < this.pagedSlot.size(); j++) {
-        			if(((SlotCore)pagedSlot.get(j)).pageId == selected) {
-        				((SlotCore)pagedSlot.get(j)).show();
+        			if(((SlotNetcraft)pagedSlot.get(j)).pageId == selected) {
+        				((SlotNetcraft)pagedSlot.get(j)).show();
         				
         			} else {
-        				((SlotCore)pagedSlot.get(j)).hide();
+        				((SlotNetcraft)pagedSlot.get(j)).hide();
         			}
         		}
         }
@@ -130,7 +130,7 @@ public class ContainerCore extends Container {
         	//this.energy = this.tileEntity.energy;
         	
         }
-        public void addPageSlotToContainer(SlotCore s) {
+        public void addPageSlotToContainer(SlotNetcraft s) {
         	addSlotToContainer(s);
         	pagedSlot.add(s);
         }

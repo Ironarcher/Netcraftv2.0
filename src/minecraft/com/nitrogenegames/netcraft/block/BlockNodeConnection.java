@@ -77,6 +77,7 @@ public class BlockNodeConnection extends Block {
 	}
 	public void updateConnection(World par1World, int par2, int par3, int par4) {
 		state = Netcraft.isConectedToCore(par1World, par2, par3, par4);
+		System.out.println(state + " " + par1World.isRemote);
 		if(state == false) {
 			par1World.setBlockMetadataWithNotify(par2, par3, par4, 2, 2);
 		} else {

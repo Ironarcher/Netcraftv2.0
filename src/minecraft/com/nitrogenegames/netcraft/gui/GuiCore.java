@@ -25,7 +25,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.machine.ContainerCore;
-import com.nitrogenegames.netcraft.machine.SlotCore;
+import com.nitrogenegames.netcraft.machine.SlotNetcraft;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
