@@ -38,10 +38,12 @@ import net.minecraft.network.packet.Packet132TileEntityData;
 import net.minecraftforge.common.ForgeDirection;
 
 public class BlockCore extends BlockContainer {
+
 	 public BlockCore (int id, String texture) {
          super(id, Material.rock);
          setCreativeTab(Netcraft.netcrafttab);
  }
+
 	 
 	 public void activatemodules(World world, int x, int y, int z) {
          TileEntityCore tileEntity = (TileEntityCore) world.getBlockTileEntity(x, y, z);

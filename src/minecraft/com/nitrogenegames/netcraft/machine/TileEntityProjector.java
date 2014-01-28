@@ -55,12 +55,6 @@ public class TileEntityProjector extends TileEntity implements ISidedInventory, 
     }
 	
 	@Override
-	public Packet getDescriptionPacket() {
-	    NBTTagCompound tagCompound = new NBTTagCompound();
-	    writeToNBT(tagCompound);
-	    return new Packet132TileEntityData(xCoord, yCoord, zCoord, 1, tagCompound);
-	}
-	@Override
 	public void onDataPacket(INetworkManager networkManager, Packet132TileEntityData packet) {
 		worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
 	}

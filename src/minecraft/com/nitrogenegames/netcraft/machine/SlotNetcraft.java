@@ -30,6 +30,10 @@ public class SlotNetcraft extends Slot {
         return !hidden;
 
     }
+    public int getSlotStackLimit()
+    {
+    	return stackSize;
+    }
     public void hide() {
     	
     	super.xDisplayPosition = Integer.MIN_VALUE;

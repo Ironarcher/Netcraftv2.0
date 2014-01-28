@@ -121,6 +121,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	     */
 	    public void updateEntity()
 	    {
+
 	    	if(!init && worldObj != null){
 	    		if(!worldObj.isRemote){
 	    			EnergyTileLoadEvent loadEvent = new EnergyTileLoadEvent(this);
@@ -133,7 +134,9 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 
 	        if (!this.worldObj.isRemote)
 	        {
-
+		    	if(!(canSmelt(20))) {
+		    		this.furnaceCookTime = 0;
+		    	}
 	            if (this.isBurning() && this.canSmelt(20))
 	            {
 	                this.furnaceCookTime+=10; //EDITABLE
@@ -171,8 +174,19 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	        else
 	        {
 	            ItemStack itemstack = Netcraft.getFabricatorResult(slots[3].itemID, slots[0].itemID, slots[1].itemID, slots[2].itemID);
-	            if (itemstack == null) return false;
+	            if (itemstack == null) {
+	            	if(Netcraft.isUpgradeFor(slots[3].itemID, slots[0].itemID)) {
+	            		return true;
+	            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[1].itemID)) {
+	            		return true;
+	            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[2].itemID)) {
+	            		return true;
+	            	}
+	            	
+	            	return false;
+	            } else {
 	            return true;
+	            }
 	        }
 	    }
 	    public ItemStack decrStackSize(int par1, int par2)
@@ -282,12 +296,23 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	}
 
 
-
+	public void upgrade(ItemStack main, ItemStack upgrade) {
+		
+	}
     public void smeltItem()
     {
             ItemStack itemstack = Netcraft.getFabricatorResult(slots[3].itemID, slots[0].itemID, slots[1].itemID, slots[2].itemID);
-
+            if(itemstack == null) {
+            	if(Netcraft.isUpgradeFor(slots[3].itemID, slots[0].itemID)) {
+            		upgrade(slots[3], slots[0]);
+            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[1].itemID)) {
+            		upgrade(slots[3], slots[1]);
+            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[2].itemID)) {
+            		upgrade(slots[3], slots[2]);
+            	}
+            } else {
                 this.slots[3] = itemstack.copy();
+            }
 
             --this.slots[0].stackSize;
             --this.slots[1].stackSize;
@@ -305,6 +330,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
             {
                 this.slots[2] = null;
             }
+            
     }
     
 	@Override
