@@ -406,6 +406,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public int getEnergyScaled(int i) {
 		return this.energy * i / maxenergy;
 	}
+	
 	public int getTabPage() {
 		
 		return tabPage;

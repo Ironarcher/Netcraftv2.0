@@ -14,7 +14,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class GuiNetworkFabricator extends GuiContainer{
 	
-	public static final ResourceLocation texture = new ResourceLocation(Netcraft.modid, "textures/gui/networkFabricatorGui.png");
+	public static final ResourceLocation texture = new ResourceLocation(Netcraft.modid, "textures/gui/networkfabricatorfinaleu2.png");
 	
 	public TileEntityNetworkFabricator networkFabricator;
 
@@ -43,8 +43,11 @@ public class GuiNetworkFabricator extends GuiContainer{
         drawTexturedModalRect(x, y, 0, 0, this.xSize, this.ySize);
         
         //draw the Model for progress bar
-        int h = this.networkFabricator.getCookProgressScaled(33);
-        drawTexturedModalRect(x + 21, y + 27, 0, 166, 74, h); //NEEDS A BIT OF WORK
+        int cookprogress = this.networkFabricator.getCookProgressScaled(31);
+        drawTexturedModalRect(x + 21, y + 27, 0, 166, 74, cookprogress); //FINISHED -- COMPLETELY WORKING
+        
+        int energyamount = this.networkFabricator.getEnergyScaled(54);
+        drawTexturedModalRect(x + 134, y + 15 + 54 - energyamount, 0, 198 + 54 - energyamount, 16, energyamount);
 	}
 
 }

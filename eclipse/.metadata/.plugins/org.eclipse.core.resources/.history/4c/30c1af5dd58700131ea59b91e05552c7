@@ -1,0 +1,93 @@
+package com.nitrogenegames.netcraft.misc;
+
+import net.minecraft.item.ItemStack;
+
+public class FabricatorRecipe {
+	public int mainID = -1;
+	public int addOn1 = -1;
+	public int addOn2 = -1;
+	public int addOn3 = -1;
+	public boolean allSlotsFilled;
+	public ItemStack result;
+	public FabricatorRecipe(int m, int a1, int a2, int a3, boolean allSlotsFilled, ItemStack r) {
+		mainID = m;
+		addOn1 = a1;
+		addOn2 = a2;
+		addOn3 = a3;
+		this.allSlotsFilled = allSlotsFilled;
+		result = r;
+	}
+	public FabricatorRecipe(int m, int a1, int a2, int a3, ItemStack s) {
+		this(m, a1, a2, a3, false, s);
+	}
+	public boolean canFabricateUsing(int main, int a1, int a2, int a3) {
+		if(!allSlotsFilled){
+			if(main != mainID) {
+				return false;
+			}
+			if(a1 == addOn1) {
+				if(a2 == addOn2) {
+					if(a3 == addOn3) {
+						return true;
+					}
+				} else if(a2 == addOn3) {
+					if(a3 == addOn2) {
+						return true;
+					}
+				}
+			} else if(a1 == addOn2) {
+				if(a2 == addOn1) {
+					if(a3 == addOn3) {
+						return true;
+					}
+				} else if(a2 == addOn3) {
+					if(a3 == addOn1) {
+						return true;
+					}
+				}
+			} else if(a1 == addOn3) {
+				if(a2 == addOn2) {
+					if(a3 == addOn1) {
+						return true;
+					}
+				} else if(a2 == addOn1) {
+					if(a3 == addOn2) {
+						return true;
+					}
+				}
+			} else {
+				return false;
+			}
+			return false;
+		} else{
+			if(main != mainID) {
+				return false;
+			}
+			if(a1 == addOn1 || a1 == addOn2 || a1 == addOn3){
+				if(a1 == addOn1){
+					//single recipes
+					if(a2 == -1 && a3 == -1){
+						return true;
+					}
+					//double recipe
+					if(!(a2==-1) && a2 == addOn2){
+						if(a3==-1){
+							return true;
+						}
+					}
+				} else if (a1 == addOn2){
+					
+				} else if (a1 == addOn3){
+					
+				}
+			} else if(a2 == addOn1 || a2 == addOn2 || a2 == addOn3){
+				
+			} else if(a3 == addOn1 || a3 == addOn2 || a3 == addOn3){
+				
+			} else{
+				return false;
+			}
+		}
+		return false;
+	}
+}
