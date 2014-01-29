@@ -6,6 +6,7 @@ import java.io.DataOutputStream;
 import ic2.api.energy.tile.IEnergySink;
 
 import com.nitrogenegames.netcraft.Netcraft;
+import com.nitrogenegames.netcraft.block.ItemBlockProjector;
 
 import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
@@ -326,6 +327,12 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 
 
 	public void upgrade(ItemStack main, ItemStack upgrade) {
+		try{
+			ItemBlockProjector block = (ItemBlockProjector) main.getItem();
+			
+		} catch(Exception e) {
+			
+		}
 		
 	}
 	

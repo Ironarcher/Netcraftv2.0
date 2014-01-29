@@ -691,9 +691,9 @@ public class Netcraft {
 	}
 	
 	public void register(){
-		//registerBlock(projectorBeam, "Projector Block");
-		//registerBlock(projectorSatelite, "Projector Block");  WEIRD ERROR HERE
-		//registerBlock(projectorRadial, "Projector Block");
+		registerBlock(projectorBeam, "Projector Block");
+		registerBlock(projectorSatelite, "Projector Block");
+		registerBlock(projectorRadial, "Projector Block");
 
 		
 		registerBlock(blockNetworkFabricatorActive, "Network Fabricator Active");

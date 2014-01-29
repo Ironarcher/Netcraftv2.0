@@ -10410,3 +10410,17 @@ Caused by: java.lang.NullPointerException
 2014-01-28 19:11:50 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
 2014-01-28 19:11:50 [SERVER] [INFO] Saving chunks for level 'New World'/The End
 2014-01-28 19:11:50 [SERVER] [INFO] Stopping server
+2014-01-29 06:46:36 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-29 06:46:36 [SERVER] [INFO] Generating keypair
+2014-01-29 06:50:56 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-29 06:50:56 [SERVER] [INFO] Generating keypair
+2014-01-29 06:50:58 [SERVER] [INFO] Preparing start region for level 0
+2014-01-29 06:50:59 [SERVER] [INFO] Player445[/127.0.0.1:0] logged in with entity id 23 at (1098.480126816516, 4.0, -575.1312891934966)
+2014-01-29 06:50:59 [SERVER] [INFO] Player445 joined the game
+2014-01-29 06:52:21 [SERVER] [INFO] Stopping server
+2014-01-29 06:52:21 [SERVER] [INFO] Saving players
+2014-01-29 06:52:21 [SERVER] [INFO] Player445 left the game
+2014-01-29 06:52:21 [SERVER] [INFO] Saving worlds
+2014-01-29 06:52:21 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-29 06:52:21 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-29 06:52:21 [SERVER] [INFO] Saving chunks for level 'New World'/The End

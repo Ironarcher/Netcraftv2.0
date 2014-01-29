@@ -41,6 +41,11 @@ public class ItemBlockProjector extends Item {
 			this.blockID = Netcraft.projectorSatelite.blockID;
 		}
 	}
+	public void upgrade(int i) {
+		this.upgraded = true;
+		this.range += 5;
+		this.rangeupgraded += 5;
+	}
 	//ITEMBLOCK CODE
     /**
      * Returns the blockID for this Item
@@ -49,6 +54,7 @@ public class ItemBlockProjector extends Item {
     {
         return this.blockID;
     }
+    
 
     @SideOnly(Side.CLIENT)
 
@@ -203,22 +209,6 @@ public class ItemBlockProjector extends Item {
         return par1World.canPlaceEntityOnSide(this.getBlockID(), par2, par3, par4, false, par5, (Entity)null, par7ItemStack);
     }
 
-    /**
-     * Returns the unlocalized name of this item. This version accepts an ItemStack so different stacks can have
-     * different names based on their damage or NBT.
-     */
-    public String getUnlocalizedName(ItemStack par1ItemStack)
-    {
-        return Block.blocksList[this.blockID].getUnlocalizedName();
-    }
-
-    /**
-     * Returns the unlocalized name of this item.
-     */
-    public String getUnlocalizedName()
-    {
-        return Block.blocksList[this.blockID].getUnlocalizedName();
-    }
 
     @SideOnly(Side.CLIENT)
 
