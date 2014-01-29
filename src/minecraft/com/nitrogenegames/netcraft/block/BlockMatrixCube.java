@@ -48,7 +48,6 @@ public BlockMatrixCube(int par1, String texture) {
 	{
 	
 		this.blockIcon = par1IconRegister.registerIcon(Netcraft.modid + ":" + (this.getUnlocalizedName()));
-	     System.out.println(this.getUnlocalizedName());
 	}
 	
 	@SideOnly(Side.CLIENT)

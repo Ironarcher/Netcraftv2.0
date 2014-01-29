@@ -19,6 +19,7 @@ import com.nitrogenegames.netcraft.item.ItemModules;
 import com.nitrogenegames.netcraft.item.ItemUpgrade;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 import com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator;
+import com.nitrogenegames.netcraft.machine.TileEntityProjector;
 import com.nitrogenegames.netcraft.misc.FabricatorRecipe;
 import com.nitrogenegames.netcraft.misc.PacketHandler;
 
@@ -27,6 +28,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -674,6 +676,7 @@ public class Netcraft {
 		GameRegistry.registerTileEntity(TileEntityNetworkFabricator.class, "tilEntityNetworkFabricator");
 		LanguageRegistry.instance().addStringLocalization("container.networkFabricator", "Network Fabricator");
 		GameRegistry.registerTileEntity(TileEntityCore.class, "tileEntityCore");
+		GameRegistry.registerTileEntity(TileEntityProjector.class, "tileEntityProjector");
 	    NetworkRegistry.instance().registerGuiHandler(this, new GuiHandler());
 		addRecipes();
 	}
@@ -861,7 +864,6 @@ public class Netcraft {
 		}
 	}
 	public static ItemStack getFabricatorResult(int main, int a1, int a2, int a3) {
-		System.out.println(a3);
 		for(int i = 0; i < fabricatorRecipes.size(); i++) {
 			FabricatorRecipe recipe = (FabricatorRecipe) fabricatorRecipes.get(i);
 			if(recipe.canFabricateUsing(main, a1, a2, a3)) {
@@ -870,12 +872,17 @@ public class Netcraft {
 		}
 		return null;
 	} //WORK ON THIS
-	public static boolean isUpgradeFor(int i, int i1) {
+	public static boolean isUpgradeFor(ItemStack s, ItemStack s1) {
 		/*if(i == Netcraft.core.blockID) {
 			if(i1 == Netcraft.rangeupgrade.itemID || i1 == Netcraft.storageupgrade.itemID) {
 			return true;
 			}
 		} else */
+		if(s == null || s1 == null) {
+			return false;
+		}
+		int i = s.itemID;
+		int i1 = s1.itemID;
 		if(i == Netcraft.itemProjectorRadial.itemID) {
 			if(i1 == Netcraft.rangeupgrade.itemID) {
 			return true;
@@ -886,6 +893,15 @@ public class Netcraft {
 			}
 		} 
 		return false;
+	}
+	public static void InstantiateStackNBT(ItemStack s) {
+        if( s.stackTagCompound == null ) {
+            s.setTagCompound(new NBTTagCompound());
+            System.out.println("CREATING NEW COMPUND");
+        }
+        if(!(s.stackTagCompound.hasKey("range"))) {
+        	s.stackTagCompound.setInteger("range", 20);
+        }
 	}
 	public enum EnumProjector {
 		BEAM, CIRCULAR, SATELITE

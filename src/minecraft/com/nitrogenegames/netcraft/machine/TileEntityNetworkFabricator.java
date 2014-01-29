@@ -135,7 +135,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 
 	        if (!this.worldObj.isRemote)
 	        {
-		    	if(!(canSmelt(20))) {
+		    	if(!(canSmeltRecipe())) {
 		    		this.furnaceCookTime = 0;
 		    	}
 	            if (this.isBurning() && this.canSmelt(20))
@@ -163,6 +163,53 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	    /**
 	     * Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc.
 	     */
+	    private boolean canSmeltRecipe()
+	    {
+	    	int slot1, slot2, slot3, slot0;
+	    	
+	    	if (this.slots[3] == null)
+	    	{
+	    		return false;
+	    	}
+	    	
+		      if(this.slots[3] != null){
+		    	  slot3 = slots[3].itemID;
+		      } else{	
+		    	  slot3 = -2;
+		      }
+		      if(this.slots[2] != null){
+		    	  slot2 = slots[2].itemID;
+		      } else{
+		    	  slot2 = -2;
+		      }
+		      if(this.slots[1] != null){
+		    	  slot1 = slots[1].itemID;
+		      } else{
+		    	  slot1 = -2;
+		      }
+		      if(this.slots[0] != null){
+		    	  slot0 = slots[0].itemID;
+		      } else{
+		    	  slot0 = -2;
+		      }
+		      
+	            ItemStack itemstack = Netcraft.getFabricatorResult(slot3, slot0, slot1, slot2);
+	            if (itemstack == null) {
+	            	if(Netcraft.isUpgradeFor(slots[3], slots[0])) {
+	            		return true;
+	            	} else if(Netcraft.isUpgradeFor(slots[3], slots[1])) {
+	            		return true;
+	            	} else if(Netcraft.isUpgradeFor(slots[3], slots[2])) {
+	            		return true;
+	            	}
+	            	
+	            	return false;
+	            } else {
+	            return true;
+	            }
+	            
+	        }
+	    
 	    private boolean canSmelt(int energy)
 	    {
 	    	int slot1, slot2, slot3, slot0;
@@ -195,14 +242,14 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 		      } else{
 		    	  slot0 = -2;
 		      }
-
+		      
 	            ItemStack itemstack = Netcraft.getFabricatorResult(slot3, slot0, slot1, slot2);
 	            if (itemstack == null) {
-	            	if(Netcraft.isUpgradeFor(slots[3].itemID, slots[0].itemID)) {
+	            	if(Netcraft.isUpgradeFor(slots[3], slots[0])) {
 	            		return true;
-	            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[1].itemID)) {
+	            	} else if(Netcraft.isUpgradeFor(slots[3], slots[1])) {
 	            		return true;
-	            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[2].itemID)) {
+	            	} else if(Netcraft.isUpgradeFor(slots[3], slots[2])) {
 	            		return true;
 	            	}
 	            	
@@ -321,8 +368,9 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 
 	public void upgrade(ItemStack main, ItemStack upgrade) {
 		try{
-			ItemBlockProjector block = (ItemBlockProjector) main.getItem();
-			
+			Netcraft.InstantiateStackNBT(main);
+			NBTTagCompound t = main.getTagCompound();
+			t.setInteger("range", t.getInteger("range") + 5);
 		} catch(Exception e) {
 			
 		}
@@ -332,54 +380,62 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
     public void smeltItem()
     {
     	int slot1, slot2, slot3, slot0;
-    	if(this.slots[3] != null){
+        if(this.slots[3] != null) {
 	    	  slot3 = slots[3].itemID;
-	      } else{
-	    	  slot3 = -2;
-	      }
-	      if(this.slots[2] != null){
+        } else {
+        	slot3 = 0;
+        }
+        if(this.slots[0] != null) {
+	    	  slot0 = slots[0].itemID;
+        } else {
+        	slot0 = 0;
+        }
+        if(this.slots[2] != null) {
 	    	  slot2 = slots[2].itemID;
+        } else {
+        	slot2 = 0;
+        }
+        if(this.slots[1] != null) {
+	    	  slot1 = slots[1].itemID;
+        } else {
+        	slot1 = 0;
+        }
+
+		      ItemStack itemstack = Netcraft.getFabricatorResult(slot3, slot0, slot1, slot2);
+	          if(itemstack == null) {
+	          	if(Netcraft.isUpgradeFor(slots[3], slots[0])) {
+	          		upgrade(slots[3], slots[0]);
+	          	} else if(Netcraft.isUpgradeFor(slots[3], slots[1])) {
+	          		upgrade(slots[3], slots[1]);
+	          	} else if(Netcraft.isUpgradeFor(slots[3], slots[2])) {
+	          		upgrade(slots[3], slots[2]);
+	          	}
+	          } else {
+	              this.slots[3] = itemstack.copy();
+	          }
+	          if(this.slots[2] != null) {
 	    	  --this.slots[2].stackSize;
 	            if (this.slots[2].stackSize <= 0)
 	            {
 	                this.slots[2] = null;
 	            }
-	      } else{
-	    	  slot2 = -2;
-	      }
-	      if(this.slots[1] != null){
-	    	  slot1 = slots[1].itemID;
+	          }
+	          if(this.slots[1] != null) {
 	    	  --this.slots[1].stackSize;
 	    	  if (this.slots[1].stackSize <= 0)
 	            {
 	                this.slots[1] = null;
 	            }
-	      } else{
-	    	  slot1 = -2;
-	      }
-	      if(this.slots[0] != null){
-	    	  slot0 = slots[0].itemID;
+	          }
+	          if(this.slots[0] != null) {
 	            --this.slots[0].stackSize;
 	            if (this.slots[0].stackSize <= 0)
 	            {
 	                this.slots[0] = null;
 	            }
-	      } else{
-	    	  slot0 = -2;
-	      }
+	          }
 	      
-	      ItemStack itemstack = Netcraft.getFabricatorResult(slot3, slot0, slot1, slot2);
-            if(itemstack == null) {
-            	if(Netcraft.isUpgradeFor(slots[3].itemID, slots[0].itemID)) {
-            		upgrade(slots[3], slots[0]);
-            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[1].itemID)) {
-            		upgrade(slots[3], slots[1]);
-            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[2].itemID)) {
-            		upgrade(slots[3], slots[2]);
-            	}
-            } else {
-                this.slots[3] = itemstack.copy();
-            }
+
 
             
     }
@@ -453,7 +509,6 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	@Override
 	public boolean acceptsEnergyFrom(TileEntity emitter,
 			ForgeDirection direction) {
-		// TODO Auto-generated method stub
 		return true;
 	}
 

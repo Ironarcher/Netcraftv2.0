@@ -15,20 +15,22 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 
 public class ItemBlockProjector extends Item {
 	Netcraft.EnumProjector type;
 	public int blockID;
-	public int range = 20;
-	public boolean upgraded = false;
-	public int rangeupgraded = 0;
      public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par2List, boolean par4)
      {
-		 par2List.add("Range: "+ range);
+		Netcraft.InstantiateStackNBT(par1ItemStack);      
+		 par2List.add("Range: "+ par1ItemStack.getTagCompound().getInteger("range"));
 
     }
+     public void onCreated(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
+			Netcraft.InstantiateStackNBT(par1ItemStack);
+     }
 	public ItemBlockProjector(int par1, Netcraft.EnumProjector p) {
 		super(par1);
 		type = p;
@@ -41,11 +43,7 @@ public class ItemBlockProjector extends Item {
 			this.blockID = Netcraft.projectorSatelite.blockID;
 		}
 	}
-	public void upgrade(int i) {
-		this.upgraded = true;
-		this.range += 5;
-		this.rangeupgraded += 5;
-	}
+
 	//ITEMBLOCK CODE
     /**
      * Returns the blockID for this Item
@@ -255,6 +253,7 @@ public class ItemBlockProjector extends Item {
        {
            Block.blocksList[this.blockID].onBlockPlacedBy(world, x, y, z, player, stack);
            Block.blocksList[this.blockID].onPostBlockPlaced(world, x, y, z, metadata);
+           //TODO SET RANGE
        }
 
        return true;
