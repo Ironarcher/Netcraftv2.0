@@ -172,7 +172,6 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	    	
 	    	if (this.slots[3] == null)
 	    	{
-	    		System.out.println("CALLED");
 	    		return false;
 	    	}
 	    	
@@ -198,12 +197,6 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 		      }
 
 	            ItemStack itemstack = Netcraft.getFabricatorResult(slot3, slot0, slot1, slot2);
-	            if(itemstack == null){
-	            	return false;
-	            } else{
-	            	return true;
-	            }
-	            /*
 	            if (itemstack == null) {
 	            	if(Netcraft.isUpgradeFor(slots[3].itemID, slots[0].itemID)) {
 	            		return true;
@@ -217,7 +210,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	            } else {
 	            return true;
 	            }
-	            */
+	            
 	        }
 	    public ItemStack decrStackSize(int par1, int par2)
 	    {
