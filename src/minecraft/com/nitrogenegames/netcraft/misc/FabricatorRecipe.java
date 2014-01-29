@@ -19,10 +19,10 @@ public class FabricatorRecipe {
 		if(slotsFilled == "tripleRecipe"){
 			tripleRecipe = true;
 		}
-		if(slotsFilled == "doubleRecipe"){
+		else if(slotsFilled == "doubleRecipe"){
 			doubleRecipe = true;
 		}
-		if(slotsFilled == "singleRecipe"){
+		else if(slotsFilled == "singleRecipe"){
 			singleRecipe = true;
 		} else{
 			System.out.println("FATAL ERROR! FIX BUG IN NETCRAFT CLASS IMMEDIATELY!");
@@ -73,6 +73,9 @@ public class FabricatorRecipe {
 			return false;
 			
 	} else if(doubleRecipe){
+		if(main != mainID) {
+			return false;
+		}
 		if(a1 == addOn1){
 			if(a2==addOn2){
 				return true;

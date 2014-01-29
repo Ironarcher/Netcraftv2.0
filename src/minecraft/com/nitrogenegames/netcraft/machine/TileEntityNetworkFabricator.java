@@ -164,16 +164,45 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	     */
 	    private boolean canSmelt(int energy)
 	    {
+	    	int slot1, slot2, slot3, slot0;
 	    	if(this.energy < energy) {
 	    		return false;
+		    }
+	    	
+	    	if (this.slots[3] == null)
+	    	{
+	    		System.out.println("CALLED");
+	    		return false;
 	    	}
-	        if (this.slots[1] == null || this.slots[0] == null || this.slots[2] == null || this.slots[3] == null)
-	        {
-	            return false;
-	        }
-	        else
-	        {
-	            ItemStack itemstack = Netcraft.getFabricatorResult(slots[3].itemID, slots[0].itemID, slots[1].itemID, slots[2].itemID);
+	    	
+		      if(this.slots[3] != null){
+		    	  slot3 = slots[3].itemID;
+		      } else{	
+		    	  slot3 = -2;
+		      }
+		      if(this.slots[2] != null){
+		    	  slot2 = slots[2].itemID;
+		      } else{
+		    	  slot2 = -2;
+		      }
+		      if(this.slots[1] != null){
+		    	  slot1 = slots[1].itemID;
+		      } else{
+		    	  slot1 = -2;
+		      }
+		      if(this.slots[0] != null){
+		    	  slot0 = slots[0].itemID;
+		      } else{
+		    	  slot0 = -2;
+		      }
+
+	            ItemStack itemstack = Netcraft.getFabricatorResult(slot3, slot0, slot1, slot2);
+	            if(itemstack == null){
+	            	return false;
+	            } else{
+	            	return true;
+	            }
+	            /*
 	            if (itemstack == null) {
 	            	if(Netcraft.isUpgradeFor(slots[3].itemID, slots[0].itemID)) {
 	            		return true;
@@ -187,8 +216,8 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	            } else {
 	            return true;
 	            }
+	            */
 	        }
-	    }
 	    public ItemStack decrStackSize(int par1, int par2)
 	    {
 	        if (this.slots[par1] != null)
@@ -299,9 +328,47 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	public void upgrade(ItemStack main, ItemStack upgrade) {
 		
 	}
+	
     public void smeltItem()
     {
-            ItemStack itemstack = Netcraft.getFabricatorResult(slots[3].itemID, slots[0].itemID, slots[1].itemID, slots[2].itemID);
+    	int slot1, slot2, slot3, slot0;
+    	if(this.slots[3] != null){
+	    	  slot3 = slots[3].itemID;
+	      } else{
+	    	  slot3 = -2;
+	      }
+	      if(this.slots[2] != null){
+	    	  slot2 = slots[2].itemID;
+	    	  --this.slots[2].stackSize;
+	            if (this.slots[2].stackSize <= 0)
+	            {
+	                this.slots[2] = null;
+	            }
+	      } else{
+	    	  slot2 = -2;
+	      }
+	      if(this.slots[1] != null){
+	    	  slot1 = slots[1].itemID;
+	    	  --this.slots[1].stackSize;
+	    	  if (this.slots[1].stackSize <= 0)
+	            {
+	                this.slots[1] = null;
+	            }
+	      } else{
+	    	  slot1 = -2;
+	      }
+	      if(this.slots[0] != null){
+	    	  slot0 = slots[0].itemID;
+	            --this.slots[0].stackSize;
+	            if (this.slots[0].stackSize <= 0)
+	            {
+	                this.slots[0] = null;
+	            }
+	      } else{
+	    	  slot0 = -2;
+	      }
+	      
+	      ItemStack itemstack = Netcraft.getFabricatorResult(slot3, slot0, slot1, slot2);
             if(itemstack == null) {
             	if(Netcraft.isUpgradeFor(slots[3].itemID, slots[0].itemID)) {
             		upgrade(slots[3], slots[0]);
@@ -314,22 +381,6 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
                 this.slots[3] = itemstack.copy();
             }
 
-            --this.slots[0].stackSize;
-            --this.slots[1].stackSize;
-            --this.slots[2].stackSize;
-
-            if (this.slots[0].stackSize <= 0)
-            {
-                this.slots[0] = null;
-            }
-            if (this.slots[1].stackSize <= 0)
-            {
-                this.slots[1] = null;
-            }
-            if (this.slots[2].stackSize <= 0)
-            {
-                this.slots[2] = null;
-            }
             
     }
     

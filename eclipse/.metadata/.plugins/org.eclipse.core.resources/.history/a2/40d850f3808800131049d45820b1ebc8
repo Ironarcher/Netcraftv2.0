@@ -1,0 +1,515 @@
+package com.nitrogenegames.netcraft.machine;
+
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+
+import ic2.api.energy.tile.IEnergySink;
+
+import com.nitrogenegames.netcraft.Netcraft;
+
+import cpw.mods.fml.common.network.PacketDispatcher;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+import net.minecraft.block.BlockFurnace;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.packet.Packet250CustomPayload;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.ForgeDirection;
+import net.minecraftforge.common.MinecraftForge;
+import ic2.api.energy.prefab.BasicSink;
+import ic2.api.energy.tile.IEnergyTile;
+import ic2.api.energy.*;
+import ic2.api.Direction;
+import ic2.api.energy.event.EnergyTileLoadEvent;
+import ic2.api.energy.event.EnergyTileUnloadEvent;
+import ic2.api.energy.tile.IEnergySink;
+import ic2.api.item.ElectricItem;
+import ic2.api.item.IElectricItem;
+
+public class TileEntityNetworkFabricator extends TileEntity implements IEnergySink, ISidedInventory
+{
+
+	private String localizedName;
+	
+	//slots 0,1,2 are the top 3 from left to right, slot 3 is the bottom slot
+	private ItemStack[] slots = new ItemStack[4];
+	public int energy = 0;
+	public int maxenergy = 10000;
+	public boolean isUsingPower = false;
+	private boolean init = false;
+	public int cookGoal = 300;
+	private static final int[] slots_top = new int[]{0,1,2};
+	private static final int[] slots_bottom = new int[]{3};
+	private static final int[] slots_sides = new int[]{0,1,2};
+	
+	//speed of the machine, less is faster
+	public int furnaceCookTime = 0;
+	
+	//How long left before fabricated
+	public int furnaceBurnTime;
+	
+	//The fabrication time for the current ingredients
+	public int currentItemBurnTime;
+	
+	public int getEnergyScaled(int scale) {
+		return this.energy * scale / maxenergy;
+	}
+	
+	public int getSizeInventory(){
+		return this.slots.length;
+	}
+	
+	public void setGuiDisplayName(String displayName){
+		this.localizedName = displayName;
+	}
+	
+	public String getInvName(){
+		return this.isInvNameLocalized() ? this.localizedName : "container.networkFabricator";
+	}
+	
+	public boolean isInvNameLocalized(){
+		return this.localizedName != null && this.localizedName.length() > 0;
+	}
+
+
+	    /**
+	     * Returns the stack in slot i
+	     */
+	    public ItemStack getStackInSlot(int par1)
+	    {
+	        return this.slots[par1];
+	    }
+
+	    /**
+	     * Removes from an inventory slot (first arg) up to a specified number (second arg) of items and returns them in a
+	     * new stack.
+	     */
+	    @SideOnly(Side.CLIENT)
+	    public int getCookProgressScaled(int par1)
+	    {
+	        return this.furnaceCookTime * par1 / cookGoal;
+	    }
+
+	    @SideOnly(Side.CLIENT)
+
+	    /**
+	     * Returns an integer between 0 and the passed value representing how much burn time is left on the current fuel
+	     * item, where 0 means that the item is exhausted and the passed value means that the item is fresh
+	     */
+	    public int getBurnTimeRemainingScaled(int par1)
+	    {
+	        return (this.currentItemBurnTime*par1)/cookGoal;
+	    }
+
+	    /**
+	     * Returns true if the furnace is currently burning
+	     */
+	    public boolean isBurning()
+	    {
+	        return true;
+	    }
+
+	    /**
+	     * Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count
+	     * ticks and creates a new spawn inside its implementation.
+	     */
+	    public void updateEntity()
+	    {
+
+	    	if(!init && worldObj != null){
+	    		if(!worldObj.isRemote){
+	    			EnergyTileLoadEvent loadEvent = new EnergyTileLoadEvent(this);
+	    			MinecraftForge.EVENT_BUS.post(loadEvent);
+	    		}
+	    		init = true;
+	    	}
+			sendEnergyPacket(Side.CLIENT);
+	        boolean flag1 = false;
+
+	        if (!this.worldObj.isRemote)
+	        {
+		    	if(!(canSmelt(20))) {
+		    		this.furnaceCookTime = 0;
+		    	}
+	            if (this.isBurning() && this.canSmelt(20))
+	            {
+	                this.furnaceCookTime+=10; //EDITABLE
+	                this.energy -= 20; //ALSO EDITABLE
+	                if (this.furnaceCookTime >= cookGoal)
+	                {
+	                    this.furnaceCookTime = 0;
+	                    this.smeltItem();
+	                    flag1 = true;
+	                }
+	            }
+
+	                flag1 = true;
+	                //BlockFurnace.updateFurnaceBlockState(this.furnaceBurnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+	        }
+
+	        if (flag1)
+	        {
+	            this.onInventoryChanged();
+	        }
+	    }
+
+	    /**
+	     * Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc.
+	     */
+	    private boolean canSmelt(int energy)
+	    {
+	    	int slot1, slot2, slot3, slot0;
+	    	if(this.energy < energy) {
+	    		return false;
+		    }
+		      if(this.slots[3] != null){
+		    	  slot3 = slots[3].itemID;
+		      } else{
+		    	  slot3 = -1;
+		      }
+		      if(this.slots[2] != null){
+		    	  slot2 = slots[2].itemID;
+		      } else{
+		    	  slot2 = -1;
+		      }
+		      if(this.slots[1] != null){
+		    	  slot1 = slots[1].itemID;
+		      } else{
+		    	  slot1 = -1;
+		      }
+		      if(this.slots[0] != null){
+		    	  slot0 = slots[0].itemID;
+		      } else{
+		    	  slot0 = -1;
+		      }
+
+	            ItemStack itemstack = Netcraft.getFabricatorResult(slot3, slot0, slot1, slot2);
+	            if (itemstack == null) {
+	            	if(Netcraft.isUpgradeFor(slots[3].itemID, slots[0].itemID)) {
+	            		return true;
+	            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[1].itemID)) {
+	            		return true;
+	            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[2].itemID)) {
+	            		return true;
+	            	}
+	            	
+	            	return false;
+	            } else {
+	            return true;
+	            }
+	        }
+	    public ItemStack decrStackSize(int par1, int par2)
+	    {
+	        if (this.slots[par1] != null)
+	        {
+	            ItemStack itemstack;
+
+	            if (this.slots[par1].stackSize <= par2)
+	            {
+	                itemstack = this.slots[par1];
+	                this.slots[par1] = null;
+	                return itemstack;
+	            }
+	            else
+	            {
+	                itemstack = this.slots[par1].splitStack(par2);
+
+	                if (this.slots[par1].stackSize == 0)
+	                {
+	                    this.slots[par1] = null;
+	                }
+
+	                return itemstack;
+	            }
+	        }
+	        else
+	        {
+	            return null;
+	        }
+	    }
+
+	    /**
+	     * When some containers are closed they call this on each slot, then drop whatever it returns as an EntityItem -
+	     * like when you close a workbench GUI.
+	     */
+	    public ItemStack getStackInSlotOnClosing(int par1)
+	    {
+	        if (this.slots[par1] != null)
+	        {
+	            ItemStack itemstack = this.slots[par1];
+	            this.slots[par1] = null;
+	            return itemstack;
+	        }
+	        else
+	        {
+	            return null;
+	        }
+	    }
+
+	    /**
+	     * Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+	     */
+	    public void setInventorySlotContents(int par1, ItemStack par2ItemStack)
+	    {
+	        this.slots[par1] = par2ItemStack;
+
+	        if (par2ItemStack != null && par2ItemStack.stackSize > this.getInventoryStackLimit())
+	        {
+	            par2ItemStack.stackSize = this.getInventoryStackLimit();
+	        }
+	    }
+
+	@Override
+	public int getInventoryStackLimit() {
+		return 64;
+	}
+
+	@Override
+	public boolean isUseableByPlayer(EntityPlayer entityplayer) {
+		return true;
+	}
+
+	@Override
+	public void openChest() {
+		
+	}
+
+	@Override
+	public void closeChest() {
+		
+	}
+
+	
+	public static int getItemFabricateTime(ItemStack baseitem, ItemStack topitemleft, ItemStack topitemmiddle, ItemStack topitemright){
+		if(baseitem != null){
+			if(topitemleft != null || topitemmiddle != null || topitemright != null){
+				if(baseitem.itemID == ic2.api.item.Items.getItem("advancedAlloy").itemID){
+					if(topitemleft.itemID == ic2.api.item.Items.getItem("electronicCircuit").itemID || topitemleft.itemID == ic2.api.item.Items.getItem("electronicCircuit").itemID || topitemleft.itemID == ic2.api.item.Items.getItem("electronicCircuit").itemID){
+						return 200;
+					}
+				}
+			//return in ticks (20 per second)
+			return 0;
+			}
+			else{
+				return 0;
+			}
+		} else{
+			return 0;
+		}
+	}
+	
+	@Override
+	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+		return i == 3 ? false : true;
+	}
+
+
+	public void upgrade(ItemStack main, ItemStack upgrade) {
+		
+	}
+	
+    public void smeltItem()
+    {
+    	int slot1, slot2, slot3, slot0;\
+    	if(this.slots[3] != null){
+	    	  slot3 = slots[3].itemID;
+	      } else{
+	    	  slot3 = -1;
+	      }
+	      if(this.slots[2] != null){
+	    	  slot2 = slots[2].itemID;
+	      } else{
+	    	  slot2 = -1;
+	      }
+	      if(this.slots[1] != null){
+	    	  slot1 = slots[1].itemID;
+	      } else{
+	    	  slot1 = -1;
+	      }
+	      if(this.slots[0] != null){
+	    	  slot0 = slots[0].itemID;
+	      } else{
+	    	  slot0 = -1;
+	      }
+	      
+	      ItemStack itemstack = Netcraft.getFabricatorResult(slot3, slot0, slot1, slot2);
+            if(itemstack == null) {
+            	if(Netcraft.isUpgradeFor(slots[3].itemID, slots[0].itemID)) {
+            		upgrade(slots[3], slots[0]);
+            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[1].itemID)) {
+            		upgrade(slots[3], slots[1]);
+            	} else if(Netcraft.isUpgradeFor(slots[3].itemID, slots[2].itemID)) {
+            		upgrade(slots[3], slots[2]);
+            	}
+            } else {
+                this.slots[3] = itemstack.copy();
+            }
+
+            --this.slots[0].stackSize;
+            --this.slots[1].stackSize;
+            --this.slots[2].stackSize;
+
+            if (this.slots[0].stackSize <= 0)
+            {
+                this.slots[0] = null;
+            }
+            if (this.slots[1].stackSize <= 0)
+            {
+                this.slots[1] = null;
+            }
+            if (this.slots[2].stackSize <= 0)
+            {
+                this.slots[2] = null;
+            }
+            
+    }
+    
+	@Override
+	public int[] getAccessibleSlotsFromSide(int var1) {
+		return var1 == 0 ? slots_bottom : (var1 == 1 ? slots_top : slots_sides);
+	}
+
+	@Override
+	public boolean canInsertItem(int i, ItemStack itemstack, int j) {
+		return this.isItemValidForSlot(i, itemstack);
+	}
+
+	@Override
+	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
+		return j != 0 || i != 0 || i != 1 || i != 2;
+	}
+    public void readFromNBT(NBTTagCompound par1NBTTagCompound)
+    {
+        super.readFromNBT(par1NBTTagCompound);
+        if(par1NBTTagCompound.hasKey("energy")){
+        	this.energy = par1NBTTagCompound.getInteger("energy");
+        }
+        NBTTagList nbttaglist = par1NBTTagCompound.getTagList("Items");
+        this.slots = new ItemStack[this.getSizeInventory()];
+
+        for (int i = 0; i < nbttaglist.tagCount(); ++i)
+        {
+            NBTTagCompound nbttagcompound1 = (NBTTagCompound)nbttaglist.tagAt(i);
+            byte b0 = nbttagcompound1.getByte("Slot");
+
+            if (b0 >= 0 && b0 < this.slots.length)
+            {
+                this.slots[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+            }
+        }
+
+        this.furnaceCookTime = par1NBTTagCompound.getShort("CookTime");
+    }
+
+    /**
+     * Writes a tile entity to NBT.
+     */
+    public void writeToNBT(NBTTagCompound par1NBTTagCompound)
+    {
+        super.writeToNBT(par1NBTTagCompound);
+        par1NBTTagCompound.setShort("CookTime", (short)this.furnaceCookTime);
+        NBTTagList nbttaglist = new NBTTagList();
+
+        for (int i = 0; i < this.slots.length; ++i)
+        {
+            if (this.slots[i] != null)
+            {
+                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                nbttagcompound1.setByte("Slot", (byte)i);
+                this.slots[i].writeToNBT(nbttagcompound1);
+                nbttaglist.appendTag(nbttagcompound1);
+            }
+        }
+
+        par1NBTTagCompound.setTag("Items", nbttaglist);
+        par1NBTTagCompound.setInteger("energy", this.energy);
+    }
+
+	@Override
+	public int getMaxSafeInput() {
+		return 32;
+	}
+
+	@Override
+	public boolean acceptsEnergyFrom(TileEntity emitter,
+			ForgeDirection direction) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public double demandedEnergyUnits() {
+		return (int) (this.maxenergy - this.energy);
+	}
+
+	@Override
+	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
+
+		this.isUsingPower = true;
+		if(this.energy >= this.maxenergy){
+			sendEnergyPacket(Side.CLIENT);
+			return amount;
+		}
+		
+		double openEnergy = this.maxenergy - this.energy;
+		
+		if(openEnergy >= amount){
+			this.energy += amount;
+			sendEnergyPacket(Side.CLIENT);
+			return 0;
+		} else if (amount > openEnergy){
+			this.energy = this.maxenergy;
+			sendEnergyPacket(Side.CLIENT);
+			return amount - (int) openEnergy;
+		}
+		sendEnergyPacket(Side.CLIENT);
+		return 0;
+	}
+	public void sendEnergyPacket(Side s) {
+		if(s == Side.CLIENT && !worldObj.isRemote) {
+    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+        DataOutputStream outputStream = new DataOutputStream(bos);
+        try {
+        	//System.out.println(this.energy + " ENERGYS SENDING");
+                outputStream.writeInt(this.energy);
+                outputStream.writeInt(this.xCoord);
+                outputStream.writeInt(this.yCoord);
+                outputStream.writeInt(this.zCoord);
+        } catch (Exception ex) {
+                ex.printStackTrace();
+        }
+
+        Packet250CustomPayload packet = new Packet250CustomPayload();
+        packet.channel = "netpack";
+        packet.data = bos.toByteArray();
+        packet.length = bos.size();
+    	PacketDispatcher.sendPacketToAllPlayers(packet); //Maybe change to players in radius?
+		} else if(s == Side.SERVER && worldObj.isRemote) {
+		    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+		        DataOutputStream outputStream = new DataOutputStream(bos);
+		        try {
+		        	//System.out.println(this.energy + " ENERGYS SENDING");
+		                outputStream.writeInt(this.energy);
+		                outputStream.writeInt(this.xCoord);
+		                outputStream.writeInt(this.yCoord);
+		                outputStream.writeInt(this.zCoord);
+		        } catch (Exception ex) {
+		                ex.printStackTrace();
+		        }
+
+		        Packet250CustomPayload packet = new Packet250CustomPayload();
+		        packet.channel = "netpack";
+		        packet.data = bos.toByteArray();
+		        packet.length = bos.size();
+		    	PacketDispatcher.sendPacketToServer(packet); //Maybe change to players in radius?
+				}
+	}
+	
+}

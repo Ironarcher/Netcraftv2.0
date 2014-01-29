@@ -861,6 +861,7 @@ public class Netcraft {
 		}
 	}
 	public static ItemStack getFabricatorResult(int main, int a1, int a2, int a3) {
+		System.out.println(a3);
 		for(int i = 0; i < fabricatorRecipes.size(); i++) {
 			FabricatorRecipe recipe = (FabricatorRecipe) fabricatorRecipes.get(i);
 			if(recipe.canFabricateUsing(main, a1, a2, a3)) {

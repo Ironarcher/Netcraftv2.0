@@ -10069,3 +10069,344 @@ Caused by: java.lang.RuntimeException: class com.nitrogenegames.netcraft.machine
 2014-01-28 17:41:39 [SERVER] [INFO] Generating keypair
 2014-01-28 17:49:58 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
 2014-01-28 17:49:58 [SERVER] [INFO] Generating keypair
+2014-01-28 18:28:13 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 18:28:13 [SERVER] [INFO] Generating keypair
+2014-01-28 18:28:14 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 18:28:14 [SERVER] [INFO] Player935[/127.0.0.1:0] logged in with entity id 52 at (1122.3277991811995, 4.0, -562.0720419003329)
+2014-01-28 18:28:14 [SERVER] [INFO] Player935 joined the game
+2014-01-28 18:28:35 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking memory connection
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.ClassCastException: com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator cannot be cast to net.minecraft.tileentity.TileEntityFurnace
+	at net.minecraft.block.BlockFurnace.onBlockActivated(BlockFurnace.java:135)
+	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:421)
+	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
+	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	... 6 more
+2014-01-28 18:28:35 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-01-28_18.28.35-server.txt
+2014-01-28 18:28:35 [SERVER] [INFO] Stopping server
+2014-01-28 18:28:35 [SERVER] [INFO] Saving players
+2014-01-28 18:28:35 [SERVER] [INFO] Player935 left the game
+2014-01-28 18:28:57 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 18:28:57 [SERVER] [INFO] Generating keypair
+2014-01-28 18:28:57 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 18:28:58 [SERVER] [INFO] Player590[/127.0.0.1:0] logged in with entity id 21 at (1097.3200089388747, 5.0, -569.7561576591808)
+2014-01-28 18:28:58 [SERVER] [INFO] Player590 joined the game
+2014-01-28 18:28:59 [SERVER] [INFO] Saving and pausing game...
+2014-01-28 18:28:59 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:28:59 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:28:59 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:29:57 [SERVER] [INFO] Saving and pausing game...
+2014-01-28 18:29:57 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:29:57 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:29:57 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:29:57 [SERVER] [INFO] Stopping server
+2014-01-28 18:29:57 [SERVER] [INFO] Saving players
+2014-01-28 18:29:57 [SERVER] [INFO] Player590 left the game
+2014-01-28 18:29:57 [SERVER] [INFO] Saving worlds
+2014-01-28 18:29:57 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:29:57 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:29:57 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:29:58 [SERVER] [INFO] Stopping server
+2014-01-28 18:30:14 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 18:30:14 [SERVER] [INFO] Generating keypair
+2014-01-28 18:30:14 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 18:30:15 [SERVER] [INFO] Player775[/127.0.0.1:0] logged in with entity id 21 at (1097.3200089388747, 5.0, -569.7561576591808)
+2014-01-28 18:30:15 [SERVER] [INFO] Player775 joined the game
+2014-01-28 18:30:18 [SERVER] [INFO] Saving and pausing game...
+2014-01-28 18:30:18 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:30:18 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:30:18 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:31:15 [SERVER] [INFO] [Player775: Set own game mode to Creative Mode]
+2014-01-28 18:32:46 [SERVER] [INFO] Saving and pausing game...
+2014-01-28 18:32:46 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:32:46 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:32:46 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:32:46 [SERVER] [INFO] Stopping server
+2014-01-28 18:32:46 [SERVER] [INFO] Saving players
+2014-01-28 18:32:46 [SERVER] [INFO] Player775 left the game
+2014-01-28 18:32:46 [SERVER] [INFO] Saving worlds
+2014-01-28 18:32:46 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:32:47 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:32:47 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:33:41 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 18:33:41 [SERVER] [INFO] Generating keypair
+2014-01-28 18:33:41 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 18:33:42 [SERVER] [INFO] Player210[/127.0.0.1:0] logged in with entity id 18 at (1097.2795015703014, 4.0, -573.0749999880791)
+2014-01-28 18:33:42 [SERVER] [INFO] Player210 joined the game
+2014-01-28 18:33:51 [SERVER] [INFO] Stopping server
+2014-01-28 18:33:51 [SERVER] [INFO] Saving players
+2014-01-28 18:33:51 [SERVER] [INFO] Player210 left the game
+2014-01-28 18:33:51 [SERVER] [INFO] Saving worlds
+2014-01-28 18:33:51 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:33:51 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:33:51 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:34:21 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 18:34:21 [SERVER] [INFO] Generating keypair
+2014-01-28 18:34:21 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 18:34:22 [SERVER] [INFO] Player319[/127.0.0.1:0] logged in with entity id 19 at (1097.2795015703014, 4.0, -573.0749999880791)
+2014-01-28 18:34:22 [SERVER] [INFO] Player319 joined the game
+2014-01-28 18:35:05 [SERVER] [INFO] Saving and pausing game...
+2014-01-28 18:35:05 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:35:05 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:35:05 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:36:02 [SERVER] [INFO] [Player319: Set the time to 100]
+2014-01-28 18:45:36 [SERVER] [INFO] Stopping server
+2014-01-28 18:45:36 [SERVER] [INFO] Saving players
+2014-01-28 18:45:36 [SERVER] [INFO] Player319 left the game
+2014-01-28 18:45:36 [SERVER] [INFO] Saving worlds
+2014-01-28 18:45:36 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:45:36 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:45:36 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:45:36 [SERVER] [INFO] Stopping server
+2014-01-28 18:46:12 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 18:46:12 [SERVER] [INFO] Generating keypair
+2014-01-28 18:46:13 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 18:46:13 [SERVER] [INFO] Player345[/127.0.0.1:0] logged in with entity id 22 at (1097.7860372655985, 4.0, -575.5590380574592)
+2014-01-28 18:46:13 [SERVER] [INFO] Player345 joined the game
+2014-01-28 18:46:14 [SERVER] [INFO] Saving and pausing game...
+2014-01-28 18:46:14 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:46:14 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:46:14 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:51:08 [SERVER] [INFO] [Player345: Set the time to 0]
+2014-01-28 18:51:12 [SERVER] [INFO] [Player345: Set game difficulty to Peaceful]
+2014-01-28 18:53:00 [SERVER] [INFO] Stopping server
+2014-01-28 18:53:00 [SERVER] [INFO] Saving players
+2014-01-28 18:53:00 [SERVER] [INFO] Player345 left the game
+2014-01-28 18:53:00 [SERVER] [INFO] Saving worlds
+2014-01-28 18:53:00 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:53:00 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:53:00 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:53:13 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 18:53:13 [SERVER] [INFO] Generating keypair
+2014-01-28 18:53:13 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 18:53:13 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking tile entity
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:674)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.canSmelt(TileEntityNetworkFabricator.java:176)
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.updateEntity(TileEntityNetworkFabricator.java:137)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	... 4 more
+2014-01-28 18:53:13 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-01-28_18.53.13-server.txt
+2014-01-28 18:53:13 [SERVER] [INFO] Stopping server
+2014-01-28 18:53:13 [SERVER] [INFO] Saving players
+2014-01-28 18:53:13 [SERVER] [INFO] Saving worlds
+2014-01-28 18:53:13 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:53:14 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:53:14 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:55:43 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 18:55:43 [SERVER] [INFO] Generating keypair
+2014-01-28 18:55:43 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 18:55:44 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking tile entity
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:674)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.canSmelt(TileEntityNetworkFabricator.java:171)
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.updateEntity(TileEntityNetworkFabricator.java:137)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	... 4 more
+2014-01-28 18:55:44 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-01-28_18.55.44-server.txt
+2014-01-28 18:55:44 [SERVER] [INFO] Stopping server
+2014-01-28 18:55:44 [SERVER] [INFO] Saving players
+2014-01-28 18:55:44 [SERVER] [INFO] Saving worlds
+2014-01-28 18:55:44 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:55:44 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:55:44 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:59:04 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 18:59:04 [SERVER] [INFO] Generating keypair
+2014-01-28 18:59:04 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 18:59:05 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking tile entity
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:674)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.canSmelt(TileEntityNetworkFabricator.java:192)
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.updateEntity(TileEntityNetworkFabricator.java:137)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	... 4 more
+2014-01-28 18:59:05 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-01-28_18.59.05-server.txt
+2014-01-28 18:59:05 [SERVER] [INFO] Stopping server
+2014-01-28 18:59:05 [SERVER] [INFO] Saving players
+2014-01-28 18:59:05 [SERVER] [INFO] Saving worlds
+2014-01-28 18:59:05 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 18:59:05 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 18:59:05 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 18:59:46 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 18:59:46 [SERVER] [INFO] Generating keypair
+2014-01-28 18:59:46 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 18:59:47 [SERVER] [INFO] Player324[/127.0.0.1:0] logged in with entity id 15 at (1098.5, 4.0, -564.5)
+2014-01-28 18:59:47 [SERVER] [INFO] Player324 joined the game
+2014-01-28 18:59:48 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking tile entity
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:674)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.smeltItem(TileEntityNetworkFabricator.java:319)
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.updateEntity(TileEntityNetworkFabricator.java:147)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	... 4 more
+2014-01-28 18:59:48 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-01-28_18.59.48-server.txt
+2014-01-28 18:59:48 [SERVER] [INFO] Stopping server
+2014-01-28 18:59:48 [SERVER] [INFO] Saving players
+2014-01-28 18:59:48 [SERVER] [INFO] Player324 left the game
+2014-01-28 18:59:48 [SERVER] [INFO] Stopping server
+2014-01-28 19:02:09 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 19:02:09 [SERVER] [INFO] Generating keypair
+2014-01-28 19:02:10 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 19:02:10 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking tile entity
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:674)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.smeltItem(TileEntityNetworkFabricator.java:355)
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.updateEntity(TileEntityNetworkFabricator.java:147)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	... 4 more
+2014-01-28 19:02:10 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-01-28_19.02.10-server.txt
+2014-01-28 19:02:10 [SERVER] [INFO] Stopping server
+2014-01-28 19:02:10 [SERVER] [INFO] Saving players
+2014-01-28 19:02:10 [SERVER] [INFO] Saving worlds
+2014-01-28 19:02:10 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 19:02:10 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 19:02:10 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 19:03:32 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 19:03:32 [SERVER] [INFO] Generating keypair
+2014-01-28 19:03:32 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 19:03:33 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking tile entity
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:674)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.smeltItem(TileEntityNetworkFabricator.java:358)
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.updateEntity(TileEntityNetworkFabricator.java:147)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	... 4 more
+2014-01-28 19:03:33 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-01-28_19.03.33-server.txt
+2014-01-28 19:03:33 [SERVER] [INFO] Stopping server
+2014-01-28 19:03:33 [SERVER] [INFO] Saving players
+2014-01-28 19:03:33 [SERVER] [INFO] Saving worlds
+2014-01-28 19:03:33 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 19:04:30 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 19:04:30 [SERVER] [INFO] Generating keypair
+2014-01-28 19:04:30 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 19:04:31 [SERVER] [INFO] Player846[/127.0.0.1:0] logged in with entity id 16 at (1098.5, 4.0, -564.5)
+2014-01-28 19:04:31 [SERVER] [INFO] Player846 joined the game
+2014-01-28 19:04:50 [SERVER] [INFO] Stopping server
+2014-01-28 19:04:50 [SERVER] [INFO] Saving players
+2014-01-28 19:04:50 [SERVER] [INFO] Player846 left the game
+2014-01-28 19:04:50 [SERVER] [INFO] Saving worlds
+2014-01-28 19:04:50 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 19:04:50 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 19:04:50 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 19:04:51 [SERVER] [INFO] Stopping server
+2014-01-28 19:05:51 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 19:05:51 [SERVER] [INFO] Generating keypair
+2014-01-28 19:05:51 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 19:05:52 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking tile entity
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:674)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.canSmelt(TileEntityNetworkFabricator.java:194)
+	at com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator.updateEntity(TileEntityNetworkFabricator.java:137)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	... 4 more
+2014-01-28 19:05:52 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Arpad\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-01-28_19.05.52-server.txt
+2014-01-28 19:05:52 [SERVER] [INFO] Stopping server
+2014-01-28 19:05:52 [SERVER] [INFO] Saving players
+2014-01-28 19:05:52 [SERVER] [INFO] Saving worlds
+2014-01-28 19:05:52 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 19:05:52 [SERVER] [INFO] Stopping server
+2014-01-28 19:07:15 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 19:07:15 [SERVER] [INFO] Generating keypair
+2014-01-28 19:07:15 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 19:07:16 [SERVER] [INFO] Player454[/127.0.0.1:0] logged in with entity id 18 at (1096.6468232839427, 4.0, -577.7713059119708)
+2014-01-28 19:07:16 [SERVER] [INFO] Player454 joined the game
+2014-01-28 19:09:01 [SERVER] [INFO] Stopping server
+2014-01-28 19:09:01 [SERVER] [INFO] Saving players
+2014-01-28 19:09:01 [SERVER] [INFO] Player454 left the game
+2014-01-28 19:09:01 [SERVER] [INFO] Saving worlds
+2014-01-28 19:09:01 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 19:09:01 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 19:09:01 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 19:09:02 [SERVER] [INFO] Stopping server
+2014-01-28 19:09:13 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 19:09:13 [SERVER] [INFO] Generating keypair
+2014-01-28 19:09:13 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 19:09:14 [SERVER] [INFO] Player530[/127.0.0.1:0] logged in with entity id 20 at (1097.5844240826511, 4.0, -574.1331618085562)
+2014-01-28 19:09:14 [SERVER] [INFO] Player530 joined the game
+2014-01-28 19:09:20 [SERVER] [INFO] Saving and pausing game...
+2014-01-28 19:09:20 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 19:09:20 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 19:09:20 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 19:09:34 [SERVER] [INFO] Saving and pausing game...
+2014-01-28 19:09:34 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 19:09:34 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 19:09:34 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 19:10:41 [SERVER] [INFO] Stopping server
+2014-01-28 19:10:41 [SERVER] [INFO] Saving players
+2014-01-28 19:10:41 [SERVER] [INFO] Player530 left the game
+2014-01-28 19:10:41 [SERVER] [INFO] Saving worlds
+2014-01-28 19:10:41 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 19:10:41 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 19:10:41 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 19:10:56 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-28 19:10:56 [SERVER] [INFO] Generating keypair
+2014-01-28 19:10:56 [SERVER] [INFO] Preparing start region for level 0
+2014-01-28 19:10:57 [SERVER] [INFO] Player104[/127.0.0.1:0] logged in with entity id 20 at (1097.5844240826511, 4.0, -574.1331618085562)
+2014-01-28 19:10:57 [SERVER] [INFO] Player104 joined the game
+2014-01-28 19:11:50 [SERVER] [INFO] Stopping server
+2014-01-28 19:11:50 [SERVER] [INFO] Saving players
+2014-01-28 19:11:50 [SERVER] [INFO] Player104 left the game
+2014-01-28 19:11:50 [SERVER] [INFO] Saving worlds
+2014-01-28 19:11:50 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-28 19:11:50 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-28 19:11:50 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-28 19:11:50 [SERVER] [INFO] Stopping server
