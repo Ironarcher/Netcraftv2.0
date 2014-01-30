@@ -13203,3 +13203,32 @@ java.io.FileNotFoundException: netcraft:/textures/gui/guicore.png
 2014-01-30 00:02:16 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3850_networkfabricatoractive.png
 2014-01-30 00:02:17 [CLIENT] [SEVERE] Realms: Server not available!
 2014-01-30 00:02:44 [CLIENT] [INFO] Stopping!
+2014-01-30 00:05:01 [CLIENT] [INFO] Setting user: Player921
+2014-01-30 00:05:01 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2014-01-30 00:05:02 [CLIENT] [INFO] Reloading ResourceManager: Default
+2014-01-30 00:05:04 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-01-30 00:05:08 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.speedmodule.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.itemstoragemodule.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldmodule.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.sirenmodule.png
+2014-01-30 00:05:08 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.expmodule.png
+2014-01-30 00:05:09 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3827_wirelessitemterminal.png
+2014-01-30 00:05:09 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3866_prosatelite.png
+2014-01-30 00:05:09 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3868_proradial.png
+2014-01-30 00:05:09 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3824_itemnode.png
+2014-01-30 00:05:09 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2014-01-30 00:05:09 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3867_probeam.png
+2014-01-30 00:05:09 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3851_networkfabricatoridle.png
+2014-01-30 00:05:09 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2014-01-30 00:05:09 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3850_networkfabricatoractive.png
+2014-01-30 00:05:10 [CLIENT] [SEVERE] Realms: Server not available!
+2014-01-30 00:05:26 [CLIENT] [INFO] Stopping!

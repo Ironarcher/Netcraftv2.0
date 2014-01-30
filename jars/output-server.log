@@ -11434,3 +11434,19 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException: -8203
 2014-01-30 00:02:43 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
 2014-01-30 00:02:43 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
 2014-01-30 00:02:43 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-30 00:05:11 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-30 00:05:11 [SERVER] [INFO] Generating keypair
+2014-01-30 00:05:12 [SERVER] [INFO] Preparing start region for level 0
+2014-01-30 00:05:13 [SERVER] [INFO] Player921[/127.0.0.1:0] logged in with entity id 87 at (1117.6273602713911, 4.0, -577.5115506663172)
+2014-01-30 00:05:13 [SERVER] [INFO] Player921 joined the game
+2014-01-30 00:05:24 [SERVER] [INFO] Saving and pausing game...
+2014-01-30 00:05:24 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-30 00:05:24 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-30 00:05:24 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-30 00:05:25 [SERVER] [INFO] Stopping server
+2014-01-30 00:05:25 [SERVER] [INFO] Saving players
+2014-01-30 00:05:25 [SERVER] [INFO] Player921 left the game
+2014-01-30 00:05:25 [SERVER] [INFO] Saving worlds
+2014-01-30 00:05:25 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-30 00:05:25 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-30 00:05:25 [SERVER] [INFO] Saving chunks for level 'New World'/The End

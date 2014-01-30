@@ -53,8 +53,7 @@ public class BlockProjector extends BlockContainer {
         {
             par1World.removeBlockTileEntity(par2, par3, par4);
         }
-    	//Netcraft.cacheTileEntity(par1World.getBlockTileEntity(par2, par3, par4), par2, par3, par4);
-        //TURNS OUT I DIDNT NEED THIS ALL ALONG
+    	Netcraft.cacheTileEntity(par1World.getBlockTileEntity(par2, par3, par4), par2, par3, par4);
         
     }
     public ArrayList<ItemStack> getBlockDropped(World w, int x, int y, int z, int meta, int fortune){
