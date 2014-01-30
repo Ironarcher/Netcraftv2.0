@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
-		<item value="100" key="DIALOG_Y_ORIGIN"/>
+		<item value="346" key="DIALOG_Y_ORIGIN"/>
 		<item value="380" key="DIALOG_HEIGHT"/>
-		<item value="901" key="DIALOG_X_ORIGIN"/>
+		<item value="1117" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,16 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="System.o" key="selection"/>
+		<item value="setBlockIDWithMetadata" key="selection"/>
 		<list key="findhistory">
-			<item value="system.o"/>
-			<item value="projector"/>
-			<item value="3860"/>
-			<item value="projectorsa"/>
-			<item value="iddr"/>
-			<item value="id"/>
-			<item value="returnid"/>
-			<item value="brea"/>
+			<item value="setBlockIDWithMetadata"/>
+			<item value="setblocktile"/>
+			<item value="onblockplaced"/>
+			<item value="place"/>
+			<item value="inform"/>
+			<item value="informa"/>
+			<item value="upgrade"/>
+			<item value="block"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Netcraft"/>

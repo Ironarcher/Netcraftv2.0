@@ -3,6 +3,7 @@ package com.nitrogenegames.netcraft.block;
 import java.util.List;
 
 import com.nitrogenegames.netcraft.Netcraft;
+import com.nitrogenegames.netcraft.machine.TileEntityProjector;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -16,8 +17,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.Chunk;
 
 public class ItemBlockProjector extends Item {
 	Netcraft.EnumProjector type;
@@ -253,6 +256,10 @@ public class ItemBlockProjector extends Item {
        {
            Block.blocksList[this.blockID].onBlockPlacedBy(world, x, y, z, player, stack);
            Block.blocksList[this.blockID].onPostBlockPlaced(world, x, y, z, metadata);
+    	   //world.setBlock(x, y, z, this.blockID, 0, 2);
+           TileEntity tileentity = Block.blocksList[this.blockID].createTileEntity(world, 0);
+           world.setBlockTileEntity(x, y, z, tileentity);
+
            //TODO SET RANGE
        }
 

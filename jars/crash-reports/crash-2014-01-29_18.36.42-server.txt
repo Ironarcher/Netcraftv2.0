@@ -1,0 +1,76 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 1/29/14 6:36 PM
+Description: Ticking memory connection
+
+java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.block.BlockProjector.getBlockDropped(BlockProjector.java:75)
+	at net.minecraft.block.Block.dropBlockAsItemWithChance(Block.java:721)
+	at net.minecraft.block.Block.dropBlockAsItem(Block.java:711)
+	at net.minecraft.block.Block.harvestBlock(Block.java:1142)
+	at net.minecraft.item.ItemInWorldManager.tryHarvestBlock(ItemInWorldManager.java:337)
+	at net.minecraft.item.ItemInWorldManager.onBlockClicked(ItemInWorldManager.java:208)
+	at net.minecraft.network.NetServerHandler.handleBlockDig(NetServerHandler.java:493)
+	at net.minecraft.network.packet.Packet14BlockDig.processPacket(Packet14BlockDig.java:67)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.nitrogenegames.netcraft.block.BlockProjector.getBlockDropped(BlockProjector.java:75)
+	at net.minecraft.block.Block.dropBlockAsItemWithChance(Block.java:721)
+	at net.minecraft.block.Block.dropBlockAsItem(Block.java:711)
+	at net.minecraft.block.Block.harvestBlock(Block.java:1142)
+	at net.minecraft.item.ItemInWorldManager.tryHarvestBlock(ItemInWorldManager.java:337)
+	at net.minecraft.item.ItemInWorldManager.onBlockClicked(ItemInWorldManager.java:208)
+	at net.minecraft.network.NetServerHandler.handleBlockDig(NetServerHandler.java:493)
+	at net.minecraft.network.packet.Packet14BlockDig.processPacket(Packet14BlockDig.java:67)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.NetServerHandler@38758fe
+Stacktrace:
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.4
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.7.0_05, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 657450976 bytes (626 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 525 (29400 bytes; 0 MB) allocated, 322 (18032 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v8.11 FML v6.4.49.965 Minecraft Forge 9.11.1.965 5 mods loaded, 5 mods active
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{6.4.49.965} [Forge Mod Loader] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{9.11.1.965} [Minecraft Forge] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	netcraft{Reloaded 0.0.1} [Netcraft] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{2.0.344-experimental} [IndustrialCraft 2] (industrialcraft-2-dev-deobf_2.0.344-experimental.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 63 (3528 bytes; 0 MB) allocated, 46 (2576 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player331'/24, l='New World', x=1116.93, y=4.00, z=-581.86]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

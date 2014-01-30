@@ -12,6 +12,7 @@ import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
@@ -369,8 +370,7 @@ public class TileEntityNetworkFabricator extends TileEntity implements IEnergySi
 	public void upgrade(ItemStack main, ItemStack upgrade) {
 		try{
 			Netcraft.InstantiateStackNBT(main);
-			NBTTagCompound t = main.getTagCompound();
-			t.setInteger("range", t.getInteger("range") + 5);
+			main.stackTagCompound.setInteger("range", main.stackTagCompound.getInteger("range") + 5);
 		} catch(Exception e) {
 			
 		}
