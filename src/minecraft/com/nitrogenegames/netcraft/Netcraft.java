@@ -258,6 +258,16 @@ public class Netcraft {
 		}
 		return e;
 	}
+	public static ArrayList getConnectedByType(World world, int x, int y, int z, Class c) {
+		ArrayList list = getConnectedObjects(world, x, y, z);
+		ArrayList list2 = new ArrayList();
+		for(int i = 0; i < list.size(); i++) {
+			if(list.get(i).getClass() == c) {
+				list2.add(list.get(i));
+			}
+		}
+		return list2;
+	}
 	public static ArrayList getConnectedObjects(World world, int x, int y, int z) {
 		ArrayList p = new ArrayList();
 		for(int c = -1; c <= 1; c++) {

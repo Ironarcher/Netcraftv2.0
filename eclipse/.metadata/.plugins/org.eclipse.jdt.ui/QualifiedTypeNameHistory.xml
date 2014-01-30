@@ -51,7 +51,6 @@
 <fullyQualifiedTypeName name="net.minecraft.item.ItemBlock"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft"/>
 <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft.EnumProjector"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.block.ItemBlockProjector"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="net.minecraft.nbt.NBTTagCompound"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
 <fullyQualifiedTypeName name="net.minecraft.tileentity.TileEntity"/>
 <fullyQualifiedTypeName name="net.minecraft.world.chunk.Chunk"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft.EnumProjector"/>
 </qualifiedTypeNameHistroy>

@@ -31,6 +31,8 @@ import net.minecraft.entity.player.EntityPlayer;
 public class ItemModules extends Item {
 	public static EntityPlayer p;
 	private Icon iconIndex;
+	public int[] projector;
+	public Netcraft.EnumProjector ptype;
 	public ItemModules(int par1) {
 		super(par1); //Returns super constructor: par1 is ID
 		setCreativeTab(Netcraft.netcrafttab); //Tells the game what creative mode tab it goes in
@@ -54,6 +56,7 @@ public class ItemModules extends Item {
 		}
 		return false;
 	}
+
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
     {
     	if(par1ItemStack.getItem() == Netcraft.deathmodule) {
@@ -140,6 +143,15 @@ public class ItemModules extends Item {
 			}
 		}
 		return itemStack;
+	}
+	public static boolean canUseProjector(ItemModules m, Netcraft.EnumProjector e) {
+		if(m.getUnlocalizedName().equals("item.weathermodule")) {
+			return e == Netcraft.EnumProjector.SATELITE;
+		} else if((m.getUnlocalizedName().equals("item.regenmodule"))||(m.getUnlocalizedName().equals("item.resistmodule"))||(m.getUnlocalizedName().equals("item.deathmodule"))) {
+			return (e == Netcraft.EnumProjector.CIRCULAR) || (e == Netcraft.EnumProjector.BEAM);
+		} else {
+			return false;
+		}
 	}
 	public void activate(World world, ItemStack itemStack, int x, int y, int z) {
 		if (this.getUnlocalizedName().equals("item.weathermodule")) {
@@ -248,7 +260,26 @@ public class ItemModules extends Item {
 			
 		if (thePlayer.isSneaking()) {
 			thePlayer.swingItem();
-
+			/*if((par2World.getBlockId(x, y, z) == Netcraft.projectorBeam.blockID)) {
+				if(this.canUseProjector(this, Netcraft.EnumProjector.BEAM)) {
+					NBTTagCompound itemcomp = par1ItemStack.getTagCompound();
+					itemcomp.setString("projector", x + "," + y + "," + z);
+					return false;
+	
+				}
+			} else 	if((par2World.getBlockId(x, y, z) == Netcraft.projectorRadial.blockID)) {
+				if(this.canUseProjector(this, Netcraft.EnumProjector.CIRCULAR)) {
+					NBTTagCompound itemcomp = par1ItemStack.getTagCompound();
+					itemcomp.setString("projector", x + "," + y + "," + z);
+					return false;
+				}
+			} else 	if((par2World.getBlockId(x, y, z) == Netcraft.projectorSatelite.blockID)) {
+				if(this.canUseProjector(this, Netcraft.EnumProjector.SATELITE)) {
+					NBTTagCompound itemcomp = par1ItemStack.getTagCompound();
+					itemcomp.setString("projector", x + "," + y + "," + z);
+					return false;
+				}
+			} */
 			if (!isMarked(x, y, z, par1ItemStack)) {
 				if(!tpChecker(x, y, z, par1ItemStack, par2World)) {
 					thePlayer.addChatMessage("Block must be within a 3 by 3 radiues of a core to be markable!");
@@ -290,6 +321,7 @@ public class ItemModules extends Item {
 		            }
 		        } 
 		        itemcomp.setTag("Marked", tagList);
+		        
 
 			}
 			return false;
