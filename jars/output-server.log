@@ -11401,3 +11401,36 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException: -8203
 2014-01-29 23:57:10 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
 2014-01-29 23:57:10 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
 2014-01-29 23:57:10 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-29 23:59:50 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-29 23:59:50 [SERVER] [INFO] Generating keypair
+2014-01-29 23:59:51 [SERVER] [INFO] Preparing start region for level 0
+2014-01-29 23:59:52 [SERVER] [INFO] Player19[/127.0.0.1:0] logged in with entity id 26 at (1109.3759457690917, 4.0, -574.6257040452493)
+2014-01-29 23:59:52 [SERVER] [INFO] Player19 joined the game
+2014-01-29 23:59:57 [SERVER] [INFO] [Player19: Set own game mode to Survival Mode]
+2014-01-30 00:00:14 [SERVER] [INFO] Saving and pausing game...
+2014-01-30 00:00:14 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-30 00:00:14 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-30 00:00:14 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-30 00:00:14 [SERVER] [INFO] Stopping server
+2014-01-30 00:00:14 [SERVER] [INFO] Saving players
+2014-01-30 00:00:14 [SERVER] [INFO] Player19 left the game
+2014-01-30 00:00:14 [SERVER] [INFO] Saving worlds
+2014-01-30 00:00:14 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-30 00:00:14 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-30 00:00:14 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-30 00:02:18 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-01-30 00:02:18 [SERVER] [INFO] Generating keypair
+2014-01-30 00:02:19 [SERVER] [INFO] Preparing start region for level 0
+2014-01-30 00:02:20 [SERVER] [INFO] Player183[/127.0.0.1:0] logged in with entity id 25 at (1114.115153316629, 4.0, -574.3796932803186)
+2014-01-30 00:02:20 [SERVER] [INFO] Player183 joined the game
+2014-01-30 00:02:43 [SERVER] [INFO] Saving and pausing game...
+2014-01-30 00:02:43 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-30 00:02:43 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-30 00:02:43 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-01-30 00:02:43 [SERVER] [INFO] Stopping server
+2014-01-30 00:02:43 [SERVER] [INFO] Saving players
+2014-01-30 00:02:43 [SERVER] [INFO] Player183 left the game
+2014-01-30 00:02:43 [SERVER] [INFO] Saving worlds
+2014-01-30 00:02:43 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-01-30 00:02:43 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-01-30 00:02:43 [SERVER] [INFO] Saving chunks for level 'New World'/The End
