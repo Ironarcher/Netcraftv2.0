@@ -146,6 +146,7 @@ public class GuiCore extends GuiContainer {
             	//speedometers
             	drawTexturedModalRect(x+19, y+26, 17, 185, 45, 45);
             	drawTexturedModalRect(x+136, y+26, 17, 185, 45, 45);
+            	drawTexturedModalRect(x+91, y+23, 80, 185, 18, 18);
             	
             	//speedometer animation
             	double l = tel.getEnergyGainPerTick()*35/tel.getMaxSafeInput();

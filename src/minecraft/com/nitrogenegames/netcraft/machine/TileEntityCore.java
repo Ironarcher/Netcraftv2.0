@@ -26,6 +26,9 @@ import ic2.api.energy.event.EnergyTileUnloadEvent;
 import ic2.api.energy.tile.IEnergySink;
 import ic2.api.item.ElectricItem;
 import ic2.api.item.IElectricItem;
+import ic2.api.item.IElectricItemManager;
+import ic2.api.item.ISpecialElectricItem;
+import ic2.api.tile.IEnergyStorage;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
@@ -250,7 +253,26 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
     	}
 		}
 		if(!(this.getStackInSlot(1) == null)) {
+			if(this.getStackInSlot(1).getItem() instanceof IElectricItem) {
+				IElectricItem i = (IElectricItem) this.getStackInSlot(1).getItem();
+				if(i.canProvideEnergy(this.getStackInSlot(1))) {
+					IElectricItemManager i2;
+					try {
+						i2 = (IElectricItemManager) ElectricItem.class.getField("manager").get(null);
+						int c = i2.discharge(this.getStackInSlot(1), 32, 1, false, false);
+						this.energy += c;
+					} catch (IllegalArgumentException e) {
+						e.printStackTrace();
+					} catch (IllegalAccessException e) {
+						e.printStackTrace();
+					} catch (NoSuchFieldException e) {
+						e.printStackTrace();
+					} catch (SecurityException e) {
+						e.printStackTrace();
+					}
 
+				}
+			}
 		}
 		sendEnergyPacket(Side.CLIENT);
 		
@@ -443,5 +465,45 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public int getEnergyGainPerTick(){
 		return energygainpertick;
 	}
+	/*
+	@Override
+	public int getStored() {
+		// TODO Auto-generated method stub
+		return energy;
+	}
+
+	@Override
+	public void setStored(int energy) {
+		this.energy = energy;
+		
+	}
+
+	@Override
+	public int addEnergy(int amount) {
+		// TODO Auto-generated method stub
+		return (int) this.injectEnergyUnits(null, amount);
+	}
+
+	@Override
+	public int getCapacity() {
+		return maxenergy;
+	}
+
+	@Override
+	public int getOutput() {
+		return 0;
+	}
+
+	@Override
+	public double getOutputEnergyUnitsPerTick() {
+		return 0;
+	}
+
+	@Override
+	public boolean isTeleporterCompatible(ForgeDirection side) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	*/
 
 }

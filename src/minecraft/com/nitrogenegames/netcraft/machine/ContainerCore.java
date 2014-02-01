@@ -1,5 +1,7 @@
 package com.nitrogenegames.netcraft.machine;
 
+import ic2.api.item.IElectricItem;
+
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.util.ArrayList;
@@ -36,7 +38,7 @@ public class ContainerCore extends Container {
                 //and the x-y coordinates it resides on-screen
                 addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 20 + this.getX(), 13 + this.getY(), 0, 1));
 
-                addPageSlotToContainer(new SlotNetcraft(tileEntity, 1, 220 + this.getX(), 13 + this.getY(), 0, 1));
+                addPageSlotToContainer(new SlotEnergyInput(tileEntity, 1, 91 + this.getX() + 1, 23 + this.getY() + 1, 2, 1));
                 //commonly used vanilla code that adds the player's inventory
                 
         }
@@ -143,16 +145,21 @@ public class ContainerCore extends Container {
             {
                 ItemStack itemstack1 = slot.getStack();
                 itemstack = itemstack1.copy();
-
-                if (par2 == 0)
+                if(slot instanceof SlotNetcraft) {
+                	if(((SlotNetcraft) slot).pageId != tileEntity.getTabPage()) {
+                		return null;
+                	}
+                }
+                if (par2 == 0 || par2 == 1)
                 {
-                    if (!this.mergeItemStack(itemstack1, 1, 37, true))
+                    if (!this.mergeItemStack(itemstack1, 2, 39, true))
                     {
                         return null;
                     }
                 }
                 else
                 {
+                	if(tileEntity.getTabPage() == 0) {
                     if (((Slot)this.inventorySlots.get(0)).getHasStack() || !Netcraft.isModule(itemstack))
                     {
                         return null;
@@ -162,13 +169,24 @@ public class ContainerCore extends Container {
                     {
                         ((Slot)this.inventorySlots.get(0)).putStack(itemstack1.copy());
                         itemstack1.stackSize = 0;
-                    }
-                    else if (itemstack1.stackSize >= 1)
-                    {
+                    } else if (itemstack1.stackSize >= 1) {
+
                         ((Slot)this.inventorySlots.get(0)).putStack(new ItemStack(itemstack1.itemID, 1, itemstack1.getItemDamage()));
                         --itemstack1.stackSize;
-                    }
-                }
+                    } else {
+                    	return null;
+                    } 
+                
+                	} else if(tileEntity.getTabPage() == 2) {
+                		if(((Slot)this.inventorySlots.get(1)).getHasStack() || !(itemstack.getItem() instanceof IElectricItem)) {
+                			return null;
+                		} else {
+                            ((Slot)this.inventorySlots.get(1)).putStack(itemstack1.copy());
+                            itemstack1.stackSize = 0;
+                		}
+                	}
+            
+        
 
                 if (itemstack1.stackSize == 0)
                 {
@@ -183,11 +201,15 @@ public class ContainerCore extends Container {
                 {
                     return null;
                 }
-
+            
                 slot.onPickupFromSlot(par1EntityPlayer, itemstack1);
             }
+            }
+            
+
 
             return itemstack;
         }
+        
         
 }

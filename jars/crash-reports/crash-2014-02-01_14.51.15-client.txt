@@ -1,0 +1,95 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 2/1/14 2:51 PM
+Description: Ticking tile entity
+
+java.lang.ClassCastException: ic2.core.item.ItemBattery cannot be cast to ic2.api.item.IElectricItemManager
+	at com.nitrogenegames.netcraft.machine.TileEntityCore.updateEntity(TileEntityCore.java:258)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1921)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:910)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:838)
+	at net.minecraft.client.main.Main.main(Main.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:131)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:27)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.nitrogenegames.netcraft.machine.TileEntityCore.updateEntity(TileEntityCore.java:258)
+
+-- Tile entity being ticked --
+Details:
+	Name: tileEntityCore // com.nitrogenegames.netcraft.machine.TileEntityCore
+	Block type: ID #3817 (tile.core // com.nitrogenegames.netcraft.block.BlockCore)
+	Block data value: 2 / 0x2 / 0b0010
+	Block location: World: (1086,4,-553), Chunk: (at 14,0,7 in 67,-35; contains blocks 1072,0,-560 to 1087,255,-545), Region: (2,-2; contains chunks 64,-64 to 95,-33, blocks 1024,0,-1024 to 1535,255,-513)
+	Actual block type: ID #3817 (tile.core // com.nitrogenegames.netcraft.block.BlockCore)
+	Actual block data value: 2 / 0x2 / 0b0010
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player173'/26, l='MpServer', x=1087.15, y=5.62, z=-550.39]]
+	Chunk stats: MultiplayerChunkCache: 425
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (1096,4,-562), Chunk: (at 8,0,14 in 68,-36; contains blocks 1088,0,-576 to 1103,255,-561), Region: (2,-2; contains chunks 64,-64 to 95,-33, blocks 1024,0,-1024 to 1535,255,-513)
+	Level time: 345370 game time, 10459 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 10 total; [EntityChicken['Chicken'/17, l='MpServer', x=1058.56, y=4.00, z=-581.53], EntityCow['Cow'/16, l='MpServer', x=1024.75, y=4.00, z=-578.75], EntitySlime['Slime'/19, l='MpServer', x=1116.72, y=4.00, z=-578.65], EntityHorse['Donkey'/18, l='MpServer', x=1107.38, y=4.00, z=-630.75], EntityHorse['Donkey'/21, l='MpServer', x=1121.94, y=4.00, z=-620.00], EntitySheep['Sheep'/23, l='MpServer', x=1161.06, y=4.00, z=-600.09], EntityHorse['Donkey'/22, l='MpServer', x=1134.94, y=4.00, z=-592.00], EntityClientPlayerMP['Player173'/26, l='MpServer', x=1087.15, y=5.62, z=-550.39], EntitySlime['Slime'/13, l='MpServer', x=1017.64, y=5.06, z=-601.25], EntityCow['Cow'/14, l='MpServer', x=1010.72, y=4.00, z=-516.63]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:440)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2312)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:856)
+	at net.minecraft.client.main.Main.main(Main.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:131)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:27)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.6.4
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.7.0_05, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 667531528 bytes (636 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 2598 (145488 bytes; 0 MB) allocated, 175 (9800 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v8.11 FML v6.4.49.965 Minecraft Forge 9.11.1.965 5 mods loaded, 5 mods active
+	mcp{8.09} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{6.4.49.965} [Forge Mod Loader] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{9.11.1.965} [Minecraft Forge] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	netcraft{Reloaded 0.0.1} [Netcraft] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	IC2{2.0.344-experimental} [IndustrialCraft 2] (industrialcraft-2-dev-deobf_2.0.344-experimental.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 1.6
+	LWJGL: 2.9.0
+	OpenGL: Intel(R) HD Graphics 3000 GL version 3.1.0 - Build 8.15.10.2653, Intel
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Pack: Default
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 247 (13832 bytes; 0 MB) allocated, 38 (2128 bytes; 0 MB) used
