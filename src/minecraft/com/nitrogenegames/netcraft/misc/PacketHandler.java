@@ -80,6 +80,7 @@ public class PacketHandler implements IPacketHandler {
 		int xcoord;
 		int ycoord;
 		int zcoord;
+		int energygainedpertick = 0;
 		boolean error = false;
 
 		TileEntity thisTileEntity;
@@ -91,13 +92,18 @@ public class PacketHandler implements IPacketHandler {
 			xcoord = inputStream.readInt();
 			ycoord = inputStream.readInt();
 			zcoord = inputStream.readInt();
-			
+			if(i == 0) {
+			energygainedpertick = inputStream.readInt();
+			}
 		} 		catch (Exception e) {
 			error = true;
 			energy = 0;
 			xcoord = 0;
 			ycoord = 0;
 			zcoord = 0;
+			if(i == 0) {
+			energygainedpertick = 0;
+			}
 		}
 		thisTileEntity = playerEntity.worldObj.getBlockTileEntity(xcoord, ycoord, zcoord);
 		try{
@@ -105,6 +111,7 @@ public class PacketHandler implements IPacketHandler {
 			if(i == 0) {
 			te2 = (TileEntityCore) thisTileEntity;
 			te2.energy = energy;
+			te2.energygainpertick = energygainedpertick;
 			} else if(i == 1) {
 				te3 = (TileEntityNetworkFabricator) thisTileEntity;	
 				te3.energy = energy;

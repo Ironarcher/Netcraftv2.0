@@ -45,13 +45,14 @@ import net.minecraftforge.common.MinecraftForge;
 
 public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInventory, INet {
 
+	public int energygainpertick = 0;
 	public int energy = 0;
 	public int tabPage = 0;
 	public boolean isUsingPower = false;
 	//ISidedInventory
 	public NetEntity net;
 	private int id = 0;
-	public int maxenergy = 10000;
+	public int maxenergy = 1000000;
 	private boolean init;
 	//private BasicSink electricSlicer = new BasicSink(this, 32, 3);
 	private ItemStack[] inv = new ItemStack[2];
@@ -302,6 +303,12 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	@Override
 	public double injectEnergyUnits(ForgeDirection directionFrom, double amount) {
 
+		if(this.maxenergy == this.energy){
+			this.energygainpertick = 0;
+		} else{
+		this.energygainpertick = (int) amount;
+		}
+		
 		this.isUsingPower = true;
 		if(this.energy >= this.maxenergy){
 			sendEnergyPacket(Side.CLIENT);
@@ -335,6 +342,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
                 outputStream.writeInt(this.xCoord);
                 outputStream.writeInt(this.yCoord);
                 outputStream.writeInt(this.zCoord);
+                outputStream.writeInt(this.energygainpertick);
         } catch (Exception ex) {
                 ex.printStackTrace();
         }
@@ -353,6 +361,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 		                outputStream.writeInt(this.xCoord);
 		                outputStream.writeInt(this.yCoord);
 		                outputStream.writeInt(this.zCoord);
+		                outputStream.writeInt(this.energygainpertick);
 		        } catch (Exception ex) {
 		                ex.printStackTrace();
 		        }
@@ -364,6 +373,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 		    	PacketDispatcher.sendPacketToServer(packet); //Maybe change to players in radius?
 				}
 	}
+	
 	public void sendTabPacket(Side s) {
 		if(s == Side.CLIENT && !worldObj.isRemote) {
     	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
@@ -428,6 +438,10 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	@Override
 	public NetEntity getEntity() {
 		return this.getNet();
+	}
+	
+	public int getEnergyGainPerTick(){
+		return energygainpertick;
 	}
 
 }
