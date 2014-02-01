@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.nitrogenegames.netcraft.Netcraft;
+import com.nitrogenegames.netcraft.machine.TileEntityCore;
 import com.nitrogenegames.netcraft.machine.TileEntityProjector;
 
 import net.minecraft.block.BlockContainer;
@@ -29,7 +30,19 @@ public class BlockProjector extends BlockContainer {
 		type = par3;
 
 	}
-	
+    @Override
+    public boolean onBlockActivated(World world, int x, int y, int z,
+                    EntityPlayer player, int idk, float what, float these, float are) {
+            TileEntityProjector tileEntity = (TileEntityProjector) world.getBlockTileEntity(x, y, z);
+
+            if (tileEntity == null || player.isSneaking()) {
+                    return false;
+            }
+    //code to open gui explained later
+            
+    player.openGui(Netcraft.instance, 0, world, x, y, z);
+            return true;
+    }
 	@Override
 	public TileEntity createNewTileEntity(World world) {
 		return new TileEntityProjector();

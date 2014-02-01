@@ -46,6 +46,8 @@ import net.minecraftforge.common.MinecraftForge;
 public class TileEntityProjector extends TileEntity implements ISidedInventory, INet {
 
 	public int range = 20;
+	public int currentrange = 20;
+	public int id = 0;
 	//private BasicSink electricSlicer = new BasicSink(this, 32, 3);
 	private ItemStack[] inv = new ItemStack[2];
 	
@@ -134,7 +136,15 @@ public class TileEntityProjector extends TileEntity implements ISidedInventory, 
     @Override
     public void readFromNBT(NBTTagCompound tagCompound) {
             super.readFromNBT(tagCompound);
-            tagCompound.setInteger("range", range);
+            if(tagCompound.hasKey("range")) {
+            	this.range = tagCompound.getInteger("range");
+            }
+            if(tagCompound.hasKey("crange")) {
+            	this.currentrange = tagCompound.getInteger("crange");
+            }
+            if(tagCompound.hasKey("id")) {
+            	this.id = tagCompound.getInteger("id");
+            }
             NBTTagList tagList = tagCompound.getTagList("Inventory");
             for (int i = 0; i < tagList.tagCount(); i++) {
                     NBTTagCompound tag = (NBTTagCompound) tagList.tagAt(i);
@@ -162,6 +172,8 @@ public class TileEntityProjector extends TileEntity implements ISidedInventory, 
             }
             tagCompound.setTag("Inventory", itemList);
             tagCompound.setInteger("range", range);
+            tagCompound.setInteger("crange", currentrange);
+            tagCompound.setInteger("id", id);
     }
     
     

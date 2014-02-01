@@ -91,7 +91,6 @@ public class BlockNodeConnection extends Block {
 			} else {
 				Block.blocksList[this.blockID].onNeighborBlockChange(par1World, par2, par3, par4, 451);
 			} 
-			Block.blocksList[this.blockID].onNeighborBlockChange(par1World, par2, par3, par4, 0);
 			System.out.println("Updating: " + coords[0] + ", " + coords[1] + ", " + coords[2]);
 		} 
 		
@@ -138,11 +137,11 @@ public class BlockNodeConnection extends Block {
 		for(int i = 0; i < p.size(); i++) {
 			int[] coords = (int[]) p.get(i);
 			if(Netcraft.isConectedToCore(par1World, par2, par3, par4)) {
-				Block.blocksList[this.blockID].onNeighborBlockChange(par1World, par2, par3, par4, 452);
+				//Block.blocksList[this.blockID].onNeighborBlockChange(par1World, par2, par3, par4, 452);
 			} else {
-				Block.blocksList[this.blockID].onNeighborBlockChange(par1World, par2, par3, par4, 452);
+				//Block.blocksList[this.blockID].onNeighborBlockChange(par1World, par2, par3, par4, 452);
 			} 
-			Block.blocksList[this.blockID].onNeighborBlockChange(par1World, par2, par3, par4, 0);
+			//Block.blocksList[this.blockID].onNeighborBlockChange(par1World, par2, par3, par4, 0);
 			System.out.println("Updating: " + coords[0] + ", " + coords[1] + ", " + coords[2]);
 		} 
 	}

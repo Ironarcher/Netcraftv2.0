@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.ContainerCore"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.ContainerModule"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.gui.GuiHandler"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.Mod.Instance"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.item.ItemModules"/>
@@ -55,9 +53,11 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="net.minecraft.nbt.NBTTagCompound"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.TileCache"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityProjector"/>
 <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
 <fullyQualifiedTypeName name="net.minecraft.tileentity.TileEntity"/>
 <fullyQualifiedTypeName name="net.minecraft.world.chunk.Chunk"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft.EnumProjector"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.ContainerProjector"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityProjector"/>
+<fullyQualifiedTypeName name="net.minecraft.client.gui.GuiTextField"/>
 </qualifiedTypeNameHistroy>

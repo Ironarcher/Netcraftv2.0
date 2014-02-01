@@ -8,8 +8,10 @@ import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.machine.ContainerCore;
 import com.nitrogenegames.netcraft.machine.ContainerModule;
 import com.nitrogenegames.netcraft.machine.ContainerNetworkFabricator;
+import com.nitrogenegames.netcraft.machine.ContainerProjector;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 import com.nitrogenegames.netcraft.machine.TileEntityNetworkFabricator;
+import com.nitrogenegames.netcraft.machine.TileEntityProjector;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -35,6 +37,9 @@ public class GuiHandler implements IGuiHandler {
                 if(tileEntity instanceof TileEntityNetworkFabricator){
                 	return new ContainerNetworkFabricator(player.inventory, (TileEntityNetworkFabricator) world.getBlockTileEntity(x, y, z));
                 }
+                if(tileEntity instanceof TileEntityProjector){
+                	return new ContainerProjector(player.inventory, (TileEntityProjector) world.getBlockTileEntity(x, y, z));
+                }
                 if(Netcraft.isModule(player.getHeldItem()))
                 {
                 	return new ContainerModule(player.inventory);
@@ -53,6 +58,9 @@ public class GuiHandler implements IGuiHandler {
                 }
                 if(tileEntity instanceof TileEntityNetworkFabricator){
                 	return new GuiNetworkFabricator(player.inventory, (TileEntityNetworkFabricator) world.getBlockTileEntity(x, y, z));
+                }
+                if(tileEntity instanceof TileEntityProjector){
+                	return new GuiProjector(player.inventory, (TileEntityProjector) world.getBlockTileEntity(x, y, z));
                 }
                 if(Netcraft.isMarkableModule(player.getHeldItem()))
                 {
