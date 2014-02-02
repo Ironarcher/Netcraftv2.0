@@ -51,16 +51,7 @@ public class ContainerNetworkFabricator extends Container{
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-            /*if (par2 == 3)
-            {
-                if (!this.mergeItemStack(itemstack1, 3, 39, true))
-                {
-                    return null;
-                }
-
-                slot.onSlotChange(itemstack1, itemstack);
-            }
-            else*/ if (par2 != 1 && par2 != 0 && par2 != 2 && par2 != 3)
+            if (par2 != 1 && par2 != 0 && par2 != 2 && par2 != 3)
             {
             	if(itemstack1.stackSize == 1) {
                     if (!this.mergeItemStack(itemstack1, 0, 4, false))
@@ -81,7 +72,7 @@ public class ContainerNetworkFabricator extends Container{
                         return null;
                     }
                 }
-                else if (par2 >= 30 && par2 < 39 && !this.mergeItemStack(itemstack1, 3, 30, false))
+                else if (par2 >= 30 && par2 < 39 && !this.mergeItemStack(itemstack1, 4, 30, false))
                 {
                     return null;
                 }

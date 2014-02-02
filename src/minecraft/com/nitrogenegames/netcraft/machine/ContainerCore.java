@@ -33,12 +33,13 @@ public class ContainerCore extends Container {
         public ContainerCore (InventoryPlayer inventoryPlayer, TileEntityCore te){
                 tileEntity = te;
                 energy = te.energy;
-                bindPlayerInventory(inventoryPlayer);
+
                 //the Slot constructor takes the IInventory and the slot number in that it binds to
                 //and the x-y coordinates it resides on-screen
                 addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 20 + this.getX(), 13 + this.getY(), 0, 1));
 
                 addPageSlotToContainer(new SlotEnergyInput(tileEntity, 1, 91 + this.getX() + 1, 23 + this.getY() + 1, 2, 1));
+                bindPlayerInventory(inventoryPlayer);
                 //commonly used vanilla code that adds the player's inventory
                 
         }
@@ -152,41 +153,83 @@ public class ContainerCore extends Container {
                 }
                 if (par2 == 0 || par2 == 1)
                 {
-                    if (!this.mergeItemStack(itemstack1, 2, 39, true))
+                    if (!this.mergeItemStack(itemstack1, 2, 37, false))
                     {
                         return null;
                     }
-                }
-                else
-                {
+                }else{
                 	if(tileEntity.getTabPage() == 0) {
-                    if (((Slot)this.inventorySlots.get(0)).getHasStack() || !Netcraft.isModule(itemstack))
-                    {
-                        return null;
-                    }
-
-                    if (itemstack1.hasTagCompound() && itemstack1.stackSize == 1)
-                    {
-                        ((Slot)this.inventorySlots.get(0)).putStack(itemstack1.copy());
-                        itemstack1.stackSize = 0;
-                    } else if (itemstack1.stackSize >= 1) {
-
-                        ((Slot)this.inventorySlots.get(0)).putStack(new ItemStack(itemstack1.itemID, 1, itemstack1.getItemDamage()));
-                        --itemstack1.stackSize;
-                    } else {
-                    	return null;
-                    } 
-                
+	                    if (((Slot)this.inventorySlots.get(0)).getHasStack() || !Netcraft.isModule(itemstack))
+	                    {
+	                        if (par2 >= 2 && par2 <= 28)
+	                        {
+	                            if (!this.mergeItemStack(itemstack1, 29, 37, false))
+	                            {
+	                                return null;
+	                            }
+	                        }
+	                        else if (par2 >= 29 && par2 < 37)
+	                        {
+	                        	if(!this.mergeItemStack(itemstack1, 2, 28, false)) {
+	                        		return null;
+	                        	}
+	                        } else {
+	                        	return null;
+	                        }
+	                    } else if (itemstack1.hasTagCompound() && itemstack1.stackSize == 1)
+	                    {
+	                        ((Slot)this.inventorySlots.get(0)).putStack(itemstack1.copy());
+	                        itemstack1.stackSize = 0;
+	                    } else if (itemstack1.stackSize >= 1) {
+	
+	                        ((Slot)this.inventorySlots.get(0)).putStack(new ItemStack(itemstack1.itemID, 1, itemstack1.getItemDamage()));
+	                        --itemstack1.stackSize;
+	                    } else {
+	                    	return null;
+	                    } 
+                	} else if(tileEntity.getTabPage() == 1) {
+                		
+                        if (par2 >= 2 && par2 <= 28)
+                        {
+                            if (!this.mergeItemStack(itemstack1, 29, 37, false))
+                            {
+                                return null;
+                            }
+                        }
+                        else if (par2 >= 29 && par2 < 37)
+                        {
+                        	if(!this.mergeItemStack(itemstack1, 2, 28, false)) {
+                        		return null;
+                        	}
+                        } else {
+                        	return null;
+                        }
+                        
                 	} else if(tileEntity.getTabPage() == 2) {
+                		
                 		if(((Slot)this.inventorySlots.get(1)).getHasStack() || !(itemstack.getItem() instanceof IElectricItem)) {
-                			return null;
+                            if (par2 >= 2 && par2 <= 28)
+                            {
+                                if (!this.mergeItemStack(itemstack1, 29, 37, false))
+                                {
+                                    return null;
+                                }
+                            }
+                            else if (par2 >= 29 && par2 < 37)
+                            {
+                            	if(!this.mergeItemStack(itemstack1, 2, 28, false)) {
+                            		return null;
+                            	}
+                            } else {
+                            	return null;
+                            }
                 		} else {
                             ((Slot)this.inventorySlots.get(1)).putStack(itemstack1.copy());
                             itemstack1.stackSize = 0;
-                		}
+                		} 
                 	}
-            
-        
+                }
+                
 
                 if (itemstack1.stackSize == 0)
                 {
@@ -204,12 +247,166 @@ public class ContainerCore extends Container {
             
                 slot.onPickupFromSlot(par1EntityPlayer, itemstack1);
             }
-            }
             
 
 
             return itemstack;
         }
-        
+        /*
+        public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)
+        {
+            ItemStack itemstack = null;
+            Slot slot = (Slot)this.inventorySlots.get(par2);
+
+            if (slot != null && slot.getHasStack())
+            {
+                ItemStack itemstack1 = slot.getStack();
+                itemstack = itemstack1.copy();
+
+                if (par2 != 1 && par2 != 0)
+                {
+                        if (!this.mergeItemStack(itemstack1, 0, 1, false))
+                        {
+                            if (par2 >= 2 && par2 < 28)
+                            {
+                                if (!this.mergeItemStack(itemstack1, 28, 37, false))
+                                {
+                                    return null;
+                                }
+                            }
+                            else if (par2 >= 28 && par2 < 37 && !this.mergeItemStack(itemstack1, 2, 28, false))
+                            {
+                                return null;
+                            }
+                        }
+                }
+
+
+                else if (!this.mergeItemStack(itemstack1, 2, 37, false))
+                {                	
+                    return null;
+                }
+
+                if (itemstack1.stackSize == 0)
+                {
+                    slot.putStack((ItemStack)null);
+                }
+                else
+                {
+                    slot.onSlotChanged();
+                }
+
+                if (itemstack1.stackSize == itemstack.stackSize)
+                {
+                    return null;
+                }
+
+                slot.onPickupFromSlot(par1EntityPlayer, itemstack1);
+            }
+
+            return itemstack;
+        }
+        */
+        protected boolean mergeItemStack(ItemStack par1ItemStack, int par2, int par3, boolean par4)
+        {
+            boolean flag1 = false;
+            int k = par2;
+
+            if (par4)
+            {
+                k = par3 - 1;
+            }
+
+            Slot slot;
+            ItemStack itemstack1;
+
+            if (par1ItemStack.isStackable())
+            {
+                while (par1ItemStack.stackSize > 0 && (!par4 && k < par3 || par4 && k >= par2))
+                {
+                    slot = (Slot)this.inventorySlots.get(k);
+                    itemstack1 = slot.getStack();
+                    boolean flagpage = false;
+                    if(slot instanceof SlotNetcraft) {
+                    	if(((SlotNetcraft) slot).hidden == true) {
+                    		flagpage = true;
+                    	}
+                    }
+                    if(!flagpage) {
+	                    if (itemstack1 != null && itemstack1.itemID == par1ItemStack.itemID && (!par1ItemStack.getHasSubtypes() || par1ItemStack.getItemDamage() == itemstack1.getItemDamage()) && ItemStack.areItemStackTagsEqual(par1ItemStack, itemstack1))
+	                    {
+	                        int l = itemstack1.stackSize + par1ItemStack.stackSize;
+	
+	                        if (l <= par1ItemStack.getMaxStackSize())
+	                        {
+	                            par1ItemStack.stackSize = 0;
+	                            itemstack1.stackSize = l;
+	                            slot.onSlotChanged();
+	                            flag1 = true;
+	                        }
+	                        else if (itemstack1.stackSize < par1ItemStack.getMaxStackSize())
+	                        {
+	                            par1ItemStack.stackSize -= par1ItemStack.getMaxStackSize() - itemstack1.stackSize;
+	                            itemstack1.stackSize = par1ItemStack.getMaxStackSize();
+	                            slot.onSlotChanged();
+	                            flag1 = true;
+	                        }
+	                    }
+                    }
+                    if (par4)
+                    {
+                        --k;
+                    }
+                    else
+                    {
+                        ++k;
+                    }
+                }
+            }
+
+            if (par1ItemStack.stackSize > 0)
+            {
+                if (par4)
+                {
+                    k = par3 - 1;
+                }
+                else
+                {
+                    k = par2;
+                }
+
+                while (!par4 && k < par3 || par4 && k >= par2)
+                {
+                    slot = (Slot)this.inventorySlots.get(k);
+                    boolean flagpage = false;
+                    if(slot instanceof SlotNetcraft) {
+                    	if(((SlotNetcraft) slot).hidden == true) {
+                    		flagpage = true;
+                    	}
+                    }
+                    itemstack1 = slot.getStack();
+                    if(!flagpage) {
+	                    if (itemstack1 == null)
+	                    {
+	                        slot.putStack(par1ItemStack.copy());
+	                        slot.onSlotChanged();
+	                        par1ItemStack.stackSize = 0;
+	                        flag1 = true;
+	                        break;
+	                    }
+                    }
+                    if (par4)
+                    {
+                        --k;
+                    }
+                    else
+                    {
+                        ++k;
+                    }
+                }
+            }
+
+            return flag1;
+        }
         
 }

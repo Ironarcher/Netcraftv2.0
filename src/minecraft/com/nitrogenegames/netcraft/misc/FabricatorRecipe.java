@@ -87,11 +87,17 @@ public class FabricatorRecipe {
 			} else if (a3 == addOn3){
 				return true;
 			}
+		} else if (a2 == addOn1){
+			return a3 == addOn2 || a3 == addOn3;
+		} else if (a2 == addOn2){
+			return a3 == addOn1 || a3 == addOn3;
+		} else if (a2 == addOn3){
+			return a3 == addOn2 || a3 == addOn1;
 		} else{
 			return false;
 		}
 	} else if(count == 1){
-		if(a1 == addOn1 || a1 == addOn2 || a1 == addOn3){
+		if(a1 == addOn1 || a1 == addOn2 || a1 == addOn3 || a2 == addOn1 || a2 == addOn2 || a2 == addOn3 || a3 == addOn1 || a3 == addOn2 || a3 == addOn3){
 			return true;
 		} else{
 			return false;
