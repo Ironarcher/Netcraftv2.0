@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ic2.api.energy.tile.IEnergyTile"/>
-<fullyQualifiedTypeName name="ic2.api.energy.tile.IEnergySink"/>
 <fullyQualifiedTypeName name="ic2.api.energy.event.EnergyTileLoadEvent"/>
 <fullyQualifiedTypeName name="net.minecraftforge.common.MinecraftForge"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.SideOnly"/>
 <fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
+<fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderItem"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.client.registry.RenderingRegistry"/>
 </qualifiedTypeNameHistroy>

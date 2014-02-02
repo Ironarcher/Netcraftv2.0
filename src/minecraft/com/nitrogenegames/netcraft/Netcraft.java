@@ -26,6 +26,7 @@ import com.nitrogenegames.netcraft.misc.TileCache;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -941,6 +942,7 @@ public class Netcraft {
 	}
 	public static void clearCached() {
 		cached = new ArrayList<TileCache>();
+		
 	}
 	public enum EnumProjector {
 		BEAM, CIRCULAR, SATELITE

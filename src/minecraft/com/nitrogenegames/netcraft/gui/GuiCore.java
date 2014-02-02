@@ -5,8 +5,10 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -22,6 +24,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL12;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.machine.ContainerCore;
@@ -90,7 +93,9 @@ public class GuiCore extends GuiContainer {
                 	fontRenderer.drawString("Module Running: " + tel.moduleSelected, 66+25, 74, 4210752);
                 	
                 } else if(selected == 1){
+                	int j = 0;
                 	
+                	this.drawItemStack(new ItemStack(Netcraft.connectionnode, 1), 20, 20, j + "");
                 } else if(selected == 2){
                 	//POWER
                 	
@@ -157,6 +162,34 @@ public class GuiCore extends GuiContainer {
             	drawTexturedModalRect(x+19+8, (int)(y+26+5+35-l), 62, (int)(185+35-l), 17, (int)(l));
             	drawTexturedModalRect(x+136+8, (int)(y+26+5+35-l), 62, (int)(185+35-l), 17, (int)(l));
             }
+        }
+        public void drawItem(ItemStack s, int x, int y) {
+        	drawItemStack(s, x, y, "");
+        }
+        public void drawItemStack(ItemStack par1ItemStack, int par2, int par3, String par4Str)
+        {
+            GL11.glDisable(GL12.GL_RESCALE_NORMAL);
+            RenderHelper.disableStandardItemLighting();
+            GL11.glDisable(GL11.GL_LIGHTING);
+            GL11.glDisable(GL11.GL_DEPTH_TEST);
+            RenderHelper.enableGUIStandardItemLighting();
+            GL11.glPushMatrix();
+            GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+            GL11.glEnable(GL12.GL_RESCALE_NORMAL);
+            GL11.glTranslatef(0.0F, 0.0F, 32.0F);
+            this.zLevel = 50.0F;
+            itemRenderer.zLevel = 50.0F;
+            FontRenderer font = null;
+            if (par1ItemStack != null) font = par1ItemStack.getItem().getFontRenderer(par1ItemStack);
+            if (font == null) font = fontRenderer;
+            //GL11.glEnable(GL11.GL_DEPTH_TEST);
+            itemRenderer.renderItemAndEffectIntoGUI(font, this.mc.getTextureManager(), par1ItemStack, par2, par3);
+            itemRenderer.renderItemOverlayIntoGUI(font, this.mc.getTextureManager(), par1ItemStack, par2, par3, par4Str);
+            this.zLevel = 0.0F;
+            itemRenderer.zLevel = 0.0F;
+            GL11.glEnable(GL11.GL_LIGHTING);
+            GL11.glEnable(GL11.GL_DEPTH_TEST);
+            RenderHelper.enableStandardItemLighting();
         }
         
         public void actionPerformed(GuiButton button)

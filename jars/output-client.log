@@ -16096,3 +16096,961 @@ java.io.FileNotFoundException: netcraft:/textures/gui/guicore.png
 2014-02-02 11:54:19 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3866_projector.png
 2014-02-02 11:54:20 [CLIENT] [SEVERE] Realms: Server not available!
 2014-02-02 11:54:52 [CLIENT] [INFO] Stopping!
+2014-02-02 15:06:35 [CLIENT] [INFO] Setting user: Player936
+2014-02-02 15:06:36 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2014-02-02 15:06:37 [CLIENT] [INFO] Reloading ResourceManager: Default
+2014-02-02 15:06:43 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 15:06:52 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 15:06:52 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 15:06:52 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2014-02-02 15:06:52 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.speedmodule.png
+2014-02-02 15:06:52 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.itemstoragemodule.png
+2014-02-02 15:06:52 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2014-02-02 15:06:52 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2014-02-02 15:06:52 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 15:06:53 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2014-02-02 15:06:53 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2014-02-02 15:06:53 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2014-02-02 15:06:53 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldmodule.png
+2014-02-02 15:06:53 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.sirenmodule.png
+2014-02-02 15:06:53 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.expmodule.png
+2014-02-02 15:06:53 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3827_wirelessitemterminal.png
+2014-02-02 15:06:54 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3824_itemnode.png
+2014-02-02 15:06:54 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2014-02-02 15:06:54 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3851_networkfabricatoridle.png
+2014-02-02 15:06:54 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2014-02-02 15:06:54 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3850_networkfabricatoractive.png
+2014-02-02 15:06:54 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3866_projector.png
+2014-02-02 15:07:30 [CLIENT] [INFO] Setting user: Player228
+2014-02-02 15:07:31 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2014-02-02 15:07:31 [CLIENT] [INFO] Reloading ResourceManager: Default
+2014-02-02 15:07:38 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 15:07:46 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.speedmodule.png
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.itemstoragemodule.png
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldmodule.png
+2014-02-02 15:07:46 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.sirenmodule.png
+2014-02-02 15:07:47 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.expmodule.png
+2014-02-02 15:07:47 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3827_wirelessitemterminal.png
+2014-02-02 15:07:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3824_itemnode.png
+2014-02-02 15:07:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2014-02-02 15:07:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3851_networkfabricatoridle.png
+2014-02-02 15:07:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2014-02-02 15:07:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3850_networkfabricatoractive.png
+2014-02-02 15:07:48 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3866_projector.png
+2014-02-02 15:07:50 [CLIENT] [SEVERE] Realms: Server not available!
+2014-02-02 15:08:35 [CLIENT] [INFO] Stopping!
+2014-02-02 15:10:12 [CLIENT] [INFO] Setting user: Player777
+2014-02-02 15:10:12 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2014-02-02 15:10:13 [CLIENT] [INFO] Reloading ResourceManager: Default
+2014-02-02 15:10:19 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 15:10:27 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 15:10:27 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 15:10:27 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2014-02-02 15:10:27 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.speedmodule.png
+2014-02-02 15:10:27 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.itemstoragemodule.png
+2014-02-02 15:10:27 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2014-02-02 15:10:27 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2014-02-02 15:10:27 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 15:10:28 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2014-02-02 15:10:28 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2014-02-02 15:10:28 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2014-02-02 15:10:28 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldmodule.png
+2014-02-02 15:10:28 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.sirenmodule.png
+2014-02-02 15:10:28 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.expmodule.png
+2014-02-02 15:10:28 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3827_wirelessitemterminal.png
+2014-02-02 15:10:28 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3824_itemnode.png
+2014-02-02 15:10:28 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2014-02-02 15:10:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3851_networkfabricatoridle.png
+2014-02-02 15:10:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2014-02-02 15:10:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3850_networkfabricatoractive.png
+2014-02-02 15:10:29 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3866_projector.png
+2014-02-02 15:10:31 [CLIENT] [SEVERE] Realms: Server not available!
+2014-02-02 15:11:19 [CLIENT] [INFO] Stopping!
+2014-02-02 15:13:49 [CLIENT] [INFO] Setting user: Player718
+2014-02-02 15:13:52 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2014-02-02 15:13:52 [CLIENT] [INFO] Reloading ResourceManager: Default
+2014-02-02 15:13:56 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 15:14:05 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 15:14:05 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 15:14:05 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2014-02-02 15:14:05 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.speedmodule.png
+2014-02-02 15:14:05 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.itemstoragemodule.png
+2014-02-02 15:14:05 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2014-02-02 15:14:05 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2014-02-02 15:14:05 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 15:14:05 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2014-02-02 15:14:05 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldmodule.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.sirenmodule.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.expmodule.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3827_wirelessitemterminal.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3824_itemnode.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3851_networkfabricatoridle.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3850_networkfabricatoractive.png
+2014-02-02 15:14:06 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3866_projector.png
+2014-02-02 15:14:07 [CLIENT] [SEVERE] Realms: Server not available!
+2014-02-02 15:14:33 [CLIENT] [INFO] Stopping!
+2014-02-02 15:14:52 [CLIENT] [INFO] Setting user: Player108
+2014-02-02 15:14:53 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2014-02-02 15:14:54 [CLIENT] [INFO] Reloading ResourceManager: Default
+2014-02-02 15:15:02 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 15:15:07 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.speedmodule.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.itemstoragemodule.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldmodule.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.sirenmodule.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.expmodule.png
+2014-02-02 15:15:07 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3827_wirelessitemterminal.png
+2014-02-02 15:15:08 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3824_itemnode.png
+2014-02-02 15:15:08 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2014-02-02 15:15:08 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3851_networkfabricatoridle.png
+2014-02-02 15:15:08 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2014-02-02 15:15:08 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3850_networkfabricatoractive.png
+2014-02-02 15:15:08 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3866_projector.png
+2014-02-02 15:15:09 [CLIENT] [SEVERE] Realms: Server not available!
+2014-02-02 15:15:45 [CLIENT] [INFO] Stopping!
+2014-02-02 16:50:08 [CLIENT] [INFO] Setting user: Player548
+2014-02-02 16:50:09 [CLIENT] [INFO] LWJGL Version: 2.9.0
+2014-02-02 16:50:09 [CLIENT] [INFO] Reloading ResourceManager: Default
+2014-02-02 16:50:13 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 16:50:17 [CLIENT] [INFO] Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Netcraft, FMLFileResourcePack:IndustrialCraft 2
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.connector.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.speedmodule.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.itemstoragemodule.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldemitters.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.tpmodule.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: ic2:textures/items/plasmaLauncher.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.atpmodule.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4084_storageupgrade.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/items/MISSING_ICON_ITEM_4085_rangeupgrade.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.forcefieldmodule.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.sirenmodule.png
+2014-02-02 16:50:17 [CLIENT] [SEVERE] Using missing texture, unable to load: netcraft:textures/items/item.expmodule.png
+2014-02-02 16:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3827_wirelessitemterminal.png
+2014-02-02 16:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3824_itemnode.png
+2014-02-02 16:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3825_conditionalnode.png
+2014-02-02 16:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3851_networkfabricatoridle.png
+2014-02-02 16:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3821_node.png
+2014-02-02 16:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3850_networkfabricatoractive.png
+2014-02-02 16:50:18 [CLIENT] [SEVERE] Using missing texture, unable to load: minecraft:textures/blocks/MISSING_ICON_TILE_3866_projector.png
+2014-02-02 16:50:19 [CLIENT] [SEVERE] Realms: Server not available!
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:26 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:26 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:26 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:27 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:27 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:27 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:28 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:28 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:28 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:29 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:29 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:29 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:30 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:30 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:30 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:31 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:31 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:31 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:32 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:32 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:32 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [SEVERE] ########## GL ERROR ##########
+2014-02-02 16:50:33 [CLIENT] [SEVERE] @ Post render
+2014-02-02 16:50:33 [CLIENT] [SEVERE] 1283: Stack overflow
+2014-02-02 16:50:33 [CLIENT] [INFO] Stopping!
