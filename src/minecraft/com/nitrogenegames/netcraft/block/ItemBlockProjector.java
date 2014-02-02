@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 
 public class ItemBlockProjector extends Item {
-	Netcraft.EnumProjector type;
+	//Netcraft.EnumProjector type;
 	public int blockID;
      public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par2List, boolean par4)
      {
@@ -34,23 +34,23 @@ public class ItemBlockProjector extends Item {
      public void onCreated(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
 			Netcraft.InstantiateStackNBT(par1ItemStack);
      }
-	public ItemBlockProjector(int par1, Netcraft.EnumProjector p) {
+	public ItemBlockProjector(int par1, Netcraft.EnumProjector type) {
 		super(par1);
-		type = p;
 		this.maxStackSize = 1;
-		if(type == Netcraft.EnumProjector.BEAM) {
-			this.blockID = Netcraft.projectorBeam.blockID;
-		} else if(type == Netcraft.EnumProjector.CIRCULAR) {
-			this.blockID = Netcraft.projectorRadial.blockID;
-		} else if(type == Netcraft.EnumProjector.SATELITE) {
-			this.blockID = Netcraft.projectorSatelite.blockID;
-		}
 	}
-
+	@Override
+	public String getUnlocalizedName(ItemStack itemstack) {
+		return getUnlocalizedName() + "." + this.getDamage(itemstack);
+	}
+	@Override
+	public int getMetadata (int damageValue) {
+		return damageValue;
+	}
 	//ITEMBLOCK CODE
     /**
      * Returns the blockID for this Item
      */
+
     public int getBlockID()
     {
         return this.blockID;
@@ -64,7 +64,7 @@ public class ItemBlockProjector extends Item {
      */
     public int getSpriteNumber()
     {
-        return Block.blocksList[this.blockID].getItemIconName() != null ? 1 : 0;
+        return 0;
     }
 
     @SideOnly(Side.CLIENT)
@@ -74,9 +74,9 @@ public class ItemBlockProjector extends Item {
      */
     public Icon getIconFromDamage(int par1)
     {
-    	if(this.type == Netcraft.EnumProjector.BEAM) {
+    	if(par1 == 0) {
            return Netcraft.projectorBeam.getBlockTextureFromSide(1);
-    	} else     	if(this.type == Netcraft.EnumProjector.CIRCULAR) {
+    	} else     	if(par1 == 1) {
             return Netcraft.projectorRadial.getBlockTextureFromSide(1);
     	} else {
             return Netcraft.projectorSatelite.getBlockTextureFromSide(1);
@@ -144,9 +144,8 @@ public class ItemBlockProjector extends Item {
         {
             Block block = Block.blocksList[this.blockID];
             int j1 = this.getMetadata(par1ItemStack.getItemDamage());
-            int k1 = Block.blocksList[this.blockID].onBlockPlaced(par3World, par4, par5, par6, par7, par8, par9, par10, j1);
 
-            if (placeBlockAt(par1ItemStack, par2EntityPlayer, par3World, par4, par5, par6, par7, par8, par9, par10, k1))
+            if (placeBlockAt(par1ItemStack, par2EntityPlayer, par3World, par4, par5, par6, par7, par8, par9, par10, j1))
             {
                 par3World.playSoundEffect((double)((float)par4 + 0.5F), (double)((float)par5 + 0.5F), (double)((float)par6 + 0.5F), block.stepSound.getPlaceSound(), (block.stepSound.getVolume() + 1.0F) / 2.0F, block.stepSound.getPitch() * 0.8F);
                 --par1ItemStack.stackSize;
@@ -218,7 +217,7 @@ public class ItemBlockProjector extends Item {
      */
     public CreativeTabs getCreativeTab()
     {
-        return Block.blocksList[this.blockID].getCreativeTabToDisplayOn();
+        return Netcraft.netcrafttab;
     }
 
     @SideOnly(Side.CLIENT)
@@ -257,8 +256,9 @@ public class ItemBlockProjector extends Item {
            Block.blocksList[this.blockID].onBlockPlacedBy(world, x, y, z, player, stack);
            Block.blocksList[this.blockID].onPostBlockPlaced(world, x, y, z, metadata);
     	   //world.setBlock(x, y, z, this.blockID, 0, 2);
-           TileEntity tileentity = Block.blocksList[this.blockID].createTileEntity(world, 0);
-           world.setBlockTileEntity(x, y, z, tileentity);
+           //TileEntity tileentity = Block.blocksList[this.blockID].createTileEntity(world, 0);
+           //world.setBlockTileEntity(x, y, z, tileentity);
+           TileEntity tileentity = world.getBlockTileEntity(x, y, z);
            Netcraft.InstantiateStackNBT(stack);
            ((TileEntityProjector) tileentity).range = stack.stackTagCompound.getInteger("range");
            //TODO SET RANGE

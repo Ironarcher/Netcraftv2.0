@@ -259,7 +259,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 					IElectricItemManager i2;
 					try {
 						i2 = (IElectricItemManager) ElectricItem.class.getField("manager").get(null);
-						int c = i2.discharge(this.getStackInSlot(1), 32, 1, false, false);
+						int c = i2.discharge(this.getStackInSlot(1), 32, 4, true, false);
 						this.energy += c;
 					} catch (IllegalArgumentException e) {
 						e.printStackTrace();

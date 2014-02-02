@@ -25,9 +25,8 @@ public class BlockProjector extends BlockContainer {
 	public int rangeupgraded = 0;
 	public int itemID;
     private final Random furnaceRand = new Random();
-	public BlockProjector(int par1, Material par2Material, Netcraft.EnumProjector par3) {
+	public BlockProjector(int par1, Material par2Material) {
 		super(par1, par2Material);
-		type = par3;
 
 	}
     @Override
@@ -73,12 +72,12 @@ public class BlockProjector extends BlockContainer {
     public ArrayList<ItemStack> getBlockDropped(World w, int x, int y, int z, int meta, int fortune){
     	ArrayList<ItemStack> list = new ArrayList<ItemStack>();
     	ItemStack s;
-		if(type == Netcraft.EnumProjector.BEAM) {
-	    	s = new ItemStack(Netcraft.itemProjectorBeam, 1);
-		} else if(type == Netcraft.EnumProjector.CIRCULAR) {
-	    	s = new ItemStack(Netcraft.itemProjectorRadial, 1);
+		if(this.getDamageValue(w, x, y, z) == 0) {
+	    	s = new ItemStack(Netcraft.itemProjectorBeam, 1, 0);
+		} else if(this.getDamageValue(w, x, y, z) == 1) {
+	    	s = new ItemStack(Netcraft.itemProjectorRadial, 1, 1);
 		} else {
-	    	s = new ItemStack(Netcraft.itemProjectorSatelite, 1);
+	    	s = new ItemStack(Netcraft.itemProjectorSatelite, 1, 2);
 		}
     	//TileEntityProjector t = (TileEntityProjector) Netcraft.getCached(x, y, z);
     	//Netcraft.removeCached(x, y, z);
@@ -89,6 +88,11 @@ public class BlockProjector extends BlockContainer {
 
 		return list;
     }
+	
+	@Override
+	public int damageDropped (int metadata) {
+		return metadata;
+	}
 	
 	
 

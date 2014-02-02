@@ -53,11 +53,11 @@
 <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
 <fullyQualifiedTypeName name="net.minecraft.tileentity.TileEntity"/>
 <fullyQualifiedTypeName name="net.minecraft.world.chunk.Chunk"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft.EnumProjector"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.ContainerProjector"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityProjector"/>
 <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiTextField"/>
 <fullyQualifiedTypeName name="ic2.api.item.IElectricItemManager"/>
 <fullyQualifiedTypeName name="ic2.api.item.ISpecialElectricItem"/>
 <fullyQualifiedTypeName name="ic2.api.item.IElectricItem"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft.EnumProjector"/>
 </qualifiedTypeNameHistroy>

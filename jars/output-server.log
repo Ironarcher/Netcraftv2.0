@@ -16545,3 +16545,145 @@ Caused by: java.lang.ClassCastException: ic2.core.item.ItemBattery cannot be cas
 2014-02-01 15:17:44 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
 2014-02-01 15:17:44 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
 2014-02-01 15:17:44 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 15:29:56 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-01 15:29:56 [SERVER] [INFO] Generating keypair
+2014-02-01 15:29:56 [SERVER] [INFO] Preparing start region for level 0
+2014-02-01 15:29:57 [SERVER] [INFO] Preparing spawn area: 96%
+2014-02-01 15:29:57 [SERVER] [INFO] Player657[/127.0.0.1:0] logged in with entity id 98 at (1087.992722702439, 5.0, -551.3251974346606)
+2014-02-01 15:29:57 [SERVER] [INFO] Player657 joined the game
+2014-02-01 15:31:44 [SERVER] [INFO] [Player657: Set the time to 0]
+2014-02-01 15:33:01 [SERVER] [INFO] Saving and pausing game...
+2014-02-01 15:33:01 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 15:33:01 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 15:33:01 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 15:33:01 [SERVER] [INFO] Stopping server
+2014-02-01 15:33:01 [SERVER] [INFO] Saving players
+2014-02-01 15:33:01 [SERVER] [INFO] Player657 left the game
+2014-02-01 15:33:01 [SERVER] [INFO] Saving worlds
+2014-02-01 15:33:01 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 15:33:01 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 15:33:01 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 20:56:34 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-01 20:56:34 [SERVER] [INFO] Generating keypair
+2014-02-01 20:56:34 [SERVER] [INFO] Preparing start region for level 0
+2014-02-01 20:56:35 [SERVER] [INFO] Preparing spawn area: 53%
+2014-02-01 20:56:36 [SERVER] [INFO] Player233[/127.0.0.1:0] logged in with entity id 67 at (1090.067461255507, 4.0, -577.8183646480906)
+2014-02-01 20:56:36 [SERVER] [INFO] Player233 joined the game
+2014-02-01 20:56:56 [SERVER] [INFO] Stopping server
+2014-02-01 20:56:56 [SERVER] [INFO] Saving players
+2014-02-01 20:56:56 [SERVER] [INFO] Player233 left the game
+2014-02-01 20:56:56 [SERVER] [INFO] Saving worlds
+2014-02-01 20:56:56 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 20:56:56 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 20:56:56 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 20:57:30 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-01 20:57:30 [SERVER] [INFO] Generating keypair
+2014-02-01 20:57:30 [SERVER] [INFO] Preparing start region for level 0
+2014-02-01 20:57:31 [SERVER] [INFO] Preparing spawn area: 94%
+2014-02-01 20:57:32 [SERVER] [INFO] Player341[/127.0.0.1:0] logged in with entity id 64 at (1085.238809129725, 4.0, -572.8780179706515)
+2014-02-01 20:57:32 [SERVER] [INFO] Player341 joined the game
+2014-02-01 20:57:33 [SERVER] [INFO] Saving and pausing game...
+2014-02-01 20:57:33 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 20:57:33 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 20:57:33 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 20:58:07 [SERVER] [INFO] Saving and pausing game...
+2014-02-01 20:58:07 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 20:58:07 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 20:58:07 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 20:58:09 [SERVER] [INFO] Saving and pausing game...
+2014-02-01 20:58:09 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 20:58:09 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 20:58:09 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 20:58:55 [SERVER] [INFO] Saving and pausing game...
+2014-02-01 20:58:55 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 20:58:55 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 20:58:55 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 20:58:56 [SERVER] [INFO] Stopping server
+2014-02-01 20:58:56 [SERVER] [INFO] Saving players
+2014-02-01 20:58:56 [SERVER] [INFO] Player341 left the game
+2014-02-01 20:58:56 [SERVER] [INFO] Saving worlds
+2014-02-01 20:58:56 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 20:58:56 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 20:58:56 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 21:03:17 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-01 21:03:17 [SERVER] [INFO] Generating keypair
+2014-02-01 21:03:17 [SERVER] [INFO] Preparing start region for level 0
+2014-02-01 21:03:18 [SERVER] [INFO] Preparing spawn area: 95%
+2014-02-01 21:03:19 [SERVER] [INFO] Player427[/127.0.0.1:0] logged in with entity id 68 at (1098.1824908642059, 4.248986633324363, -565.3000000119209)
+2014-02-01 21:03:19 [SERVER] [INFO] Player427 joined the game
+2014-02-01 21:03:23 [SERVER] [INFO] Saving and pausing game...
+2014-02-01 21:03:23 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 21:03:23 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 21:03:23 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 21:03:23 [SERVER] [INFO] Stopping server
+2014-02-01 21:03:23 [SERVER] [INFO] Saving players
+2014-02-01 21:03:23 [SERVER] [INFO] Player427 left the game
+2014-02-01 21:03:23 [SERVER] [INFO] Saving worlds
+2014-02-01 21:03:23 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 21:03:23 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 21:03:23 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 21:06:19 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-01 21:06:19 [SERVER] [INFO] Generating keypair
+2014-02-01 21:06:20 [SERVER] [INFO] Preparing start region for level 0
+2014-02-01 21:06:21 [SERVER] [INFO] Preparing spawn area: 23%
+2014-02-01 21:06:22 [SERVER] [INFO] Preparing spawn area: 68%
+2014-02-01 21:06:24 [SERVER] [INFO] Player297[/127.0.0.1:0] logged in with entity id 35 at (1079.3893110295473, 4.248986633324363, -573.3000000119209)
+2014-02-01 21:06:24 [SERVER] [INFO] Player297 joined the game
+2014-02-01 21:06:30 [SERVER] [INFO] Saving and pausing game...
+2014-02-01 21:06:30 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 21:06:30 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 21:06:30 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 21:06:31 [SERVER] [INFO] Stopping server
+2014-02-01 21:06:31 [SERVER] [INFO] Saving players
+2014-02-01 21:06:31 [SERVER] [INFO] Player297 left the game
+2014-02-01 21:06:31 [SERVER] [INFO] Saving worlds
+2014-02-01 21:06:31 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 21:06:31 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 21:06:31 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 21:28:14 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-01 21:28:14 [SERVER] [INFO] Generating keypair
+2014-02-01 21:28:14 [SERVER] [INFO] Preparing start region for level 0
+2014-02-01 21:28:15 [SERVER] [INFO] Preparing spawn area: 43%
+2014-02-01 21:28:16 [SERVER] [INFO] Player451[/127.0.0.1:0] logged in with entity id 35 at (1079.3893110295473, 4.248986633324363, -573.3000000119209)
+2014-02-01 21:28:16 [SERVER] [INFO] Player451 joined the game
+2014-02-01 21:28:19 [SERVER] [INFO] Stopping server
+2014-02-01 21:28:19 [SERVER] [INFO] Saving players
+2014-02-01 21:28:19 [SERVER] [INFO] Player451 left the game
+2014-02-01 21:28:19 [SERVER] [INFO] Saving worlds
+2014-02-01 21:28:19 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 21:28:19 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 21:28:19 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-01 21:29:14 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-01 21:29:14 [SERVER] [INFO] Generating keypair
+2014-02-01 21:29:14 [SERVER] [INFO] Preparing start region for level 0
+2014-02-01 21:29:15 [SERVER] [INFO] Preparing spawn area: 97%
+2014-02-01 21:29:15 [SERVER] [INFO] Player619[/127.0.0.1:0] logged in with entity id 35 at (1079.3893110295473, 4.248986633324363, -573.3000000119209)
+2014-02-01 21:29:15 [SERVER] [INFO] Player619 joined the game
+2014-02-01 21:29:19 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Ticking memory connection
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at net.minecraft.world.World.canPlaceEntityOnSide(World.java:3773)
+	at com.nitrogenegames.netcraft.block.ItemBlockProjector.onItemUse(ItemBlockProjector.java:143)
+	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
+	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
+	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
+	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	... 6 more
+2014-02-01 21:29:19 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-02-01_21.29.19-server.txt
+2014-02-01 21:29:19 [SERVER] [INFO] Stopping server
+2014-02-01 21:29:19 [SERVER] [INFO] Saving players
+2014-02-01 21:29:19 [SERVER] [INFO] Player619 left the game
+2014-02-01 21:29:19 [SERVER] [INFO] Saving worlds
+2014-02-01 21:29:19 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-01 21:29:20 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-01 21:29:20 [SERVER] [INFO] Saving chunks for level 'New World'/The End
