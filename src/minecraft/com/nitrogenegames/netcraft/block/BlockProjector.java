@@ -8,8 +8,12 @@ import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 import com.nitrogenegames.netcraft.machine.TileEntityProjector;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
@@ -72,12 +76,12 @@ public class BlockProjector extends BlockContainer {
     public ArrayList<ItemStack> getBlockDropped(World w, int x, int y, int z, int meta, int fortune){
     	ArrayList<ItemStack> list = new ArrayList<ItemStack>();
     	ItemStack s;
-		if(this.getDamageValue(w, x, y, z) == 0) {
-	    	s = new ItemStack(Netcraft.itemProjectorBeam, 1, 0);
-		} else if(this.getDamageValue(w, x, y, z) == 1) {
-	    	s = new ItemStack(Netcraft.itemProjectorRadial, 1, 1);
+		if(meta == 0) {
+	    	s = new ItemStack(Netcraft.itemProjector, 1, 0);
+		} else if(meta == 1) {
+	    	s = new ItemStack(Netcraft.itemProjector, 1, 1);
 		} else {
-	    	s = new ItemStack(Netcraft.itemProjectorSatelite, 1, 2);
+	    	s = new ItemStack(Netcraft.itemProjector, 1, 2);
 		}
     	//TileEntityProjector t = (TileEntityProjector) Netcraft.getCached(x, y, z);
     	//Netcraft.removeCached(x, y, z);
@@ -87,6 +91,14 @@ public class BlockProjector extends BlockContainer {
        list.add(s);
 
 		return list;
+    }
+    @SideOnly(Side.CLIENT)
+    public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
+    {
+        for (int var4 = 0; var4 < 2; ++var4)
+        {
+            par3List.add(new ItemStack(par1, 1, var4));
+        }
     }
 	
 	@Override

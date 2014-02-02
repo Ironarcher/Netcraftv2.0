@@ -90,12 +90,9 @@ public class Netcraft {
 	public static Block wirelessitemterminal;
 	
 	//projectors
-	public static Block projectorBeam;
-	public static Block projectorRadial;
-	public static Block projectorSatelite;
-	public static Item itemProjectorBeam;
-	public static Item itemProjectorRadial;
-	public static Item itemProjectorSatelite;
+	public static Block projector;
+	public static Item itemProjector;
+
 	
 	//upgrades
 	public static Item baseupgrade;
@@ -673,13 +670,9 @@ public class Netcraft {
 		itemstoragemodule = new ItemModules(3847).setUnlocalizedName("itemstoragemodule");
 		forcefieldmodule = new ItemModules(3848).setUnlocalizedName("forcefieldmodule");
 	
-		projectorSatelite= new BlockProjector(3866, Material.iron).setUnlocalizedName("prosatelite");
-		projectorBeam= new BlockProjector(3867, Material.iron).setUnlocalizedName("probeam");
-		projectorRadial= new BlockProjector(3868, Material.iron).setUnlocalizedName("proradial");
+		projector= new BlockProjector(3866, Material.iron).setUnlocalizedName("projector");
 		
-		itemProjectorSatelite= new ItemBlockProjector(3912, EnumProjector.SATELITE).setUnlocalizedName("itemsatelite");
-		itemProjectorBeam= new ItemBlockProjector(3913, EnumProjector.BEAM).setUnlocalizedName("itembeam");
-		itemProjectorRadial= new ItemBlockProjector(3914, EnumProjector.CIRCULAR).setUnlocalizedName("itemradial");
+		itemProjector = new ItemBlockProjector(3912).setUnlocalizedName("itemprojector");
 
 		
 		register();
@@ -701,12 +694,12 @@ public class Netcraft {
 		LanguageRegistry.addName(block, name);
 	}
 	public void registerBlock(Block block, String name, int metadata){
-		GameRegistry.registerBlock(block, block.getUnlocalizedName());
+
 		ItemStack multiBlockStack = new ItemStack(block, 1, metadata);
 		LanguageRegistry.addName(multiBlockStack, name);
 	}
 	public void registerItem(Item item, String name, int metadata){
-		GameRegistry.registerItem(item, item.getUnlocalizedName());
+
 		ItemStack multiBlockStack = new ItemStack(item, 1, metadata);
 		LanguageRegistry.addName(multiBlockStack, name);
 	}
@@ -716,9 +709,11 @@ public class Netcraft {
 	}
 	
 	public void register(){
-		registerBlock(projectorBeam, "Beam Projector Block", 0);
-		registerBlock(projectorSatelite, "Satelite Projector Block", 2);
-		registerBlock(projectorRadial, "Radial Projector Block", 1);
+		GameRegistry.registerBlock(projector, projector.getUnlocalizedName());
+		registerBlock(projector, "Beam Projector Block", 0);
+		registerBlock(projector, "Satelite Projector Block", 2);
+		registerBlock(projector, "Radial Projector Block", 1);
+
 
 		
 		registerBlock(blockNetworkFabricatorActive, "Network Fabricator Active");
@@ -753,9 +748,11 @@ public class Netcraft {
 		registerItem(rangeupgrade, "Range Upgrade");
 		registerItem(superdatachip, "Supernatural Datachip");
 		registerItem(forcefieldemitters, "Force Field Emitter");
-		registerItem(itemProjectorBeam, "Beam Projector", 0);
-		registerItem(itemProjectorSatelite, "Satelite Projector", 2);
-		registerItem(itemProjectorRadial, "Radial Projector", 1);
+		GameRegistry.registerItem(itemProjector, itemProjector.getUnlocalizedName());
+		registerItem(itemProjector, "Beam Projector", 0);
+		registerItem(itemProjector, "Satelite Projector", 2);
+		registerItem(itemProjector, "Radial Projector", 1);
+
 		
 		GameRegistry.addRecipe(new ItemStack(Netcraft.matrixcube,1), new Object[]{
 			"SDS","DAD","SDS",'S', Block.stone, 'D', Netcraft.netdatachip, 'A', ic2.api.item.Items.getItem("advancedMachine"),
@@ -832,9 +829,9 @@ public class Netcraft {
 		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.design.itemID, Netcraft.superdatachip.itemID, Item.netherStar.itemID, Item.magmaCream.itemID, new ItemStack(Netcraft.resistmodule, 1)));
 		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.design.itemID, Netcraft.superdatachip.itemID, Item.netherStar.itemID, Item.sugar.itemID, new ItemStack(Netcraft.speedmodule, 1)));
 		
-		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.communicator.itemID, Netcraft.centraldatachip.itemID, Block.blockRedstone.blockID, Block.blockRedstone.blockID, new ItemStack(Netcraft.itemProjectorBeam, 1, 0)));
-		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.communicator.itemID, Netcraft.centraldatachip.itemID, Netcraft.centraldatachip.itemID, ic2.api.item.Items.getItem("teslaCoil").itemID, new ItemStack(Netcraft.itemProjectorRadial, 1, 1)));
-		fabricatorRecipes.add(new FabricatorRecipe(Block.beacon.blockID, Netcraft.superdatachip.itemID, Block.glass.blockID, Block.glass.blockID, new ItemStack(Netcraft.itemProjectorSatelite, 1, 2)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.communicator.itemID, Netcraft.centraldatachip.itemID, Block.blockRedstone.blockID, Block.blockRedstone.blockID, new ItemStack(Netcraft.itemProjector, 1, 0)));
+		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.communicator.itemID, Netcraft.centraldatachip.itemID, Netcraft.centraldatachip.itemID, ic2.api.item.Items.getItem("teslaCoil").itemID, new ItemStack(Netcraft.itemProjector, 1, 1)));
+		fabricatorRecipes.add(new FabricatorRecipe(Block.beacon.blockID, Netcraft.superdatachip.itemID, Block.glass.blockID, Block.glass.blockID, new ItemStack(Netcraft.itemProjector, 1, 2)));
 		}
 	public static int[] decompileNBT(String s)
 	{
@@ -905,11 +902,11 @@ public class Netcraft {
 		}
 		int i = s.itemID;
 		int i1 = s1.itemID;
-		if(i == Netcraft.itemProjectorRadial.itemID) {
+		if(i == Netcraft.itemProjector.itemID && s.getItemDamage() == 1) {
 			if(i1 == Netcraft.rangeupgrade.itemID) {
 			return true;
 			}
-		}else if(i == Netcraft.itemProjectorBeam.itemID) {
+		}else if(i == Netcraft.itemProjector.itemID && s.getItemDamage() == 0) {
 			if(i1 == Netcraft.rangeupgrade.itemID) {
 			return true;
 			}

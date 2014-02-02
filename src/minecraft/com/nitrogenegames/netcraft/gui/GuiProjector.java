@@ -135,19 +135,19 @@ public class GuiProjector extends GuiContainer{
 		} else if(button.id == 6) {
 			if(id + 10 < 100) {	
 				id = id - 10;
-			    this.networkFabricator.id = id;
+			    this.networkFabricator.pid = id;
 			} else {
 				id = 100;
-			    this.networkFabricator.id = id;
+			    this.networkFabricator.pid = id;
 			}
 		
 		} else if(button.id == 7) {
 			if(id - 10 > 1) {
 				id = id - 10;
-			    this.networkFabricator.id = id;
+			    this.networkFabricator.pid = id;
 			} else {
 				id = 1;
-			    this.networkFabricator.id = id;
+			    this.networkFabricator.pid = id;
 			}
 		} 
 	} 
