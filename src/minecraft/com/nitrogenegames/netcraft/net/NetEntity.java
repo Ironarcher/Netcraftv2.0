@@ -15,6 +15,7 @@ public class NetEntity {
 	public int[] core;
 	public NetEntity(World w) {
 		worldObj = w;
+		
 	}
 	public NetEntity(World w, ArrayList t) {
 		worldObj = w;

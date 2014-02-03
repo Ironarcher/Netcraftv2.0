@@ -53,7 +53,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public int tabPage = 0;
 	public boolean isUsingPower = false;
 	//ISidedInventory
-	public NetEntity net;
+	public NetEntity net = new NetEntity();
 	private int id = 0;
 	public int maxenergy = 1000000;
 	private boolean init;

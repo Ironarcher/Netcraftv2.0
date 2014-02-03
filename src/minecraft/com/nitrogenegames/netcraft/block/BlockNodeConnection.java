@@ -117,13 +117,17 @@ public class BlockNodeConnection extends Block implements INetBlock {
 	 @Override
 	 public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
 	 {
-			this.getEntity(par1World, par2, par3, par4).update();
+		 if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
+				this.getEntity(par1World, par2, par3, par4).update();
+			 	}
 			updateConnection(par1World, par2, par3, par4);
 	 }
 	@Override
 	public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
-		this.getEntity(par1World, par2, par3, par4).update();
-		
+	{
+		if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
+			this.getEntity(par1World, par2, par3, par4).update();
+		 	}
 		if(!(par5 == 451)) {
 		updateConnection(par1World, par2, par3, par4);
 		} else {
@@ -131,7 +135,9 @@ public class BlockNodeConnection extends Block implements INetBlock {
 		}
 	}
 	public void updateConnectionWithoutNotify(World par1World, int par2, int par3, int par4) {
-		this.getEntity(par1World, par2, par3, par4).update();
+		if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
+			this.getEntity(par1World, par2, par3, par4).update();
+		 	}
 		if(!par1World.isRemote) {
 		state = Netcraft.isConectedToCore(par1World, par2, par3, par4);
 		if(state == false) {
