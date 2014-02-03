@@ -53,7 +53,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public int tabPage = 0;
 	public boolean isUsingPower = false;
 	//ISidedInventory
-	public NetEntity net = new NetEntity();
+	public NetEntity net;
 	private int id = 0;
 	public int maxenergy = 1000000;
 	private boolean init;
@@ -65,7 +65,10 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public int moduleCurrentPage = 1;
 	public int moduleMaxPages = 3;
 	public String moduleSelected = "None";
-	
+	/*public TileEntityCore() {
+		this.net = new NetEntity(worldObj, new int[]{this.xCoord, this.yCoord, this.zCoord});
+		net.update();
+	}*/
 	@Override
     public int getSizeInventory() {
             return inv.length;
@@ -459,6 +462,8 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 
 	@Override
 	public NetEntity getEntity() {
+		System.out.println("RETURNING");
+		System.out.println(this.getNet() == null);
 		return this.getNet();
 	}
 	

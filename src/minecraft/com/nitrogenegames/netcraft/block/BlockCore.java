@@ -85,9 +85,9 @@ public class BlockCore extends BlockContainer implements INetBlock {
 	          if (!par1World.isRemote)
 	          {
 	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
-	        	  	tileEntity.net = new NetEntity(par1World);
+	        	  	tileEntity.net = new NetEntity(par1World, new int[]{par2, par3, par4});
 	        	  	tileEntity.net.objects = Netcraft.getConnectedObjects(par1World, par2, par3, par4);
-	                  
+tileEntity.net.update();
 	                  boolean powered = tileEntity.powered;
 	                  if (powered && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
 	                  {
@@ -105,7 +105,7 @@ public class BlockCore extends BlockContainer implements INetBlock {
 	 {
 		 if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
 				this.getEntity(par1World, par2, par3, par4).update();
-			 	}
+	      }
 	          if (!par1World.isRemote)
 	          {
 	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
@@ -296,6 +296,7 @@ public class BlockCore extends BlockContainer implements INetBlock {
     	@Override
     	public NetEntity getEntity(World par1, int par2, int par3, int par4) {
     		// TODO Auto-generated method stub
+    		
     		return ((TileEntityCore) par1.getBlockTileEntity(getCore(par1, par2, par3, par4)[0], getCore(par1, par2, par3, par4)[1] ,  getCore(par1, par2, par3, par4)[2])).getEntity();
     	}
 

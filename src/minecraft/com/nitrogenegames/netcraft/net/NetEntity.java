@@ -13,9 +13,9 @@ public class NetEntity {
 	public ArrayList connectors = new ArrayList();
 	public World worldObj;
 	public int[] core;
-	public NetEntity(World w) {
+	public NetEntity(World w, int[] c) {
 		worldObj = w;
-		
+		this.core = c;
 	}
 	public NetEntity(World w, ArrayList t) {
 		worldObj = w;
