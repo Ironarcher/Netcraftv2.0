@@ -27,6 +27,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import com.nitrogenegames.netcraft.Netcraft;
+import com.nitrogenegames.netcraft.block.BlockNodeConnection;
 import com.nitrogenegames.netcraft.machine.ContainerCore;
 import com.nitrogenegames.netcraft.machine.SlotNetcraft;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
@@ -66,7 +67,6 @@ public class GuiCore extends GuiContainer {
         	ContainerCore parentContainer = (ContainerCore) super.inventorySlots;
         	//System.out.println(tel.energy);
         	//System.out.println(parentContainer.tileEntity.energy);
-
                 fontRenderer.drawString("Net Core", 100 - (fontRenderer.getStringWidth("Net Core")/2) + 25, 6, 4210752);
                 //202, 252, middle is 227
                 int ewidth = fontRenderer.getStringWidth("EU:");
@@ -93,9 +93,8 @@ public class GuiCore extends GuiContainer {
                 	fontRenderer.drawString("Module Running: " + tel.moduleSelected, 66+25, 74, 4210752);
                 	
                 } else if(selected == 1){
-                	int j = 0;
-                	
-                	this.drawItemStack(new ItemStack(Netcraft.connectionnode, 1), 20, 20, j + "");
+
+                	//this.drawItemStack(new ItemStack(Netcraft.connectionnode, 1), 50+20, 20, j + "");
                 } else if(selected == 2){
                 	//POWER
                 	
@@ -144,7 +143,9 @@ public class GuiCore extends GuiContainer {
             	//Main box of module storage
             	drawTexturedModalRect(x+19, y+16, 80, 185, 90, 18);
             } else if(selected == 1){
+              	int j = this.tel.getEntity().connectors.size();
             	
+                this.drawItemStack(new ItemStack(Netcraft.connectionnode, 1), x+20, y+20, j + ""); 
             } else if(selected == 2){
             	//POWER
             	
@@ -224,6 +225,7 @@ public class GuiCore extends GuiContainer {
             //this.guiTop = (this.height - this.ySize) / 2;
             initTabs();
             updateTabs();
+
 
         }
         public void updateTabs() {

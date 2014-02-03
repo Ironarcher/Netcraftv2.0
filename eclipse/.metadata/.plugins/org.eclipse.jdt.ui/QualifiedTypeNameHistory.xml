@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ic2.api.energy.event.EnergyTileLoadEvent"/>
-<fullyQualifiedTypeName name="net.minecraftforge.common.MinecraftForge"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.Tessellator"/>
 <fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
@@ -17,7 +15,6 @@
 <fullyQualifiedTypeName name="net.minecraft.util.Icon"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.blockNetworkFabricator"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="net.minecraft.world.World"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.EntityLivingBase"/>
 <fullyQualifiedTypeName name="net.minecraft.util.MathHelper"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
@@ -34,8 +31,6 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
 <fullyQualifiedTypeName name="net.minecraft.block.BlockContainer"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.net.INet"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityCore"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.block.BlockProjector"/>
 <fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
 <fullyQualifiedTypeName name="net.minecraft.item.ItemBlock"/>
@@ -60,4 +55,9 @@
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderItem"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.client.registry.RenderingRegistry"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.net.INet"/>
+<fullyQualifiedTypeName name="net.minecraft.world.World"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityCore"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.net.INetBlock"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.block.BlockNodeConnection"/>
 </qualifiedTypeNameHistroy>

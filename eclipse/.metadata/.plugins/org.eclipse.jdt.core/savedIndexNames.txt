@@ -1,5 +1,4 @@
 INDEX VERSION 1.126+C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\eclipse\.metadata\.plugins\org.eclipse.jdt.core
-286606776.index
 3065916431.index
 30765161.index
 305854171.index

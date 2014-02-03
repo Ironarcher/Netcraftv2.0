@@ -10,6 +10,7 @@ import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.item.ItemModules;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 import com.nitrogenegames.netcraft.net.INet;
+import com.nitrogenegames.netcraft.net.INetBlock;
 import com.nitrogenegames.netcraft.net.NetEntity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -37,7 +38,7 @@ import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.Packet132TileEntityData;
 import net.minecraftforge.common.ForgeDirection;
 
-public class BlockCore extends BlockContainer {
+public class BlockCore extends BlockContainer implements INetBlock {
 
 	 public BlockCore (int id, String texture) {
          super(id, Material.rock);
@@ -78,7 +79,7 @@ public class BlockCore extends BlockContainer {
 	 @Override
 	 public void onBlockAdded(World par1World, int par2, int par3, int par4)
 	 {
-		 
+			this.getEntity(par1World, par2, par3, par4).update();
 	          if (!par1World.isRemote)
 	          {
 	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
@@ -100,6 +101,7 @@ public class BlockCore extends BlockContainer {
 	 @Override
 	 public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
 	 {
+			this.getEntity(par1World, par2, par3, par4).update();
 	          if (!par1World.isRemote)
 	          {
 	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
@@ -147,6 +149,7 @@ public class BlockCore extends BlockContainer {
      }
      public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack)
      {
+ 		this.getEntity(par1World, par2, par3, par4).update();
      //int l = MathHelper.floor_double((double)(par5EntityLivingBase.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
     //par1World.setBlockMetadataWithNotify(par2, par3, par4, l, 2);
      
@@ -271,6 +274,23 @@ public class BlockCore extends BlockContainer {
         public TileEntity createNewTileEntity(World mainworld) {
             return new TileEntityCore();
     }
+
+
+    	@Override
+    	public ArrayList getConnected(World par1, int par2, int par3, int par4) {
+    		// TODO Auto-generated method stub
+    		return Netcraft.getConnectedObjects(par1, par2, par3, par4);
+    	}
+    	@Override
+    	public int[] getCore(World par1, int par2, int par3, int par4) {
+    		// TODO Auto-generated method stub
+    		return Netcraft.getCoreCoordinates(par1, par2, par3, par4);
+    	}
+    	@Override
+    	public NetEntity getEntity(World par1, int par2, int par3, int par4) {
+    		// TODO Auto-generated method stub
+    		return ((TileEntityCore) par1.getBlockTileEntity(getCore(par1, par2, par3, par4)[0], getCore(par1, par2, par3, par4)[1] ,  getCore(par1, par2, par3, par4)[2])).getEntity();
+    	}
 
         
 
