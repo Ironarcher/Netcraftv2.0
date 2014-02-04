@@ -17829,3 +17829,158 @@ Caused by: java.lang.NullPointerException
 2014-02-03 15:26:07 [SERVER] [INFO] Stopping server
 2014-02-03 15:26:07 [SERVER] [INFO] Saving players
 2014-02-03 15:26:07 [SERVER] [INFO] Player765 left the game
+2014-02-04 14:23:33 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-04 14:23:33 [SERVER] [INFO] Generating keypair
+2014-02-04 14:23:33 [SERVER] [INFO] Preparing start region for level 0
+2014-02-04 14:23:34 [SERVER] [INFO] Player940[/127.0.0.1:0] logged in with entity id 23 at (1080.351215533513, 4.0, -560.2750721106501)
+2014-02-04 14:23:34 [SERVER] [INFO] Player940 joined the game
+2014-02-04 14:23:51 [SERVER] [INFO] Stopping server
+2014-02-04 14:23:51 [SERVER] [INFO] Saving players
+2014-02-04 14:23:52 [SERVER] [INFO] Player940 left the game
+2014-02-04 14:23:52 [SERVER] [INFO] Saving worlds
+2014-02-04 14:23:52 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-04 14:23:52 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-04 14:23:52 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-04 14:25:00 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-04 14:25:00 [SERVER] [INFO] Generating keypair
+2014-02-04 14:25:01 [SERVER] [INFO] Preparing start region for level 0
+2014-02-04 14:25:02 [SERVER] [INFO] Player870[/127.0.0.1:0] logged in with entity id 23 at (1080.2220646021115, 4.0, -560.6017637217011)
+2014-02-04 14:25:02 [SERVER] [INFO] Player870 joined the game
+2014-02-04 14:25:17 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Exception while updating neighbours
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.Netcraft.getCoreCoordinates(Netcraft.java:227)
+	at com.nitrogenegames.netcraft.block.BlockNodeConnection.onNeighborBlockChange(BlockNodeConnection.java:130)
+	at net.minecraft.world.World.notifyBlockOfNeighborChange(World.java:845)
+	at net.minecraft.world.World.notifyBlocksOfNeighborChange(World.java:791)
+	at net.minecraft.world.World.notifyBlockChange(World.java:741)
+	at net.minecraft.world.World.setBlock(World.java:573)
+	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:241)
+	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:119)
+	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
+	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
+	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
+	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	... 6 more
+2014-02-04 14:25:17 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-02-04_14.25.17-server.txt
+2014-02-04 14:25:17 [SERVER] [INFO] Stopping server
+2014-02-04 14:25:17 [SERVER] [INFO] Saving players
+2014-02-04 14:25:17 [SERVER] [INFO] Stopping server
+2014-02-04 14:25:17 [SERVER] [INFO] Saving players
+2014-02-04 14:26:41 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-04 14:26:41 [SERVER] [INFO] Generating keypair
+2014-02-04 14:26:42 [SERVER] [INFO] Preparing start region for level 0
+2014-02-04 14:26:43 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Exception while updating neighbours
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:674)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.Netcraft.getCoreCoordinates(Netcraft.java:227)
+	at com.nitrogenegames.netcraft.block.BlockNodeConnection.onNeighborBlockChange(BlockNodeConnection.java:130)
+	at net.minecraft.world.World.notifyBlockOfNeighborChange(World.java:845)
+	at ic2.core.energy.EnergyNetLocal.addTileEntity(EnergyNetLocal.java:115)
+	at ic2.core.energy.EventHandler.onEnergyTileLoad(EventHandler.java:26)
+	at net.minecraftforge.event.ASMEventHandler_20_EventHandler_onEnergyTileLoad_EnergyTileLoadEvent.invoke(.dynamic)
+	at net.minecraftforge.event.ASMEventHandler.invoke(ASMEventHandler.java:39)
+	at net.minecraftforge.event.EventBus.post(EventBus.java:108)
+	at com.nitrogenegames.netcraft.machine.TileEntityCore.updateEntity(TileEntityCore.java:229)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	... 4 more
+2014-02-04 14:26:43 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-02-04_14.26.43-server.txt
+2014-02-04 14:26:43 [SERVER] [INFO] Stopping server
+2014-02-04 14:26:43 [SERVER] [INFO] Saving players
+2014-02-04 14:26:43 [SERVER] [INFO] Saving worlds
+2014-02-04 14:26:43 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-04 14:26:43 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-04 14:26:43 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-04 14:27:57 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-04 14:27:57 [SERVER] [INFO] Generating keypair
+2014-02-04 14:27:57 [SERVER] [INFO] Preparing start region for level 0
+2014-02-04 14:27:58 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Exception while updating neighbours
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:674)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.Netcraft.getCoreCoordinates(Netcraft.java:229)
+	at com.nitrogenegames.netcraft.block.BlockNodeConnection.onNeighborBlockChange(BlockNodeConnection.java:130)
+	at net.minecraft.world.World.notifyBlockOfNeighborChange(World.java:845)
+	at ic2.core.energy.EnergyNetLocal.addTileEntity(EnergyNetLocal.java:115)
+	at ic2.core.energy.EventHandler.onEnergyTileLoad(EventHandler.java:26)
+	at net.minecraftforge.event.ASMEventHandler_20_EventHandler_onEnergyTileLoad_EnergyTileLoadEvent.invoke(.dynamic)
+	at net.minecraftforge.event.ASMEventHandler.invoke(ASMEventHandler.java:39)
+	at net.minecraftforge.event.EventBus.post(EventBus.java:108)
+	at com.nitrogenegames.netcraft.machine.TileEntityCore.updateEntity(TileEntityCore.java:229)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	... 4 more
+2014-02-04 14:27:58 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-02-04_14.27.58-server.txt
+2014-02-04 14:27:58 [SERVER] [INFO] Stopping server
+2014-02-04 14:27:58 [SERVER] [INFO] Saving players
+2014-02-04 14:27:58 [SERVER] [INFO] Saving worlds
+2014-02-04 14:27:58 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-04 14:27:58 [SERVER] [INFO] Stopping server
+2014-02-04 14:27:58 [SERVER] [INFO] Saving players
+2014-02-04 14:29:14 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-04 14:29:14 [SERVER] [INFO] Generating keypair
+2014-02-04 14:29:14 [SERVER] [INFO] Preparing start region for level 0
+2014-02-04 14:29:16 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Exception while updating neighbours
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:674)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.Netcraft.getCoreCoordinates(Netcraft.java:227)
+	at com.nitrogenegames.netcraft.block.BlockNodeConnection.onNeighborBlockChange(BlockNodeConnection.java:130)
+	at net.minecraft.world.World.notifyBlockOfNeighborChange(World.java:845)
+	at ic2.core.energy.EnergyNetLocal.addTileEntity(EnergyNetLocal.java:115)
+	at ic2.core.energy.EventHandler.onEnergyTileLoad(EventHandler.java:26)
+	at net.minecraftforge.event.ASMEventHandler_20_EventHandler_onEnergyTileLoad_EnergyTileLoadEvent.invoke(.dynamic)
+	at net.minecraftforge.event.ASMEventHandler.invoke(ASMEventHandler.java:39)
+	at net.minecraftforge.event.EventBus.post(EventBus.java:108)
+	at com.nitrogenegames.netcraft.machine.TileEntityCore.updateEntity(TileEntityCore.java:229)
+	at net.minecraft.world.World.updateEntities(World.java:2209)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:550)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:668)
+	... 4 more
+2014-02-04 14:29:16 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-02-04_14.29.16-server.txt
+2014-02-04 14:29:16 [SERVER] [INFO] Stopping server
+2014-02-04 14:29:16 [SERVER] [INFO] Saving players
+2014-02-04 14:29:16 [SERVER] [INFO] Saving worlds
+2014-02-04 14:29:16 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-04 14:31:14 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-04 14:31:14 [SERVER] [INFO] Generating keypair
+2014-02-04 14:31:14 [SERVER] [INFO] Preparing start region for level 0
+2014-02-04 14:31:15 [SERVER] [INFO] Player453[/127.0.0.1:0] logged in with entity id 24 at (1116.3582143522456, 4.0, -582.1459693861316)
+2014-02-04 14:31:15 [SERVER] [INFO] Player453 joined the game
+2014-02-04 14:31:19 [SERVER] [INFO] Saving and pausing game...
+2014-02-04 14:31:19 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-04 14:31:19 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-04 14:31:19 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-04 14:31:20 [SERVER] [INFO] Stopping server
+2014-02-04 14:31:20 [SERVER] [INFO] Saving players
+2014-02-04 14:31:20 [SERVER] [INFO] Player453 left the game
+2014-02-04 14:31:20 [SERVER] [INFO] Saving worlds
+2014-02-04 14:31:20 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2014-02-04 14:31:20 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2014-02-04 14:31:20 [SERVER] [INFO] Saving chunks for level 'New World'/The End

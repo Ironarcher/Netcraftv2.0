@@ -11,7 +11,7 @@ import com.nitrogenegames.netcraft.item.ItemModules;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
 import com.nitrogenegames.netcraft.net.INet;
 import com.nitrogenegames.netcraft.net.INetBlock;
-import com.nitrogenegames.netcraft.net.NetEntity;
+
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -79,15 +79,11 @@ public class BlockCore extends BlockContainer implements INetBlock {
 	 @Override
 	 public void onBlockAdded(World par1World, int par2, int par3, int par4)
 	 {
-		 	if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
-			this.getEntity(par1World, par2, par3, par4).update();
-		 	}
+		 TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
+		 tileEntity.update();
 	          if (!par1World.isRemote)
 	          {
-	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
-	        	  	tileEntity.net = new NetEntity(par1World, new int[]{par2, par3, par4});
-	        	  	tileEntity.net.objects = Netcraft.getConnectedObjects(par1World, par2, par3, par4);
-tileEntity.net.update();
+	        	  
 	                  boolean powered = tileEntity.powered;
 	                  if (powered && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
 	                  {
@@ -103,12 +99,12 @@ tileEntity.net.update();
 	 @Override
 	 public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
 	 {
-		 if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
-				this.getEntity(par1World, par2, par3, par4).update();
-	      }
+   	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
+				tileEntity.update();
+	    
 	          if (!par1World.isRemote)
 	          {
-	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
+	        	  //TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
 	        	  	
                   
                   boolean powered = tileEntity.powered;
@@ -153,9 +149,8 @@ tileEntity.net.update();
      }
      public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLivingBase par5EntityLivingBase, ItemStack par6ItemStack)
      {
-    	 if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
- 			this.getEntity(par1World, par2, par3, par4).update();
- 		 	}
+   	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
+   	  tileEntity.update();
     	 
      //int l = MathHelper.floor_double((double)(par5EntityLivingBase.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
     //par1World.setBlockMetadataWithNotify(par2, par3, par4, l, 2);
@@ -292,12 +287,6 @@ tileEntity.net.update();
     	public int[] getCore(World par1, int par2, int par3, int par4) {
     		// TODO Auto-generated method stub
     		return Netcraft.getCoreCoordinates(par1, par2, par3, par4);
-    	}
-    	@Override
-    	public NetEntity getEntity(World par1, int par2, int par3, int par4) {
-    		// TODO Auto-generated method stub
-    		
-    		return ((TileEntityCore) par1.getBlockTileEntity(getCore(par1, par2, par3, par4)[0], getCore(par1, par2, par3, par4)[1] ,  getCore(par1, par2, par3, par4)[2])).getEntity();
     	}
 
         

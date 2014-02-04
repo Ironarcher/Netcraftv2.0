@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.gui.GuiCore;
 import com.nitrogenegames.netcraft.net.INet;
-import com.nitrogenegames.netcraft.net.NetEntity;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.network.PacketDispatcher;
@@ -221,11 +220,6 @@ public class TileEntityProjector extends TileEntity implements ISidedInventory, 
 		return Netcraft.getCoreCoordinates(worldObj, this.xCoord, this.yCoord, this.zCoord);
 	}
 
-	@Override
-	public NetEntity getEntity() {
-		
-		return ((TileEntityCore) worldObj.getBlockTileEntity(getCore()[0], getCore()[1], getCore()[2])).net;
 
-	}
 
 }

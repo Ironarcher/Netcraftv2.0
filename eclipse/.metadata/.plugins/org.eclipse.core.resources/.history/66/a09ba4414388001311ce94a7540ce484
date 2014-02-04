@@ -1,5 +1,0 @@
-package com.nitrogenegames.netcraft.net;
-
-public interface INet {
-
-}

@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.gui.GuiCore;
 import com.nitrogenegames.netcraft.net.INet;
-import com.nitrogenegames.netcraft.net.NetEntity;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.network.PacketDispatcher;
@@ -53,7 +52,6 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public int tabPage = 0;
 	public boolean isUsingPower = false;
 	//ISidedInventory
-	public NetEntity net;
 	private int id = 0;
 	public int maxenergy = 1000000;
 	private boolean init;
@@ -172,17 +170,6 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
             if(tagCompound.hasKey("energy")){
             	this.energy = tagCompound.getInteger("energy");
             }
-            if(tagCompound.hasKey("net")){
-            	try {
-					this.net = ((NetEntity) deserialize(tagCompound.getByteArray("net")));
-				} catch (ClassNotFoundException e) {
-					// TODO Auto-generated catch block
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-				}
-            } else {
-            	
-            }
             if(tagCompound.hasKey("pressed")){
             	this.tabPage = tagCompound.getInteger("pressed");
 
@@ -229,11 +216,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
             tagCompound.setBoolean("POWER", powered);
             tagCompound.setInteger("energy", this.energy);
             tagCompound.setInteger("pressed", this.tabPage);
-            try {
-				tagCompound.setByteArray("net", serialize(this.net));
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+
     }
     
     
@@ -446,9 +429,6 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 		
 		return tabPage;
 	}
-	public NetEntity getNet() {
-		return net;
-	}
 
 	@Override
 	public ArrayList getConnected() {
@@ -460,12 +440,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 		return new int[] {xCoord, yCoord, zCoord};
 	}
 
-	@Override
-	public NetEntity getEntity() {
-		System.out.println("RETURNING");
-		System.out.println(this.getNet() == null);
-		return this.getNet();
-	}
+
 	
 	public int getEnergyGainPerTick(){
 		return energygainpertick;
@@ -506,9 +481,29 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 
 	@Override
 	public boolean isTeleporterCompatible(ForgeDirection side) {
-		// TODO Auto-generated method stub
+		//  Auto-generated method stub
 		return false;
 	}
 	*/
+	
+	//TODO NET STUFF
+	public ArrayList objects = new ArrayList();
+	public ArrayList nodes = new ArrayList();
+	public ArrayList connectors = new ArrayList();
+
+	public void update() {
+		System.out.println("UPDATING");
+    	ArrayList c = Netcraft.getConnectedObjects(worldObj, xCoord, yCoord, zCoord);
+    	objects = c;
+    	ArrayList d = new ArrayList();
+        for(int i = 0; i < c.size(); i++) {
+    		System.out.println("SIZE: " + c.size());
+        	if(worldObj.getBlockId(((int[]) c.get(i))[0], ((int[]) c.get(i))[1], ((int[]) c.get(i))[2]) == Netcraft.connectionnode.blockID) {
+        		d.add(new int[]{((int[]) c.get(i))[0], ((int[]) c.get(i))[1], ((int[]) c.get(i))[2]});
+        		System.out.println("ADDING NODE");
+        	}
+        }
+        connectors = d;
+	}
 
 }

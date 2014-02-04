@@ -971,3 +971,38 @@ Caused by: java.lang.NullPointerException
 2014-02-02 21:11:10 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
 2014-02-02 21:11:10 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
 2014-02-02 21:11:10 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2014-02-04 14:31:26 [SERVER] [INFO] Starting integrated minecraft server version 1.6.4
+2014-02-04 14:31:26 [SERVER] [INFO] Generating keypair
+2014-02-04 14:31:26 [SERVER] [INFO] Preparing start region for level 0
+2014-02-04 14:31:27 [SERVER] [INFO] Player453[/127.0.0.1:0] logged in with entity id 1986 at (1116.3582143522456, 4.0, -582.1459693861316)
+2014-02-04 14:31:27 [SERVER] [INFO] Player453 joined the game
+2014-02-04 14:31:31 [SERVER] [INFO] [Player453: Set own game mode to Creative Mode]
+2014-02-04 14:31:52 [SERVER] [SEVERE] Encountered an unexpected exception ReportedException
+net.minecraft.util.ReportedException: Exception while updating neighbours
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:63)
+	at net.minecraft.server.integrated.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:109)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:691)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:587)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:129)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:484)
+	at net.minecraft.server.ThreadMinecraftServer.run(ThreadMinecraftServer.java:16)
+Caused by: java.lang.NullPointerException
+	at com.nitrogenegames.netcraft.block.BlockNodeConnection.onNeighborBlockChange(BlockNodeConnection.java:130)
+	at net.minecraft.world.World.notifyBlockOfNeighborChange(World.java:845)
+	at net.minecraft.world.World.notifyBlocksOfNeighborChange(World.java:790)
+	at net.minecraft.world.World.notifyBlockChange(World.java:741)
+	at net.minecraft.world.World.setBlock(World.java:573)
+	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:241)
+	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:119)
+	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:153)
+	at net.minecraft.item.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:434)
+	at net.minecraft.network.NetServerHandler.handlePlace(NetServerHandler.java:556)
+	at net.minecraft.network.packet.Packet15Place.processPacket(Packet15Place.java:79)
+	at net.minecraft.network.MemoryConnection.processReadPackets(MemoryConnection.java:89)
+	at net.minecraft.network.NetServerHandler.networkTick(NetServerHandler.java:141)
+	at net.minecraft.network.NetworkListenThread.networkTick(NetworkListenThread.java:54)
+	... 6 more
+2014-02-04 14:31:52 [SERVER] [SEVERE] This crash report has been saved to: C:\Users\Joseph\Documents\GitHub\Netcraftv2.0\jars\.\crash-reports\crash-2014-02-04_14.31.52-server.txt
+2014-02-04 14:31:52 [SERVER] [INFO] Stopping server
+2014-02-04 14:31:52 [SERVER] [INFO] Saving players
+2014-02-04 14:31:52 [SERVER] [INFO] Player453 left the game

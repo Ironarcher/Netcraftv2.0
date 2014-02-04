@@ -143,7 +143,7 @@ public class GuiCore extends GuiContainer {
             	//Main box of module storage
             	drawTexturedModalRect(x+19, y+16, 80, 185, 90, 18);
             } else if(selected == 1){
-              	int j = this.tel.getEntity().connectors.size();
+              	int j = this.tel.connectors.size();
             	
                 this.drawItemStack(new ItemStack(Netcraft.connectionnode, 1), x+20, y+20, j + ""); 
             } else if(selected == 2){
