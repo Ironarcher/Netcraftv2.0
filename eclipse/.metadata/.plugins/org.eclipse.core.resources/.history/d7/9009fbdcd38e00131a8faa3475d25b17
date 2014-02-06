@@ -1,0 +1,48 @@
+package com.nitrogenegames.netcraft.misc;
+
+import java.io.ByteArrayOutputStream;
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectOutputStream;
+
+import net.minecraft.network.packet.NetHandler;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.Packet250CustomPayload;
+
+public class ObjectPacket extends Packet250CustomPayload
+{
+    /** Name of the 'channel' used to send data */
+    public String channel;
+
+    /** Length of the data to be read */
+    public int length;
+
+    /** Any data */
+    private static byte [] createByteArray( Object obj)
+    {
+        byte [] bArray = null;
+        try
+        {
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                ObjectOutputStream objOstream = new ObjectOutputStream(baos);
+                objOstream.writeObject(obj);
+                bArray = baos.toByteArray();
+        }
+        catch (Exception e)
+        {
+
+        }
+
+                return bArray;
+
+    }
+    public ObjectPacket() {}
+
+    public ObjectPacket(String par1Str, InputStream par2ArrayOfByte)
+    {
+    	super(par1Str, createByteArray(par2ArrayOfByte));
+    }
+
+}

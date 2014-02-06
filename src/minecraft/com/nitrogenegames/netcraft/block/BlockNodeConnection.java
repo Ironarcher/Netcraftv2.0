@@ -9,6 +9,7 @@ import com.nitrogenegames.netcraft.net.INet;
 import com.nitrogenegames.netcraft.net.INetBlock;
 
 
+
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -118,17 +119,27 @@ public class BlockNodeConnection extends Block implements INetBlock {
 	 public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
 	 {
 			if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
-		      	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[0], Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[1], Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[2]);
-				 	tileEntity.update();
+				TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
+			   	  try {
+							tileEntity.update();
+					
+					} catch (Exception e) {
+						
+					}
 				}
 			updateConnection(par1World, par2, par3, par4);
 	 }
+
 	@Override
 	public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
 	{
+		try{
 		if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
       	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[0], Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[1], Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[2]);
 		 	tileEntity.update();
+		}
+		} catch (Exception e) {
+			
 		}
 		if(!(par5 == 451)) {
 		updateConnection(par1World, par2, par3, par4);
@@ -137,10 +148,16 @@ public class BlockNodeConnection extends Block implements INetBlock {
 		}
 	}
 	public void updateConnectionWithoutNotify(World par1World, int par2, int par3, int par4) {
+		try {
 		if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
 	      	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[0], Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[1], Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[2]);
 			 	tileEntity.update();
 			}
+		
+	
+		} catch (Exception e) {
+			
+		}
 		if(!par1World.isRemote) {
 		state = Netcraft.isConectedToCore(par1World, par2, par3, par4);
 		if(state == false) {

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.gui.GuiCore;
+import com.nitrogenegames.netcraft.misc.PacketNet;
 import com.nitrogenegames.netcraft.net.INet;
 
 import cpw.mods.fml.client.FMLClientHandler;
@@ -381,7 +382,72 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 		    	PacketDispatcher.sendPacketToServer(packet); //Maybe change to players in radius?
 				}
 	}
-	
+	 private byte [] createByteArray( Object obj)
+	    {
+	        byte [] bArray = null;
+	        try
+	        {
+	                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+	                ObjectOutputStream objOstream = new ObjectOutputStream(baos);
+	                objOstream.writeObject(obj);
+	                bArray = baos.toByteArray();
+	        }
+	        catch (Exception e)
+	        {
+	     
+
+	        }
+
+	                return bArray;
+
+	    }
+	public void sendNetPacket(Side s) {
+		if(s == Side.CLIENT && !worldObj.isRemote) {
+	    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+	        try {
+
+        DataOutputStream outputStream = new DataOutputStream(bos);
+
+        	//System.out.println(this.energy + " ENERGYS SENDING");
+                //outputStream.write(this.objects.t);
+                outputStream.writeInt(this.xCoord);
+                outputStream.writeInt(this.yCoord);
+                outputStream.writeInt(this.zCoord);
+        } catch (Exception ex) {
+                ex.printStackTrace();
+        }
+
+        PacketNet packet = new PacketNet();
+        packet.channel = "netupdate";
+        packet.data = bos.toByteArray();
+        packet.length = bos.size();
+        packet.objects = this.objects;
+        packet.connectors = this.connectors;
+        packet.nodes = this.nodes;
+    	PacketDispatcher.sendPacketToAllPlayers(packet); //Maybe change to players in radius?
+		} /*else if(s == Side.SERVER && worldObj.isRemote) { 
+	    	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
+	        DataOutputStream outputStream = new DataOutputStream(bos);
+	        try {
+	        	//System.out.println(this.energy + " ENERGYS SENDING");
+	                //outputStream.write(this.objects.t);
+	        		outputStream.write(createByteArray(objects));
+	        		outputStream.write(createByteArray(connectors));
+	        		outputStream.write(createByteArray(nodes));
+	                outputStream.writeInt(this.xCoord);
+	                outputStream.writeInt(this.yCoord);
+	                outputStream.writeInt(this.zCoord);
+	        } catch (Exception ex) {
+	                ex.printStackTrace();
+	        }
+
+	        Packet250CustomPayload packet = new Packet250CustomPayload();
+	        packet.channel = "netupdate";
+	        packet.data = bos.toByteArray();
+	        packet.length = bos.size();
+		    	PacketDispatcher.sendPacketToServer(packet); //Maybe change to players in radius?
+				} */
+	}
 	public void sendTabPacket(Side s) {
 		if(s == Side.CLIENT && !worldObj.isRemote) {
     	ByteArrayOutputStream bos = new ByteArrayOutputStream(8);
@@ -492,18 +558,16 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public ArrayList connectors = new ArrayList();
 
 	public void update() {
-		System.out.println("UPDATING");
     	ArrayList c = Netcraft.getConnectedObjects(worldObj, xCoord, yCoord, zCoord);
     	objects = c;
     	ArrayList d = new ArrayList();
         for(int i = 0; i < c.size(); i++) {
-    		System.out.println("SIZE: " + c.size());
         	if(worldObj.getBlockId(((int[]) c.get(i))[0], ((int[]) c.get(i))[1], ((int[]) c.get(i))[2]) == Netcraft.connectionnode.blockID) {
         		d.add(new int[]{((int[]) c.get(i))[0], ((int[]) c.get(i))[1], ((int[]) c.get(i))[2]});
-        		System.out.println("ADDING NODE");
         	}
         }
         connectors = d;
+        sendNetPacket(Side.CLIENT);
 	}
 
 }

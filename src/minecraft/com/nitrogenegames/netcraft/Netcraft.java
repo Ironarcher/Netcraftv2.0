@@ -45,7 +45,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid = Netcraft.modid, name = "Netcraft", version = "Reloaded 0.0.1")
-@NetworkMod(channels = { "corepack", "coretab", "netpack" }, packetHandler = PacketHandler.class)
+@NetworkMod(channels = { "corepack", "coretab", "netpack", "netupdate" }, packetHandler = PacketHandler.class)
 public class Netcraft {
 	public static final String modid = "netcraft";
 	public static ArrayList<TileCache> cached = new ArrayList<TileCache>();
@@ -116,7 +116,7 @@ public class Netcraft {
 		}
 			
 	}
-	public static boolean isNodeConnectedToCore(World world, int x, int y, int z, ArrayList p) {
+public static boolean isNodeConnectedToCore(World world, int x, int y, int z, ArrayList p) {
 		boolean isC = false;
 		boolean isCC = false;
 		for(int c = -1; c <= 1; c++) {
@@ -184,6 +184,7 @@ public class Netcraft {
 		}
 		return isC;
 	}
+	
 	public TileEntityCore getClosestCoreTileEntity (World world, int x, int y, int z) {
 		int[] coords = getCoreCoordinates(world, x, y, z);
 		return (TileEntityCore) world.getBlockTileEntity(coords[0], coords[1], coords[2]);
@@ -224,21 +225,15 @@ public class Netcraft {
 					} 
 					if(world.getBlockId(x + c, y, z)  == core.blockID) {
 						isC = true;
-						coords[0] = x+c;
-						coords[1] = y;
-						coords[2] = z;
+						coords = new int[] {x+c, y, z};
 					} 
 					if(world.getBlockId(x, y + c, z)  == core.blockID) {
 						isC = true;
-						coords[0] = x;
-						coords[1] = y+c;
-						coords[2] = z;
+						coords = new int[] {x, y+c, z};
 					} 
 					if(world.getBlockId(x, y, z + c)  == core.blockID) {
 						isC = true;
-						coords[0] = x;
-						coords[1] = y;
-						coords[2] = z+c;
+						coords = new int[] {x, y, z+c};
 					}	
 		}
 		if(isC) {
@@ -602,6 +597,7 @@ public class Netcraft {
 		}
 		return isC;
 	}
+	
 	public static boolean isSelectiveModule(ItemStack itemstack) {
 		if(isModule(itemstack)) {
 			Item par1item = itemstack.getItem();

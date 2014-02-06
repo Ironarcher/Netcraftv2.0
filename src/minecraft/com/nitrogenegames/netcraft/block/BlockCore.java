@@ -13,6 +13,8 @@ import com.nitrogenegames.netcraft.net.INet;
 import com.nitrogenegames.netcraft.net.INetBlock;
 
 
+
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -80,7 +82,12 @@ public class BlockCore extends BlockContainer implements INetBlock {
 	 public void onBlockAdded(World par1World, int par2, int par3, int par4)
 	 {
 		 TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
+		 try {
 		 tileEntity.update();
+			
+			} catch (Exception e) {
+				
+			}
 	          if (!par1World.isRemote)
 	          {
 	        	  
@@ -99,8 +106,14 @@ public class BlockCore extends BlockContainer implements INetBlock {
 	 @Override
 	 public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
 	 {
+		 
    	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
+   	  try {
 				tileEntity.update();
+		
+		} catch (Exception e) {
+			
+		}
 	    
 	          if (!par1World.isRemote)
 	          {
@@ -122,10 +135,16 @@ public class BlockCore extends BlockContainer implements INetBlock {
 
 	 @Override
 	 public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
-	 {
+	 {	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
+	   	  try {
+					tileEntity.update();
+			
+			} catch (Exception e) {
+				
+			}
 	          if (!par1World.isRemote)
 	          {
-	        	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
+
                   
                   boolean powered = tileEntity.powered;
 	                  if (powered && !par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))

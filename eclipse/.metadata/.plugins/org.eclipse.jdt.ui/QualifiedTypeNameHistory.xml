@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="net.minecraft.client.renderer.Tessellator"/>
-<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
-<fullyQualifiedTypeName name="java.io.DataOutputStream"/>
-<fullyQualifiedTypeName name="net.minecraft.network.packet.Packet250CustomPayload"/>
-<fullyQualifiedTypeName name="cpw.mods.fml.common.network.PacketDispatcher"/>
-<fullyQualifiedTypeName name="cpw.mods.fml.common.network.Player"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.PacketHandler"/>
 <fullyQualifiedTypeName name="ic2.api.item.ElectricItem"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.gui.GuiCore"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.texture.IconRegister"/>
@@ -37,7 +28,6 @@
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.Netcraft"/>
 <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.block.ItemBlockProjector"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="net.minecraft.nbt.NBTTagCompound"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.TileCache"/>
 <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
@@ -60,4 +50,14 @@
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityCore"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.net.INetBlock"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.block.BlockNodeConnection"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+<fullyQualifiedTypeName name="com.jcraft.jogg.Packet"/>
+<fullyQualifiedTypeName name="net.minecraft.network.packet.Packet"/>
+<fullyQualifiedTypeName name="net.minecraft.network.packet.NetHandler"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+<fullyQualifiedTypeName name="net.minecraft.network.packet.Packet250CustomPayload"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.PacketNet"/>
 </qualifiedTypeNameHistroy>

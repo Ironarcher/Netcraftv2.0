@@ -2,6 +2,9 @@ package com.nitrogenegames.netcraft.misc;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.machine.TileEntityCore;
@@ -34,6 +37,46 @@ public class PacketHandler implements IPacketHandler {
 		if(packet.channel.equals("netpack")){
 			handleEnergyPacket(packet,player,1);
 		}
+		if(packet.channel.equals("netupdate")){
+			handleUpdate(packet,player);
+		}
+    }
+    private void handleUpdate(Packet250CustomPayload packet, Player player) {
+    	
+		DataInputStream inputStream = new DataInputStream(new ByteArrayInputStream(packet.data));
+		ArrayList a;
+		int xcoord;
+		int ycoord;
+		int zcoord;
+		boolean error = false;
+		Entity playerEntity = (Entity)player;
+		TileEntityCore te2;
+			
+		try {
+			xcoord = inputStream.readInt();
+			ycoord = inputStream.readInt();
+			zcoord = inputStream.readInt();
+			
+		} 		catch (Exception e) {
+			error = true;
+			xcoord = 0;
+			ycoord = 0;
+			zcoord = 0;
+		}
+		te2 = (TileEntityCore) playerEntity.worldObj.getBlockTileEntity(xcoord, ycoord, zcoord);
+		try{
+			if(!error) {
+			if(packet instanceof PacketNet) {
+				PacketNet pNet = (PacketNet) packet;
+				te2.connectors = pNet.connectors;
+				te2.nodes = pNet.nodes;
+				te2.objects = pNet.objects;
+			}
+			}
+		} catch (Exception e) {
+
+		}
+    	
     }
     private void handleTabPacket(Packet250CustomPayload packet, Player player) {
 		DataInputStream inputStream = new DataInputStream(new ByteArrayInputStream(packet.data));
