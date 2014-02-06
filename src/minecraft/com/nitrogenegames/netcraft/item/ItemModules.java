@@ -144,18 +144,25 @@ public class ItemModules extends Item {
 		}
 		return itemStack;
 	}
-	public static boolean canUseProjector(ItemModules m, Netcraft.EnumProjector e) {
+	public static boolean canUseProjector(ItemModules m, int e) {
 		if(m.getUnlocalizedName().equals("item.weathermodule")) {
-			return e == Netcraft.EnumProjector.SATELITE;
-		} else if((m.getUnlocalizedName().equals("item.regenmodule"))||(m.getUnlocalizedName().equals("item.resistmodule"))||(m.getUnlocalizedName().equals("item.deathmodule"))) {
-			return (e == Netcraft.EnumProjector.CIRCULAR) || (e == Netcraft.EnumProjector.BEAM);
+			return e == 2;
+		} else if((m.getUnlocalizedName().equals("item.regenmodule"))||(m.getUnlocalizedName().equals("item.resistmodule"))||(m.getUnlocalizedName().equals("item.deathmodule")||m.getUnlocalizedName().equals("item.tpmodule")) || (m.getUnlocalizedName().equals("item.atpmodule"))) {
+			return ((e == 1) || (e == 0));
 		} else {
 			return false;
 		}
 	}
-	public void activate(World world, ItemStack itemStack, int x, int y, int z) {
+	public boolean activate(World world, ItemStack itemStack, int x, int y, int z) {
+		if(world.getBlockId(x, y, z) != Netcraft.projector.blockID) {
+			return false;
+		}
+		if(!canUseProjector(this, world.getBlockPowerInput(x, y, z))) {
+			return false;
+		}
 		if (this.getUnlocalizedName().equals("item.weathermodule")) {
 			MinecraftServer.getServer().worldServers[0].toggleRain();
+			return true;
 			//MinecraftServer.getServer().worldServers[0].getWorldInfo().setThundering(true);
 		} else if (this.getUnlocalizedName().equals("item.regenmodule")) {
 		    NBTTagCompound tagCompound = itemStack.getTagCompound();	
@@ -167,6 +174,7 @@ public class ItemModules extends Item {
 				EntityPlayer mob = (EntityPlayer) entities.get(i);
 				mob.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 60, 1));
 			}
+			return true;
 		} else if (this.getUnlocalizedName().equals("item.resistmodule")) {
 		    NBTTagCompound tagCompound = itemStack.getTagCompound();	
 		    int range = tagCompound.getInteger("Range");
@@ -177,6 +185,7 @@ public class ItemModules extends Item {
 				EntityPlayer mob = (EntityPlayer) entities.get(i);
 				mob.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 60, 1));
 			}
+			return true;
 		} else if (this.getUnlocalizedName().equals("item.deathmodule")) {
 		    NBTTagCompound tagCompound = itemStack.getTagCompound();	
 		    int trange = tagCompound.getInteger("Range");
@@ -213,7 +222,7 @@ public class ItemModules extends Item {
 				
 				
 			}
-			
+			return true;
 		} else if ((this.getUnlocalizedName().equals("item.tpmodule")) || (this.getUnlocalizedName().equals("item.atpmodule"))) {
 			int trange = 10;
 			List entities = world.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(x - trange, y - trange, z - trange, x + trange, y + trange, z + trange));
@@ -245,7 +254,9 @@ public class ItemModules extends Item {
 				
 				
 			}
+			return true;
 		}
+		return false;
 	}
 	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer thePlayer, World par2World, int x, int y, int z, int par7, float xFloat, float yFloat, float zFloat)
 	{

@@ -30,7 +30,6 @@
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.block.ItemBlockProjector"/>
 <fullyQualifiedTypeName name="net.minecraft.nbt.NBTTagCompound"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.TileCache"/>
-<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
 <fullyQualifiedTypeName name="net.minecraft.tileentity.TileEntity"/>
 <fullyQualifiedTypeName name="net.minecraft.world.chunk.Chunk"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.ContainerProjector"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="net.minecraft.network.packet.Packet250CustomPayload"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.misc.PacketNet"/>
+<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
 </qualifiedTypeNameHistroy>

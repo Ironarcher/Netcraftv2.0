@@ -50,6 +50,7 @@ public class BlockProjector extends BlockContainer {
 	public TileEntity createNewTileEntity(World world) {
 		return new TileEntityProjector();
 	}
+	//public void activateModule
     /*public int idDropped(int par1, Random par2Random, int par3)
     {
 

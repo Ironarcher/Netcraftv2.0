@@ -263,7 +263,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 		}
 		sendEnergyPacket(Side.CLIENT);
 		
-    	
+    	worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
     }
     @Override
     public void invalidate(){
