@@ -226,7 +226,7 @@ public class GuiCore extends GuiContainer {
         	this.selected = button.id;
         	tel.setPressed(button.id);
         	} else if(button instanceof GuiModuleButton) {
-        		if(this.inventorySlots.getSlot(0).getHasStack()) {
+        		if(this.inventorySlots.getSlot(button.id - 3).getHasStack()) {
         			player.openGui(Netcraft.instance, 0, this.tel.worldObj, this.tel.xCoord, this.tel.yCoord, this.tel.zCoord);
         		}
         	}
@@ -294,16 +294,16 @@ public class GuiCore extends GuiContainer {
         	int x = (this.width - this.xSize + 50) / 2;
             int y = (this.height - this.ySize) / 2;
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i+3, i+22+x, 37+y, 1);
+        		createModuleButton(i/18+3, i+22+x, 37+y, 1);
         	}
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i+3+5, i+22+x, 65+y, 1);
+        		createModuleButton(i/18+3+5, i+22+x, 65+y, 1);
         	}
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i+3+10, i+22+x, 37+y, 2);
+        		createModuleButton(i/18+3+10, i+22+x, 37+y, 2);
         	}
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i+3+15, i+22+x, 65+y, 2);
+        		createModuleButton(i/18+3+15, i+22+x, 65+y, 2);
         	}
         }
         

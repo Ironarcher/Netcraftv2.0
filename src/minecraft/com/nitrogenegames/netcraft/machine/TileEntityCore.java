@@ -57,7 +57,7 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public int maxenergy = 1000000;
 	private boolean init;
 	//private BasicSink electricSlicer = new BasicSink(this, 32, 3);
-	private ItemStack[] inv = new ItemStack[2];
+	private ItemStack[] inv = new ItemStack[11];
 	public boolean powered = false;
 	public int coreEnergyNeeded = 0;
 	

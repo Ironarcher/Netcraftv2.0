@@ -36,9 +36,20 @@ public class ContainerCore extends Container {
 
                 //the Slot constructor takes the IInventory and the slot number in that it binds to
                 //and the x-y coordinates it resides on-screen
-                addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 20 + this.getX(), 13 + this.getY(), 0, 1));
+                for(int i = 0; i < 5; i++) {
 
-                addPageSlotToContainer(new SlotEnergyInput(tileEntity, 1, 91 + this.getX() + 1, 23 + this.getY() + 1, 2, 1));
+	                addPageSlotToContainer(new SlotModuleCore(tileEntity, i, 20 + 18*i + this.getX(), 17 + this.getY(), 0, 1));
+	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 20 + this.getX(), 17 + this.getY(), 0, 1));
+	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 56 + this.getX(), 17 + this.getY(), 0, 1));
+	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0,  + this.getX(), 17 + this.getY(), 0, 1));
+	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 60 + this.getX(), 17 + this.getY(), 0, 1));
+	                addPageSlotToContainer(new SlotModuleCore(tileEntity, i+5, 20 + 18*i + this.getX(), 45 + this.getY(), 0, 1));
+	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 30 + this.getX(), 45 + this.getY(), 0, 1));
+	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 40 + this.getX(), 45 + this.getY(), 0, 1));
+	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 50 + this.getX(), 17 + this.getY(), 0, 1));
+	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 60 + this.getX(), 17 + this.getY(), 0, 1));
+                }
+                addPageSlotToContainer(new SlotEnergyInput(tileEntity, 10, 91 + this.getX() + 1, 23 + this.getY() + 1, 2, 1));
                 bindPlayerInventory(inventoryPlayer);
                 //commonly used vanilla code that adds the player's inventory
                 
