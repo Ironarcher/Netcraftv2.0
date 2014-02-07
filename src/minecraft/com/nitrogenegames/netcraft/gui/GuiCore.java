@@ -39,7 +39,9 @@ public class GuiCore extends GuiContainer {
 	
 		TileEntityCore tel;
 		ArrayList<GuiTabButton> tabs;
+		ArrayList<GuiModuleButton> moduleButtons;
 		private int selected = 0;
+		private int modulepage = 1;
 		
 		//public boolean tabbed = false;
 		//int x,y;
@@ -142,6 +144,7 @@ public class GuiCore extends GuiContainer {
             	
             	//Main box of module storage
             	drawTexturedModalRect(x+19, y+16, 80, 185, 90, 18);
+            	drawTexturedModalRect(x+19, y+44, 80, 185, 90, 18);
             } else if(selected == 1){
               	int j = this.tel.connectors.size();
             	
@@ -164,6 +167,22 @@ public class GuiCore extends GuiContainer {
             	drawTexturedModalRect(x+136+8, (int)(y+26+5+35-l), 62, (int)(185+35-l), 17, (int)(l));
             }
         }
+        
+        public void changeButtonModule(boolean s){
+        	//Custom buttons here
+        	if(modulepage == 1){
+        		for(int i = 0+3; i < 10+3; i++){
+        			((GuiModuleButton)this.buttonList.get(i)).drawButton = s;
+        		}
+        	} else if (modulepage == 2){
+        		for(int i = 10+3; i < 20+3; i++){
+        			((GuiModuleButton)this.buttonList.get(i)).drawButton = s;
+        		}	
+        	}
+        	
+        	//Normal buttons here
+        }
+        
         public void drawItem(ItemStack s, int x, int y) {
         	drawItemStack(s, x, y, "");
         }
@@ -224,6 +243,7 @@ public class GuiCore extends GuiContainer {
             //this.guiLeft = (this.width - this.xSize) / 2;
             //this.guiTop = (this.height - this.ySize) / 2;
             initTabs();
+            initModuleButton();
             updateTabs();
 
 
@@ -247,6 +267,24 @@ public class GuiCore extends GuiContainer {
         	//createTab(tabs.size(), "Tesla Field Module", false); --NO NO NO
         }
         
+        private void initModuleButton(){
+        	moduleButtons = new ArrayList<GuiModuleButton>();
+        	int x = (this.width - this.xSize + 50) / 2;
+            int y = (this.height - this.ySize) / 2;
+        	for(int i = 0; i < 90; i+=18){
+        		createModuleButton(i+3, i+22+x, 37+y, true);
+        	}
+        	for(int i = 0; i < 90; i+=18){
+        		createModuleButton(i+3+5, i+22+x, 65+y, true);
+        	}
+        	for(int i = 0; i < 90; i+=18){
+        		createModuleButton(i+3+10, i+22+x, 37+y, false);
+        	}
+        	for(int i = 0; i < 90; i+=18){
+        		createModuleButton(i+3+15, i+22+x, 65+y, false);
+        	}
+        }
+        
         public void createTab(int placement, String text, int id, boolean press){
                 	int x = (this.width - this.xSize + 50) / 2;
              int y = (this.height - this.ySize) / 2;
@@ -254,6 +292,13 @@ public class GuiCore extends GuiContainer {
         	this.buttonList.add(temp);
         	tabs.add(temp);
         } 
+        
+        public void createModuleButton(int id, int x, int y, boolean visible){
+        	GuiModuleButton temp = new GuiModuleButton(id, x, y, 12, 5, "/textures/gui/modulebuttonfinal.png");
+        	this.buttonList.add(temp);
+        	moduleButtons.add(temp);
+        	temp.drawButton = visible;
+        	} 
         /* WIP
         @Override
         protected void drawSlotInventory(Slot par1Slot)
