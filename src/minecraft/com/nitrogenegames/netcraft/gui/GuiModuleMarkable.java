@@ -37,7 +37,7 @@ public int maxpages = 0;
 private boolean lastone = false;
 public GuiModuleMarkable(ItemStack i)
 {
-         this.stack = ItemModules.p.getHeldItem();
+         this.stack = i;
 }
 
 public void setmaxpages()

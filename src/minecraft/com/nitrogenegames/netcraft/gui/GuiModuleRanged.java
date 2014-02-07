@@ -8,6 +8,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -20,7 +21,7 @@ public class GuiModuleRanged extends GuiScreen {
 	private int range;
 	public int maxrange = 50;
 	public GuiModuleRanged(ItemStack i) {
-		this.stack = ItemModules.p.getHeldItem();
+		this.stack = i;
 		if( stack.stackTagCompound == null )
 	        stack.setTagCompound( new NBTTagCompound( ) );
 	    NBTTagCompound tagCompound = stack.getTagCompound();	

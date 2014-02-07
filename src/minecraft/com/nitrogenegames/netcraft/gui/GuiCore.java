@@ -11,6 +11,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
@@ -42,15 +43,16 @@ public class GuiCore extends GuiContainer {
 		ArrayList<GuiModuleButton> moduleButtons;
 		private int selected = 0;
 		private int modulepage = 1;
+		public EntityPlayer player;
 		
 		//public boolean tabbed = false;
 		//int x,y;
 		
-        public GuiCore (InventoryPlayer inventoryPlayer, TileEntityCore tileEntity) {
+        public GuiCore (InventoryPlayer inventoryPlayer, TileEntityCore tileEntity, EntityPlayer p) {
                 //the container is instanciated and passed to the superclass for handling
                 super(new ContainerCore(inventoryPlayer, tileEntity));
                 tel = tileEntity;
-                
+                this.player = p;
                 this.xSize = 252;
                 this.ySize = 166;
         }
@@ -62,7 +64,6 @@ public class GuiCore extends GuiContainer {
         }
         @Override
         protected void drawGuiContainerForegroundLayer(int param1, int param2) {
-
                 //draw text and stuff here
                 //the parameters for drawString are: string, x, y, color
         		//tel = (TileEntityCore) tel.worldObj.getBlockTileEntity(tel.xCoord, tel.yCoord, tel.zCoord);
@@ -168,7 +169,7 @@ public class GuiCore extends GuiContainer {
             }
         }
         
-        public void changeButtonModule(boolean s){
+        /*public void changeButtonModule(boolean s){
         	//Custom buttons here
         	if(modulepage == 1){
         		for(int i = 0+3; i < 10+3; i++){
@@ -181,7 +182,7 @@ public class GuiCore extends GuiContainer {
         	}
         	
         	//Normal buttons here
-        }
+        } */
         
         public void drawItem(ItemStack s, int x, int y) {
         	drawItemStack(s, x, y, "");
@@ -214,6 +215,7 @@ public class GuiCore extends GuiContainer {
         
         public void actionPerformed(GuiButton button)
         {
+        	if(button instanceof GuiTabButton) {
         	for(int i = 0; i < tabs.size(); i++){
         		tabs.get(i).setPressed(false);
         		if(tabs.get(i).id == button.id) {
@@ -223,6 +225,11 @@ public class GuiCore extends GuiContainer {
 
         	this.selected = button.id;
         	tel.setPressed(button.id);
+        	} else if(button instanceof GuiModuleButton) {
+        		if(this.inventorySlots.getSlot(0).getHasStack()) {
+        			player.openGui(Netcraft.instance, 0, this.tel.worldObj, this.tel.xCoord, this.tel.yCoord, this.tel.zCoord);
+        		}
+        	}
         	
         }
         
@@ -245,8 +252,11 @@ public class GuiCore extends GuiContainer {
             initTabs();
             initModuleButton();
             updateTabs();
+            initButtons();
 
-
+        }
+        public void initButtons() {
+        	
         }
         public void updateTabs() {
         	this.selected = tel.getTabPage();
@@ -258,6 +268,18 @@ public class GuiCore extends GuiContainer {
         		}
         	}
         	((ContainerCore)this.inventorySlots).updateTab();
+        	for(int i = 0; i < moduleButtons.size(); i++){
+	        	if(this.selected == 0) {
+	        		moduleButtons.get(i).tabPage = true;
+	        	} else {
+	        		moduleButtons.get(i).tabPage = false;	
+	        	}
+	        	if(moduleButtons.get(i).page == this.modulepage) {
+	        		moduleButtons.get(i).modulePage = true;
+	        	} else {
+	        		moduleButtons.get(i).modulePage = false;   		
+	        	}
+        	}
         }
         private void initTabs(){
         	tabs = new ArrayList<GuiTabButton>();
@@ -272,16 +294,16 @@ public class GuiCore extends GuiContainer {
         	int x = (this.width - this.xSize + 50) / 2;
             int y = (this.height - this.ySize) / 2;
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i+3, i+22+x, 37+y, true);
+        		createModuleButton(i+3, i+22+x, 37+y, 1);
         	}
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i+3+5, i+22+x, 65+y, true);
+        		createModuleButton(i+3+5, i+22+x, 65+y, 1);
         	}
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i+3+10, i+22+x, 37+y, false);
+        		createModuleButton(i+3+10, i+22+x, 37+y, 2);
         	}
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i+3+15, i+22+x, 65+y, false);
+        		createModuleButton(i+3+15, i+22+x, 65+y, 2);
         	}
         }
         
@@ -293,11 +315,16 @@ public class GuiCore extends GuiContainer {
         	tabs.add(temp);
         } 
         
-        public void createModuleButton(int id, int x, int y, boolean visible){
+        public void createModuleButton(int id, int x, int y, int visible){
         	GuiModuleButton temp = new GuiModuleButton(id, x, y, 12, 5, "/textures/gui/modulebuttonfinal.png");
         	this.buttonList.add(temp);
         	moduleButtons.add(temp);
-        	temp.drawButton = visible;
+        	temp.page = visible;
+        	if(this.modulepage==temp.page) {
+        		temp.tabPage = true;
+        	} else {
+        		temp.tabPage = false;
+        	}
         	} 
         /* WIP
         @Override

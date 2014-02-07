@@ -7,6 +7,8 @@ import com.nitrogenegames.netcraft.Netcraft;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
  
 public class GuiModuleButton extends GuiButton {
@@ -19,8 +21,10 @@ public class GuiModuleButton extends GuiButton {
 	//syntax for sheet is following order of buttons, going from top to bottom: normal, normal hovered, pressed, pressed+hovered
 	private ResourceLocation texture1;
 	private boolean pressed = false;
+	public boolean modulePage = false;
+	public boolean tabPage = false;
 	private int mode = 0;
- 
+	public int page = 1;
 	//for default size: 120 width and 20 height
     public GuiModuleButton(int id, int startx, int starty, String reslocation)
     {
@@ -39,11 +43,14 @@ public class GuiModuleButton extends GuiButton {
     {
     	this(id, xposition, yposition, width, height, reslocation, false);
     }
+    /*public ItemStack getModule() {
+    	
+    }*/
     
     @Override
     public void drawButton(Minecraft mc, int mx, int my)
     {
-    	if(this.drawButton){
+    	if(this.drawButton && this.tabPage && this.modulePage){
 	        mc.renderEngine.bindTexture(texture1);
 	        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 	        if(!pressed){

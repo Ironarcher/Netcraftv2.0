@@ -38,7 +38,7 @@ private int selected;
 private boolean lastone = false;
 public GuiModuleSelective(ItemStack i)
 {
-         this.stack = ItemModules.p.getHeldItem();
+         this.stack = i;
      	if( stack.stackTagCompound == null )
             stack.setTagCompound( new NBTTagCompound( ) );
          NBTTagCompound tagCompound = stack.getTagCompound();	

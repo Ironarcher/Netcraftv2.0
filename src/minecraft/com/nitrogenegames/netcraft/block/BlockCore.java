@@ -247,7 +247,7 @@ public class BlockCore extends BlockContainer implements INetBlock {
                 }
         //code to open gui explained later
                 
-        player.openGui(Netcraft.instance, 0, world, x, y, z);
+        player.openGui(Netcraft.instance, 100, world, x, y, z);
                 return true;
         }
 

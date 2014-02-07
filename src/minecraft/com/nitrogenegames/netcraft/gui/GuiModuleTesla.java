@@ -22,7 +22,7 @@ public class GuiModuleTesla extends GuiScreen {
 	private int mode;
 	public int maxrange = 50;
 	public GuiModuleTesla(ItemStack i) {
-		this.stack = ItemModules.p.getHeldItem();
+		this.stack = i;
 		if( stack.stackTagCompound == null )
 	        stack.setTagCompound( new NBTTagCompound( ) );
 	    NBTTagCompound tagCompound = stack.getTagCompound();	
