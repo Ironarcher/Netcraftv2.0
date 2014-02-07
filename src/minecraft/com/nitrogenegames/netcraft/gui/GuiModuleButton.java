@@ -19,73 +19,65 @@ public class GuiModuleButton extends GuiButton {
 	//syntax for sheet is following order of buttons, going from top to bottom: normal, normal hovered, pressed, pressed+hovered
 	private ResourceLocation texture1;
 	private boolean pressed = false;
-
+	private int mode = 0;
  
 	//for default size: 120 width and 20 height
-    public GuiModuleButton(int id, int startx, int starty, String text, String reslocation)
+    public GuiModuleButton(int id, int startx, int starty, String reslocation)
     {
-        this(id, startx, starty, 120, 20, text, reslocation);
+        this(id, startx, starty, 120, 20, reslocation);
     }
  
     //use this
-    public GuiModuleButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation, boolean pressed)
+    public GuiModuleButton(int id, int xposition, int yposition, int width, int height, String reslocation, boolean pressed)
     {
-        super(id, xposition, yposition, width, height, text);
+        super(id, xposition, yposition, width, height, "");
         texture1 = new ResourceLocation(Netcraft.modid.toLowerCase(), reslocation);
         this.setPressed(pressed);
         }
 
-    private static String charFit(String s){
-    	if(s.length() > 9 ){
-    		return s.substring(0,7) + "..";
-    	}
-    	return s;
-    }
-    public GuiModuleButton(int id, int xposition, int yposition, int width, int height, String text, String reslocation)
+    public GuiModuleButton(int id, int xposition, int yposition, int width, int height, String reslocation)
     {
-    	this(id, xposition, yposition, width, height, text, reslocation, false);
+    	this(id, xposition, yposition, width, height, reslocation, false);
     }
-    protected int getHoverState(boolean flag)
-    {
-        byte byte0 = 1;
-        if (!enabled)
-        {
-                byte0 = 0;
-                }
-        else if (flag)
-        {
-                byte0 = 2;
-        }
-        return byte0;
-        }
     
     @Override
     public void drawButton(Minecraft mc, int mx, int my)
     {
-        FontRenderer fontrenderer = mc.fontRenderer;
-        mc.renderEngine.bindTexture(texture1);
-        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        boolean flag = mx >= xPosition && my >= yPosition && mx < xPosition + width && my < yPosition + height;  //Flag, tells if your mouse is hovering the button
-        if(!pressed){
-	        if (flag)
-	        { // Hover Action
-	        	drawTexturedModalRect(this.xPosition, this.yPosition, 0, 15, this.width, this.height);
+    	if(this.drawButton){
+	        mc.renderEngine.bindTexture(texture1);
+	        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+	        if(!pressed){
+	        	switch(mode){
+	        	case 0: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 0, this.width, this.height);
+	        	case 1: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 5, this.width, this.height);
+	        	case 2: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 10, this.width, this.height);
+	        	case 3: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 15, this.width, this.height);
+	        	}
+	        	
+	        } else if(pressed){
+	        	switch(mode){
+	        	case 0: drawTexturedModalRect(this.xPosition, this.yPosition, 12, 0, this.width, this.height);
+	        	case 1: drawTexturedModalRect(this.xPosition, this.yPosition, 12, 5, this.width, this.height);
+	        	case 2: drawTexturedModalRect(this.xPosition, this.yPosition, 12, 10, this.width, this.height);
+	        	case 3: drawTexturedModalRect(this.xPosition, this.yPosition, 12, 15, this.width, this.height);
+	        	}
 	        }
-	        else { // Normal
-	        	drawTexturedModalRect(this.xPosition, this.yPosition, 0, 0, this.width, this.height);
-	        }
-        } else{
-        	if (flag)
-	        { // Hover Action
-        		drawTexturedModalRect(this.xPosition, this.yPosition, 0, height*2, this.width, this.height); 
-	        }
-	        else { // Normal
-	        	drawTexturedModalRect(this.xPosition, this.yPosition, 0, height*3, this.width, this.height);
-	        }
-        }
-        drawCenteredString(fontrenderer, charFit(displayString), xPosition + width / 2, yPosition + (height - 8) / 2, 0xFFCCCCCC);
+    	}
     }
    
+    //0: Red Mode - Module not running
+    //1: Orange button - Module attempting run, but not sufficient power
+    //2: Yellow button - Module slot open
+    //3: Green button - Module running successfully
+    
+    public int getMode(){
+    	return mode;
+    }
+    
+    public void setMode(int s){
+    	mode = s;
+    }
+    
     public void togglePressed(){
     	pressed = !pressed;
     }
