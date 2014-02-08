@@ -44,6 +44,7 @@ public class GuiCore extends GuiContainer {
 		private int selected = 0;
 		private int modulepage = 1;
 		public EntityPlayer player;
+		private boolean moduleSelected = false;
 		
 		//public boolean tabbed = false;
 		//int x,y;
@@ -229,6 +230,7 @@ public class GuiCore extends GuiContainer {
         		if(this.inventorySlots.getSlot(button.id - 3).getHasStack()) {
         			player.openGui(Netcraft.instance, 0, this.tel.worldObj, this.tel.xCoord, this.tel.yCoord, this.tel.zCoord);
         		}
+        		this.moduleSelected = true;
         	}
         	
         }
@@ -247,8 +249,16 @@ public class GuiCore extends GuiContainer {
         {
             super.initGui();
             //this.mc.thePlayer.openContainer = this.inventorySlots;
-            //this.guiLeft = (this.width - this.xSize) / 2;
-            //this.guiTop = (this.height - this.ySize) / 2;
+            
+            int x = (this.width - this.xSize) / 2;
+            int y = (this.height - this.ySize) / 2;
+            GuiButton temp1 = new GuiButton(24, x + 143, y + 23, "Toggle");
+            temp1.drawButton = false;
+            GuiButton temp2 = new GuiButton(25, x + 143, y + 47, "Open GUI");
+            temp2.drawButton = false;
+            this.buttonList.add(temp1);
+            this.buttonList.add(temp2);
+        
             initTabs();
             initModuleButton();
             updateTabs();
@@ -280,6 +290,15 @@ public class GuiCore extends GuiContainer {
 	        		moduleButtons.get(i).modulePage = false;   		
 	        	}
         	}
+        	
+        	if(this.moduleSelected){
+        		((GuiModuleButton)(this.buttonList.get(24))).drawButton = true;
+        		((GuiModuleButton)(this.buttonList.get(25))).drawButton = true;
+        	} else{
+        		((GuiModuleButton)(this.buttonList.get(24))).drawButton = false;
+        		((GuiModuleButton)(this.buttonList.get(25))).drawButton = false;
+        	}
+        	
         }
         private void initTabs(){
         	tabs = new ArrayList<GuiTabButton>();

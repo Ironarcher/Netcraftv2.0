@@ -54,28 +54,33 @@ public class GuiHandler implements IGuiHandler {
         public Object getClientGuiElement(int id, EntityPlayer player, World world,
                         int x, int y, int z) {
                 TileEntity tileEntity = world.getBlockTileEntity(x, y, z);
+                ItemStack item;
                 if(tileEntity instanceof TileEntityCore){
                 	if(id == 100) {
-                	syncWithGUI(x,y,z);
+                		syncWithGUI(x,y,z);
                         return new GuiCore(player.inventory, (TileEntityCore) world.getBlockTileEntity(x, y, z), player);
                 	} else {
                 		TileEntityCore t = (TileEntityCore) world.getBlockTileEntity(x, y, z);
-                		ItemStack item = t.getStackInSlot(id);
-                    if(Netcraft.isMarkableModule(item))
-                    {
-                    	return new GuiModuleMarkable(item);
-                    }
-                    if(Netcraft.isSelectiveModule(item))
-                    {
-                    	return new GuiModuleSelective(item);
-                    }
-                    if(item.getItem().itemID == Netcraft.deathmodule.itemID) {
-                    	return new GuiModuleTesla(item);
-                    }
-                    if(Netcraft.isRangedModule(item) && item.getItem().itemID != Netcraft.deathmodule.itemID)
-                    {
-                    	return new GuiModuleRanged(item);
-                    }
+                		item = t.getStackInSlot(id);
+                		//PROBLEM HERE!
+                		if(t.getStackInSlot(id) == null){
+                			return null;
+                		}
+	                    if(Netcraft.isMarkableModule(item))
+	                    {
+	                    	return new GuiModuleMarkable(item);
+	                    }
+	                    if(Netcraft.isSelectiveModule(item))
+	                    {
+	                    	return new GuiModuleSelective(item);
+	                    }
+	                    if(item.getItem().itemID == Netcraft.deathmodule.itemID) {
+	                    	return new GuiModuleTesla(item);
+	                    }
+	                    if(Netcraft.isRangedModule(item) && item.getItem().itemID != Netcraft.deathmodule.itemID)
+	                    {
+	                    	return new GuiModuleRanged(item);
+	                    }
                 	}
                 }
                 if(tileEntity instanceof TileEntityNetworkFabricator){

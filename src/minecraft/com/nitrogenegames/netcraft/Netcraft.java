@@ -108,13 +108,16 @@ public class Netcraft {
 	public static CreativeTabs netcrafttab = new NetcraftTab(CreativeTabs.getNextID(), "Netcraft");
 
 	public static boolean isModule(ItemStack itemstack) {
-		Item par1item = itemstack.getItem();
-		if (par1item == Netcraft.redmodule || par1item == Netcraft.timemodule|| par1item == Netcraft.weathermodule|| par1item == Netcraft.resistmodule|| par1item == Netcraft.regenmodule|| par1item == Netcraft.deathmodule || par1item == Netcraft.powermodule || par1item == Netcraft.tpmodule || par1item == Netcraft.atpmodule) {
-			return true;
-		} else {
+		if(itemstack == null){
 			return false;
-		}
-			
+		} else{
+			Item par1item = itemstack.getItem();
+			if (par1item == Netcraft.redmodule || par1item == Netcraft.timemodule|| par1item == Netcraft.weathermodule|| par1item == Netcraft.resistmodule|| par1item == Netcraft.regenmodule|| par1item == Netcraft.deathmodule || par1item == Netcraft.powermodule || par1item == Netcraft.tpmodule || par1item == Netcraft.atpmodule) {
+				return true;
+			} else {
+				return false;
+			}
+		}	
 	}
 public static boolean isNodeConnectedToCore(World world, int x, int y, int z, ArrayList p) {
 		boolean isC = false;
