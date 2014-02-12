@@ -45,6 +45,7 @@ public class GuiCore extends GuiContainer {
 		private int modulepage = 1;
 		public EntityPlayer player;
 		private boolean moduleSelected = false;
+		public int moduleSlotSelected = -1;
 		
 		//public boolean tabbed = false;
 		//int x,y;
@@ -216,6 +217,11 @@ public class GuiCore extends GuiContainer {
         
         public void actionPerformed(GuiButton button)
         {
+        	if(button.id == 24) {
+        		if(this.inventorySlots.getSlot(this.moduleSlotSelected).getHasStack()) {
+        			player.openGui(Netcraft.instance, this.moduleSlotSelected, this.tel.worldObj, this.tel.xCoord, this.tel.yCoord, this.tel.zCoord);
+        		} 
+        	}
         	if(button instanceof GuiTabButton) {
         	for(int i = 0; i < tabs.size(); i++){
         		tabs.get(i).setPressed(false);
@@ -228,9 +234,21 @@ public class GuiCore extends GuiContainer {
         	tel.setPressed(button.id);
         	} else if(button instanceof GuiModuleButton) {
         		if(this.inventorySlots.getSlot(button.id - 3).getHasStack()) {
-        			player.openGui(Netcraft.instance, 0, this.tel.worldObj, this.tel.xCoord, this.tel.yCoord, this.tel.zCoord);
+        		if((button.id - 3 != this.moduleSlotSelected) && this.moduleSelected) {
+        			this.moduleSlotSelected = button.id - 3;
+        		} else {
+        		this.moduleSelected = !this.moduleSelected;
+        		if(this.moduleSelected) {
+        			this.moduleSlotSelected = button.id - 3;
+        		} else {
+        			this.moduleSlotSelected = -1;
         		}
-        		this.moduleSelected = true;
+        		}
+        		} else {
+        			this.moduleSlotSelected = -1;
+        			this.moduleSelected = false;
+        		}
+        	
         	}
         	
         }
@@ -252,21 +270,27 @@ public class GuiCore extends GuiContainer {
             
             int x = (this.width - this.xSize) / 2;
             int y = (this.height - this.ySize) / 2;
-            GuiButton temp1 = new GuiButton(24, x + 143, y + 23, "Toggle");
-            temp1.drawButton = false;
-            GuiButton temp2 = new GuiButton(25, x + 143, y + 47, "Open GUI");
-            temp2.drawButton = false;
-            this.buttonList.add(temp1);
-            this.buttonList.add(temp2);
+
+
         
-            initTabs();
-            initModuleButton();
+            initTabs(); //0, 1, 2
+            initModuleButton(); //3 - 22
+
+            initButtons(); //23, 24
+
             updateTabs();
-            initButtons();
 
         }
         public void initButtons() {
-        	
+            int x = (this.width - this.xSize) / 2;
+            int y = (this.height - this.ySize) / 2;
+            GuiButton temp1 = new GuiButton(23, x + 143, y + 23, 50, 20, "Toggle");
+            GuiButton temp2 = new GuiButton(24, x + 143, y + 47, 50, 20, "Open GUI");
+            temp1.drawButton = false;
+
+            temp2.drawButton = false;
+            this.buttonList.add(temp1);
+            this.buttonList.add(temp2);
         }
         public void updateTabs() {
         	this.selected = tel.getTabPage();
@@ -292,11 +316,12 @@ public class GuiCore extends GuiContainer {
         	}
         	
         	if(this.moduleSelected){
-        		((GuiModuleButton)(this.buttonList.get(24))).drawButton = true;
-        		((GuiModuleButton)(this.buttonList.get(25))).drawButton = true;
+        		
+        		((GuiButton)(this.buttonList.get(23))).drawButton = true;
+        		((GuiButton)(this.buttonList.get(24))).drawButton = true;
         	} else{
-        		((GuiModuleButton)(this.buttonList.get(24))).drawButton = false;
-        		((GuiModuleButton)(this.buttonList.get(25))).drawButton = false;
+        		((GuiButton)(this.buttonList.get(23))).drawButton = false;
+        		((GuiButton)(this.buttonList.get(24))).drawButton = false;
         	}
         	
         }
@@ -313,16 +338,16 @@ public class GuiCore extends GuiContainer {
         	int x = (this.width - this.xSize + 50) / 2;
             int y = (this.height - this.ySize) / 2;
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i/18+3, i+22+x, 37+y, 1);
+        		createModuleButton(i/18+3, i+22+x, 37+y, 1); //3, 4, 5, 6, 7
         	}
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i/18+3+5, i+22+x, 65+y, 1);
+        		createModuleButton(i/18+3+5, i+22+x, 65+y, 1); //8, 9, 10, 11, 12
         	}
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i/18+3+10, i+22+x, 37+y, 2);
+        		createModuleButton(i/18+3+10, i+22+x, 37+y, 2); //13, 14, 15, 16, 17
         	}
         	for(int i = 0; i < 90; i+=18){
-        		createModuleButton(i/18+3+15, i+22+x, 65+y, 2);
+        		createModuleButton(i/18+3+15, i+22+x, 65+y, 2); //18, 19, 20, 21, 22
         	}
         }
         
@@ -379,27 +404,9 @@ public class GuiCore extends GuiContainer {
 
             return null;
         }
-        @Override
-        protected void mouseClicked(int par1, int par2, int par3)
-        {
-        	try {
-				Method m = this.getClass().getSuperclass().getDeclaredMethod("mouseClicked");
-				try {
-					m.invoke(this, par1, par2, par3);
-				} catch (IllegalAccessException e) {
-					e.printStackTrace();
-				} catch (IllegalArgumentException e) {
-					e.printStackTrace();
-				} catch (InvocationTargetException e) {
-					e.printStackTrace();
-				}
-			} catch (NoSuchMethodException e) {
-				e.printStackTrace();
-			} catch (SecurityException e) {
-				e.printStackTrace();
-			}
-        }
-        
+        */
+
+        /*
         public boolean publicMouseOverSlot(Slot par1Slot, int par2, int par3) {
             return this.isPointInRegion(par1Slot.xDisplayPosition, par1Slot.yDisplayPosition, 16, 16, par2, par3);
         }

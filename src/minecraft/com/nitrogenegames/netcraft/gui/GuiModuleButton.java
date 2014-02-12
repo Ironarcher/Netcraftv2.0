@@ -25,6 +25,7 @@ public class GuiModuleButton extends GuiButton {
 	public boolean tabPage = false;
 	private int mode = 0;
 	public int page = 1;
+
 	//for default size: 120 width and 20 height
     public GuiModuleButton(int id, int startx, int starty, String reslocation)
     {
@@ -54,20 +55,16 @@ public class GuiModuleButton extends GuiButton {
 	        mc.renderEngine.bindTexture(texture1);
 	        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 	        if(!pressed){
-	        	switch(mode){
-	        	case 0: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 0, this.width, this.height);
-	        	case 1: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 5, this.width, this.height);
-	        	case 2: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 10, this.width, this.height);
-	        	case 3: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 15, this.width, this.height);
-	        	}
+	        	drawTexturedModalRect(this.xPosition, this.yPosition, 0, mode*5, this.width, this.height);
+	        	//case 1: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 5, this.width, this.height);
+	        	//case 2: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 10, this.width, this.height);
+	        	//case 3: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 15, this.width, this.height);
 	        	
 	        } else if(pressed){
-	        	switch(mode){
-	        	case 0: drawTexturedModalRect(this.xPosition, this.yPosition, 12, 0, this.width, this.height);
-	        	case 1: drawTexturedModalRect(this.xPosition, this.yPosition, 12, 5, this.width, this.height);
-	        	case 2: drawTexturedModalRect(this.xPosition, this.yPosition, 12, 10, this.width, this.height);
-	        	case 3: drawTexturedModalRect(this.xPosition, this.yPosition, 12, 15, this.width, this.height);
-	        	}
+	        	drawTexturedModalRect(this.xPosition, this.yPosition, 12, mode*5, this.width, this.height);
+	        	//case 1: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 5, this.width, this.height);
+	        	//case 2: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 10, this.width, this.height);
+	        	//case 3: drawTexturedModalRect(this.xPosition, this.yPosition, 0, 15, this.width, this.height);
 	        }
     	}
     }
@@ -91,5 +88,9 @@ public class GuiModuleButton extends GuiButton {
     
     public void setPressed(boolean s){
     	pressed = s;
+    }
+    public boolean mousePressed(Minecraft par1Minecraft, int par2, int par3)
+    {
+        return this.enabled && this.tabPage && this.modulePage && this.drawButton && par2 >= this.xPosition && par3 >= this.yPosition && par2 < this.xPosition + this.width && par3 < this.yPosition + this.height;
     }
 }
