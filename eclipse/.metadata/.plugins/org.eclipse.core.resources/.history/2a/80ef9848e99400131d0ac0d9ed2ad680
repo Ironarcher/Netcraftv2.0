@@ -108,13 +108,16 @@ public class Netcraft {
 	public static CreativeTabs netcrafttab = new NetcraftTab(CreativeTabs.getNextID(), "Netcraft");
 
 	public static boolean isModule(ItemStack itemstack) {
-		Item par1item = itemstack.getItem();
-		if (par1item == Netcraft.redmodule || par1item == Netcraft.timemodule|| par1item == Netcraft.weathermodule|| par1item == Netcraft.resistmodule|| par1item == Netcraft.regenmodule|| par1item == Netcraft.deathmodule || par1item == Netcraft.powermodule || par1item == Netcraft.tpmodule || par1item == Netcraft.atpmodule) {
-			return true;
-		} else {
+		if(itemstack == null){
 			return false;
-		}
-			
+		} else{
+			Item par1item = itemstack.getItem();
+			if (par1item == Netcraft.redmodule || par1item == Netcraft.timemodule|| par1item == Netcraft.weathermodule|| par1item == Netcraft.resistmodule|| par1item == Netcraft.regenmodule|| par1item == Netcraft.deathmodule || par1item == Netcraft.powermodule || par1item == Netcraft.tpmodule || par1item == Netcraft.atpmodule) {
+				return true;
+			} else {
+				return false;
+			}
+		}	
 	}
 public static boolean isNodeConnectedToCore(World world, int x, int y, int z, ArrayList p) {
 		boolean isC = false;
@@ -561,6 +564,7 @@ public static boolean isNodeConnectedToCore(World world, int x, int y, int z, Ar
 	public static boolean isConectedToCore(World world, int x, int y, int z) {
 		boolean isC = false;
 		for(int c = -1; c <= 1; c++) {
+			if(c!=0) {
 					if(world.getBlockId(x + c, y, z)  == connectionnode.blockID){
 						//System.out.println("" + (x + c) + "," + (y) + "," + (z));
 						if(!isC) {
@@ -594,6 +598,7 @@ public static boolean isNodeConnectedToCore(World world, int x, int y, int z, Ar
 					if(world.getBlockId(x, y, z + c)  == core.blockID) {
 						isC = true;
 					}	
+			}
 		}
 		return isC;
 	}

@@ -118,14 +118,16 @@ public class BlockNodeConnection extends Block implements INetBlock {
 	 @Override
 	 public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
 	 {
+			if(par1World.isRemote) {
 			if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
+
 				TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(par2, par3, par4);
-			   	  try {
+			   	  //try {
 							tileEntity.update();
-					
-					} catch (Exception e) {
+				}
+					//} catch (Exception e) {
 						
-					}
+					//}
 				}
 			updateConnection(par1World, par2, par3, par4);
 	 }
@@ -133,14 +135,16 @@ public class BlockNodeConnection extends Block implements INetBlock {
 	@Override
 	public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
 	{
-		try{
+		//try{
+		if(par1World.isRemote) {
 		if(Netcraft.isConectedToCore(par1World, par2, par3, par4)){
       	  TileEntityCore tileEntity = (TileEntityCore) par1World.getBlockTileEntity(Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[0], Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[1], Netcraft.getCoreCoordinates(par1World, par2, par3, par4)[2]);
 		 	tileEntity.update();
 		}
-		} catch (Exception e) {
-			
 		}
+		//} catch (Exception e) {
+			
+		//}
 		if(!(par5 == 451)) {
 		updateConnection(par1World, par2, par3, par4);
 		} else {

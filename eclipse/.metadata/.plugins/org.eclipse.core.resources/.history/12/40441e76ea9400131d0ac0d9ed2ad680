@@ -50,11 +50,9 @@ public class PacketHandler implements IPacketHandler {
 		int zcoord;
 		boolean error = false;
 		Entity playerEntity = (Entity)player;
-		TileEntity thisTileEntity;
 		TileEntityCore te2;
 			
 		try {
-			a = inputStream.
 			xcoord = inputStream.readInt();
 			ycoord = inputStream.readInt();
 			zcoord = inputStream.readInt();
@@ -65,13 +63,16 @@ public class PacketHandler implements IPacketHandler {
 			ycoord = 0;
 			zcoord = 0;
 		}
-		thisTileEntity = playerEntity.worldObj.getBlockTileEntity(xcoord, ycoord, zcoord);
+		te2 = (TileEntityCore) playerEntity.worldObj.getBlockTileEntity(xcoord, ycoord, zcoord);
 		try{
 			if(!error) {
-			te2 = (TileEntityCore) thisTileEntity;
-			te2.tabPage = tab;
-			playerEntity.worldObj.markBlockForUpdate(xcoord, ycoord, zcoord);
-			//System.out.println(energy + " ENERGY SENT");
+			if(packet instanceof PacketNet) {
+				PacketNet pNet = (PacketNet) packet;
+				te2.connectors = pNet.connectors;
+				te2.nodes = pNet.nodes;
+				te2.objects = pNet.objects;
+				te2.update();
+			}
 			}
 		} catch (Exception e) {
 

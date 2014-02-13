@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ic2.api.item.ElectricItem"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.gui.GuiCore"/>
-<fullyQualifiedTypeName name="net.minecraft.client.renderer.texture.IconRegister"/>
-<fullyQualifiedTypeName name="net.minecraft.util.Icon"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.blockNetworkFabricator"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.EntityLivingBase"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
 <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
+<fullyQualifiedTypeName name="net.minecraft.src.ModLoader"/>
+<fullyQualifiedTypeName name="java.util.Dictionary"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

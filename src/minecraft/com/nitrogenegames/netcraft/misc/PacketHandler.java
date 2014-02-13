@@ -71,6 +71,7 @@ public class PacketHandler implements IPacketHandler {
 				te2.connectors = pNet.connectors;
 				te2.nodes = pNet.nodes;
 				te2.objects = pNet.objects;
+				te2.update(true);
 			}
 			}
 		} catch (Exception e) {

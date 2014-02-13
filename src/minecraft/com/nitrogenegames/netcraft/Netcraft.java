@@ -1,6 +1,9 @@
 package com.nitrogenegames.netcraft;
 
 import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.Map;
 
 import com.nitrogenegames.netcraft.block.BlockCore;
 import com.nitrogenegames.netcraft.block.BlockMatrixCube;
@@ -31,6 +34,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.src.ModLoader;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.Mod;
@@ -217,6 +221,7 @@ public static boolean isNodeConnectedToCore(World world, int x, int y, int z, Ar
 						}
 					} 
 					if(world.getBlockId(x, y, z + c)  == connectionnode.blockID){
+						System.out.println("getC z");
 						if(!isC) {
 						ArrayList l = new ArrayList();
 						l.add("" + (x) + "," + (y) + "," + (z + c));
@@ -581,6 +586,7 @@ public static boolean isNodeConnectedToCore(World world, int x, int y, int z, Ar
 						}
 					} 
 					if(world.getBlockId(x, y, z + c)  == connectionnode.blockID){
+						System.out.println("isC z");
 						//System.out.println("" + (x) + "," + (y) + "," + (z + c));
 						if(!isC) {
 						ArrayList l = new ArrayList();
@@ -693,15 +699,20 @@ public static boolean isNodeConnectedToCore(World world, int x, int y, int z, Ar
 		GameRegistry.registerBlock(block, block.getUnlocalizedName());
 		LanguageRegistry.addName(block, name);
 	}
-	public void registerBlock(Block block, String name, int metadata){
+	public void registerBlockMetadata(Block block, HashMap<Integer,String> s){
+		GameRegistry.registerBlock(block, block.getUnlocalizedName());
+		for(int i = 0; i < s.size(); i++) {
+			ItemStack multiBlockStack = new ItemStack(block, 1, i);
+			LanguageRegistry.addName(multiBlockStack, s.get(i));
+		}
 
-		ItemStack multiBlockStack = new ItemStack(block, 1, metadata);
-		LanguageRegistry.addName(multiBlockStack, name);
 	}
-	public void registerItem(Item item, String name, int metadata){
-
-		ItemStack multiBlockStack = new ItemStack(item, 1, metadata);
-		LanguageRegistry.addName(multiBlockStack, name);
+	public void registerItemMetadata(Item block, HashMap<Integer,String> s){
+		GameRegistry.registerItem(block, block.getUnlocalizedName());
+		for(int i = 0; i < s.size(); i++) {
+			ItemStack multiBlockStack = new ItemStack(block, 1, i);
+			LanguageRegistry.addName(multiBlockStack, s.get(i));
+		}
 	}
 	public void registerItem(Item item, String name){
 		GameRegistry.registerItem(item, item.getUnlocalizedName());
@@ -709,10 +720,16 @@ public static boolean isNodeConnectedToCore(World world, int x, int y, int z, Ar
 	}
 	
 	public void register(){
-		GameRegistry.registerBlock(projector, projector.getUnlocalizedName());
-		registerBlock(projector, "Beam Projector Block", 0);
-		registerBlock(projector, "Satelite Projector Block", 2);
-		registerBlock(projector, "Radial Projector Block", 1);
+
+		registerBlockMetadata(projector, new HashMap<Integer,String>() {
+			 {
+				    put(0,"Beam Projector Block");
+				    put(2,"Satelite Projector Block");
+				    put(1,"Radial Projector Block");
+				 }
+				});
+		//registerBlockMetadata(projector, "Satelite Projector Block", 2);
+		//registerBlockMetadata(projector, "Radial Projector Block", 1);
 
 
 		
@@ -748,11 +765,17 @@ public static boolean isNodeConnectedToCore(World world, int x, int y, int z, Ar
 		registerItem(rangeupgrade, "Range Upgrade");
 		registerItem(superdatachip, "Supernatural Datachip");
 		registerItem(forcefieldemitters, "Force Field Emitter");
-		GameRegistry.registerItem(itemProjector, itemProjector.getUnlocalizedName());
-		registerItem(itemProjector, "Beam Projector", 0);
-		registerItem(itemProjector, "Satelite Projector", 2);
-		registerItem(itemProjector, "Radial Projector", 1);
-
+		registerItemMetadata(itemProjector, new HashMap<Integer,String>() {
+			 {
+				    put(0,"Beam Projector");
+				    put(2,"Satelite Projector");
+				    put(1,"Radial Projector");
+				 }
+				});
+		//GameRegistry.registerItem(itemProjector, itemProjector.getUnlocalizedName());
+		//registerItemMetadata(itemProjector, "Beam Projector", 0);
+		//registerItemMetadata(itemProjector, "Satelite Projector", 2);
+		//registerItemMetadata(itemProjector, "Radial Projector", 1);
 		
 		GameRegistry.addRecipe(new ItemStack(Netcraft.matrixcube,1), new Object[]{
 			"SDS","DAD","SDS",'S', Block.stone, 'D', Netcraft.netdatachip, 'A', ic2.api.item.Items.getItem("advancedMachine"),
@@ -833,6 +856,7 @@ public static boolean isNodeConnectedToCore(World world, int x, int y, int z, Ar
 		fabricatorRecipes.add(new FabricatorRecipe(Netcraft.communicator.itemID, Netcraft.centraldatachip.itemID, Netcraft.centraldatachip.itemID, ic2.api.item.Items.getItem("teslaCoil").itemID, new ItemStack(Netcraft.itemProjector, 1, 1)));
 		fabricatorRecipes.add(new FabricatorRecipe(Block.beacon.blockID, Netcraft.superdatachip.itemID, Block.glass.blockID, Block.glass.blockID, new ItemStack(Netcraft.itemProjector, 1, 2)));
 		}
+
 	public static int[] decompileNBT(String s)
 	{
 		int[] coords = new int[3];

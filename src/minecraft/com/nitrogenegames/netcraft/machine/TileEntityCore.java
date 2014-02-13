@@ -556,8 +556,10 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
 	public ArrayList objects = new ArrayList();
 	public ArrayList nodes = new ArrayList();
 	public ArrayList connectors = new ArrayList();
-
 	public void update() {
+		update(false);
+	}
+	public void update(boolean p) {
     	ArrayList c = Netcraft.getConnectedObjects(worldObj, xCoord, yCoord, zCoord);
     	objects = c;
     	ArrayList d = new ArrayList();
@@ -567,7 +569,13 @@ public class TileEntityCore extends TileEntity implements IEnergySink, ISidedInv
         	}
         }
         connectors = d;
+        if(!p) {
+        if(!this.worldObj.isRemote) {
         sendNetPacket(Side.CLIENT);
+        } else {
+            sendNetPacket(Side.SERVER);
+        }
+        }
 	}
 
 }
