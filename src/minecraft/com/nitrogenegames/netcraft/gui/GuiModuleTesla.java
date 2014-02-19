@@ -4,11 +4,13 @@ import org.lwjgl.opengl.GL11;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.item.ItemModules;
+import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -21,6 +23,17 @@ public class GuiModuleTesla extends GuiScreen {
 	private int range;
 	private int mode;
 	public int maxrange = 50;
+	public TileEntityCore closeto;
+	public boolean flage = false;
+	public EntityPlayer patent;
+	public GuiModuleTesla(ItemStack i, TileEntityCore te, EntityPlayer p)
+	{
+	         this(i);
+	         closeto = te;
+	         flage = true;
+	         patent = p;
+	}
+	
 	public GuiModuleTesla(ItemStack i) {
 		this.stack = i;
 		if( stack.stackTagCompound == null )

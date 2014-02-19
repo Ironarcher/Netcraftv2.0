@@ -43,6 +43,8 @@ public class ContainerCore extends Container {
 	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 56 + this.getX(), 17 + this.getY(), 0, 1));
 	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0,  + this.getX(), 17 + this.getY(), 0, 1));
 	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 60 + this.getX(), 17 + this.getY(), 0, 1));
+                }
+                for(int i = 0; i < 5; i++) {
 	                addPageSlotToContainer(new SlotModuleCore(tileEntity, i+5, 20 + 18*i + this.getX(), 45 + this.getY(), 0, 1));
 	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 30 + this.getX(), 45 + this.getY(), 0, 1));
 	                //addPageSlotToContainer(new SlotModuleCore(tileEntity, 0, 40 + this.getX(), 45 + this.getY(), 0, 1));

@@ -40,7 +40,6 @@
 <fullyQualifiedTypeName name="cpw.mods.fml.client.registry.RenderingRegistry"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.net.INet"/>
 <fullyQualifiedTypeName name="net.minecraft.world.World"/>
-<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityCore"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.net.INetBlock"/>
 <fullyQualifiedTypeName name="com.nitrogenegames.netcraft.block.BlockNodeConnection"/>
 <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="java.util.Dictionary"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.nitrogenegames.netcraft.machine.TileEntityCore"/>
 </qualifiedTypeNameHistroy>

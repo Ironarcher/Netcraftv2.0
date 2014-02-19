@@ -3,6 +3,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.item.ItemModules;
+import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -30,6 +31,16 @@ public class GuiModuleRanged extends GuiScreen {
 	    	range = 20; //PUT DEFAULT RANGE HERE
 	    }
 	    
+	}
+	public TileEntityCore closeto;
+	public boolean flage = false;
+	public EntityPlayer patent;
+	public GuiModuleRanged(ItemStack i, TileEntityCore te, EntityPlayer p)
+	{
+	         this(i);
+	         closeto = te;
+	         flage = true;
+	         patent = p;
 	}
 	@Override
 	public void drawScreen(int param1, int param2, float par3) {

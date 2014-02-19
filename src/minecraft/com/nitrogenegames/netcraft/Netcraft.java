@@ -724,8 +724,8 @@ public static boolean isNodeConnectedToCore(World world, int x, int y, int z, Ar
 		registerBlockMetadata(projector, new HashMap<Integer,String>() {
 			 {
 				    put(0,"Beam Projector Block");
-				    put(2,"Satelite Projector Block");
 				    put(1,"Radial Projector Block");
+				    put(2,"Satelite Projector Block");
 				 }
 				});
 		//registerBlockMetadata(projector, "Satelite Projector Block", 2);
@@ -768,8 +768,8 @@ public static boolean isNodeConnectedToCore(World world, int x, int y, int z, Ar
 		registerItemMetadata(itemProjector, new HashMap<Integer,String>() {
 			 {
 				    put(0,"Beam Projector");
-				    put(2,"Satelite Projector");
 				    put(1,"Radial Projector");
+				    put(2,"Satelite Projector");
 				 }
 				});
 		//GameRegistry.registerItem(itemProjector, itemProjector.getUnlocalizedName());

@@ -4,6 +4,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.item.ItemModules;
+import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.relauncher.Side;
@@ -31,15 +32,36 @@ public class GuiModuleMarkable extends GuiScreen
 private ItemStack stack;
 private int xSize = 176;
 private int ySize = 166;
+
+
 //public NBTTagList tagList;
 public int pagenum = 1;
 public int maxpages = 0;
 private boolean lastone = false;
+
 public GuiModuleMarkable(ItemStack i)
 {
          this.stack = i;
+ 		if( stack.stackTagCompound == null )
+	        stack.setTagCompound( new NBTTagCompound( ) );
 }
-
+public TileEntityCore closeto;
+public boolean flage = false;
+public EntityPlayer patent;
+public GuiModuleMarkable(ItemStack i, TileEntityCore te, EntityPlayer p)
+{
+         this(i);
+         closeto = te;
+         flage = true;
+         patent = p;
+}
+@Override
+public void onGuiClosed() {
+	super.onGuiClosed();
+	if(flage) {
+		patent.openGui(Netcraft.instance, 100, this.closeto.worldObj, this.closeto.xCoord, this.closeto.yCoord, this.closeto.zCoord);
+	}
+}
 public void setmaxpages()
 {
     NBTTagCompound tagCompound = stack.getTagCompound();	

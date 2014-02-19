@@ -33,6 +33,8 @@ public class GuiHandler implements IGuiHandler {
                 	if(id == 100) {
                 	world.markBlockForUpdate(x, y, z);
                         return new ContainerCore(player.inventory, (TileEntityCore) world.getBlockTileEntity(x, y, z));
+                	} else {
+                    	return new ContainerModule(player.inventory);
                 	}
                 } 
                 
@@ -68,18 +70,18 @@ public class GuiHandler implements IGuiHandler {
                 		}
 	                    if(Netcraft.isMarkableModule(item))
 	                    {
-	                    	return new GuiModuleMarkable(item);
+	                    	return new GuiModuleMarkable(item, t, player);
 	                    }
 	                    if(Netcraft.isSelectiveModule(item))
 	                    {
-	                    	return new GuiModuleSelective(item);
+	                    	return new GuiModuleSelective(item, t, player);
 	                    }
 	                    if(item.getItem().itemID == Netcraft.deathmodule.itemID) {
-	                    	return new GuiModuleTesla(item);
+	                    	return new GuiModuleTesla(item, t, player);
 	                    }
 	                    if(Netcraft.isRangedModule(item) && item.getItem().itemID != Netcraft.deathmodule.itemID)
 	                    {
-	                    	return new GuiModuleRanged(item);
+	                    	return new GuiModuleRanged(item, t, player);
 	                    }
                 	}
                 }

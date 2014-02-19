@@ -4,6 +4,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.nitrogenegames.netcraft.Netcraft;
 import com.nitrogenegames.netcraft.item.ItemModules;
+import com.nitrogenegames.netcraft.machine.TileEntityCore;
 
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.relauncher.Side;
@@ -36,6 +37,17 @@ public int pagenum = 1;
 public int maxpages = 0;
 private int selected;
 private boolean lastone = false;
+public TileEntityCore closeto;
+public boolean flage = false;
+public EntityPlayer patent;
+
+public GuiModuleSelective(ItemStack i, TileEntityCore te, EntityPlayer p)
+{
+         this(i);
+         closeto = te;
+         flage = true;
+         patent = p;
+}
 public GuiModuleSelective(ItemStack i)
 {
          this.stack = i;
